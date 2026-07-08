@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Daily Photo</title>
+  <style>
+    :root {
+      /* Easily adjust the white frame size around your photo */
+      /* Set to 0px for absolute full-bleed (no white border) */
+      --frame-padding: 16px;
+      --photo-border-radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Prevent elastic bounce scrolling on iOS */
+      position: fixed; 
+    }
+
+    /* The white frame container */
+    .frame {
+      width: 100%;
+      height: 100%;
+      padding: var(--frame-padding);
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    /* The photo itself */
+    .photo {
+      width: 100%;
+      height: 100%;
+      /* 'cover' scales the photo to fill the container, bleeding end-to-end */
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--photo-border-radius);
+      /* Subtle premium shadow to separate the photo from the white frame */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Landscape or specific screen adjustment helper */
+    @media (max-aspect-ratio: 1/1) {
+      /* Portait layout optimizations if any */
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <img src="photo.jpg" alt="Daily Photograph" class="photo" onerror="this.style.display='none';">
+  </div>
+</body>
+</html>
