@@ -20,11 +20,11 @@ cd "${REPO_DIR}"
 
 # Run the rotation script
 echo "Running rotate.py..."
-python3 rotate.py
+/Users/karl/.hermes/hermes-agent/venv/bin/python3 rotate.py
 
 # Run the local vision analysis and crop calculation
 echo "Running local_analyze.py with local Ollama vision model..."
-python3 local_analyze.py
+/Users/karl/.hermes/hermes-agent/venv/bin/python3 local_analyze.py
 
 # Check git status
 echo "Checking git status..."
@@ -33,7 +33,7 @@ if [ -n "$(git status --porcelain)" ]; then
     git add photo.jpg state.json index.html local_analyze.py rotate_and_push.sh
     
     # Get the name of the newly shown photo from state.json
-    NEW_PHOTO=$(python3 -c "import json; print(json.load(open('state.json'))['last_shown'])")
+    NEW_PHOTO=$(/Users/karl/.hermes/hermes-agent/venv/bin/python3 -c "import json; print(json.load(open('state.json'))['last_shown'])")
     
     echo "Committing changes..."
     git commit -m "Rotate to photo: ${NEW_PHOTO}"
