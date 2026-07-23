@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 51,
-    "y": 50
+    "x": 46,
+    "y": 41
   },
-  "visual_weight_analysis": "The primary focal driver is the wooden dock in the lower right part of the frame. The contrast between the dark wood and light water adds visual weight, while the leading lines created by the dock enhance perspective and guide the viewer's eye.",
-  "final_x": 65,
-  "final_y": 40,
-  "justification": "The final crop shifts to align more closely with the actual subject (the wooden dock) rather than the raw centroid. This adjustment places the dock at a stronger focal point using Bryan Peterson's off-center placement principle, enhancing emotional storytelling and visual balance."
+  "visual_weight_analysis": "The primary focal drivers are the vibrant 'CANDY CANE' mural and the dynamic human figures in the foreground. The fulcrum balance is achieved by positioning these elements slightly off-center to enhance visual interest.",
+  "final_x": 50,
+  "final_y": 38,
+  "justification": "The final crop moves the X-axis slightly right to center the vibrant mural more effectively and adjusts the Y-axis upwards to include more of the dynamic human figures, creating a balanced yet engaging composition that anchors the quantitative centroid while emphasizing emotional storytelling."
 }
