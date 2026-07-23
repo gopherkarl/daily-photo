@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 52,
-    "y": 54
+    "x": 51,
+    "y": 50
   },
-  "visual_weight_analysis": "The primary focal drivers are the multitude of spectators creating a sea of people throughout the image. The lighting contrast and natural light entering from the upper level of the stadium add depth and visual interest, requiring careful framing to balance emotional storytelling.",
-  "final_x": 48,
-  "final_y": 50,
-  "justification": "The final crop was selected to nudge slightly towards the left (48%) and up (50%) from the raw centroid to anchor the mathematical luminance centroid while emphasizing the faces and human figures at the forefront, fulfilling asymmetrical visual balance and emotional storytelling."
+  "visual_weight_analysis": "The primary focal driver is the wooden dock in the lower right part of the frame. The contrast between the dark wood and light water adds visual weight, while the leading lines created by the dock enhance perspective and guide the viewer's eye.",
+  "final_x": 65,
+  "final_y": 40,
+  "justification": "The final crop shifts to align more closely with the actual subject (the wooden dock) rather than the raw centroid. This adjustment places the dock at a stronger focal point using Bryan Peterson's off-center placement principle, enhancing emotional storytelling and visual balance."
 }
