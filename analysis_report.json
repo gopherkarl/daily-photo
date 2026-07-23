@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 51,
-    "y": 48
+    "x": 52,
+    "y": 54
   },
-  "visual_weight_analysis": "The vibrant colors and intricate shapes of the painting anchor the visual weight due to its high color saturation and size. The off-center placement of the painting in the lower third of the frame creates a dynamic asymmetry that pulls the viewer's eye.",
-  "final_x": 50,
-  "final_y": 43,
-  "justification": "The final crop centers the painting more closely to balance the visual weight while maintaining its off-center impact. This adjustment emphasizes the emotional story of the vibrant and detailed artwork, fulfilling asymmetrical visual balance."
+  "visual_weight_analysis": "The primary focal drivers are the multitude of spectators creating a sea of people throughout the image. The lighting contrast and natural light entering from the upper level of the stadium add depth and visual interest, requiring careful framing to balance emotional storytelling.",
+  "final_x": 48,
+  "final_y": 50,
+  "justification": "The final crop was selected to nudge slightly towards the left (48%) and up (50%) from the raw centroid to anchor the mathematical luminance centroid while emphasizing the faces and human figures at the forefront, fulfilling asymmetrical visual balance and emotional storytelling."
 }
