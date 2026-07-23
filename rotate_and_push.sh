@@ -30,7 +30,7 @@ echo "Running local_analyze.py with local Ollama vision model..."
 echo "Checking git status..."
 if [ -n "$(git status --porcelain)" ]; then
     echo "Changes detected. Staging changes..."
-    git add photo.jpg state.json index.html local_analyze.py rotate_and_push.sh
+    git add photo.jpg state.json index.html local_analyze.py rotate_and_push.sh analysis_report.json
     
     # Get the name of the newly shown photo from state.json
     NEW_PHOTO=$(/Users/karl/.hermes/hermes-agent/venv/bin/python3 -c "import json; print(json.load(open('state.json'))['last_shown'])")
