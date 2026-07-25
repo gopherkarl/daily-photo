@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 47,
+    "x": 52,
     "y": 51
   },
-  "visual_weight_analysis": "The primary visual weight is driven by the warm glow of the setting sun and the silhouettes of two people on the pier. Off-center placement of these elements creates a dynamic balance with the serene beach setting.",
+  "visual_weight_analysis": "The boat in the lower left quadrant is the primary subject with high contrast against the dark sky and crashing waves adding dynamism. The absence of human figures means the boat itself must carry the emotional weight, necessitating a crop that emphasizes its off-center yet balanced placement.",
   "final_x": 40,
-  "final_y": 51,
-  "justification": "The final crop shifts slightly to the left, placing more emphasis on the wooden pier and silhouettes, enhancing the storytelling aspect while maintaining the tranquil ambiance of the sunset scene."
+  "final_y": 45,
+  "justification": "Moving the x-position to 40% and y-position to 45% better anchors the boat while maintaining asymmetrical balance. This adjustment fulfills the dual-core rule by keeping the mathematical centroid in view but frames the emotional story of the isolated, contrasting boat."
 }
