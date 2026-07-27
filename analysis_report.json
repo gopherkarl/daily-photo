@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 45,
+    "x": 54,
     "y": 51
   },
-  "visual_weight_analysis": "Fallback: unable to complete LLM synthesis.",
-  "final_x": 45,
-  "final_y": 51,
-  "justification": "Fallback to raw mathematical centroid."
+  "visual_weight_analysis": "The focal drivers are primarily the palm trees and the interplay of light at dawn or dusk. The lack of human figures makes the landscape elements\u2014such as contrast between trees and ocean\u2014the anchors for visual weight.",
+  "final_x": 60,
+  "final_y": 48,
+  "justification": "By slightly nudging the x-coordinate to 60%, we emphasize the palm trees, which are central to the scene. The y-coordinate at 48% helps balance the emotional story by placing more of the beach and ocean within view, creating a sense of depth and perspective."
 }
