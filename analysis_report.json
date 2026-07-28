@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 54,
-    "y": 51
+    "x": 52,
+    "y": 48
   },
-  "visual_weight_analysis": "The focal drivers are primarily the palm trees and the interplay of light at dawn or dusk. The lack of human figures makes the landscape elements\u2014such as contrast between trees and ocean\u2014the anchors for visual weight.",
-  "final_x": 60,
+  "visual_weight_analysis": "The sunset and its vibrant colors create a strong focal point at the mathematical centroid. However, to enhance visual balance and storytelling, we should nudge the focus slightly off-center towards the left to incorporate more of the serene water and subtle hill silhouette.",
+  "final_x": 45,
   "final_y": 48,
-  "justification": "By slightly nudging the x-coordinate to 60%, we emphasize the palm trees, which are central to the scene. The y-coordinate at 48% helps balance the emotional story by placing more of the beach and ocean within view, creating a sense of depth and perspective."
+  "justification": "By moving the crop box to (45%, 48%), we maintain the sunset's prominence while introducing a sense of asymmetry by including more of the peaceful water surface and hinting at the hill, fulfilling the Dual-Core Rule."
 }
