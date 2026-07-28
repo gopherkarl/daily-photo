@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 52,
-    "y": 48
+    "x": 48,
+    "y": 49
   },
-  "visual_weight_analysis": "The sunset and its vibrant colors create a strong focal point at the mathematical centroid. However, to enhance visual balance and storytelling, we should nudge the focus slightly off-center towards the left to incorporate more of the serene water and subtle hill silhouette.",
-  "final_x": 45,
-  "final_y": 48,
-  "justification": "By moving the crop box to (45%, 48%), we maintain the sunset's prominence while introducing a sense of asymmetry by including more of the peaceful water surface and hinting at the hill, fulfilling the Dual-Core Rule."
+  "visual_weight_analysis": "The image is anchored by people and vibrant display items, creating a strong focal point. The natural light enhances contrast and draws attention to the central figures.",
+  "final_x": 50,
+  "final_y": 47,
+  "justification": "The final crop moves slightly upward and centers horizontally to better balance the visual weight of the people and merchandise while maintaining the emotional story of the bustling store interior."
 }
