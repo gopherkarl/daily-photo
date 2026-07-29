@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 49,
-    "y": 50
+    "x": 46,
+    "y": 57
   },
-  "visual_weight_analysis": "The primary visual drivers are the contrast between the brightly lit dining area and the darker background, as well as the location of the harbor and city skyline off-center. The emotional story subject is the serene outdoor dining setting with a captivating backdrop, which benefits from an asymmetrical framing to enhance balance.",
-  "final_x": 45,
-  "final_y": 48,
-  "justification": "The final crop shifts slightly to the left (45% instead of 49%) and upward (48% instead of 50%) to better anchor the emotional story subject while maintaining the off-center balance, making the vibrant contrast and captivating background elements more prominent."
+  "visual_weight_analysis": "Fallback: unable to complete LLM synthesis.",
+  "final_x": 46,
+  "final_y": 57,
+  "justification": "Fallback to raw mathematical centroid."
 }
