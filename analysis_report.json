@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 38,
-    "y": 45
+    "x": 49,
+    "y": 43
   },
-  "visual_weight_analysis": "The high contrast silhouette of the running dog creates a strong focal point, and its motion towards the right side suggests anchoring the emotional story subject slightly off-center to enhance asymmetrical visual balance.",
-  "final_x": 60,
-  "final_y": 30,
-  "justification": "Nudging the crop box further to the right (X=60%) emphasizes the dog's direction of motion and creates a more dynamic composition. Lowering the Y-coordinate to 30% helps maintain visual balance while aligning with the Dual-Core Rule by framing the emotional story."
+  "visual_weight_analysis": "The focal drivers in the image are the group of people playing soccer, which has high psychological weight due to their presence and engagement. The sharp contrast between the players and the soft background, along with the off-center location of some figures, helps achieve asymmetrical visual balance.",
+  "final_x": 45,
+  "final_y": 38,
+  "justification": "The final crop was selected to slightly nudge the frame towards the group while maintaining the mathematical luminance centroid. This adjustment enhances the emotional story by focusing more on the soccer players' activities and their interaction with the beach environment, fulfilling asymmetrical balance."
 }
