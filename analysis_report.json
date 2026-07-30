@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 49,
-    "y": 43
+    "x": 51,
+    "y": 56
   },
-  "visual_weight_analysis": "The focal drivers in the image are the group of people playing soccer, which has high psychological weight due to their presence and engagement. The sharp contrast between the players and the soft background, along with the off-center location of some figures, helps achieve asymmetrical visual balance.",
-  "final_x": 45,
-  "final_y": 38,
-  "justification": "The final crop was selected to slightly nudge the frame towards the group while maintaining the mathematical luminance centroid. This adjustment enhances the emotional story by focusing more on the soccer players' activities and their interaction with the beach environment, fulfilling asymmetrical balance."
+  "visual_weight_analysis": "The Buddha's head sculpture holds significant visual weight due to its sharp focus and high contrast against the dark background. The slight off-center placement enhances asymmetrical balance while emphasizing intricate details.",
+  "final_x": 48,
+  "final_y": 53,
+  "justification": "To anchor the emotional story subject (Buddha's head) and fulfill asymmetrical visual balance, the crop was nudged slightly to the left and upwards from the raw centroid. This adjustment ensures that the sculpture remains the focal point while creating a more dynamic composition."
 }
