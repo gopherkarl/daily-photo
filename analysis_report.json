@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 46,
-    "y": 57
+    "x": 38,
+    "y": 45
   },
-  "visual_weight_analysis": "Fallback: unable to complete LLM synthesis.",
-  "final_x": 46,
-  "final_y": 57,
-  "justification": "Fallback to raw mathematical centroid."
+  "visual_weight_analysis": "The high contrast silhouette of the running dog creates a strong focal point, and its motion towards the right side suggests anchoring the emotional story subject slightly off-center to enhance asymmetrical visual balance.",
+  "final_x": 60,
+  "final_y": 30,
+  "justification": "Nudging the crop box further to the right (X=60%) emphasizes the dog's direction of motion and creates a more dynamic composition. Lowering the Y-coordinate to 30% helps maintain visual balance while aligning with the Dual-Core Rule by framing the emotional story."
 }
