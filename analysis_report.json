@@ -1,10 +1,10 @@
 {
   "math_centroid": {
     "x": 52,
-    "y": 48
+    "y": 49
   },
-  "visual_weight_analysis": "The primary focal driver is the arrangement of flowers in the transparent glass vase, which introduces color and complexity to the serene indoor scene. The window bars and natural light streaming through add secondary weight but are less dominant.",
-  "final_x": 65,
-  "final_y": 40,
-  "justification": "The final crop is adjusted to nudge focus more towards the floral arrangement, which carries significant visual weight due to its color saturation and complexity. This ensures that the emotional story subject (the flowers) takes center stage while maintaining asymmetrical balance."
+  "visual_weight_analysis": "The focal drivers are the two individuals standing centrally, with the sign 'DON'T BE SOMEONE'S STORY' providing additional context. The balance is asymmetric, with the people being slightly off-center to create visual interest.",
+  "final_x": 50,
+  "final_y": 47,
+  "justification": "The final crop moves the x-coordinate slightly left and y-coordinate up from the raw centroid to better frame the two individuals as the primary focus while maintaining asymmetrical balance, adhering to the Dual-Core Rule."
 }
