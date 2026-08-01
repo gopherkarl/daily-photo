@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 53,
-    "y": 49
+    "x": 50,
+    "y": 58
   },
-  "visual_weight_analysis": "The primary subject, a large modern skyscraper with human figures scattered throughout, holds significant visual weight due to its size and presence of people. The vibrant lighting and contrast enhance the overall composition, while the urban setting and greenery provide context.",
-  "final_x": 55,
-  "final_y": 47,
-  "justification": "The final crop slightly shifts the focus towards the upper portion of the skyscraper to balance the visual weight more effectively, aligning with the Dual-Core Rule. This adjustment enhances the emotional story by capturing more of the architectural details and human figures without losing the urban context."
+  "visual_weight_analysis": "The large metallic structure resembling an eye in the bottom right corner has high visual weight due to its size and complexity. The subtle contrast between dark tones at the bottom and lighter tones towards the top helps create a depth and perspective, but the main focus should be anchored on the dominant metallic eye.",
+  "final_x": 70,
+  "final_y": 65,
+  "justification": "The final crop shifts slightly to the right and downward to place more emphasis on the large, complex metallic structure in the bottom right corner, which is the primary visual anchor. This adjustment fulfills asymmetrical balance while framing the emotional story of the eye-like object."
 }
