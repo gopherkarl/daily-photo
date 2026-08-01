@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 49,
-    "y": 49
+    "x": 51,
+    "y": 46
   },
-  "visual_weight_analysis": "The primary subject, the old building with Spanish writing, holds significant visual weight due to its size and central placement. However, to create a more engaging composition, we should nudge the focus slightly off-center, using Bryan Peterson's Dual-Core Rule.",
-  "final_x": 40,
-  "final_y": 35,
-  "justification": "The final crop is adjusted to position the building off-center, creating an asymmetrical balance and directing the viewer's eye towards it while leaving room for narrative context in the background. This fulfills the emotional story of the scene by highlighting its historical charm without overwhelming the composition."
+  "visual_weight_analysis": "The primary focal drivers are the contrast between brightly lit machinery and dim surroundings, and the location of the machinery at the center. The industrial setting lacks human figures or vibrant colors, making size and scale the main balance elements.",
+  "final_x": 50,
+  "final_y": 47,
+  "justification": "While the quantitative centroid places the focus in the middle, nudging slightly to (50%, 47%) helps frame the machinery more effectively while maintaining asymmetrical balance and emphasizing depth through contrast."
 }
