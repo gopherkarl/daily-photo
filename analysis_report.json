@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 51,
-    "y": 46
+    "x": 53,
+    "y": 49
   },
-  "visual_weight_analysis": "The primary focal drivers are the contrast between brightly lit machinery and dim surroundings, and the location of the machinery at the center. The industrial setting lacks human figures or vibrant colors, making size and scale the main balance elements.",
-  "final_x": 50,
+  "visual_weight_analysis": "The primary subject, a large modern skyscraper with human figures scattered throughout, holds significant visual weight due to its size and presence of people. The vibrant lighting and contrast enhance the overall composition, while the urban setting and greenery provide context.",
+  "final_x": 55,
   "final_y": 47,
-  "justification": "While the quantitative centroid places the focus in the middle, nudging slightly to (50%, 47%) helps frame the machinery more effectively while maintaining asymmetrical balance and emphasizing depth through contrast."
+  "justification": "The final crop slightly shifts the focus towards the upper portion of the skyscraper to balance the visual weight more effectively, aligning with the Dual-Core Rule. This adjustment enhances the emotional story by capturing more of the architectural details and human figures without losing the urban context."
 }
