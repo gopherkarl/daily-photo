@@ -1,10 +1,10 @@
 {
   "math_centroid": {
-    "x": 52,
+    "x": 49,
     "y": 49
   },
-  "visual_weight_analysis": "The focal drivers are the two individuals standing centrally, with the sign 'DON'T BE SOMEONE'S STORY' providing additional context. The balance is asymmetric, with the people being slightly off-center to create visual interest.",
-  "final_x": 50,
-  "final_y": 47,
-  "justification": "The final crop moves the x-coordinate slightly left and y-coordinate up from the raw centroid to better frame the two individuals as the primary focus while maintaining asymmetrical balance, adhering to the Dual-Core Rule."
+  "visual_weight_analysis": "The primary subject, the old building with Spanish writing, holds significant visual weight due to its size and central placement. However, to create a more engaging composition, we should nudge the focus slightly off-center, using Bryan Peterson's Dual-Core Rule.",
+  "final_x": 40,
+  "final_y": 35,
+  "justification": "The final crop is adjusted to position the building off-center, creating an asymmetrical balance and directing the viewer's eye towards it while leaving room for narrative context in the background. This fulfills the emotional story of the scene by highlighting its historical charm without overwhelming the composition."
 }
