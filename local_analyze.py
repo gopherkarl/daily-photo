@@ -83,12 +83,22 @@ def query_llava_vision(image_path):
               "2. Are there human figures or agents? Where are they located? "
               "3. Describe the lighting, contrast, and visual background context.")
     cmd = ["ollama", "run", "llava", prompt, temp_micro]
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+
     if os.path.exists(temp_micro):
         os.remove(temp_micro)
-        
-    return result.stdout.strip() if result.returncode == 0 else "Local vision analysis unavailable."
+
+    if result.returncode != 0:
+        print(f"   Llava exit code: {result.returncode}")
+        print(f"   Llava stderr: {result.stderr[:200]}")
+        return "Local vision analysis unavailable."
+
+    # Strip ANSI escape codes (ollama spinner leaks them into stdout in non-TTY mode)
+    clean = re.sub(r'\x1b\[[0-9;]*[A-Za-z]', '', result.stdout)
+    # Collapse the carriage-return / line-erase artifacts ollama produces
+    clean = re.sub(r'\x1b\[[0-9]*D', '', clean)
+    clean = re.sub(r'\x1b\[K', '', clean)
+    return clean.strip()
 
 def run_synthesis_judge(lum_data, vision_desc, model="qwen2.5-coder:32b"):
     """Stage 3 & 4: Visual Weight Skill Reasoning + Synthesis Judge."""
