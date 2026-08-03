@@ -1,10 +1,21 @@
 {
   "math_centroid": {
     "x": 49,
-    "y": 50
+    "y": 52
   },
-  "visual_weight_analysis": "The intricate fountain pen and flowing ink have significant visual weight due to their sharpness, complexity, and contrast with the blurred background. The candle holder with warm light and the added text 'FUCK' provide additional focal points that need careful balancing off-center for emotional storytelling.",
-  "final_x": 45,
-  "final_y": 47,
-  "justification": "Moving the crop slightly to the left (45%) and up (47%) from the math centroid anchors the mathematical luminance centroid while nudging the frame to emphasize the intricate pen as the main subject and create asymmetrical balance with the candle holder and text."
+  "visual_weight_analysis": "The photograph's focal drivers are the crowd of people and the traditional Japanese shrine gate. The crowd occupies a significant portion of the frame, creating high visual weight with their engagement and positioning slightly below center.",
+  "final_x": 70,
+  "final_y": 52,
+  "justification": "To optimize for portrait phone viewing, final_x is set to align with the center of the human figures' horizontal range (60-75%), which are the primary subject and source of high visual weight. The math centroid X is ignored as it's likely influenced by background brightness rather than the focal subject.",
+  "display_context": {
+    "visible_fraction_x": 0.307,
+    "visible_fraction_y": 1.0,
+    "overflow_x_pct": 69.3,
+    "overflow_y_pct": 0.0,
+    "x_critical": true,
+    "y_critical": false,
+    "is_landscape": true,
+    "photo_dimensions": "5515x3670",
+    "display_note": "LANDSCAPE photo on PORTRAIT phone: only 30.7% of width visible. X coordinate is CRITICAL (controls 69.3% horizontal clip). Y coordinate has ZERO EFFECT (full height visible)."
+  }
 }

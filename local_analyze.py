@@ -13,6 +13,10 @@ INDEX_PATH = os.path.join(REPO_DIR, "index.html")
 REPORT_PATH = os.path.join(REPO_DIR, "analysis_report.json")
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
+# Target display: iPhone 13 mini in portrait (primary viewing mode)
+PHONE_PORTRAIT_W = 375
+PHONE_PORTRAIT_H = 812
+
 SYSTEM_VISUAL_WEIGHT_PROMPT = """You are a master photography curator applying the Visual Composition Weight skill and Bryan Peterson's Learning to See principles.
 
 The 9 Visual Weight Drivers:
@@ -73,16 +77,69 @@ def calculate_centroid(image_path):
         "aspect_ratio": round(w / h, 2)
     }
 
+def calculate_display_window(photo_w, photo_h):
+    """Determine which portion of the photo is visible on a portrait phone screen
+    when object-fit:cover is applied. Returns the visible fraction for each axis
+    and which axis is clipped (critical) vs. fully visible (irrelevant).
+
+    For a LANDSCAPE photo on a PORTRAIT phone:
+      - Height is fully visible → Y coordinate has zero effect
+      - Width is heavily clipped (~70%) → X coordinate is critical and dominant
+    For a PORTRAIT photo on a PORTRAIT phone:
+      - Both axes are partially clipped → both coordinates matter, standard logic
+    """
+    cover_scale = max(PHONE_PORTRAIT_W / photo_w, PHONE_PORTRAIT_H / photo_h)
+
+    displayed_w = photo_w * cover_scale
+    displayed_h = photo_h * cover_scale
+
+    overflow_x = max(0, displayed_w - PHONE_PORTRAIT_W)
+    overflow_y = max(0, displayed_h - PHONE_PORTRAIT_H)
+
+    visible_w = PHONE_PORTRAIT_W / cover_scale
+    visible_h = PHONE_PORTRAIT_H / cover_scale
+
+    visible_fraction_x = visible_w / photo_w
+    visible_fraction_y = visible_h / photo_h
+
+    is_landscape = photo_w > photo_h
+
+    # X is critical when width is clipped (landscape photo on portrait phone)
+    # Y is critical when height is clipped (portrait photo on portrait phone, or square)
+    x_critical = overflow_x > 0
+    y_critical = overflow_y > 0
+
+    return {
+        "visible_fraction_x": round(visible_fraction_x, 3),
+        "visible_fraction_y": round(visible_fraction_y, 3),
+        "overflow_x_pct": round(overflow_x / displayed_w * 100, 1) if displayed_w > 0 else 0,
+        "overflow_y_pct": round(overflow_y / displayed_h * 100, 1) if displayed_h > 0 else 0,
+        "x_critical": x_critical,
+        "y_critical": y_critical,
+        "is_landscape": is_landscape,
+        "photo_dimensions": f"{photo_w}x{photo_h}",
+        "display_note": (
+            f"LANDSCAPE photo on PORTRAIT phone: only {visible_fraction_x*100:.1f}% of width visible. "
+            f"X coordinate is CRITICAL (controls {overflow_x/displayed_w*100:.1f}% horizontal clip). "
+            f"Y coordinate has ZERO EFFECT (full height visible)."
+            if is_landscape and x_critical and not y_critical
+            else f"Both axes partially clipped. X: {visible_fraction_x*100:.1f}% visible, Y: {visible_fraction_y*100:.1f}% visible."
+        )
+    }
+
 def query_llava_vision(image_path):
     """Stage 2: Right-Brain Qualitative Vision (Llava)."""
     temp_micro = "/tmp/ollama_analyzable.jpg"
     subprocess.run(["sips", "-Z", "800", image_path, "--out", temp_micro], capture_output=True)
     
     prompt = ("Describe this photograph in detail for a photographic editor. "
-              "1. What is the primary subject and where is it located in the frame (e.g. top-left, center, lower-right)? "
-              "2. Are there human figures or agents? Where are they located? "
+              "1. What is the primary subject and where is it located in the frame? "
+              "Give the subject's horizontal position as a percentage from left (0%) to right (100%), "
+              "and vertical position as a percentage from top (0%) to bottom (100%). "
+              "For example: 'The subject is at approximately 70% horizontal, 55% vertical (right side, slightly below center).' "
+              "2. Are there human figures or agents? Where are they located (give percentage positions)? "
               "3. Describe the lighting, contrast, and visual background context.")
-    cmd = ["ollama", "run", "llava", prompt, temp_micro]
+    cmd = ["ollama", "run", "qwen2.5vl", prompt, temp_micro]
     result = subprocess.run(cmd, capture_output=True, text=True)
     
     if os.path.exists(temp_micro):
@@ -90,8 +147,48 @@ def query_llava_vision(image_path):
         
     return result.stdout.strip() if result.returncode == 0 else "Local vision analysis unavailable."
 
-def run_synthesis_judge(lum_data, vision_desc, model="qwen2.5-coder:32b"):
-    """Stage 3 & 4: Visual Weight Skill Reasoning + Synthesis Judge."""
+def run_synthesis_judge(lum_data, vision_desc, display_info=None, model="qwen2.5-coder:32b"):
+    """Stage 3 & 4: Visual Weight Skill Reasoning + Synthesis Judge.
+
+    When display_info is provided, the judge prompt is augmented with phone display
+    context. For landscape photos on a portrait phone, the prompt instructs the judge
+    to prioritize and be more aggressive on the X axis (the critical clipping axis),
+    since only ~31% of the photo width is visible and Y has zero effect.
+    """
+    # Build display-aware instruction
+    if display_info:
+        if display_info["is_landscape"] and display_info["x_critical"] and not display_info["y_critical"]:
+            vis_pct = display_info['visible_fraction_x'] * 100
+            display_instruction = f"""
+CRITICAL DISPLAY CONTEXT — PORTRAIT PHONE VIEWING:
+This is a LANDSCAPE photo ({display_info['photo_dimensions']}) being displayed on a PORTRAIT phone screen.
+Only {vis_pct:.1f}% of the photo's WIDTH is visible. {display_info['overflow_x_pct']:.1f}% of the width is clipped.
+The FULL HEIGHT is visible — the Y coordinate has ZERO EFFECT on what the viewer sees.
+
+VISIBLE WINDOW GEOMETRY:
+The phone screen shows a vertical strip of the photo. The object-position X% value determines where this strip is positioned:
+- The visible strip spans from (final_x - {vis_pct:.1f}/2)% to (final_x + {vis_pct:.1f}/2)% of the photo width.
+- For example, if final_x=70%, the phone shows the region from {70 - vis_pct/2:.1f}% to {70 + vis_pct/2:.1f}% of the photo width.
+- Any subject outside this narrow strip is INVISIBLE to the viewer.
+
+NUDGE LOGIC FOR LANDSCAPE PHOTOS:
+1. Read the subject's horizontal position from the Qualitative Vision Report (the percentage the vision model estimated).
+2. Set final_x EQUAL TO the subject's horizontal position percentage. This centers the visible strip directly on the subject.
+3. If the vision report gives a range (e.g. "60-75%"), use the center of that range.
+4. If the math centroid X is far from the subject X, IGNORE the math centroid for X — it is likely pulled by background brightness, not the subject.
+5. Set final_y equal to the math centroid Y ({lum_data['y']}%) — Y has no display effect.
+"""
+        else:
+            display_instruction = f"""
+DISPLAY CONTEXT — PORTRAIT PHONE VIEWING:
+Photo dimensions: {display_info['photo_dimensions']}. Both axes are partially clipped.
+X: {display_info['visible_fraction_x']*100:.1f}% visible ({display_info['overflow_x_pct']:.1f}% clipped).
+Y: {display_info['visible_fraction_y']*100:.1f}% visible ({display_info['overflow_y_pct']:.1f}% clipped).
+Both coordinates matter. Apply the standard dual-core nudge logic on both axes.
+"""
+    else:
+        display_instruction = ""
+
     prompt = f"""
 Image Quantitative Math Centroid:
 - Dimensions: {lum_data['width']}x{lum_data['height']} (Aspect Ratio: {lum_data['aspect_ratio']})
@@ -99,7 +196,7 @@ Image Quantitative Math Centroid:
 
 Qualitative Vision Report (Llava):
 "{vision_desc}"
-
+{display_instruction}
 Task:
 Synthesize the Quantitative Math Centroid and Qualitative Vision Report using the Visual Composition Weight rules.
 Determine the optimal CSS `object-position` crop coordinates (final_x, final_y) from 0% to 100%.
@@ -170,6 +267,10 @@ def main():
     lum_data = calculate_centroid(PHOTO_PATH)
     print(f"1. Quantitative Centroid: X={lum_data['x']}%, Y={lum_data['y']}% ({lum_data['width']}x{lum_data['height']})")
     
+    # 1b. Calculate phone display window context
+    display_info = calculate_display_window(lum_data['width'], lum_data['height'])
+    print(f"1b. Display Context: {display_info['display_note']}")
+    
     # 2. Right-Brain Art Local Ollama Analysis
     print("2. Running local Ollama vision model (Llava)...")
     vision_desc = query_llava_vision(PHOTO_PATH)
@@ -177,16 +278,23 @@ def main():
     
     # 3. Visual Composition Weight Skill Synthesis Judge
     print("3. Synthesizing visual weight principles via local LLM (qwen2.5-coder:32b)...")
-    report = run_synthesis_judge(lum_data, vision_desc)
+    report = run_synthesis_judge(lum_data, vision_desc, display_info=display_info)
     
     final_x = report.get("final_x", lum_data['x'])
     final_y = report.get("final_y", lum_data['y'])
+    
+    # If landscape on portrait phone, force Y to math centroid (Y has no display effect)
+    if display_info["is_landscape"] and display_info["x_critical"] and not display_info["y_critical"]:
+        report["final_y"] = lum_data['y']
+        final_y = lum_data['y']
+        print(f"   [Display-aware] Y forced to math centroid ({lum_data['y']}%) — no vertical clipping on portrait phone")
     
     print("\n--- Dual-Core Synthesis Report ---")
     print(json.dumps(report, indent=2))
     print("----------------------------------\n")
     
     # Save detailed report JSON
+    report["display_context"] = display_info
     with open(REPORT_PATH, 'w') as f:
         json.dump(report, f, indent=2)
         
