@@ -1,12 +1,12 @@
 {
   "math_centroid": {
-    "x": 49,
-    "y": 52
+    "x": 51,
+    "y": 48
   },
-  "visual_weight_analysis": "The photograph's focal drivers are the crowd of people and the traditional Japanese shrine gate. The crowd occupies a significant portion of the frame, creating high visual weight with their engagement and positioning slightly below center.",
-  "final_x": 70,
-  "final_y": 52,
-  "justification": "To optimize for portrait phone viewing, final_x is set to align with the center of the human figures' horizontal range (60-75%), which are the primary subject and source of high visual weight. The math centroid X is ignored as it's likely influenced by background brightness rather than the focal subject.",
+  "visual_weight_analysis": "The primary focal drivers are the vibrant abstract painting featuring two longhorn cattle, which holds high visual weight due to its vivid colors and sharpness. The natural light source through the window adds contrast, enhancing the artwork's prominence.",
+  "final_x": 50,
+  "final_y": 48,
+  "justification": "The final crop centers the visible strip on the primary subject (the cattle painting) at 50% X, ignoring the math centroid as it likely reflects background brightness. The Y coordinate remains at 48%, as vertical placement has no effect in portrait phone viewing.",
   "display_context": {
     "visible_fraction_x": 0.307,
     "visible_fraction_y": 1.0,
@@ -15,7 +15,7 @@
     "x_critical": true,
     "y_critical": false,
     "is_landscape": true,
-    "photo_dimensions": "5515x3670",
+    "photo_dimensions": "8704x5793",
     "display_note": "LANDSCAPE photo on PORTRAIT phone: only 30.7% of width visible. X coordinate is CRITICAL (controls 69.3% horizontal clip). Y coordinate has ZERO EFFECT (full height visible)."
   }
 }
