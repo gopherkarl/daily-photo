@@ -1,21 +1,21 @@
 {
   "math_centroid": {
-    "x": 51,
-    "y": 48
+    "x": 52,
+    "y": 54
   },
-  "visual_weight_analysis": "The primary focal drivers are the vibrant abstract painting featuring two longhorn cattle, which holds high visual weight due to its vivid colors and sharpness. The natural light source through the window adds contrast, enhancing the artwork's prominence.",
-  "final_x": 50,
-  "final_y": 48,
-  "justification": "The final crop centers the visible strip on the primary subject (the cattle painting) at 50% X, ignoring the math centroid as it likely reflects background brightness. The Y coordinate remains at 48%, as vertical placement has no effect in portrait phone viewing.",
+  "visual_weight_analysis": "The primary subject is the crowd filling the stadium with high contrast and vibrant colors creating a sense of energy. The stadium advertisements and field provide context but are secondary to the crowd's presence.",
+  "final_x": 48,
+  "final_y": 50,
+  "justification": "Nudged the crop slightly left (from 52% to 48%) to balance the off-center crowd distribution and down (from 54% to 50%) to emphasize the focal point of the crowd's energy while maintaining contextual elements.",
   "display_context": {
-    "visible_fraction_x": 0.307,
+    "visible_fraction_x": 0.577,
     "visible_fraction_y": 1.0,
-    "overflow_x_pct": 69.3,
+    "overflow_x_pct": 42.3,
     "overflow_y_pct": 0.0,
     "x_critical": true,
     "y_critical": false,
-    "is_landscape": true,
-    "photo_dimensions": "8704x5793",
-    "display_note": "LANDSCAPE photo on PORTRAIT phone: only 30.7% of width visible. X coordinate is CRITICAL (controls 69.3% horizontal clip). Y coordinate has ZERO EFFECT (full height visible)."
+    "is_landscape": false,
+    "photo_dimensions": "1024x1280",
+    "display_note": "Both axes partially clipped. X: 57.7% visible, Y: 100.0% visible."
   }
 }
