@@ -55,15 +55,20 @@
       transition: opacity 0.5s ease-in-out;
     }
 
-    /* Landscape or specific screen adjustment helper */
-    @media (max-aspect-ratio: 1/1) {
-      /* Portait layout optimizations if any */
+    /* Generated display-aware crop positions are written by local_analyze.py. */
+    .photo {
+      object-position: 50% 50%;
+    }
+    @media (orientation: landscape) {
+      .photo {
+        object-position: 50% 50%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="frame">
-    <img src="photo.jpg" alt="Daily Photograph" class="photo" style="object-position: 50% 35%;" onerror="this.style.display='none';">
+    <img src="photo.jpg" alt="Daily Photograph" class="photo" onerror="this.style.display='none';">
   </div>
 </body>
 </html>
