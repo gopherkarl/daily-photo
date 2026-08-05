@@ -64,11 +64,14 @@
         object-position: 50% 50%;
       }
     }
+    /* Generated display-aware crop positions */
+    .photo { object-position: 37% 50%; }
+    @media (orientation: landscape) { .photo { object-position: 50% 100%; } }
   </style>
 </head>
 <body>
   <div class="frame">
-    <img src="photo.jpg" alt="Daily Photograph" class="photo" onerror="this.style.display='none';">
+    <img src="photo.jpg" alt="Daily Photograph" class="photo" src="photo.jpg" alt="Daily Photograph" onerror="this.style.display='none';">
   </div>
 </body>
 </html>
