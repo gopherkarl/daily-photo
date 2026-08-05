@@ -1,21 +1,21 @@
 {
   "math_centroid": {
-    "x": 51,
-    "y": 50
+    "x": 46,
+    "y": 41
   },
-  "visual_weight_analysis": "The primary subject, a wooden pier, dominates the lower portion of the frame and creates strong visual weight due to its size and scale. The contrast between the dark wooden planks and the lighter water/sky enhances this focus, while the absence of human figures adds to the solitude theme.",
-  "final_x": 40,
+  "visual_weight_analysis": "The focal drivers in this image are the human figures and the vibrant 'HOLLYWOOD' signage. The balance needs to be adjusted to emphasize both these elements while maintaining asymmetry.",
+  "final_x": 50,
   "final_y": 35,
-  "justification": "The crop was nudged to 40% X and 35% Y to better frame the wooden pier's entry into the ocean, enhancing its visual weight as the focal point. This adjustment maintains emotional balance by centering the viewer\u2019s attention on the most significant element while adhering to the dual-core nudge principle.",
+  "justification": "Shifting the final X position slightly to 50% centers the pathway and signage more prominently in the frame, while reducing Y from 41% to 35% moves the group of figures higher up for better balance and visual flow, enhancing both emotional storytelling and compositional impact.",
   "display_context": {
-    "visible_fraction_x": 0.694,
+    "visible_fraction_x": 0.307,
     "visible_fraction_y": 1.0,
-    "overflow_x_pct": 30.6,
+    "overflow_x_pct": 69.3,
     "overflow_y_pct": 0.0,
     "x_critical": true,
-    "y_critical": false,
-    "is_landscape": false,
-    "photo_dimensions": "6023x9049",
-    "display_note": "Both axes partially clipped. X: 69.4% visible, Y: 100.0% visible."
+    "y_critical": true,
+    "is_landscape": true,
+    "photo_dimensions": "8344x5553",
+    "display_note": "Both axes partially clipped. X: 30.7% visible, Y: 100.0% visible."
   }
 }
