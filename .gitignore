@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Environment and secrets
+.env
+.env.*
+*.env
+
+# Logs and local databases
+*.log
+*.db
+*.sqlite
+*.sqlite3
