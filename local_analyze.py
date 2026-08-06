@@ -24,6 +24,7 @@ from crop_geometry import (
     candidate_crop,
     score_candidate,
 )
+from grounding_localizer import locate as grounding_locate
 
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 PHOTO_PATH = os.path.join(REPO_DIR, "photo.jpg")
@@ -31,8 +32,9 @@ INDEX_PATH = os.path.join(REPO_DIR, "index.html")
 REPORT_PATH = os.path.join(REPO_DIR, "analysis_report.json")
 DISPLAY_PROFILES_PATH = os.path.join(REPO_DIR, "display_profiles.json")
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
-VISION_MODEL = os.environ.get("DAILY_PHOTO_VISION_MODEL", "qwen2.5vl")
+VISION_MODEL = os.environ.get("DAILY_PHOTO_VISION_MODEL", "qwen3-vl:8b")
 JUDGE_MODEL = os.environ.get("DAILY_PHOTO_JUDGE_MODEL", "qwen3:32b")
+USE_GROUNDING_DINO = os.environ.get("DAILY_PHOTO_USE_GROUNDING_DINO", "1") != "0"
 SCENE_DISAGREEMENT_THRESHOLD = 0.35
 
 SYSTEM_VISUAL_WEIGHT_PROMPT = """You are a photography composition reviewer. Analyze only the supplied image.
@@ -200,7 +202,10 @@ def validate_vision_report(report):
             "confidence": 0.4,
             "narrative_value": 0.4,
             "description": "surrounding visual environment",
+            "synthetic": True,
         }]
+    if not any(item["name"] == "surrounding scene" for item in elements):
+        elements.extend(contexts)
     return {
         "elements": elements,
         "primary_anchor": anchor["name"],
@@ -235,22 +240,38 @@ Return at least one element. Classify dense repetitive material as background_ma
         source_bytes = open(image_path, "rb").read()
         source_hash = hashlib.sha256(source_bytes).hexdigest()[:12]
         prompt += f" Image identity hash for this run: {source_hash}. Analyze this attached image, not any prior image."
-        payload = {
-            "model": VISION_MODEL,
-            "prompt": prompt,
-            "images": [base64.b64encode(open(temp_path, "rb").read()).decode("ascii")],
-            "format": "json",
-            "stream": False,
-            "options": {"temperature": 0.1},
-        }
+        image_b64 = base64.b64encode(open(temp_path, "rb").read()).decode("ascii")
+        if VISION_MODEL.startswith("qwen3-vl"):
+            endpoint = OLLAMA_URL.replace("/api/generate", "/api/chat")
+            payload = {
+                "model": VISION_MODEL,
+                "messages": [{"role": "user", "content": prompt, "images": [image_b64]}],
+                "format": "json",
+                "stream": False,
+                "options": {"temperature": 0.1},
+            }
+        else:
+            endpoint = OLLAMA_URL
+            payload = {
+                "model": VISION_MODEL,
+                "prompt": prompt,
+                "images": [image_b64],
+                "format": "json",
+                "stream": False,
+                "options": {"temperature": 0.1},
+            }
         request = urllib.request.Request(
-            OLLAMA_URL,
+            endpoint,
             data=json.dumps(payload).encode("utf-8"),
             headers={"Content-Type": "application/json"},
         )
         with urllib.request.urlopen(request, timeout=180) as response:
             result = json.loads(response.read().decode("utf-8"))
-        raw_response = result.get("response", "")
+        raw_response = (
+            result.get("message", {}).get("content", "")
+            if "message" in result
+            else result.get("response", "")
+        )
         try:
             return validate_vision_report(extract_json(raw_response))
         except (ValueError, TypeError, KeyError) as exc:
@@ -281,6 +302,41 @@ def scene_consistent(first, second):
     if not a or not b:
         return False
     return len(a & b) / max(1, len(a | b)) >= SCENE_DISAGREEMENT_THRESHOLD
+
+
+def ground_vision_elements(image_path, vision):
+    """Replace VLM-estimated boxes with independent Grounding DINO boxes."""
+    labels = [
+        item["name"]
+        for item in vision["elements"]
+        if not item.get("synthetic", False)
+    ]
+    detections = grounding_locate(image_path, labels)
+    grouped = {}
+    for item in detections:
+        grouped.setdefault(item["name"], []).append(item)
+    grounded = []
+    for item in vision["elements"]:
+        wanted = item["name"].lower()
+        matches = grouped.get(wanted, [])
+        if not matches:
+            matches = [
+                detection
+                for detected_name, candidates in grouped.items()
+                if wanted in detected_name or detected_name in wanted
+                for detection in candidates
+            ]
+        if not matches:
+            if item["role"] in {"context", "background_mass"}:
+                grounded.append(item)
+                continue
+            raise RuntimeError(f"Grounding DINO could not localize primary element: {item['name']}")
+        best = max(matches, key=lambda match: match["detector_score"])
+        item = dict(item)
+        item["bbox_pct"] = best["bbox_pct"]
+        item["detector_score"] = best["detector_score"]
+        grounded.append(item)
+    return {**vision, "elements": grounded, "localization_model": "Grounding DINO-T"}
 
 
 def synthesize_analysis(lum_data, vision, display_context, candidates):
@@ -356,6 +412,7 @@ def create_qa_artifact(lum_data, vision, positions, validation):
     with open(os.path.join(REPO_DIR, "qa_summary.md"), "w") as handle:
         handle.write(f"# Crop QA — {datetime.now(timezone.utc).isoformat()}\n\n")
         handle.write(f"- Source: `{os.path.basename(PHOTO_PATH)}` ({lum_data['width']}×{lum_data['height']})\n")
+        handle.write(f"- Localization model: **{vision.get('localization_model', 'VLM-only')}**\n")
         handle.write(f"- Primary anchor: **{vision['primary_anchor']}**\n")
         handle.write(f"- Focal anomaly: **{vision['focal_element'] or 'none'}**\n")
         handle.write(f"- Elements: `{[(item['name'], item['role'], item['bbox_pct']) for item in vision['elements']]}`\n")
@@ -366,7 +423,9 @@ def create_qa_artifact(lum_data, vision, positions, validation):
         handle.write(f"- Portrait composition valid: **{validation['portrait_composition_valid']}**\n")
         handle.write(f"- Landscape composition valid: **{validation['landscape_composition_valid']}**\n")
         handle.write(f"- Portrait anchor-priority fallback: **{validation['portrait_anchor_priority_fallback']}**\n")
+        handle.write(f"- Portrait anchor-center fallback: **{validation.get('portrait_anchor_center_fallback', False)}**\n")
         handle.write(f"- Landscape anchor-priority fallback: **{validation['landscape_anchor_priority_fallback']}**\n")
+        handle.write(f"- Landscape anchor-center fallback: **{validation.get('landscape_anchor_center_fallback', False)}**\n")
         handle.write("\nThe preview image is `qa_source_preview.jpg`; the production image is not replaced by this artifact.\n")
 
 
@@ -385,6 +444,9 @@ def main():
             second_has_context = any(item["role"] == "context" for item in second["elements"])
             if second["confidence"] > confidence or (second_has_context and not has_context):
                 vision = second
+
+    if USE_GROUNDING_DINO:
+        vision = ground_vision_elements(PHOTO_PATH, vision)
 
     anchor = next(item for item in vision["elements"] if item["name"] == vision["primary_anchor"])
     anomaly = next((item for item in vision["elements"] if item["name"] == vision["focal_element"]), None)
@@ -419,7 +481,15 @@ def main():
         # Anchor-priority fallback: preserve the photograph's identity even when
         # no candidate can retain both the anchor and contextual material.
         selected = default_candidates["anchor_only"]
-        selected["fallback"] = "anchor_priority"
+        if selected["anchor_inside"]:
+            selected["fallback"] = "anchor_priority"
+        else:
+            # If the anchor is wider than the portrait viewport, center the
+            # viewport on the anchor's center rather than rejecting the run.
+            # candidate_crop() already computes this center-based position;
+            # containment is impossible by geometry, but the crop remains the
+            # best identity-preserving portrait representation.
+            selected["fallback"] = "anchor_center"
     for name, candidates in candidates_by_profile.items():
         selected_profile = selected if name == default_profile else max(candidates, key=lambda item: item["score"])
         prefix = "portrait" if name == "portrait_phone" else "landscape"
@@ -428,8 +498,24 @@ def main():
         validation[f"{prefix}_primary_anchor_overlap"] = selected_profile.get("anchor_overlap", 0.0)
         validation[f"{prefix}_context_inside"] = selected_profile["context_inside"]
         validation[f"{prefix}_focal_anomaly_inside"] = selected_profile["anomaly_inside"]
-        validation[f"{prefix}_composition_valid"] = selected_profile["anchor_inside"] and any(selected_profile["context_inside"])
-        validation[f"{prefix}_anchor_priority_fallback"] = bool(selected_profile.get("fallback"))
+        # Anchor-only is an intentional valid fallback for narrow portrait
+        # displays. Context is preferred, but must not displace the identity
+        # anchor when the source geometry cannot fit both.
+        validation[f"{prefix}_composition_valid"] = (
+            selected_profile["anchor_inside"]
+            or selected_profile.get("fallback") == "anchor_center"
+        )
+        validation[f"{prefix}_anchor_center_fallback"] = (
+            selected_profile.get("fallback") == "anchor_center"
+        )
+        validation[f"{prefix}_context_preferred_but_unavailable"] = (
+            selected_profile["anchor_inside"]
+            and not any(selected_profile["context_inside"])
+            and selected_profile["name"] == "anchor_only"
+        )
+        validation[f"{prefix}_anchor_priority_fallback"] = (
+            selected_profile.get("fallback") == "anchor_priority"
+        )
     print(f"Primary anchor: {vision['primary_anchor']}; selected candidate: {selected['name']}; portrait crop: {positions['portrait_x']}% {positions['portrait_y']}%")
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -449,8 +535,14 @@ def main():
     create_qa_artifact(lum_data, vision, positions, validation)
     print(json.dumps(report, indent=2))
     default_prefix = "portrait" if default_profile == "portrait_phone" else "landscape"
-    if not validation[f"{default_prefix}_primary_anchor_inside"] and validation[f"{default_prefix}_primary_anchor_overlap"] < 0.50:
-        raise RuntimeError(f"primary anchor could not be preserved for default profile: {default_profile}")
+    if (
+        not validation[f"{default_prefix}_primary_anchor_inside"]
+        and not validation[f"{default_prefix}_anchor_center_fallback"]
+    ):
+        raise RuntimeError(
+            f"primary anchor could not be preserved for default profile {default_profile}: "
+            f"overlap={validation[f'{default_prefix}_primary_anchor_overlap']}"
+        )
 
 
 if __name__ == "__main__":

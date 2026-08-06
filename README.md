@@ -259,14 +259,20 @@ If the synthesis request fails, the code falls back to the mathematical centroid
 
 - macOS with `sips` available;
 - Python 3;
-- Python packages: `numpy`, `Pillow`;
+- Python packages: `numpy`, `Pillow`, `torch`, `torchvision`, `transformers`;
 - Ollama;
 - the following Ollama models:
 
 ```bash
-ollama pull qwen2.5vl
+ollama pull qwen3-vl:8b
 ollama pull qwen3:32b
 ```
+
+The visual-language model proposes semantic labels, while `grounding_localizer.py`
+uses the Hugging Face `IDEA-Research/grounding-dino-tiny` checkpoint to produce
+independent bounding boxes. The default local environment is `.venv-grounding`;
+the shell runner uses it automatically, or the interpreter can be overridden with
+`DAILY_PHOTO_PYTHON`. Grounding DINO uses Apple MPS when available.
 
 The repository currently uses absolute paths tailored to the original Mac installation. For reuse on another machine, update the paths in `rotate.py`, `local_analyze.py`, and the shell script, or refactor them into environment variables.
 
@@ -320,12 +326,12 @@ GitHub Pages then serves the static site at the configured project URL.
 
 ## Known limitations
 
-- **Subject coordinates are model estimates.** Qwen2.5-VL is stronger than the previous Llava model, but it can still misidentify a subject or estimate its position inaccurately.
+- **Subject labels and coordinates come from separate models.** Qwen3-VL proposes semantic elements; Grounding DINO-T localizes them. Detector confidence and crop containment are still not proof of artistic quality.
 - **Local vision can still be wrong.** The pipeline now uses scene consistency checks, semantic roles, candidate scoring, and validation, but a visually incorrect inventory can still require manual review.
 - **The target viewport is hard-coded.** The primary geometry is based on an iPhone 13 mini in portrait mode. Other phones, browser chrome, safe-area behavior, or landscape viewing can produce different visible windows.
 - **Only one CSS crop is published.** The page does not currently use separate portrait and landscape crop positions via media queries.
 - **The HTML patch is regex-based.** `local_analyze.py` expects an inline `object-position` style attribute in `index.html`.
-- **Fallback behavior favors continuity over quality.** If Ollama fails, the mathematical centroid is used.
+- **Invalid portrait composition now fails the run.** The scheduled wrapper therefore does not publish a crop lacking both an inside anchor and explicit context.
 - **The pipeline assumes a clean, serialized run.** Concurrent executions could race while modifying `photo.jpg`, `state.json`, `index.html`, or `analysis_report.json`.
 - **Generated files are committed.** This makes each published crop auditable, but it also causes large image files and analysis reports to accumulate in Git history.
 

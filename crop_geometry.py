@@ -39,11 +39,11 @@ def crop_position_for_bbox(window, bbox):
     left, top, right, bottom = [float(bbox[k]) for k in ("left", "top", "right", "bottom")]
     subject_x = (left + right) / 2.0
     subject_y = (top + bottom) / 2.0
-    if window["overflow_x"] > 0:
+    if window["overflow_x"] > 1e-6:
         x = clamp((subject_x - window["visible_width"] / 2) / window["overflow_x"] * 100)
     else:
         x = 50.0
-    if window["overflow_y"] > 0:
+    if window["overflow_y"] > 1e-6:
         y = clamp((subject_y - window["visible_height"] / 2) / window["overflow_y"] * 100)
     else:
         y = 50.0
