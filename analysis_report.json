@@ -1,482 +1,409 @@
 {
-  "generated_at": "2026-08-07T10:31:51.045573+00:00",
+  "generated_at": "2026-08-07T22:20:09.079092+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 48,
-    "y": 49
+    "x": 49,
+    "y": 50
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "BAR MANOLO signage",
-        "role": "context",
-        "bbox_pct": {
-          "left": 6.93,
-          "top": 30.3,
-          "right": 16.6,
-          "bottom": 43.52
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.7,
-        "description": "Hanging circular signs spelling 'BAR MANOLO' in uppercase letters.",
-        "detector_score": 0.3993
-      },
-      {
-        "name": "man with hands on hips",
+        "name": "Round wooden table with colorful post",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 41.02,
-          "top": 40.85,
-          "right": 55.3,
-          "bottom": 87.09
+          "left": 11.6,
+          "top": 49.17,
+          "right": 84.16,
+          "bottom": 99.61
         },
         "confidence": 0.9,
         "narrative_value": 0.8,
-        "description": "Person wearing dark clothing walking towards the bar area with hands on hips.",
-        "detector_score": 0.3843
+        "description": "Round wooden table with a colorful painted post featuring blue, orange, and dark blue sections",
+        "detector_score": 0.6881
       },
       {
-        "name": "checkered floor",
-        "role": "background_mass",
+        "name": "Yellow bag on table",
+        "role": "focal_anomaly",
         "bbox_pct": {
-          "left": 0.0,
-          "top": 0.6,
-          "right": 1.0,
-          "bottom": 0.8
-        },
-        "confidence": 0.95,
-        "narrative_value": 0.2,
-        "description": "Black and white checkered pattern on the floor."
-      },
-      {
-        "name": "product shelves",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 57.09,
-          "top": 41.23,
-          "right": 66.05,
-          "bottom": 56.69
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.1,
-        "description": "Shelves stocked with bottles and boxes behind the bar counter.",
-        "detector_score": 0.3354
-      },
-      {
-        "name": "ceiling pipes",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.42,
-          "top": 0.46,
-          "right": 81.24,
-          "bottom": 26.63
+          "left": 50.44,
+          "top": 45.0,
+          "right": 76.31,
+          "bottom": 52.52
         },
         "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "Exposed ceiling pipes and lighting fixtures.",
-        "detector_score": 0.3328
-      },
-      {
-        "name": "hanging plant",
-        "role": "context",
-        "bbox_pct": {
-          "left": 63.71,
-          "top": 22.38,
-          "right": 83.76,
-          "bottom": 49.07
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.4,
-        "description": "Large hanging plant with foliage near the glass doors.",
-        "detector_score": 0.5547
-      },
-      {
-        "name": "glass doors",
-        "role": "context",
-        "bbox_pct": {
-          "left": 83.76,
-          "top": 27.13,
-          "right": 99.72,
-          "bottom": 70.97
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.3,
-        "description": "Glass doors on the right side of the image.",
-        "detector_score": 0.4798
-      },
-      {
-        "name": "BAR MANOLO signage",
-        "role": "context",
-        "bbox_pct": {
-          "left": 6.93,
-          "top": 30.3,
-          "right": 16.6,
-          "bottom": 43.52
-        },
-        "confidence": 0.9,
         "narrative_value": 0.7,
-        "description": "Hanging circular signs spelling 'BAR MANOLO' in uppercase letters.",
-        "detector_score": 0.3993
+        "description": "Yellow bag with a light-colored strap resting on the table",
+        "detector_score": 0.9128
       },
       {
-        "name": "ceiling pipes",
-        "role": "context",
+        "name": "City skyline and boats",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 0.42,
-          "top": 0.46,
-          "right": 81.24,
-          "bottom": 26.63
+          "left": 0.56,
+          "top": 1.87,
+          "right": 99.61,
+          "bottom": 43.99
         },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "Exposed ceiling pipes and lighting fixtures.",
-        "detector_score": 0.3328
+        "confidence": 0.9,
+        "narrative_value": 0.2,
+        "description": "Dense city skyline with numerous skyscrapers and boats on the water",
+        "detector_score": 0.3929
       },
       {
-        "name": "hanging plant",
+        "name": "White railing",
         "role": "context",
         "bbox_pct": {
-          "left": 63.71,
-          "top": 22.38,
-          "right": 83.76,
-          "bottom": 49.07
+          "left": 30.52,
+          "top": 57.36,
+          "right": 89.43,
+          "bottom": 83.82
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "White railing surrounding the wooden deck",
+        "detector_score": 0.3439
+      },
+      {
+        "name": "Black lamp post",
+        "role": "context",
+        "bbox_pct": {
+          "left": 2.97,
+          "top": 27.98,
+          "right": 8.52,
+          "bottom": 44.91
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.3,
+        "description": "Black lamp post near the railing",
+        "detector_score": 0.7685
+      },
+      {
+        "name": "White metal chair",
+        "role": "secondary_subject",
+        "bbox_pct": {
+          "left": 59.33,
+          "top": 55.03,
+          "right": 99.62,
+          "bottom": 99.66
         },
         "confidence": 0.7,
         "narrative_value": 0.4,
-        "description": "Large hanging plant with foliage near the glass doors.",
-        "detector_score": 0.5547
+        "description": "White metal chair with a curved backrest",
+        "detector_score": 0.7305
       },
       {
-        "name": "glass doors",
+        "name": "White railing",
         "role": "context",
         "bbox_pct": {
-          "left": 83.76,
-          "top": 27.13,
-          "right": 99.72,
-          "bottom": 70.97
+          "left": 30.52,
+          "top": 57.36,
+          "right": 89.43,
+          "bottom": 83.82
         },
-        "confidence": 0.9,
+        "confidence": 0.7,
         "narrative_value": 0.3,
-        "description": "Glass doors on the right side of the image.",
-        "detector_score": 0.4798
+        "description": "White railing surrounding the wooden deck",
+        "detector_score": 0.3439
+      },
+      {
+        "name": "Black lamp post",
+        "role": "context",
+        "bbox_pct": {
+          "left": 2.97,
+          "top": 27.98,
+          "right": 8.52,
+          "bottom": 44.91
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.3,
+        "description": "Black lamp post near the railing",
+        "detector_score": 0.7685
       }
     ],
-    "primary_anchor": "man with hands on hips",
-    "focal_element": null,
+    "primary_anchor": "Round wooden table with colorful post",
+    "focal_element": "Yellow bag on table",
     "confidence": 0.9,
-    "description": "Black-and-white interior of a bar or caf\u00e9 with people, checkered flooring, and signage.",
-    "lighting": "Bright overhead lighting from ceiling fixtures.",
-    "background": "Shelves stocked with products behind the bar counter.",
+    "description": "Waterfront deck scene featuring a wooden table, chairs, railing, lamp post, yellow bag, and city skyline in the background.",
+    "lighting": "Soft, diffused lighting with an overcast sky.",
+    "background": "Dense urban skyline with tall skyscrapers and boats on the water.",
     "localization_model": "Grounding DINO-T"
   },
   "synthesis_model": "qwen3:32b",
   "synthesis": {
-    "recommended_candidate": "anchor_plus_context",
-    "primary_anchor": "man with hands on hips",
+    "recommended_candidate": "anchor_context_anomaly",
+    "primary_anchor": "Round wooden table with colorful post",
     "selected_context": [
-      "ceiling pipes",
-      "hanging plant",
-      "glass doors"
+      "White railing",
+      "Black lamp post"
     ],
-    "selected_anomaly": null,
-    "confidence": 0.5269,
-    "composition_strategy": "Selected 'anchor_plus_context' as it includes the primary anchor and relevant context elements without introducing an anomaly."
+    "selected_anomaly": "Yellow bag on table",
+    "confidence": 0.9,
+    "composition_strategy": "The 'anchor_context_anomaly' candidate was selected because it includes the primary anchor (round wooden table), at least one context element (white railing and black lamp post), and the focal anomaly (yellow bag). This composition best balances the rules by maintaining the primary anchor's visibility while adding narrative value through the context and anomaly elements."
   },
   "positions": {
-    "portrait_x": 50,
+    "portrait_x": 43,
     "portrait_y": 50,
     "landscape_x": 50,
-    "landscape_y": 96
+    "landscape_y": 70
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 9520,
-        "photo_height": 6336,
+        "photo_width": 2886,
+        "photo_height": 4337,
         "viewport_width": 375,
         "viewport_height": 812,
-        "visible_width": 2926.1083743842364,
-        "visible_height": 6336.0,
-        "visible_fraction_x": 0.307364325040361,
+        "visible_width": 2002.9248768472908,
+        "visible_height": 4337.0,
+        "visible_fraction_x": 0.6940141638417501,
         "visible_fraction_y": 1.0,
-        "overflow_x": 6593.891625615764,
+        "overflow_x": 883.0751231527092,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 47,
+            "object_x": 43,
             "object_y": 50,
             "visible_source_window": {
-              "left": 32.55,
+              "left": 13.16,
               "top": 0.0,
-              "right": 63.29,
+              "right": 82.56,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.9565,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 3905.1040000000003,
-              "top": 2588.2560000000003,
-              "right": 5264.5599999999995,
-              "bottom": 5518.0224
+              "left": 334.77599999999995,
+              "top": 2132.5029,
+              "right": 2428.8576,
+              "bottom": 4320.0857
             },
             "name": "anchor_only",
-            "score": 0.249
+            "score": -0.656,
+            "fallback": "anchor_center"
           },
           {
-            "object_x": 50,
+            "object_x": 38,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.63,
+              "left": 11.63,
               "top": 0.0,
-              "right": 65.37,
+              "right": 81.03,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.9565,
             "context_inside": [
-              false,
-              false,
-              false,
-              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
+              0.8574,
               0.0,
-              0.3803,
-              0.0827,
-              0.0,
-              0.0,
-              0.3803,
-              0.0827,
+              0.8574,
               0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 39.983999999999995,
-              "top": 29.145599999999998,
-              "right": 9493.344,
-              "bottom": 5518.0224
+              "left": 85.7142,
+              "top": 1213.4926,
+              "right": 2580.9498000000003,
+              "bottom": 4320.0857
             },
             "name": "anchor_plus_context",
-            "score": 0.5269
+            "score": -0.3038
           },
           {
-            "object_x": 47,
+            "object_x": 43,
             "object_y": 50,
             "visible_source_window": {
-              "left": 32.55,
+              "left": 13.16,
               "top": 0.0,
-              "right": 63.29,
+              "right": 82.56,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.9565,
             "context_inside": [],
             "context_overlap": [],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 3905.1040000000003,
-              "top": 2588.2560000000003,
-              "right": 5264.5599999999995,
-              "bottom": 5518.0224
+              "left": 334.77599999999995,
+              "top": 1951.65,
+              "right": 2428.8576,
+              "bottom": 4320.0857
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.249
+            "score": -0.506
           },
           {
-            "object_x": 50,
+            "object_x": 38,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.63,
+              "left": 11.63,
               "top": 0.0,
-              "right": 65.37,
+              "right": 81.03,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.9565,
             "context_inside": [
-              false,
-              false,
-              false,
-              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
+              0.8574,
               0.0,
-              0.3803,
-              0.0827,
-              0.0,
-              0.0,
-              0.3803,
-              0.0827,
+              0.8574,
               0.0
             ],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 39.983999999999995,
-              "top": 29.145599999999998,
-              "right": 9493.344,
-              "bottom": 5518.0224
+              "left": 85.7142,
+              "top": 1213.4926,
+              "right": 2580.9498000000003,
+              "bottom": 4320.0857
             },
             "name": "anchor_context_anomaly",
-            "score": 0.5269
+            "score": -0.1538
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 9520,
-        "photo_height": 6336,
+        "photo_width": 2886,
+        "photo_height": 4337,
         "viewport_width": 812,
         "viewport_height": 375,
-        "visible_width": 9520.0,
-        "visible_height": 4396.551724137931,
+        "visible_width": 2886.0,
+        "visible_height": 1332.8201970443351,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6939002089864159,
+        "visible_fraction_y": 0.30731385682368806,
         "overflow_x": 0.0,
-        "overflow_y": 1939.4482758620688,
+        "overflow_y": 3004.179802955665,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 96,
+            "object_y": 85,
             "visible_source_window": {
               "left": 0.0,
-              "top": 29.39,
+              "top": 58.88,
               "right": 100.0,
-              "bottom": 98.78
+              "bottom": 89.61
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.6093,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 3905.1040000000003,
-              "top": 2588.2560000000003,
-              "right": 5264.5599999999995,
-              "bottom": 5518.0224
+              "left": 334.77599999999995,
+              "top": 2132.5029,
+              "right": 2428.8576,
+              "bottom": 4320.0857
             },
             "name": "anchor_only",
-            "score": 0.248
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 30,
+            "object_y": 70,
             "visible_source_window": {
               "left": 0.0,
-              "top": 9.18,
+              "top": 48.49,
               "right": 100.0,
-              "bottom": 78.57
+              "bottom": 79.22
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8158,
+            "anchor_overlap": 0.5957,
             "context_inside": [
-              true,
               false,
-              true,
-              true,
-              true,
               false,
-              true,
-              true
+              false,
+              false
             ],
             "context_overlap": [
-              1.0,
-              0.6667,
-              1.0,
-              1.0,
-              1.0,
-              0.6667,
-              1.0,
-              1.0
+              0.8261,
+              0.0,
+              0.8261,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 39.983999999999995,
-              "top": 29.145599999999998,
-              "right": 9493.344,
-              "bottom": 5518.0224
+              "left": 85.7142,
+              "top": 1213.4926,
+              "right": 2580.9498000000003,
+              "bottom": 4320.0857
             },
             "name": "anchor_plus_context",
-            "score": -0.1728
+            "score": -0.2977
           },
           {
             "object_x": 50,
-            "object_y": 96,
+            "object_y": 82,
             "visible_source_window": {
               "left": 0.0,
-              "top": 29.39,
+              "top": 56.8,
               "right": 100.0,
-              "bottom": 98.78
+              "bottom": 87.53
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.6093,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 3905.1040000000003,
-              "top": 2588.2560000000003,
-              "right": 5264.5599999999995,
-              "bottom": 5518.0224
+              "left": 334.77599999999995,
+              "top": 1951.65,
+              "right": 2428.8576,
+              "bottom": 4320.0857
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.248
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 30,
+            "object_y": 70,
             "visible_source_window": {
               "left": 0.0,
-              "top": 9.18,
+              "top": 48.49,
               "right": 100.0,
-              "bottom": 78.57
+              "bottom": 79.22
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8158,
+            "anchor_overlap": 0.5957,
             "context_inside": [
-              true,
               false,
-              true,
-              true,
-              true,
               false,
-              true,
-              true
+              false,
+              false
             ],
             "context_overlap": [
-              1.0,
-              0.6667,
-              1.0,
-              1.0,
-              1.0,
-              0.6667,
-              1.0,
-              1.0
+              0.8261,
+              0.0,
+              0.8261,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 39.983999999999995,
-              "top": 29.145599999999998,
-              "right": 9493.344,
-              "bottom": 5518.0224
+              "left": 85.7142,
+              "top": 1213.4926,
+              "right": 2580.9498000000003,
+              "bottom": 4320.0857
             },
             "name": "anchor_context_anomaly",
-            "score": -0.1728
+            "score": -0.2977
           }
         ]
       }
@@ -484,30 +411,26 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": true,
-    "portrait_primary_anchor_overlap": 1.0,
-    "portrait_context_inside": [
-      false,
-      false,
-      false,
-      false,
+    "portrait_primary_anchor_inside": false,
+    "portrait_primary_anchor_overlap": 0.9565,
+    "portrait_context_inside": [],
+    "portrait_focal_anomaly_inside": false,
+    "portrait_composition_valid": true,
+    "portrait_anchor_center_fallback": true,
+    "portrait_context_preferred_but_unavailable": false,
+    "portrait_anchor_priority_fallback": false,
+    "landscape_primary_anchor_inside": false,
+    "landscape_primary_anchor_overlap": 0.5957,
+    "landscape_context_inside": [
       false,
       false,
       false,
       false
     ],
-    "portrait_focal_anomaly_inside": false,
-    "portrait_composition_valid": true,
-    "portrait_anchor_center_fallback": false,
-    "portrait_context_preferred_but_unavailable": false,
-    "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": true,
-    "landscape_primary_anchor_overlap": 1.0,
-    "landscape_context_inside": [],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": true,
+    "landscape_composition_valid": false,
     "landscape_anchor_center_fallback": false,
-    "landscape_context_preferred_but_unavailable": true,
+    "landscape_context_preferred_but_unavailable": false,
     "landscape_anchor_priority_fallback": false
   }
 }
