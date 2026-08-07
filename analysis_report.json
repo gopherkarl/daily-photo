@@ -1,121 +1,233 @@
 {
-  "generated_at": "2026-08-06T16:56:23.981557+00:00",
+  "generated_at": "2026-08-07T10:31:51.045573+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 52,
-    "y": 48
+    "x": 48,
+    "y": 49
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "ocean surface",
+        "name": "BAR MANOLO signage",
         "role": "context",
         "bbox_pct": {
-          "left": 0.33,
-          "top": 55.38,
-          "right": 99.66,
-          "bottom": 99.39
+          "left": 6.93,
+          "top": 30.3,
+          "right": 16.6,
+          "bottom": 43.52
         },
         "confidence": 0.9,
-        "narrative_value": 0.1,
-        "description": "body of water with ripples reflecting sunset light",
-        "detector_score": 0.7114
+        "narrative_value": 0.7,
+        "description": "Hanging circular signs spelling 'BAR MANOLO' in uppercase letters.",
+        "detector_score": 0.3993
       },
       {
-        "name": "sunset glow band",
+        "name": "man with hands on hips",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 0.36,
-          "top": 0.37,
-          "right": 99.65,
-          "bottom": 54.53
+          "left": 41.02,
+          "top": 40.85,
+          "right": 55.3,
+          "bottom": 87.09
         },
-        "confidence": 0.8,
-        "narrative_value": 0.7,
-        "description": "horizontal band of orange light from setting sun",
-        "detector_score": 0.3046
+        "confidence": 0.9,
+        "narrative_value": 0.8,
+        "description": "Person wearing dark clothing walking towards the bar area with hands on hips.",
+        "detector_score": 0.3843
       },
       {
-        "name": "ocean surface",
-        "role": "context",
+        "name": "checkered floor",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 0.33,
-          "top": 55.38,
-          "right": 99.66,
-          "bottom": 99.39
+          "left": 0.0,
+          "top": 0.6,
+          "right": 1.0,
+          "bottom": 0.8
+        },
+        "confidence": 0.95,
+        "narrative_value": 0.2,
+        "description": "Black and white checkered pattern on the floor."
+      },
+      {
+        "name": "product shelves",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 57.09,
+          "top": 41.23,
+          "right": 66.05,
+          "bottom": 56.69
         },
         "confidence": 0.9,
         "narrative_value": 0.1,
-        "description": "body of water with ripples reflecting sunset light",
-        "detector_score": 0.7114
+        "description": "Shelves stocked with bottles and boxes behind the bar counter.",
+        "detector_score": 0.3354
+      },
+      {
+        "name": "ceiling pipes",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.42,
+          "top": 0.46,
+          "right": 81.24,
+          "bottom": 26.63
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.3,
+        "description": "Exposed ceiling pipes and lighting fixtures.",
+        "detector_score": 0.3328
+      },
+      {
+        "name": "hanging plant",
+        "role": "context",
+        "bbox_pct": {
+          "left": 63.71,
+          "top": 22.38,
+          "right": 83.76,
+          "bottom": 49.07
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.4,
+        "description": "Large hanging plant with foliage near the glass doors.",
+        "detector_score": 0.5547
+      },
+      {
+        "name": "glass doors",
+        "role": "context",
+        "bbox_pct": {
+          "left": 83.76,
+          "top": 27.13,
+          "right": 99.72,
+          "bottom": 70.97
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.3,
+        "description": "Glass doors on the right side of the image.",
+        "detector_score": 0.4798
+      },
+      {
+        "name": "BAR MANOLO signage",
+        "role": "context",
+        "bbox_pct": {
+          "left": 6.93,
+          "top": 30.3,
+          "right": 16.6,
+          "bottom": 43.52
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.7,
+        "description": "Hanging circular signs spelling 'BAR MANOLO' in uppercase letters.",
+        "detector_score": 0.3993
+      },
+      {
+        "name": "ceiling pipes",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.42,
+          "top": 0.46,
+          "right": 81.24,
+          "bottom": 26.63
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.3,
+        "description": "Exposed ceiling pipes and lighting fixtures.",
+        "detector_score": 0.3328
+      },
+      {
+        "name": "hanging plant",
+        "role": "context",
+        "bbox_pct": {
+          "left": 63.71,
+          "top": 22.38,
+          "right": 83.76,
+          "bottom": 49.07
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.4,
+        "description": "Large hanging plant with foliage near the glass doors.",
+        "detector_score": 0.5547
+      },
+      {
+        "name": "glass doors",
+        "role": "context",
+        "bbox_pct": {
+          "left": 83.76,
+          "top": 27.13,
+          "right": 99.72,
+          "bottom": 70.97
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.3,
+        "description": "Glass doors on the right side of the image.",
+        "detector_score": 0.4798
       }
     ],
-    "primary_anchor": "sunset glow band",
+    "primary_anchor": "man with hands on hips",
     "focal_element": null,
-    "confidence": 0.8,
-    "description": "sunset over a body of water with reflective surface",
-    "lighting": "warm orange and purple gradient lighting from setting sun",
-    "background": "cloudy sky above the ocean horizon",
+    "confidence": 0.9,
+    "description": "Black-and-white interior of a bar or caf\u00e9 with people, checkered flooring, and signage.",
+    "lighting": "Bright overhead lighting from ceiling fixtures.",
+    "background": "Shelves stocked with products behind the bar counter.",
     "localization_model": "Grounding DINO-T"
   },
   "synthesis_model": "qwen3:32b",
   "synthesis": {
     "recommended_candidate": "anchor_plus_context",
-    "primary_anchor": "sunset glow band",
+    "primary_anchor": "man with hands on hips",
     "selected_context": [
-      "ocean surface"
+      "ceiling pipes",
+      "hanging plant",
+      "glass doors"
     ],
     "selected_anomaly": null,
-    "confidence": 0.8,
-    "composition_strategy": "The 'anchor_plus_context' candidate was selected because it includes the primary anchor 'sunset glow band' and at least one context element 'ocean surface', fulfilling the rule that the anchor should be visible along with context. The absence of a focal anomaly is acceptable as it does not displace the primary anchor."
+    "confidence": 0.5269,
+    "composition_strategy": "Selected 'anchor_plus_context' as it includes the primary anchor and relevant context elements without introducing an anomaly."
   },
   "positions": {
     "portrait_x": 50,
     "portrait_y": 50,
     "landscape_x": 50,
-    "landscape_y": 0
+    "landscape_y": 96
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 8661,
-        "photo_height": 5764,
+        "photo_width": 9520,
+        "photo_height": 6336,
         "viewport_width": 375,
         "viewport_height": 812,
-        "visible_width": 2661.945812807882,
-        "visible_height": 5764.0,
-        "visible_fraction_x": 0.3073485524544373,
+        "visible_width": 2926.1083743842364,
+        "visible_height": 6336.0,
+        "visible_fraction_x": 0.307364325040361,
         "visible_fraction_y": 1.0,
-        "overflow_x": 5999.054187192118,
+        "overflow_x": 6593.891625615764,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 50,
+            "object_x": 47,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.63,
+              "left": 32.55,
               "top": 0.0,
-              "right": 65.37,
+              "right": 63.29,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.3095,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 31.1796,
-              "top": 21.326800000000002,
-              "right": 8630.6865,
-              "bottom": 3143.1092
+              "left": 3905.1040000000003,
+              "top": 2588.2560000000003,
+              "right": 5264.5599999999995,
+              "bottom": 5518.0224
             },
             "name": "anchor_only",
-            "score": -0.652,
-            "fallback": "anchor_center"
+            "score": 0.249
           },
           {
             "object_x": 50,
@@ -126,48 +238,60 @@
               "right": 65.37,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.3095,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.3094,
-              0.3094
+              0.0,
+              0.3803,
+              0.0827,
+              0.0,
+              0.0,
+              0.3803,
+              0.0827,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 28.5813,
-              "top": 21.326800000000002,
-              "right": 8631.552599999999,
-              "bottom": 5728.8396
+              "left": 39.983999999999995,
+              "top": 29.145599999999998,
+              "right": 9493.344,
+              "bottom": 5518.0224
             },
             "name": "anchor_plus_context",
-            "score": -0.3246
+            "score": 0.5269
           },
           {
-            "object_x": 50,
+            "object_x": 47,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.63,
+              "left": 32.55,
               "top": 0.0,
-              "right": 65.37,
+              "right": 63.29,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.3095,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 31.1796,
-              "top": 21.326800000000002,
-              "right": 8630.6865,
-              "bottom": 3143.1092
+              "left": 3905.1040000000003,
+              "top": 2588.2560000000003,
+              "right": 5264.5599999999995,
+              "bottom": 5518.0224
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.652
+            "score": 0.249
           },
           {
             "object_x": 50,
@@ -178,50 +302,62 @@
               "right": 65.37,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.3095,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.3094,
-              0.3094
+              0.0,
+              0.3803,
+              0.0827,
+              0.0,
+              0.0,
+              0.3803,
+              0.0827,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 28.5813,
-              "top": 21.326800000000002,
-              "right": 8631.552599999999,
-              "bottom": 5728.8396
+              "left": 39.983999999999995,
+              "top": 29.145599999999998,
+              "right": 9493.344,
+              "bottom": 5518.0224
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3246
+            "score": 0.5269
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 8661,
-        "photo_height": 5764,
+        "photo_width": 9520,
+        "photo_height": 6336,
         "viewport_width": 812,
         "viewport_height": 375,
-        "visible_width": 8661.0,
-        "visible_height": 3999.8460591133003,
+        "visible_width": 9520.0,
+        "visible_height": 4396.551724137931,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6939358187219467,
+        "visible_fraction_y": 0.6939002089864159,
         "overflow_x": 0.0,
-        "overflow_y": 1764.1539408866997,
+        "overflow_y": 1939.4482758620688,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 0,
+            "object_y": 96,
             "visible_source_window": {
               "left": 0.0,
-              "top": 0.0,
+              "top": 29.39,
               "right": 100.0,
-              "bottom": 69.39
+              "bottom": 98.78
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -229,51 +365,63 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 31.1796,
-              "top": 21.326800000000002,
-              "right": 8630.6865,
-              "bottom": 3143.1092
+              "left": 3905.1040000000003,
+              "top": 2588.2560000000003,
+              "right": 5264.5599999999995,
+              "bottom": 5518.0224
             },
             "name": "anchor_only",
             "score": 0.248
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 30,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.3,
+              "top": 9.18,
               "right": 100.0,
-              "bottom": 84.7
+              "bottom": 78.57
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7243,
+            "anchor_overlap": 0.8158,
             "context_inside": [
+              true,
               false,
-              false
+              true,
+              true,
+              true,
+              false,
+              true,
+              true
             ],
             "context_overlap": [
-              0.6661,
-              0.6661
+              1.0,
+              0.6667,
+              1.0,
+              1.0,
+              1.0,
+              0.6667,
+              1.0,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 28.5813,
-              "top": 21.326800000000002,
-              "right": 8631.552599999999,
-              "bottom": 5728.8396
+              "left": 39.983999999999995,
+              "top": 29.145599999999998,
+              "right": 9493.344,
+              "bottom": 5518.0224
             },
             "name": "anchor_plus_context",
-            "score": -0.2355
+            "score": -0.1728
           },
           {
             "object_x": 50,
-            "object_y": 0,
+            "object_y": 96,
             "visible_source_window": {
               "left": 0.0,
-              "top": 0.0,
+              "top": 29.39,
               "right": 100.0,
-              "bottom": 69.39
+              "bottom": 98.78
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -281,42 +429,54 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 31.1796,
-              "top": 21.326800000000002,
-              "right": 8630.6865,
-              "bottom": 3143.1092
+              "left": 3905.1040000000003,
+              "top": 2588.2560000000003,
+              "right": 5264.5599999999995,
+              "bottom": 5518.0224
             },
             "name": "anchor_plus_anomaly",
             "score": 0.248
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 30,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.3,
+              "top": 9.18,
               "right": 100.0,
-              "bottom": 84.7
+              "bottom": 78.57
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7243,
+            "anchor_overlap": 0.8158,
             "context_inside": [
+              true,
               false,
-              false
+              true,
+              true,
+              true,
+              false,
+              true,
+              true
             ],
             "context_overlap": [
-              0.6661,
-              0.6661
+              1.0,
+              0.6667,
+              1.0,
+              1.0,
+              1.0,
+              0.6667,
+              1.0,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 28.5813,
-              "top": 21.326800000000002,
-              "right": 8631.552599999999,
-              "bottom": 5728.8396
+              "left": 39.983999999999995,
+              "top": 29.145599999999998,
+              "right": 9493.344,
+              "bottom": 5518.0224
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2355
+            "score": -0.1728
           }
         ]
       }
@@ -324,12 +484,21 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": false,
-    "portrait_primary_anchor_overlap": 0.3095,
-    "portrait_context_inside": [],
+    "portrait_primary_anchor_inside": true,
+    "portrait_primary_anchor_overlap": 1.0,
+    "portrait_context_inside": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
-    "portrait_anchor_center_fallback": true,
+    "portrait_anchor_center_fallback": false,
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": true,
