@@ -1,134 +1,77 @@
 {
-  "generated_at": "2026-08-08T10:32:28.764953+00:00",
+  "generated_at": "2026-08-08T12:12:30.966556+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 46,
-    "y": 57
+    "x": 38,
+    "y": 45
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "river",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.29,
-          "top": 82.19,
-          "right": 99.72,
-          "bottom": 99.57
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.8,
-        "description": "dark water body in foreground",
-        "detector_score": 0.6846
-      },
-      {
-        "name": "sky",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 0.25,
-          "top": 0.28,
-          "right": 99.73,
-          "bottom": 70.04
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.3,
-        "description": "cloudy sky above city skyline",
-        "detector_score": 0.6008
-      },
-      {
-        "name": "tall skyscraper with spire",
+        "name": "dog",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 0.25,
-          "top": 0.28,
-          "right": 99.73,
-          "bottom": 70.04
+          "left": 9.14,
+          "top": 22.61,
+          "right": 47.02,
+          "bottom": 52.14
         },
         "confidence": 0.95,
-        "narrative_value": 0.9,
-        "description": "tallest building with a pointed spire at the top",
-        "detector_score": 0.6008
+        "narrative_value": 0.8,
+        "description": "brown fluffy dog in motion running on snow",
+        "detector_score": 0.8691
       },
       {
-        "name": "cylindrical skyscraper",
-        "role": "secondary_subject",
-        "bbox_pct": {
-          "left": 0.25,
-          "top": 0.28,
-          "right": 99.73,
-          "bottom": 70.04
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.6,
-        "description": "tall cylindrical building with illuminated windows",
-        "detector_score": 0.6008
-      },
-      {
-        "name": "boat",
+        "name": "snow",
         "role": "context",
         "bbox_pct": {
-          "left": 27.41,
-          "top": 78.33,
-          "right": 39.48,
-          "bottom": 84.0
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.4,
-        "description": "small boat on the river surface",
-        "detector_score": 0.4762
-      },
-      {
-        "name": "river",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.29,
-          "top": 82.19,
-          "right": 99.72,
-          "bottom": 99.57
+          "left": 0.15,
+          "top": 0.14,
+          "right": 99.85,
+          "bottom": 99.86
         },
         "confidence": 0.9,
-        "narrative_value": 0.8,
-        "description": "dark water body in foreground",
-        "detector_score": 0.6846
+        "narrative_value": 0.2,
+        "description": "white snowy ground with visible footprints trailing behind the dog",
+        "detector_score": 0.5938
       },
       {
-        "name": "boat",
+        "name": "snow",
         "role": "context",
         "bbox_pct": {
-          "left": 27.41,
-          "top": 78.33,
-          "right": 39.48,
-          "bottom": 84.0
+          "left": 0.15,
+          "top": 0.14,
+          "right": 99.85,
+          "bottom": 99.86
         },
-        "confidence": 0.7,
-        "narrative_value": 0.4,
-        "description": "small boat on the river surface",
-        "detector_score": 0.4762
+        "confidence": 0.9,
+        "narrative_value": 0.2,
+        "description": "white snowy ground with visible footprints trailing behind the dog",
+        "detector_score": 0.5938
       }
     ],
-    "primary_anchor": "tall skyscraper with spire",
+    "primary_anchor": "dog",
     "focal_element": null,
     "confidence": 0.95,
-    "description": "black-and-white photograph of a waterfront city skyline with a river in the foreground and numerous skyscrapers under a cloudy sky",
-    "lighting": "overcast lighting with diffused light from cloud cover",
-    "background": "cloudy sky above the city skyline",
+    "description": "a brown fluffy dog running on a snow-covered ground with footprints trailing behind it",
+    "lighting": "bright and even",
+    "background": "snow-covered ground with visible footprints",
     "localization_model": "Grounding DINO-T"
   },
   "synthesis_model": "qwen3:32b",
   "synthesis": {
     "recommended_candidate": "anchor_plus_context",
-    "primary_anchor": "tall skyscraper with spire",
+    "primary_anchor": "dog",
     "selected_context": [
-      "river",
-      "boat"
+      "snow"
     ],
     "selected_anomaly": null,
     "confidence": 0.95,
-    "composition_strategy": "The 'anchor_plus_context' candidate was selected because it includes the primary anchor (tall skyscraper with spire) and at least one context element (river and boat), aligning with the preference for visible anchor and context. The focal anomaly is not present in this candidate, but it does not displace the primary anchor."
+    "composition_strategy": "The 'anchor_plus_context' candidate was selected because it includes both the primary anchor (dog) and at least one context element (snow), aligning with the rule that prefers candidates with the anchor visible and at least one context element visible. The focal anomaly is not present in this candidate, which is acceptable since it is not required to be included if it does not add significant narrative value or if it might displace the primary anchor."
   },
   "positions": {
-    "portrait_x": 50,
+    "portrait_x": 18,
     "portrait_y": 50,
     "landscape_x": 50,
     "landscape_y": 50
@@ -137,259 +80,243 @@
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 9494,
-        "photo_height": 6319,
-        "viewport_width": 375,
-        "viewport_height": 812,
-        "visible_width": 2918.2573891625616,
-        "visible_height": 6319.0,
-        "visible_fraction_x": 0.3073791225155426,
+        "photo_width": 2048,
+        "photo_height": 1363,
+        "viewport_width": 402,
+        "viewport_height": 874,
+        "visible_width": 626.9176201372998,
+        "visible_height": 1363.0,
+        "visible_fraction_x": 0.3061121192076659,
         "visible_fraction_y": 1.0,
-        "overflow_x": 6575.742610837438,
+        "overflow_x": 1421.0823798627002,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 50,
+            "object_x": 18,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.63,
+              "left": 12.49,
               "top": 0.0,
-              "right": 65.37,
+              "right": 43.1,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.309,
+            "anchor_overlap": 0.8081,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 23.735,
-              "top": 17.6932,
-              "right": 9468.3662,
-              "bottom": 4425.8276000000005
+              "left": 187.18720000000002,
+              "top": 308.1743,
+              "right": 962.9696,
+              "bottom": 710.6682
             },
             "name": "anchor_only",
-            "score": -0.654,
+            "score": -0.67,
             "fallback": "anchor_center"
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.63,
+              "left": 34.69,
               "top": 0.0,
-              "right": 65.37,
+              "right": 65.31,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.309,
+            "anchor_overlap": 0.3254,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.3091,
-              0.4017,
-              0.3091,
-              0.4017
+              0.307,
+              0.307
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 23.735,
-              "top": 17.6932,
-              "right": 9468.3662,
-              "bottom": 6291.828299999999
+              "left": 3.072,
+              "top": 1.9082000000000003,
+              "right": 2044.9279999999999,
+              "bottom": 1361.0918000000001
             },
             "name": "anchor_plus_context",
-            "score": -0.3151
+            "score": -0.3352
           },
           {
-            "object_x": 50,
+            "object_x": 18,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.63,
+              "left": 12.49,
               "top": 0.0,
-              "right": 65.37,
+              "right": 43.1,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.309,
+            "anchor_overlap": 0.8081,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 23.735,
-              "top": 17.6932,
-              "right": 9468.3662,
-              "bottom": 4425.8276000000005
+              "left": 187.18720000000002,
+              "top": 308.1743,
+              "right": 962.9696,
+              "bottom": 710.6682
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.654
+            "score": -0.67
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.63,
+              "left": 34.69,
               "top": 0.0,
-              "right": 65.37,
+              "right": 65.31,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.309,
+            "anchor_overlap": 0.3254,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.3091,
-              0.4017,
-              0.3091,
-              0.4017
+              0.307,
+              0.307
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 23.735,
-              "top": 17.6932,
-              "right": 9468.3662,
-              "bottom": 6291.828299999999
+              "left": 3.072,
+              "top": 1.9082000000000003,
+              "right": 2044.9279999999999,
+              "bottom": 1361.0918000000001
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3151
+            "score": -0.3352
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 9494,
-        "photo_height": 6319,
-        "viewport_width": 812,
-        "viewport_height": 375,
-        "visible_width": 9494.0,
-        "visible_height": 4384.54433497537,
+        "photo_width": 2048,
+        "photo_height": 1363,
+        "viewport_width": 874,
+        "viewport_height": 402,
+        "visible_width": 2048.0,
+        "visible_height": 941.9862700228833,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6938668040790267,
+        "visible_fraction_y": 0.6911124504936782,
         "overflow_x": 0.0,
-        "overflow_y": 1934.4556650246304,
+        "overflow_y": 421.01372997711667,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 2,
+            "object_y": 9,
             "visible_source_window": {
               "left": 0.0,
-              "top": 0.61,
+              "top": 2.78,
               "right": 100.0,
-              "bottom": 70.0
+              "bottom": 71.89
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.9946,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 23.735,
-              "top": 17.6932,
-              "right": 9468.3662,
-              "bottom": 4425.8276000000005
+              "left": 187.18720000000002,
+              "top": 308.1743,
+              "right": 962.9696,
+              "bottom": 710.6682
             },
             "name": "anchor_only",
-            "score": -0.654
+            "score": 0.238
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.31,
+              "top": 15.44,
               "right": 100.0,
-              "bottom": 84.69
+              "bottom": 84.56
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7846,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
               false,
-              true,
-              false,
-              true
+              false
             ],
             "context_overlap": [
-              0.144,
-              1.0,
-              0.144,
-              1.0
+              0.6931,
+              0.6931
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 23.735,
-              "top": 17.6932,
-              "right": 9468.3662,
-              "bottom": 6291.828299999999
+              "left": 3.072,
+              "top": 1.9082000000000003,
+              "right": 2044.9279999999999,
+              "bottom": 1361.0918000000001
             },
             "name": "anchor_plus_context",
-            "score": -0.261
+            "score": 0.6613
           },
           {
             "object_x": 50,
-            "object_y": 2,
+            "object_y": 9,
             "visible_source_window": {
               "left": 0.0,
-              "top": 0.61,
+              "top": 2.78,
               "right": 100.0,
-              "bottom": 70.0
+              "bottom": 71.89
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.9946,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 23.735,
-              "top": 17.6932,
-              "right": 9468.3662,
-              "bottom": 4425.8276000000005
+              "left": 187.18720000000002,
+              "top": 308.1743,
+              "right": 962.9696,
+              "bottom": 710.6682
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.654
+            "score": 0.238
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.31,
+              "top": 15.44,
               "right": 100.0,
-              "bottom": 84.69
+              "bottom": 84.56
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7846,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
               false,
-              true,
-              false,
-              true
+              false
             ],
             "context_overlap": [
-              0.144,
-              1.0,
-              0.144,
-              1.0
+              0.6931,
+              0.6931
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 23.735,
-              "top": 17.6932,
-              "right": 9468.3662,
-              "bottom": 6291.828299999999
+              "left": 3.072,
+              "top": 1.9082000000000003,
+              "right": 2044.9279999999999,
+              "bottom": 1361.0918000000001
             },
             "name": "anchor_context_anomaly",
-            "score": -0.261
+            "score": 0.6613
           }
         ]
       }
@@ -398,23 +325,21 @@
   },
   "validation": {
     "portrait_primary_anchor_inside": false,
-    "portrait_primary_anchor_overlap": 0.309,
+    "portrait_primary_anchor_overlap": 0.8081,
     "portrait_context_inside": [],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": true,
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.7846,
+    "landscape_primary_anchor_inside": true,
+    "landscape_primary_anchor_overlap": 1.0,
     "landscape_context_inside": [
       false,
-      true,
-      false,
-      true
+      false
     ],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": false,
+    "landscape_composition_valid": true,
     "landscape_anchor_center_fallback": false,
     "landscape_context_preferred_but_unavailable": false,
     "landscape_anchor_priority_fallback": false

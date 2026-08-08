@@ -1,16 +1,16 @@
-# Crop QA — 2026-08-08T10:32:29.066062+00:00
+# Crop QA — 2026-08-08T12:12:31.011974+00:00
 
-- Source: `photo.jpg` (9494×6319)
+- Source: `photo.jpg` (2048×1363)
 - Localization model: **Grounding DINO-T**
-- Primary anchor: **tall skyscraper with spire**
+- Primary anchor: **dog**
 - Focal anomaly: **none**
-- Elements: `[('river', 'context', {'left': 0.29, 'top': 82.19, 'right': 99.72, 'bottom': 99.57}), ('sky', 'background_mass', {'left': 0.25, 'top': 0.28, 'right': 99.73, 'bottom': 70.04}), ('tall skyscraper with spire', 'primary_anchor', {'left': 0.25, 'top': 0.28, 'right': 99.73, 'bottom': 70.04}), ('cylindrical skyscraper', 'secondary_subject', {'left': 0.25, 'top': 0.28, 'right': 99.73, 'bottom': 70.04}), ('boat', 'context', {'left': 27.41, 'top': 78.33, 'right': 39.48, 'bottom': 84.0}), ('river', 'context', {'left': 0.29, 'top': 82.19, 'right': 99.72, 'bottom': 99.57}), ('boat', 'context', {'left': 27.41, 'top': 78.33, 'right': 39.48, 'bottom': 84.0})]`
-- Portrait crop: `50% 50%`
+- Elements: `[('dog', 'primary_anchor', {'left': 9.14, 'top': 22.61, 'right': 47.02, 'bottom': 52.14}), ('snow', 'context', {'left': 0.15, 'top': 0.14, 'right': 99.85, 'bottom': 99.86}), ('snow', 'context', {'left': 0.15, 'top': 0.14, 'right': 99.85, 'bottom': 99.86})]`
+- Portrait crop: `18% 50%`
 - Landscape crop: `50% 50%`
-- Portrait anchor overlap: **0.31**
-- Landscape anchor overlap: **0.78**
+- Portrait anchor overlap: **0.81**
+- Landscape anchor overlap: **1.00**
 - Portrait composition valid: **True**
-- Landscape composition valid: **False**
+- Landscape composition valid: **True**
 - Portrait anchor-priority fallback: **False**
 - Portrait anchor-center fallback: **True**
 - Landscape anchor-priority fallback: **False**
