@@ -151,16 +151,16 @@ If confidence is below the configured threshold, the pipeline performs a second 
 
 ## Portrait-phone crop logic
 
-The target displays are configured in `display_profiles.json`. The default profile is an iPhone 13 mini portrait viewport:
+The target displays are configured in `display_profiles.json`. The default profile is an iPhone 17 Pro portrait viewport:
 
 ```text
-375 x 812 CSS pixels
+402 x 874 CSS pixels
 ```
 
-A second iPhone 13 mini landscape profile is also generated:
+A second iPhone 17 Pro landscape profile is also generated:
 
 ```text
-812 x 375 CSS pixels
+874 x 402 CSS pixels
 ```
 
 The dimensions are configuration, not code constants, so additional device profiles can be added without changing the geometry functions.
@@ -328,7 +328,7 @@ GitHub Pages then serves the static site at the configured project URL.
 
 - **Subject labels and coordinates come from separate models.** Qwen3-VL proposes semantic elements; Grounding DINO-T localizes them. Detector confidence and crop containment are still not proof of artistic quality.
 - **Local vision can still be wrong.** The pipeline now uses scene consistency checks, semantic roles, candidate scoring, and validation, but a visually incorrect inventory can still require manual review.
-- **The target viewport is hard-coded.** The primary geometry is based on an iPhone 13 mini in portrait mode. Other phones, browser chrome, safe-area behavior, or landscape viewing can produce different visible windows.
+- **The target viewport is hard-coded.** The primary geometry is based on an iPhone 17 Pro in portrait mode. Other phones, browser chrome, safe-area behavior, or landscape viewing can produce different visible windows.
 - **Only one CSS crop is published.** The page does not currently use separate portrait and landscape crop positions via media queries.
 - **The HTML patch is regex-based.** `local_analyze.py` expects an inline `object-position` style attribute in `index.html`.
 - **Invalid portrait composition now fails the run.** The scheduled wrapper therefore does not publish a crop lacking both an inside anchor and explicit context.

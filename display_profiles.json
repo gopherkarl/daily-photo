@@ -2,14 +2,14 @@
   "default_profile": "portrait_phone",
   "profiles": {
     "portrait_phone": {
-      "label": "iPhone 13 mini portrait",
-      "width": 375,
-      "height": 812
+      "label": "iPhone 17 Pro portrait",
+      "width": 402,
+      "height": 874
     },
     "landscape_phone": {
-      "label": "iPhone 13 mini landscape",
-      "width": 812,
-      "height": 375
+      "label": "iPhone 17 Pro landscape",
+      "width": 874,
+      "height": 402
     }
   }
 }
