@@ -1,12 +1,12 @@
-# Crop QA — 2026-08-09T10:31:41.978884+00:00
+# Crop QA — 2026-08-09T21:11:45.779454+00:00
 
-- Source: `photo.jpg` (2048×1363)
+- Source: `photo.jpg` (1536×2048)
 - Localization model: **Grounding DINO-T**
-- Primary anchor: **boy in blue shorts reaching forward**
+- Primary anchor: **Jefferson Memorial**
 - Focal anomaly: **none**
-- Elements: `[('boy in blue shorts reaching forward', 'primary_anchor', {'left': 31.27, 'top': 45.21, 'right': 57.2, 'bottom': 88.98}), ('beach crowd', 'background_mass', {'left': 0.0, 'top': 35.0, 'right': 100.0, 'bottom': 85.0}), ('lifeguard tower', 'context', {'left': 96.47, 'top': 33.64, 'right': 99.45, 'bottom': 38.25}), ('lifeguard tower', 'context', {'left': 96.47, 'top': 33.64, 'right': 99.45, 'bottom': 38.25})]`
-- Portrait crop: `42% 50%`
-- Landscape crop: `50% 87%`
+- Elements: `[('Cherry Blossoms', 'background_mass', {'left': 0.22, 'top': 0.14, 'right': 99.82, 'bottom': 61.45}), ('Jefferson Memorial', 'primary_anchor', {'left': 40.1, 'top': 51.02, 'right': 54.57, 'bottom': 58.3}), ('Water Body', 'secondary_subject', {'left': 0.29, 'top': 58.11, 'right': 99.65, 'bottom': 99.69}), ('Railing', 'context', {'left': 0.06, 'top': 78.65, 'right': 99.83, 'bottom': 88.71}), ('Railing', 'context', {'left': 0.06, 'top': 78.65, 'right': 99.83, 'bottom': 88.71})]`
+- Portrait crop: `50% 50%`
+- Landscape crop: `50% 57%`
 - Portrait anchor overlap: **1.00**
 - Landscape anchor overlap: **1.00**
 - Portrait composition valid: **True**
