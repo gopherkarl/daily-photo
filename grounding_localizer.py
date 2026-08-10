@@ -38,6 +38,81 @@ def _normalise_label(label: str) -> str:
     return " ".join(str(label).lower().strip().replace(".", " ").split())
 
 
+def canonical_category(label: str) -> str:
+    """Map free-form VLM descriptions to stable detector categories.
+
+    Grounding DINO is text-conditioned, but it is much more reliable when
+    prompted with the object's head noun than with a scene-specific caption.
+    Keep this vocabulary semantic and general: descriptions such as
+    ``"vase with foliage"`` and ``"central palm tree"`` must reduce to
+    categories that the detector can recognize across unrelated photos.
+    """
+    value = _normalise_label(label)
+    tokens = set(value.split())
+
+    if tokens & {"woman", "women"}:
+        return "woman"
+    if tokens & {"man", "men", "person", "people", "human"}:
+        return "person"
+    if tokens & {"tree", "trees", "palm", "palms"}:
+        return "trees"
+    if tokens & {"building", "buildings", "facade", "facades"}:
+        return "building"
+    if tokens & {"bollard", "bollards"}:
+        return "bollards"
+    if tokens & {"umbrella", "umbrellas", "parasol", "parasols"}:
+        return "umbrella"
+    if tokens & {"vase", "vases", "urn", "urns", "planter", "planters", "pot", "pots"}:
+        return "vase"
+    if tokens & {"plant", "plants", "foliage", "flower", "flowers", "floral", "vegetation"}:
+        return "plant"
+
+    # Generic fallback: remove common descriptive/relational words and
+    # normalize simple plurals without relying on any particular test image.
+    head_tokens = [token for token in value.split() if token not in {
+        "a", "an", "the", "with", "in", "on", "at", "near", "central",
+        "left", "right", "foreground", "background", "low", "high",
+    }]
+    if not head_tokens:
+        return value
+    head = head_tokens[-1]
+    if len(head) > 3 and head.endswith("ies"):
+        head = head[:-3] + "y"
+    elif len(head) > 3 and head.endswith("s") and not head.endswith("ss"):
+        head = head[:-1]
+    return head
+
+
+def _bbox_iou(first: dict[str, float], second: dict[str, float]) -> float:
+    left = max(first["left"], second["left"])
+    top = max(first["top"], second["top"])
+    right = min(first["right"], second["right"])
+    bottom = min(first["bottom"], second["bottom"])
+    intersection = max(0.0, right - left) * max(0.0, bottom - top)
+    first_area = max(1e-9, (first["right"] - first["left"]) * (first["bottom"] - first["top"]))
+    second_area = max(1e-9, (second["right"] - second["left"]) * (second["bottom"] - second["top"]))
+    return intersection / (first_area + second_area - intersection + 1e-9)
+
+
+def match_detections_to_elements(elements: list[dict[str, Any]], detections: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Assign generic detector instances to semantic VLM elements by category and IoU."""
+    remaining = list(detections)
+    assigned = []
+    for element in elements:
+        category = canonical_category(element["name"])
+        candidates = [item for item in remaining if item.get("category") == category]
+        if not candidates:
+            assigned.append(dict(element))
+            continue
+        best = max(candidates, key=lambda item: (_bbox_iou(element["bbox_pct"], item["bbox_pct"]), item["detector_score"]))
+        remaining.remove(best)
+        item = dict(element)
+        item["bbox_pct"] = best["bbox_pct"]
+        item["detector_score"] = best["detector_score"]
+        assigned.append(item)
+    return assigned
+
+
 def locate(image_path: str, labels: list[str]) -> list[dict[str, Any]]:
     """Return detector boxes in percentage coordinates, grouped by label."""
     labels = list(dict.fromkeys(_normalise_label(label) for label in labels if str(label).strip()))
@@ -62,10 +137,12 @@ def locate(image_path: str, labels: list[str]) -> list[dict[str, Any]]:
 
     width, height = image.size
     detections = []
-    for box, score, result_label in zip(results["boxes"], results["scores"], results["labels"]):
+    result_labels = results.get("text_labels", results.get("labels", []))
+    for box, score, result_label in zip(results["boxes"], results["scores"], result_labels):
         left, top, right, bottom = [float(value) for value in box.tolist()]
         detections.append({
             "name": _normalise_label(str(result_label)),
+            "category": canonical_category(str(result_label)),
             "bbox_pct": {
                 "left": round(max(0.0, min(100.0, left / width * 100)), 2),
                 "top": round(max(0.0, min(100.0, top / height * 100)), 2),
@@ -78,8 +155,8 @@ def locate(image_path: str, labels: list[str]) -> list[dict[str, Any]]:
 
 
 def choose_best(detections: list[dict[str, Any]], labels: list[str]) -> dict[str, Any] | None:
-    wanted = {_normalise_label(label) for label in labels}
-    candidates = [item for item in detections if item["name"] in wanted]
+    wanted = {canonical_category(label) for label in labels}
+    candidates = [item for item in detections if item.get("category", canonical_category(item["name"])) in wanted]
     if not candidates:
         return None
     return max(candidates, key=lambda item: item["detector_score"])

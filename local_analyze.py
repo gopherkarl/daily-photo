@@ -24,7 +24,7 @@ from crop_geometry import (
     candidate_crop,
     score_candidate,
 )
-from grounding_localizer import locate as grounding_locate
+from grounding_localizer import canonical_category, locate as grounding_locate, match_detections_to_elements
 
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 PHOTO_PATH = os.path.join(REPO_DIR, "photo.jpg")
@@ -306,37 +306,19 @@ def scene_consistent(first, second):
 
 def ground_vision_elements(image_path, vision):
     """Replace VLM-estimated boxes with independent Grounding DINO boxes."""
-    labels = [
-        item["name"]
+    # Grounding DINO localizes generic categories; the VLM retains attributes,
+    # narrative roles, and semantic identity. This avoids exact phrase matching.
+    labels = sorted({
+        canonical_category(item["name"])
         for item in vision["elements"]
         if not item.get("synthetic", False)
-    ]
+    })
     detections = grounding_locate(image_path, labels)
-    grouped = {}
-    for item in detections:
-        grouped.setdefault(item["name"], []).append(item)
-    grounded = []
-    for item in vision["elements"]:
-        wanted = item["name"].lower()
-        matches = grouped.get(wanted, [])
-        if not matches:
-            matches = [
-                detection
-                for detected_name, candidates in grouped.items()
-                if wanted in detected_name or detected_name in wanted
-                for detection in candidates
-            ]
-        if not matches:
-            if item["role"] in {"context", "background_mass"}:
-                grounded.append(item)
-                continue
-            raise RuntimeError(f"Grounding DINO could not localize primary element: {item['name']}")
-        best = max(matches, key=lambda match: match["detector_score"])
-        item = dict(item)
-        item["bbox_pct"] = best["bbox_pct"]
-        item["detector_score"] = best["detector_score"]
-        grounded.append(item)
-    return {**vision, "elements": grounded, "localization_model": "Grounding DINO-T"}
+    grounded = match_detections_to_elements(vision["elements"], detections)
+    primary = next(item for item in grounded if item["name"] == vision["primary_anchor"])
+    if "detector_score" not in primary and primary["role"] == "primary_anchor":
+        raise RuntimeError(f"Grounding DINO could not localize primary element: {primary['name']}")
+    return {**vision, "elements": grounded, "localization_model": "Grounding DINO-T + VLM assignment"}
 
 
 def synthesize_analysis(lum_data, vision, display_context, candidates):

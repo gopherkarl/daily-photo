@@ -1,349 +1,350 @@
 {
-  "generated_at": "2026-08-09T21:11:45.744456+00:00",
+  "generated_at": "2026-08-10T11:24:11.213578+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 49,
-    "y": 45
+    "x": 52,
+    "y": 49
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "Cherry Blossoms",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 0.22,
-          "top": 0.14,
-          "right": 99.82,
-          "bottom": 61.45
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.3,
-        "description": "Dense pink and orange cherry blossom branches covering the foreground",
-        "detector_score": 0.5408
-      },
-      {
-        "name": "Jefferson Memorial",
+        "name": "person on left",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 40.1,
-          "top": 51.02,
-          "right": 54.57,
-          "bottom": 58.3
+          "left": 28.05,
+          "top": 27.83,
+          "right": 65.4,
+          "bottom": 99.85
         },
-        "confidence": 0.8,
-        "narrative_value": 0.7,
-        "description": "White domed architectural structure with columns across a body of water",
-        "detector_score": 0.6657
+        "confidence": 0.95,
+        "narrative_value": 0.8,
+        "description": "individual with large afro hairstyle wearing a t-shirt with a graphic print",
+        "detector_score": 0.7778
       },
       {
-        "name": "Water Body",
+        "name": "person on right",
         "role": "secondary_subject",
         "bbox_pct": {
-          "left": 0.29,
-          "top": 58.11,
-          "right": 99.65,
-          "bottom": 99.69
+          "left": 28.95,
+          "top": 33.76,
+          "right": 90.15,
+          "bottom": 99.87
+        },
+        "confidence": 0.95,
+        "narrative_value": 0.6,
+        "description": "individual with afro hairstyle wearing a t-shirt with a graphic print, arm resting on the shoulder of the person to their left",
+        "detector_score": 0.7499
+      },
+      {
+        "name": "advertisement sign",
+        "role": "context",
+        "bbox_pct": {
+          "left": 28.79,
+          "top": 0.36,
+          "right": 59.91,
+          "bottom": 59.75
         },
         "confidence": 0.9,
         "narrative_value": 0.4,
-        "description": "Smooth surface of a large body of water reflecting light",
-        "detector_score": 0.7085
+        "description": "rectangular sign with text 'Don't be someone's subway story.'",
+        "detector_score": 0.7143
       },
       {
-        "name": "Railing",
-        "role": "context",
+        "name": "metal pole",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 0.06,
-          "top": 78.65,
-          "right": 99.83,
-          "bottom": 88.71
+          "left": 90.28,
+          "top": 0.0,
+          "right": 93.97,
+          "bottom": 99.97
         },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "Metal railing in the lower left corner of the image",
-        "detector_score": 0.3711
+        "confidence": 0.9,
+        "narrative_value": 0.1,
+        "description": "vertical metal pole typical of subway car interior",
+        "detector_score": 0.4883
       },
       {
-        "name": "Railing",
+        "name": "advertisement sign",
         "role": "context",
         "bbox_pct": {
-          "left": 0.06,
-          "top": 78.65,
-          "right": 99.83,
-          "bottom": 88.71
+          "left": 28.0,
+          "top": 10.0,
+          "right": 58.0,
+          "bottom": 30.0
         },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "Metal railing in the lower left corner of the image",
-        "detector_score": 0.3711
+        "confidence": 0.9,
+        "narrative_value": 0.4,
+        "description": "rectangular sign with text 'Don't be someone's subway story.'"
       }
     ],
-    "primary_anchor": "Jefferson Memorial",
+    "primary_anchor": "person on left",
     "focal_element": null,
-    "confidence": 0.8,
-    "description": "Cherry blossom branches frame a body of water with a domed architectural structure visible across it.",
-    "lighting": "Warm sunlight illuminating cherry blossoms and reflecting on water surface.",
-    "background": "Blue sky with scattered clouds above the water.",
-    "localization_model": "Grounding DINO-T"
+    "confidence": 0.95,
+    "description": "two individuals seated on a subway train seat with one person's arm resting on the other's shoulder",
+    "lighting": "soft even lighting from overhead subway lights",
+    "background": "metal subway car interior including vertical poles and windows",
+    "localization_model": "Grounding DINO-T + VLM assignment"
   },
   "synthesis_model": "qwen3:32b",
   "synthesis": {
     "recommended_candidate": "anchor_plus_context",
-    "primary_anchor": "Jefferson Memorial",
+    "primary_anchor": "person on left",
     "selected_context": [
-      "Railing"
+      "advertisement sign",
+      "advertisement sign"
     ],
     "selected_anomaly": null,
-    "confidence": 0.6527,
-    "composition_strategy": "The 'anchor_plus_context' candidate was selected because it includes the primary anchor (Jefferson Memorial) and at least one context element (Railing), aligning with the rule that prefers candidates with the anchor visible and at least one context element visible. The focal anomaly is not present in this candidate, which is acceptable since it is not required to be included if it does not add narrative value or if it displaces the primary anchor."
+    "confidence": 0.95,
+    "composition_strategy": "The 'anchor_plus_context' candidate was selected because it includes the primary anchor with significant overlap and incorporates visible context elements (advertisement signs) that explain the subway scene without overshadowing the main subject. The focal anomaly is not present, which aligns with the rule that it should not displace the primary anchor."
   },
   "positions": {
-    "portrait_x": 50,
+    "portrait_x": 45,
     "portrait_y": 50,
     "landscape_x": 50,
-    "landscape_y": 57
+    "landscape_y": 50
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 1536,
-        "photo_height": 2048,
+        "photo_width": 1280,
+        "photo_height": 852,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 941.9862700228833,
-        "visible_height": 2048.0,
-        "visible_fraction_x": 0.6132723112128147,
+        "visible_width": 391.88100686498854,
+        "visible_height": 852.0,
+        "visible_fraction_x": 0.3061570366132723,
         "visible_fraction_y": 1.0,
-        "overflow_x": 594.0137299771167,
+        "overflow_x": 888.1189931350115,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 43,
+            "object_x": 45,
             "object_y": 50,
             "visible_source_window": {
-              "left": 16.63,
+              "left": 31.22,
               "top": 0.0,
-              "right": 77.96,
+              "right": 61.84,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8197,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 615.936,
-              "top": 1044.8896,
-              "right": 838.1951999999999,
-              "bottom": 1193.984
+              "left": 359.04,
+              "top": 237.11159999999998,
+              "right": 837.12,
+              "bottom": 850.722
             },
             "name": "anchor_only",
-            "score": 0.244
+            "score": -0.657,
+            "fallback": "anchor_center"
           },
           {
-            "object_x": 50,
+            "object_x": 45,
             "object_y": 50,
             "visible_source_window": {
-              "left": 19.34,
+              "left": 31.22,
               "top": 0.0,
-              "right": 80.66,
+              "right": 61.84,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8197,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.6147,
-              0.6147
+              0.9218,
+              0.8926
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.9216,
-              "top": 1044.8896,
-              "right": 1533.3888,
-              "bottom": 1816.7807999999998
+              "left": 358.40000000000003,
+              "top": 3.0671999999999997,
+              "right": 837.12,
+              "bottom": 850.722
             },
             "name": "anchor_plus_context",
-            "score": 0.6527
+            "score": -0.1802
           },
           {
-            "object_x": 43,
+            "object_x": 45,
             "object_y": 50,
             "visible_source_window": {
-              "left": 16.63,
+              "left": 31.22,
               "top": 0.0,
-              "right": 77.96,
+              "right": 61.84,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8197,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 615.936,
-              "top": 1044.8896,
-              "right": 838.1951999999999,
-              "bottom": 1193.984
+              "left": 359.04,
+              "top": 237.11159999999998,
+              "right": 837.12,
+              "bottom": 850.722
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.244
+            "score": -0.657
           },
           {
-            "object_x": 50,
+            "object_x": 45,
             "object_y": 50,
             "visible_source_window": {
-              "left": 19.34,
+              "left": 31.22,
               "top": 0.0,
-              "right": 80.66,
+              "right": 61.84,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8197,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.6147,
-              0.6147
+              0.9218,
+              0.8926
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.9216,
-              "top": 1044.8896,
-              "right": 1533.3888,
-              "bottom": 1816.7807999999998
+              "left": 358.40000000000003,
+              "top": 3.0671999999999997,
+              "right": 837.12,
+              "bottom": 850.722
             },
             "name": "anchor_context_anomaly",
-            "score": 0.6527
+            "score": -0.1802
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 1536,
-        "photo_height": 2048,
+        "photo_width": 1280,
+        "photo_height": 852,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 1536.0,
-        "visible_height": 706.4897025171625,
+        "visible_width": 1280.0,
+        "visible_height": 588.741418764302,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.34496567505720827,
+        "visible_fraction_y": 0.6910110548876784,
         "overflow_x": 0.0,
-        "overflow_y": 1341.5102974828374,
+        "overflow_y": 263.258581235698,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 57,
+            "object_y": 95,
             "visible_source_window": {
               "left": 0.0,
-              "top": 37.34,
+              "top": 29.35,
               "right": 100.0,
-              "bottom": 71.83
+              "bottom": 98.46
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.9595,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 615.936,
-              "top": 1044.8896,
-              "right": 838.1951999999999,
-              "bottom": 1193.984
+              "left": 359.04,
+              "top": 237.11159999999998,
+              "right": 837.12,
+              "bottom": 850.722
             },
             "name": "anchor_only",
-            "score": 0.249
+            "score": -0.652
           },
           {
             "object_x": 50,
-            "object_y": 80,
+            "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 52.4,
+              "top": 15.45,
               "right": 100.0,
-              "bottom": 86.9
+              "bottom": 84.55
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8101,
+            "anchor_overlap": 0.7876,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.82,
-              0.82
+              0.7459,
+              0.7275
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.9216,
-              "top": 1044.8896,
-              "right": 1533.3888,
-              "bottom": 1816.7807999999998
+              "left": 358.40000000000003,
+              "top": 3.0671999999999997,
+              "right": 837.12,
+              "bottom": 850.722
             },
             "name": "anchor_plus_context",
-            "score": -0.196
+            "score": -0.2178
           },
           {
             "object_x": 50,
-            "object_y": 57,
+            "object_y": 95,
             "visible_source_window": {
               "left": 0.0,
-              "top": 37.34,
+              "top": 29.35,
               "right": 100.0,
-              "bottom": 71.83
+              "bottom": 98.46
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.9595,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 615.936,
-              "top": 1044.8896,
-              "right": 838.1951999999999,
-              "bottom": 1193.984
+              "left": 359.04,
+              "top": 237.11159999999998,
+              "right": 837.12,
+              "bottom": 850.722
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.249
+            "score": -0.652
           },
           {
             "object_x": 50,
-            "object_y": 80,
+            "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 52.4,
+              "top": 15.45,
               "right": 100.0,
-              "bottom": 86.9
+              "bottom": 84.55
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8101,
+            "anchor_overlap": 0.7876,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.82,
-              0.82
+              0.7459,
+              0.7275
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.9216,
-              "top": 1044.8896,
-              "right": 1533.3888,
-              "bottom": 1816.7807999999998
+              "left": 358.40000000000003,
+              "top": 3.0671999999999997,
+              "right": 837.12,
+              "bottom": 850.722
             },
             "name": "anchor_context_anomaly",
-            "score": -0.196
+            "score": -0.2178
           }
         ]
       }
@@ -351,24 +352,24 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": true,
-    "portrait_primary_anchor_overlap": 1.0,
-    "portrait_context_inside": [
+    "portrait_primary_anchor_inside": false,
+    "portrait_primary_anchor_overlap": 0.8197,
+    "portrait_context_inside": [],
+    "portrait_focal_anomaly_inside": false,
+    "portrait_composition_valid": true,
+    "portrait_anchor_center_fallback": true,
+    "portrait_context_preferred_but_unavailable": false,
+    "portrait_anchor_priority_fallback": false,
+    "landscape_primary_anchor_inside": false,
+    "landscape_primary_anchor_overlap": 0.7876,
+    "landscape_context_inside": [
       false,
       false
     ],
-    "portrait_focal_anomaly_inside": false,
-    "portrait_composition_valid": true,
-    "portrait_anchor_center_fallback": false,
-    "portrait_context_preferred_but_unavailable": false,
-    "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": true,
-    "landscape_primary_anchor_overlap": 1.0,
-    "landscape_context_inside": [],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": true,
+    "landscape_composition_valid": false,
     "landscape_anchor_center_fallback": false,
-    "landscape_context_preferred_but_unavailable": true,
+    "landscape_context_preferred_but_unavailable": false,
     "landscape_anchor_priority_fallback": false
   }
 }
