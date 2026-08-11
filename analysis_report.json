@@ -1,350 +1,464 @@
 {
-  "generated_at": "2026-08-10T11:24:11.213578+00:00",
+  "generated_at": "2026-08-11T10:32:40.125547+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 52,
+    "x": 49,
     "y": 49
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "person on left",
+        "name": "Main Building Facade",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 28.05,
-          "top": 27.83,
-          "right": 65.4,
-          "bottom": 99.85
-        },
-        "confidence": 0.95,
-        "narrative_value": 0.8,
-        "description": "individual with large afro hairstyle wearing a t-shirt with a graphic print",
-        "detector_score": 0.7778
-      },
-      {
-        "name": "person on right",
-        "role": "secondary_subject",
-        "bbox_pct": {
-          "left": 28.95,
-          "top": 33.76,
-          "right": 90.15,
-          "bottom": 99.87
-        },
-        "confidence": 0.95,
-        "narrative_value": 0.6,
-        "description": "individual with afro hairstyle wearing a t-shirt with a graphic print, arm resting on the shoulder of the person to their left",
-        "detector_score": 0.7499
-      },
-      {
-        "name": "advertisement sign",
-        "role": "context",
-        "bbox_pct": {
-          "left": 28.79,
-          "top": 0.36,
-          "right": 59.91,
-          "bottom": 59.75
+          "left": 18.62,
+          "top": 18.26,
+          "right": 99.78,
+          "bottom": 76.53
         },
         "confidence": 0.9,
-        "narrative_value": 0.4,
-        "description": "rectangular sign with text 'Don't be someone's subway story.'",
-        "detector_score": 0.7143
+        "narrative_value": 0.8,
+        "description": "Building structure with architectural details including arched windows and entrance",
+        "detector_score": 0.5329
       },
       {
-        "name": "metal pole",
+        "name": "Tile Mural",
+        "role": "focal_anomaly",
+        "bbox_pct": {
+          "left": 50.0,
+          "top": 25.0,
+          "right": 85.0,
+          "bottom": 35.0
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.7,
+        "description": "Arched tile mural depicting a woman holding objects within a decorative frame"
+      },
+      {
+        "name": "Signage",
+        "role": "context",
+        "bbox_pct": {
+          "left": 62.63,
+          "top": 46.98,
+          "right": 84.27,
+          "bottom": 53.22
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.5,
+        "description": "Text reading 'CHOLULA LA FONDA' above an entrance",
+        "detector_score": 0.5445
+      },
+      {
+        "name": "Outdoor Seating",
+        "role": "context",
+        "bbox_pct": {
+          "left": 19.13,
+          "top": 66.49,
+          "right": 45.3,
+          "bottom": 74.97
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.6,
+        "description": "Tables and chairs under white umbrellas on a sidewalk",
+        "detector_score": 0.3893
+      },
+      {
+        "name": "Potted Plants",
         "role": "background_mass",
         "bbox_pct": {
-          "left": 90.28,
-          "top": 0.0,
-          "right": 93.97,
-          "bottom": 99.97
+          "left": 34.33,
+          "top": 44.37,
+          "right": 37.87,
+          "bottom": 46.72
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.1,
+        "description": "Line of potted plants along the sidewalk",
+        "detector_score": 0.388
+      },
+      {
+        "name": "Row of Buildings",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 0.14,
+          "top": 49.8,
+          "right": 19.91,
+          "bottom": 67.64
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.1,
+        "description": "Repetitive buildings extending leftward along the street",
+        "detector_score": 0.2917
+      },
+      {
+        "name": "Cobblestone Street",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 0.14,
+          "top": 66.52,
+          "right": 99.77,
+          "bottom": 99.8
         },
         "confidence": 0.9,
         "narrative_value": 0.1,
-        "description": "vertical metal pole typical of subway car interior",
-        "detector_score": 0.4883
+        "description": "Dense cobblestone pavement covering the street",
+        "detector_score": 0.4557
       },
       {
-        "name": "advertisement sign",
+        "name": "Palm Tree",
         "role": "context",
         "bbox_pct": {
-          "left": 28.0,
-          "top": 10.0,
-          "right": 58.0,
-          "bottom": 30.0
+          "left": 0.05,
+          "top": 47.66,
+          "right": 13.59,
+          "bottom": 56.08
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.2,
+        "description": "Single palm tree visible on the far left",
+        "detector_score": 0.4611
+      },
+      {
+        "name": "Signage",
+        "role": "context",
+        "bbox_pct": {
+          "left": 60.0,
+          "top": 35.0,
+          "right": 80.0,
+          "bottom": 40.0
         },
         "confidence": 0.9,
-        "narrative_value": 0.4,
-        "description": "rectangular sign with text 'Don't be someone's subway story.'"
+        "narrative_value": 0.5,
+        "description": "Text reading 'CHOLULA LA FONDA' above an entrance"
+      },
+      {
+        "name": "Outdoor Seating",
+        "role": "context",
+        "bbox_pct": {
+          "left": 20.0,
+          "top": 40.0,
+          "right": 50.0,
+          "bottom": 70.0
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.6,
+        "description": "Tables and chairs under white umbrellas on a sidewalk"
+      },
+      {
+        "name": "Palm Tree",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 40.0,
+          "right": 5.0,
+          "bottom": 60.0
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.2,
+        "description": "Single palm tree visible on the far left"
       }
     ],
-    "primary_anchor": "person on left",
-    "focal_element": null,
-    "confidence": 0.95,
-    "description": "two individuals seated on a subway train seat with one person's arm resting on the other's shoulder",
-    "lighting": "soft even lighting from overhead subway lights",
-    "background": "metal subway car interior including vertical poles and windows",
+    "primary_anchor": "Main Building Facade",
+    "focal_element": "Tile Mural",
+    "confidence": 0.9,
+    "description": "A sepia-toned street view featuring a row of buildings on one side with cobblestone pavement and outdoor seating areas.",
+    "lighting": "Bright daylight with clear sky",
+    "background": "Row of buildings extending leftward along a cobblestone street",
     "localization_model": "Grounding DINO-T + VLM assignment"
   },
   "synthesis_model": "qwen3:32b",
   "synthesis": {
-    "recommended_candidate": "anchor_plus_context",
-    "primary_anchor": "person on left",
+    "recommended_candidate": "anchor_context_anomaly",
+    "primary_anchor": "Main Building Facade",
     "selected_context": [
-      "advertisement sign",
-      "advertisement sign"
+      "Signage",
+      "Outdoor Seating",
+      "Palm Tree"
     ],
-    "selected_anomaly": null,
-    "confidence": 0.95,
-    "composition_strategy": "The 'anchor_plus_context' candidate was selected because it includes the primary anchor with significant overlap and incorporates visible context elements (advertisement signs) that explain the subway scene without overshadowing the main subject. The focal anomaly is not present, which aligns with the rule that it should not displace the primary anchor."
+    "selected_anomaly": "Tile Mural",
+    "confidence": 0.9,
+    "composition_strategy": "Balanced composition with primary anchor, contextual elements, and focal anomaly all visible."
   },
   "positions": {
-    "portrait_x": 45,
+    "portrait_x": 81,
     "portrait_y": 50,
     "landscape_x": 50,
-    "landscape_y": 50
+    "landscape_y": 46
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 1280,
-        "photo_height": 852,
+        "photo_width": 2441,
+        "photo_height": 3720,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 391.88100686498854,
-        "visible_height": 852.0,
-        "visible_fraction_x": 0.3061570366132723,
+        "visible_width": 1711.0297482837527,
+        "visible_height": 3720.0,
+        "visible_fraction_x": 0.700954423713131,
         "visible_fraction_y": 1.0,
-        "overflow_x": 888.1189931350115,
+        "overflow_x": 729.9702517162473,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 45,
+            "object_x": 81,
             "object_y": 50,
             "visible_source_window": {
-              "left": 31.22,
+              "left": 24.22,
               "top": 0.0,
-              "right": 61.84,
+              "right": 94.32,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8197,
+            "anchor_overlap": 0.8637,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 359.04,
-              "top": 237.11159999999998,
-              "right": 837.12,
-              "bottom": 850.722
+              "left": 454.5142,
+              "top": 679.272,
+              "right": 2435.6298,
+              "bottom": 2846.9159999999997
             },
             "name": "anchor_only",
-            "score": -0.657,
+            "score": -0.682,
             "fallback": "anchor_center"
           },
           {
-            "object_x": 45,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 31.22,
+              "left": 14.95,
               "top": 0.0,
-              "right": 61.84,
+              "right": 85.05,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8197,
+            "anchor_overlap": 0.8185,
             "context_inside": [
+              true,
+              true,
               false,
+              true,
+              true,
               false
             ],
             "context_overlap": [
-              0.9218,
-              0.8926
+              1.0,
+              1.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 358.40000000000003,
-              "top": 3.0671999999999997,
-              "right": 837.12,
-              "bottom": 850.722
+              "left": 0.0,
+              "top": 679.272,
+              "right": 2435.6298,
+              "bottom": 2846.9159999999997
             },
             "name": "anchor_plus_context",
-            "score": -0.1802
+            "score": -0.2343
           },
           {
-            "object_x": 45,
+            "object_x": 81,
             "object_y": 50,
             "visible_source_window": {
-              "left": 31.22,
+              "left": 24.22,
               "top": 0.0,
-              "right": 61.84,
+              "right": 94.32,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8197,
+            "anchor_overlap": 0.8637,
             "context_inside": [],
             "context_overlap": [],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 359.04,
-              "top": 237.11159999999998,
-              "right": 837.12,
-              "bottom": 850.722
+              "left": 454.5142,
+              "top": 679.272,
+              "right": 2435.6298,
+              "bottom": 2846.9159999999997
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.657
+            "score": -0.532
           },
           {
-            "object_x": 45,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 31.22,
+              "left": 14.95,
               "top": 0.0,
-              "right": 61.84,
+              "right": 85.05,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8197,
+            "anchor_overlap": 0.8185,
             "context_inside": [
+              true,
+              true,
               false,
+              true,
+              true,
               false
             ],
             "context_overlap": [
-              0.9218,
-              0.8926
+              1.0,
+              1.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0
             ],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 358.40000000000003,
-              "top": 3.0671999999999997,
-              "right": 837.12,
-              "bottom": 850.722
+              "left": 0.0,
+              "top": 679.272,
+              "right": 2435.6298,
+              "bottom": 2846.9159999999997
             },
             "name": "anchor_context_anomaly",
-            "score": -0.1802
+            "score": -0.0843
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 1280,
-        "photo_height": 852,
+        "photo_width": 2441,
+        "photo_height": 3720,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 1280.0,
-        "visible_height": 588.741418764302,
+        "visible_width": 2441.0,
+        "visible_height": 1122.7482837528603,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6910110548876784,
+        "visible_fraction_y": 0.3018140547722743,
         "overflow_x": 0.0,
-        "overflow_y": 263.258581235698,
+        "overflow_y": 2597.2517162471395,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 95,
+            "object_y": 46,
             "visible_source_window": {
               "left": 0.0,
-              "top": 29.35,
+              "top": 32.12,
               "right": 100.0,
-              "bottom": 98.46
+              "bottom": 62.3
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.9595,
+            "anchor_overlap": 0.518,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 359.04,
-              "top": 237.11159999999998,
-              "right": 837.12,
-              "bottom": 850.722
+              "left": 454.5142,
+              "top": 679.272,
+              "right": 2435.6298,
+              "bottom": 2846.9159999999997
             },
             "name": "anchor_only",
-            "score": -0.652
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 46,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.45,
+              "top": 32.12,
               "right": 100.0,
-              "bottom": 84.55
+              "bottom": 62.3
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7876,
+            "anchor_overlap": 0.518,
             "context_inside": [
+              true,
               false,
-              false
+              true,
+              true,
+              false,
+              true
             ],
             "context_overlap": [
-              0.7459,
-              0.7275
+              1.0,
+              0.0,
+              1.0,
+              1.0,
+              0.7433,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 358.40000000000003,
-              "top": 3.0671999999999997,
-              "right": 837.12,
-              "bottom": 850.722
+              "left": 0.0,
+              "top": 679.272,
+              "right": 2435.6298,
+              "bottom": 2846.9159999999997
             },
             "name": "anchor_plus_context",
-            "score": -0.2178
+            "score": -0.2034
           },
           {
             "object_x": 50,
-            "object_y": 95,
+            "object_y": 46,
             "visible_source_window": {
               "left": 0.0,
-              "top": 29.35,
+              "top": 32.12,
               "right": 100.0,
-              "bottom": 98.46
+              "bottom": 62.3
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.9595,
+            "anchor_overlap": 0.518,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 359.04,
-              "top": 237.11159999999998,
-              "right": 837.12,
-              "bottom": 850.722
+              "left": 454.5142,
+              "top": 679.272,
+              "right": 2435.6298,
+              "bottom": 2846.9159999999997
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.652
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 46,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.45,
+              "top": 32.12,
               "right": 100.0,
-              "bottom": 84.55
+              "bottom": 62.3
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7876,
+            "anchor_overlap": 0.518,
             "context_inside": [
+              true,
               false,
-              false
+              true,
+              true,
+              false,
+              true
             ],
             "context_overlap": [
-              0.7459,
-              0.7275
+              1.0,
+              0.0,
+              1.0,
+              1.0,
+              0.7433,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 358.40000000000003,
-              "top": 3.0671999999999997,
-              "right": 837.12,
-              "bottom": 850.722
+              "left": 0.0,
+              "top": 679.272,
+              "right": 2435.6298,
+              "bottom": 2846.9159999999997
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2178
+            "score": -0.2034
           }
         ]
       }
@@ -353,7 +467,7 @@
   },
   "validation": {
     "portrait_primary_anchor_inside": false,
-    "portrait_primary_anchor_overlap": 0.8197,
+    "portrait_primary_anchor_overlap": 0.8637,
     "portrait_context_inside": [],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
@@ -361,10 +475,14 @@
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.7876,
+    "landscape_primary_anchor_overlap": 0.518,
     "landscape_context_inside": [
+      true,
       false,
-      false
+      true,
+      true,
+      false,
+      true
     ],
     "landscape_focal_anomaly_inside": false,
     "landscape_composition_valid": false,
