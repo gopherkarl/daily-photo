@@ -1,131 +1,113 @@
 {
-  "generated_at": "2026-08-13T10:32:16.597369+00:00",
+  "generated_at": "2026-08-13T20:11:08.184203+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 53,
-    "y": 49
+    "x": 50,
+    "y": 58
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "sky",
+        "name": "reflective dome structure",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 0.43,
-          "top": 0.25,
-          "right": 91.51,
-          "bottom": 80.28
+          "left": 8.94,
+          "top": 68.89,
+          "right": 22.49,
+          "bottom": 93.71
         },
         "confidence": 0.9,
         "narrative_value": 0.8,
-        "description": "blue sky with scattered white clouds",
-        "detector_score": 0.3256
+        "description": "large curved reflective surface spanning most of the image",
+        "detector_score": 0.3672
       },
       {
-        "name": "left_building_facade",
+        "name": "person",
+        "role": "focal_anomaly",
+        "bbox_pct": {
+          "left": 45.54,
+          "top": 18.37,
+          "right": 47.22,
+          "bottom": 19.95
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.9,
+        "description": "small figure standing on the apex of the dome structure",
+        "detector_score": 0.4973
+      },
+      {
+        "name": "city buildings",
+        "role": "context",
+        "bbox_pct": {
+          "left": 19.91,
+          "top": 73.4,
+          "right": 33.83,
+          "bottom": 94.53
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.6,
+        "description": "tall urban structures with varied architectural styles",
+        "detector_score": 0.3808
+      },
+      {
+        "name": "trees",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.01,
+          "top": 87.52,
+          "right": 100.0,
+          "bottom": 99.83
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.5,
+        "description": "dense green foliage at the base of the buildings",
+        "detector_score": 0.4411
+      },
+      {
+        "name": "city buildings",
+        "role": "context",
+        "bbox_pct": {
+          "left": 8.93,
+          "top": 68.92,
+          "right": 22.47,
+          "bottom": 93.67
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.6,
+        "description": "tall urban structures with varied architectural styles",
+        "detector_score": 0.4115
+      },
+      {
+        "name": "trees",
         "role": "context",
         "bbox_pct": {
           "left": 0.0,
-          "top": 0.0,
-          "right": 35.0,
-          "bottom": 100.0
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.6,
-        "description": "concrete and glass structure on the left side of the image"
-      },
-      {
-        "name": "right_building_facade",
-        "role": "context",
-        "bbox_pct": {
-          "left": 75.0,
-          "top": 0.0,
+          "top": 90.0,
           "right": 100.0,
-          "bottom": 100.0
+          "bottom": 95.0
         },
         "confidence": 0.8,
-        "narrative_value": 0.6,
-        "description": "glass curtain wall structure on the right side of the image"
-      },
-      {
-        "name": "rooftop_greenery",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 20.0,
-          "top": 75.0,
-          "right": 80.0,
-          "bottom": 90.0
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.3,
-        "description": "dense vegetation including grass and shrubs on the rooftop terrace"
-      },
-      {
-        "name": "person_in_white_dress",
-        "role": "secondary_subject",
-        "bbox_pct": {
-          "left": 25.0,
-          "top": 75.0,
-          "right": 35.0,
-          "bottom": 90.0
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.4,
-        "description": "individual wearing white dress seated on a sofa"
-      },
-      {
-        "name": "left_building_facade",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 0.0,
-          "right": 35.0,
-          "bottom": 100.0
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.6,
-        "description": "concrete and glass structure on the left side of the image"
-      },
-      {
-        "name": "right_building_facade",
-        "role": "context",
-        "bbox_pct": {
-          "left": 75.0,
-          "top": 0.0,
-          "right": 100.0,
-          "bottom": 100.0
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.6,
-        "description": "glass curtain wall structure on the right side of the image"
+        "narrative_value": 0.5,
+        "description": "dense green foliage at the base of the buildings"
       }
     ],
-    "primary_anchor": "sky",
-    "focal_element": null,
+    "primary_anchor": "reflective dome structure",
+    "focal_element": "person",
     "confidence": 0.9,
-    "description": "rooftop terrace with people seated on sofas between two tall buildings under a blue sky with clouds",
-    "lighting": "bright daylight with clear visibility",
-    "background": "tall glass and concrete buildings flanking the rooftop area",
+    "description": "a large reflective dome structure with a person on top, surrounded by city buildings and trees under a cloudy sky",
+    "lighting": "diffused overcast lighting from the cloud-covered sky",
+    "background": "cloudy sky above the urban landscape",
     "localization_model": "Grounding DINO-T + VLM assignment"
   },
-  "synthesis_model": "qwen3:32b",
-  "synthesis": {
-    "recommended_candidate": "anchor_plus_context",
-    "primary_anchor": "sky",
-    "selected_context": [
-      "left_building_facade",
-      "right_building_facade"
-    ],
-    "selected_anomaly": null,
-    "confidence": 0.8,
-    "composition_strategy": "Selected anchor_plus_context to include primary anchor (sky) with contextual elements (left and right building facades) while maintaining balance and supporting the rooftop terrace scene."
-  },
+  "selection_method": "deterministic_argmax_score_candidate",
+  "synthesis_model": null,
+  "synthesis": null,
   "positions": {
-    "portrait_x": 44,
+    "portrait_x": 0,
     "portrait_y": 50,
     "landscape_x": 50,
-    "landscape_y": 50
+    "landscape_y": 100
   },
   "display_context": {
     "default_profile": "portrait_phone",
@@ -145,28 +127,27 @@
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 44,
+            "object_x": 0,
             "object_y": 50,
             "visible_source_window": {
-              "left": 28.82,
+              "left": 0.0,
               "top": 0.0,
-              "right": 63.32,
+              "right": 34.5,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.3788,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 34.6752,
-              "top": 15.120000000000001,
-              "right": 7379.3664,
-              "bottom": 4855.3344
+              "left": 720.9215999999999,
+              "top": 4166.4672,
+              "right": 1813.5936,
+              "bottom": 5667.5808
             },
             "name": "anchor_only",
-            "score": -0.659,
-            "fallback": "anchor_center"
+            "score": 0.2
           },
           {
             "object_x": 50,
@@ -178,7 +159,7 @@
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3788,
+            "anchor_overlap": 0.0,
             "context_inside": [
               false,
               false,
@@ -186,43 +167,43 @@
               false
             ],
             "context_overlap": [
-              0.0642,
+              0.0775,
+              0.345,
               0.0,
-              0.0642,
-              0.0
+              0.345
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 0.0,
+              "top": 4166.4672,
               "right": 8064.0,
-              "bottom": 6048.0
+              "bottom": 6037.7184
             },
             "name": "anchor_plus_context",
-            "score": -0.395
+            "score": -0.352
           },
           {
-            "object_x": 44,
+            "object_x": 17,
             "object_y": 50,
             "visible_source_window": {
-              "left": 28.82,
+              "left": 11.14,
               "top": 0.0,
-              "right": 63.32,
+              "right": 45.63,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3788,
+            "anchor_overlap": 0.838,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 34.6752,
-              "top": 15.120000000000001,
-              "right": 7379.3664,
-              "bottom": 4855.3344
+              "left": 720.9215999999999,
+              "top": 1111.0176,
+              "right": 3807.8208,
+              "bottom": 5667.5808
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.659
+            "score": -0.683
           },
           {
             "object_x": 50,
@@ -234,7 +215,7 @@
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3788,
+            "anchor_overlap": 0.0,
             "context_inside": [
               false,
               false,
@@ -242,20 +223,20 @@
               false
             ],
             "context_overlap": [
-              0.0642,
+              0.0775,
+              0.345,
               0.0,
-              0.0642,
-              0.0
+              0.345
             ],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
               "left": 0.0,
-              "top": 0.0,
+              "top": 1111.0176,
               "right": 8064.0,
-              "bottom": 6048.0
+              "bottom": 6037.7184
             },
             "name": "anchor_context_anomaly",
-            "score": -0.395
+            "score": -0.202
           }
         ]
       },
@@ -275,94 +256,94 @@
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 25,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 9.67,
+              "top": 38.67,
               "right": 100.0,
-              "bottom": 71.0
+              "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7663,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 34.6752,
-              "top": 15.120000000000001,
-              "right": 7379.3664,
-              "bottom": 4855.3344
+              "left": 720.9215999999999,
+              "top": 4166.4672,
+              "right": 1813.5936,
+              "bottom": 5667.5808
             },
             "name": "anchor_only",
-            "score": -0.653
+            "score": 0.25
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 19.34,
+              "top": 38.67,
               "right": 100.0,
-              "bottom": 80.66
+              "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7615,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
-              false,
-              false,
-              false,
-              false
+              true,
+              true,
+              true,
+              true
             ],
             "context_overlap": [
-              0.6133,
-              0.6133,
-              0.6133,
-              0.6133
+              1.0,
+              1.0,
+              1.0,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 0.0,
+              "top": 4166.4672,
               "right": 8064.0,
-              "bottom": 6048.0
+              "bottom": 6037.7184
             },
             "name": "anchor_plus_context",
-            "score": -0.2497
+            "score": 0.75
           },
           {
             "object_x": 50,
-            "object_y": 25,
+            "object_y": 66,
             "visible_source_window": {
               "left": 0.0,
-              "top": 9.67,
+              "top": 25.52,
               "right": 100.0,
-              "bottom": 71.0
+              "bottom": 86.85
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7663,
+            "anchor_overlap": 0.7237,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 34.6752,
-              "top": 15.120000000000001,
-              "right": 7379.3664,
-              "bottom": 4855.3344
+              "left": 720.9215999999999,
+              "top": 1111.0176,
+              "right": 3807.8208,
+              "bottom": 5667.5808
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.653
+            "score": -0.65
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 74,
             "visible_source_window": {
               "left": 0.0,
-              "top": 19.34,
+              "top": 28.62,
               "right": 100.0,
-              "bottom": 80.66
+              "bottom": 89.95
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7615,
+            "anchor_overlap": 0.8483,
             "context_inside": [
               false,
               false,
@@ -370,20 +351,20 @@
               false
             ],
             "context_overlap": [
-              0.6133,
-              0.6133,
-              0.6133,
-              0.6133
+              0.783,
+              0.197,
+              0.8495,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 0.0,
+              "top": 1111.0176,
               "right": 8064.0,
-              "bottom": 6048.0
+              "bottom": 6037.7184
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2497
+            "score": -0.2857
           }
         ]
       }
@@ -391,24 +372,24 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": false,
-    "portrait_primary_anchor_overlap": 0.3788,
+    "portrait_primary_anchor_inside": true,
+    "portrait_primary_anchor_overlap": 1.0,
     "portrait_context_inside": [],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
-    "portrait_anchor_center_fallback": true,
-    "portrait_context_preferred_but_unavailable": false,
+    "portrait_anchor_center_fallback": false,
+    "portrait_context_preferred_but_unavailable": true,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.7615,
+    "landscape_primary_anchor_inside": true,
+    "landscape_primary_anchor_overlap": 1.0,
     "landscape_context_inside": [
-      false,
-      false,
-      false,
-      false
+      true,
+      true,
+      true,
+      true
     ],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": false,
+    "landscape_composition_valid": true,
     "landscape_anchor_center_fallback": false,
     "landscape_context_preferred_but_unavailable": false,
     "landscape_anchor_priority_fallback": false
