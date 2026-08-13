@@ -33,7 +33,7 @@ REPORT_PATH = os.path.join(REPO_DIR, "analysis_report.json")
 DISPLAY_PROFILES_PATH = os.path.join(REPO_DIR, "display_profiles.json")
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 VISION_MODEL = os.environ.get("DAILY_PHOTO_VISION_MODEL", "qwen3-vl:8b")
-JUDGE_MODEL = os.environ.get("DAILY_PHOTO_JUDGE_MODEL", "qwen3:32b")
+
 USE_GROUNDING_DINO = os.environ.get("DAILY_PHOTO_USE_GROUNDING_DINO", "1") != "0"
 SCENE_DISAGREEMENT_THRESHOLD = 0.35
 
@@ -248,7 +248,7 @@ Return at least one element. Classify dense repetitive material as background_ma
                 "messages": [{"role": "user", "content": prompt, "images": [image_b64]}],
                 "format": "json",
                 "stream": False,
-                "options": {"temperature": 0.1},
+                "options": {"temperature": 0.0},
             }
         else:
             endpoint = OLLAMA_URL
@@ -258,7 +258,7 @@ Return at least one element. Classify dense repetitive material as background_ma
                 "images": [image_b64],
                 "format": "json",
                 "stream": False,
-                "options": {"temperature": 0.1},
+                "options": {"temperature": 0.0},
             }
         request = urllib.request.Request(
             endpoint,
@@ -283,13 +283,6 @@ Return at least one element. Classify dense repetitive material as background_ma
             except FileNotFoundError:
                 pass
 
-
-def call_ollama_json(model, prompt):
-    payload = {"model": model, "prompt": prompt, "format": "json", "stream": False, "options": {"temperature": 0.1}}
-    request = urllib.request.Request(OLLAMA_URL, data=json.dumps(payload).encode("utf-8"), headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(request, timeout=180) as response:
-        result = json.loads(response.read().decode("utf-8"))
-    return extract_json(result.get("response", ""))
 
 
 def scene_signature(vision):
@@ -320,26 +313,6 @@ def ground_vision_elements(image_path, vision):
         raise RuntimeError(f"Grounding DINO could not localize primary element: {primary['name']}")
     return {**vision, "elements": grounded, "localization_model": "Grounding DINO-T + VLM assignment"}
 
-
-def synthesize_analysis(lum_data, vision, display_context, candidates):
-    prompt = json.dumps({
-        "task": "Choose the best composition candidate. Return JSON only.",
-        "rules": [
-            "primary_anchor defines the photograph's identity",
-            "context explains the scene",
-            "focal_anomaly adds narrative value but must not displace the primary anchor",
-            "background_mass supports but does not dominate",
-            "prefer candidates with anchor visible and at least one context element visible",
-        ],
-        "math_centroid": {"x": lum_data["x"], "y": lum_data["y"]},
-        "vision": vision,
-        "candidates": candidates,
-        "required_output": {"recommended_candidate": "candidate name", "primary_anchor": "name", "selected_context": ["name"], "selected_anomaly": "name or null", "confidence": 0.0, "composition_strategy": "brief explanation"},
-    })
-    try:
-        return call_ollama_json(JUDGE_MODEL, prompt)
-    except Exception:
-        return {"recommended_candidate": max(candidates, key=lambda item: item["score"])["name"], "confidence": 0.0, "composition_strategy": "Deterministic fallback to highest-scoring candidate."}
 
 
 def update_html_crop(positions):
@@ -454,10 +427,11 @@ def main():
         profile_windows[name] = {**window, "candidates": candidates}
 
     display_context = {"default_profile": default_profile, "profiles": profile_windows, "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"}
-    synthesis = synthesize_analysis(lum_data, vision, display_context, candidates_by_profile[default_profile])
-    selected_name = synthesis.get("recommended_candidate", "anchor_plus_context")
     default_candidates = {item["name"]: item for item in candidates_by_profile[default_profile]}
-    selected = default_candidates.get(selected_name, max(default_candidates.values(), key=lambda item: item["score"]))
+    # Deterministic selection replaces the redundant Qwen3:32b judge.
+    synthesis = None
+    selection_method = "deterministic_argmax_score_candidate"
+    selected = max(default_candidates.values(), key=lambda item: item["score"])
     default_prefix = "portrait" if default_profile == "portrait_phone" else "landscape"
     if not selected["anchor_inside"]:
         # Anchor-priority fallback: preserve the photograph's identity even when
@@ -505,8 +479,9 @@ def main():
         "math_centroid": {"x": lum_data["x"], "y": lum_data["y"]},
         "vision_model": VISION_MODEL,
         "vision": vision,
-        "synthesis_model": JUDGE_MODEL,
-        "synthesis": synthesis,
+        "selection_method": selection_method,
+        "synthesis_model": None,
+        "synthesis": None,
         "positions": positions,
         "display_context": display_context,
         "validation": validation,
