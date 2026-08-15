@@ -126,6 +126,30 @@ def candidate_crop(window, anchor_bbox, context_bboxes=(), anomaly_bbox=None):
     }
 
 
+def dead_center_crop(window):
+    """Ultimate fallback: crop the geometric center of the source.
+
+    Guarantees a deterministic, valid-looking composition regardless of anchor,
+    context, or anomaly state. object-position 50% 50% centers the visible
+    window on the source frame. Used only when no anchor-preserving candidate
+    is possible, so the anchor is NOT inside by construction.
+    """
+    visible = visible_source_window(window, 50.0, 50.0)
+    return {
+        "name": "dead_center",
+        "object_x": 50,
+        "object_y": 50,
+        "visible_source_window": percent_window(window, 50.0, 50.0),
+        "anchor_inside": False,
+        "anchor_overlap": 0.0,
+        "context_inside": [],
+        "context_overlap": [],
+        "anomaly_inside": False,
+        "target_bbox": None,
+        "fallback": "dead_center",
+    }
+
+
 def score_candidate(candidate, centroid, anomaly_present=True):
     context_score = (sum(candidate.get("context_overlap", [])) / len(candidate["context_overlap"])) if candidate.get("context_overlap") else 0.0
     centroid_x = abs(candidate["object_x"] - centroid["x"]) / 100.0

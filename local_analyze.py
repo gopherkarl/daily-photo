@@ -17,6 +17,7 @@ from crop_geometry import (
     bbox_inside_window,
     bbox_percent_to_pixels,
     crop_position_for_bbox,
+    dead_center_crop,
     display_window,
     percent_window,
     visible_source_window,
@@ -298,20 +299,41 @@ def scene_consistent(first, second):
 
 
 def ground_vision_elements(image_path, vision):
-    """Replace VLM-estimated boxes with independent Grounding DINO boxes."""
-    # Grounding DINO localizes generic categories; the VLM retains attributes,
-    # narrative roles, and semantic identity. This avoids exact phrase matching.
-    labels = sorted({
-        canonical_category(item["name"])
-        for item in vision["elements"]
-        if not item.get("synthetic", False)
-    })
-    detections = grounding_locate(image_path, labels)
-    grounded = match_detections_to_elements(vision["elements"], detections)
-    primary = next(item for item in grounded if item["name"] == vision["primary_anchor"])
-    if "detector_score" not in primary and primary["role"] == "primary_anchor":
+    """Replace VLM-estimated boxes with independent Grounding DINO boxes.
+
+    The primary anchor is grounded in its OWN single-label call so that
+    competing labels in a multi-label prompt can never suppress it (the known
+    ~30% DINO fragility). Remaining crop-relevant elements (context, focal
+    anomaly, secondary subjects) are grounded in a separate filtered call.
+    Background mass and synthetic placeholders are excluded: they do not drive
+    the crop and only add suppression pressure.
+    """
+    elements = vision["elements"]
+    primary = next(item for item in elements if item["name"] == vision["primary_anchor"])
+    primary_cat = canonical_category(primary["name"])
+
+    # Fix #1: ground the primary anchor in isolation.
+    primary_dets = grounding_locate(image_path, [primary_cat])
+    if not primary_dets:
         raise RuntimeError(f"Grounding DINO could not localize primary element: {primary['name']}")
-    return {**vision, "elements": grounded, "localization_model": "Grounding DINO-T + VLM assignment"}
+
+    # Fix #2: ground only crop-relevant labels (exclude background_mass and
+    # the primary itself, already handled), keeping the primary out of this
+    # call so it cannot suppress other labels either.
+    other_labels = sorted({
+        canonical_category(item["name"])
+        for item in elements
+        if not item.get("synthetic", False)
+        and item["role"] in ("context", "focal_anomaly", "secondary_subject")
+        and item["name"] != primary["name"]
+    })
+    other_dets = grounding_locate(image_path, other_labels) if other_labels else []
+
+    grounded = match_detections_to_elements(elements, primary_dets + other_dets)
+    grounded_primary = next(item for item in grounded if item["name"] == primary["name"])
+    if "detector_score" not in grounded_primary:
+        raise RuntimeError(f"Grounding DINO could not localize primary element: {primary['name']}")
+    return {**vision, "elements": grounded, "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"}
 
 
 
@@ -379,6 +401,7 @@ def create_qa_artifact(lum_data, vision, positions, validation):
         handle.write(f"- Landscape composition valid: **{validation['landscape_composition_valid']}**\n")
         handle.write(f"- Portrait anchor-priority fallback: **{validation['portrait_anchor_priority_fallback']}**\n")
         handle.write(f"- Portrait anchor-center fallback: **{validation.get('portrait_anchor_center_fallback', False)}**\n")
+        handle.write(f"- Portrait dead-center fallback: **{validation.get('portrait_dead_center_fallback', False)}**\n")
         handle.write(f"- Landscape anchor-priority fallback: **{validation['landscape_anchor_priority_fallback']}**\n")
         handle.write(f"- Landscape anchor-center fallback: **{validation.get('landscape_anchor_center_fallback', False)}**\n")
         handle.write("\nThe preview image is `qa_source_preview.jpg`; the production image is not replaced by this artifact.\n")
@@ -440,12 +463,14 @@ def main():
         if selected["anchor_inside"]:
             selected["fallback"] = "anchor_priority"
         else:
-            # If the anchor is wider than the portrait viewport, center the
-            # viewport on the anchor's center rather than rejecting the run.
-            # candidate_crop() already computes this center-based position;
-            # containment is impossible by geometry, but the crop remains the
-            # best identity-preserving portrait representation.
-            selected["fallback"] = "anchor_center"
+            # Ultimate fallback: no candidate can preserve the anchor in this
+            # viewport (e.g. the anchor is wider than the portrait window).
+            # Emit a deterministic dead-center crop rather than rejecting the
+            # run, so a valid composition always publishes.
+            window = display_window(lum_data["width"], lum_data["height"],
+                                    profiles[default_profile]["width"], profiles[default_profile]["height"])
+            selected = dead_center_crop(window)
+            selected["fallback"] = "dead_center"
     for name, candidates in candidates_by_profile.items():
         selected_profile = selected if name == default_profile else max(candidates, key=lambda item: item["score"])
         prefix = "portrait" if name == "portrait_phone" else "landscape"
@@ -459,10 +484,13 @@ def main():
         # anchor when the source geometry cannot fit both.
         validation[f"{prefix}_composition_valid"] = (
             selected_profile["anchor_inside"]
-            or selected_profile.get("fallback") == "anchor_center"
+            or selected_profile.get("fallback") in ("anchor_center", "dead_center")
         )
         validation[f"{prefix}_anchor_center_fallback"] = (
             selected_profile.get("fallback") == "anchor_center"
+        )
+        validation[f"{prefix}_dead_center_fallback"] = (
+            selected_profile.get("fallback") == "dead_center"
         )
         validation[f"{prefix}_context_preferred_but_unavailable"] = (
             selected_profile["anchor_inside"]
@@ -495,6 +523,7 @@ def main():
     if (
         not validation[f"{default_prefix}_primary_anchor_inside"]
         and not validation[f"{default_prefix}_anchor_center_fallback"]
+        and not validation[f"{default_prefix}_dead_center_fallback"]
     ):
         raise RuntimeError(
             f"primary anchor could not be preserved for default profile {default_profile}: "
