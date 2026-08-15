@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T17:27:07.873043+00:00",
+  "generated_at": "2026-08-15T18:34:02.563312+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
     "x": 49,
@@ -172,8 +172,8 @@
   "positions": {
     "portrait_x": 50,
     "portrait_y": 50,
-    "landscape_x": 50,
-    "landscape_y": 62
+    "landscape_x": 50.0,
+    "landscape_y": 29.6214
   },
   "display_context": {
     "default_profile": "portrait_phone",
@@ -497,5 +497,85 @@
     "landscape_dead_center_fallback": false,
     "landscape_context_preferred_but_unavailable": false,
     "landscape_anchor_priority_fallback": false
+  },
+  "visual_weight_refine": {
+    "enabled": true,
+    "model": "google/gemini-3.7-flash",
+    "log": [
+      {
+        "profile": "portrait",
+        "model": "google/gemini-3.7-flash",
+        "judge_adjust": false,
+        "judge_reason": "The current centered crop perfectly aligns with the strong central perspective, framing the torii gate's vertical post, the lantern-lined path, and the distant shrine symmetrically.",
+        "judge_object_x": null,
+        "judge_object_y": null,
+        "max_delta_x_points": 14.4112,
+        "max_delta_y_points": 0.0,
+        "clamped_object_x": 50.0,
+        "clamped_object_y": 50.0,
+        "applied": false,
+        "cost": 0.001295625,
+        "usage": {
+          "prompt_tokens": 1780,
+          "completion_tokens": 335,
+          "total_tokens": 2115,
+          "cost": 0.001295625,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001295625,
+            "upstream_inference_prompt_cost": 0.0006675,
+            "upstream_inference_completions_cost": 0.000628125
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 277,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "profile": "landscape",
+        "model": "google/gemini-3.7-flash",
+        "judge_adjust": true,
+        "judge_reason": "Panning upward includes the full sweep of the torii gate's top crossbeam, preventing an awkward slice through the main architectural silhouette.",
+        "judge_object_x": 50.0,
+        "judge_object_y": 29.6,
+        "max_delta_x_points": 0.0,
+        "max_delta_y_points": 32.3786,
+        "clamped_object_x": 50.0,
+        "clamped_object_y": 29.6214,
+        "applied": true,
+        "cost": 0.002380125,
+        "usage": {
+          "prompt_tokens": 1782,
+          "completion_tokens": 913,
+          "total_tokens": 2695,
+          "cost": 0.002380125,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.002380125,
+            "upstream_inference_prompt_cost": 0.00066825,
+            "upstream_inference_completions_cost": 0.001711875
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 844,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    ]
   }
 }

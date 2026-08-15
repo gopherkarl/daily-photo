@@ -27,6 +27,15 @@ from crop_geometry import (
 )
 from grounding_localizer import canonical_category, locate as grounding_locate, match_detections_to_elements
 
+# Optional visual-weight refinement module. Guarded so an import failure (e.g. in a
+# headless cron env) never breaks rotation -- the refinement is strictly optional.
+try:
+    import visual_weight_refine
+    _VW_IMPORT_OK = True
+except Exception:  # noqa: BLE001
+    visual_weight_refine = None
+    _VW_IMPORT_OK = False
+
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 PHOTO_PATH = os.path.join(REPO_DIR, "photo.jpg")
 INDEX_PATH = os.path.join(REPO_DIR, "index.html")
@@ -37,6 +46,12 @@ VISION_MODEL = os.environ.get("DAILY_PHOTO_VISION_MODEL", "qwen3-vl:8b")
 
 USE_GROUNDING_DINO = os.environ.get("DAILY_PHOTO_USE_GROUNDING_DINO", "1") != "0"
 SCENE_DISAGREEMENT_THRESHOLD = 0.35
+
+# Optional visual-weight refinement: after the deterministic crop decision, ask a
+# frontier vision LLM for a SMALL bounded pan (<=10% of pixels) for better composition.
+# The clamp is the only guard. FAIL-OPEN: any error keeps the deterministic positions.
+USE_VISUAL_WEIGHT_REFINE = os.environ.get("DAILY_PHOTO_VISUAL_WEIGHT_REFINE", "1") != "0"
+VISUAL_WEIGHT_MODEL = os.environ.get("DAILY_PHOTO_VISUAL_WEIGHT_MODEL", "google/gemini-3.7-flash")
 
 SYSTEM_VISUAL_WEIGHT_PROMPT = """You are a photography composition reviewer. Analyze only the supplied image.
 Do not infer content from filenames or prior context. Identify the primary subject,
@@ -501,6 +516,24 @@ def main():
             selected_profile.get("fallback") == "anchor_priority"
         )
     print(f"Primary anchor: {vision['primary_anchor']}; selected candidate: {selected['name']}; portrait crop: {positions['portrait_x']}% {positions['portrait_y']}%")
+
+    # Optional visual-weight refinement: after the deterministic decision, ask the
+    # frontier LLM for a small bounded pan. FAIL-OPEN -- on any error the deterministic
+    # positions are kept and the pipeline continues unchanged.
+    visual_weight_log = []
+    if USE_VISUAL_WEIGHT_REFINE and _VW_IMPORT_OK:
+        try:
+            positions, visual_weight_log = visual_weight_refine.refine_positions(
+                PHOTO_PATH, positions, profiles, anchor_px, anchor["bbox_pct"]
+            )
+            applied = [r["profile"] for r in visual_weight_log if r["applied"]]
+            if applied:
+                print(f"Visual-weight refine applied for: {', '.join(applied)}")
+            else:
+                print("Visual-weight refine: no adjustment applied")
+        except Exception as exc:  # noqa: BLE001 - fail open, never block rotation
+            print(f"Visual-weight refine skipped (fail-open): {exc}")
+            visual_weight_log = [{"error": str(exc)}]
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source_photo": os.path.basename(PHOTO_PATH),
@@ -513,6 +546,11 @@ def main():
         "positions": positions,
         "display_context": display_context,
         "validation": validation,
+        "visual_weight_refine": {
+            "enabled": USE_VISUAL_WEIGHT_REFINE,
+            "model": VISUAL_WEIGHT_MODEL,
+            "log": visual_weight_log,
+        },
     }
     with open(REPORT_PATH, "w") as handle:
         json.dump(report, handle, indent=2)
