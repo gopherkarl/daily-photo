@@ -1,381 +1,312 @@
 {
-  "generated_at": "2026-08-15T18:44:19.424460+00:00",
+  "generated_at": "2026-08-15T20:49:58.171679+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 59,
-    "y": 51
+    "x": 49,
+    "y": 50
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "dark wooden architectural model",
+        "name": "fountain pen nib",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 52.74,
-          "top": 39.37,
-          "right": 70.07,
-          "bottom": 91.75
+          "left": 38.17,
+          "top": 0.12,
+          "right": 85.36,
+          "bottom": 93.02
         },
-        "confidence": 0.9,
+        "confidence": 0.95,
         "narrative_value": 0.8,
-        "description": "small dark wooden structure with traditional roof and columns",
-        "detector_score": 0.5063
+        "description": "metallic pen nib with engraved patterns, partially submerged in ink",
+        "detector_score": 0.4169
       },
       {
-        "name": "metallic decorative symbol",
-        "role": "focal_anomaly",
+        "name": "ink",
+        "role": "context",
         "bbox_pct": {
-          "left": 52.76,
-          "top": 39.4,
-          "right": 70.13,
-          "bottom": 91.56
+          "left": 37.44,
+          "top": 0.11,
+          "right": 99.73,
+          "bottom": 93.66
         },
         "confidence": 0.8,
-        "narrative_value": 0.7,
-        "description": "ornate white metallic symbol with flame-like design",
-        "detector_score": 0.5586
-      },
-      {
-        "name": "blurred metallic object left",
-        "role": "context",
-        "bbox_pct": {
-          "left": 26.14,
-          "top": 7.78,
-          "right": 76.97,
-          "bottom": 90.69
-        },
-        "confidence": 0.7,
         "narrative_value": 0.2,
-        "description": "blurred metallic candle holder on left side",
-        "detector_score": 0.5554
+        "description": "brown liquid with visible bubbles, filling the container",
+        "detector_score": 0.5946
       },
       {
-        "name": "blurred metallic object right",
+        "name": "ink",
         "role": "context",
-        "bbox_pct": {
-          "left": 80.0,
-          "top": 60.0,
-          "right": 90.0,
-          "bottom": 90.0
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.2,
-        "description": "blurred metallic candle holder on right side"
-      },
-      {
-        "name": "wooden background panels",
-        "role": "background_mass",
         "bbox_pct": {
           "left": 0.0,
-          "top": 0.0,
+          "top": 20.0,
           "right": 100.0,
-          "bottom": 80.0
+          "bottom": 95.0
         },
-        "confidence": 0.9,
-        "narrative_value": 0.3,
-        "description": "dark wooden panels forming the background"
-      },
-      {
-        "name": "blurred metallic object left",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 60.0,
-          "right": 10.0,
-          "bottom": 90.0
-        },
-        "confidence": 0.7,
+        "confidence": 0.8,
         "narrative_value": 0.2,
-        "description": "blurred metallic candle holder on left side"
-      },
-      {
-        "name": "blurred metallic object right",
-        "role": "context",
-        "bbox_pct": {
-          "left": 80.0,
-          "top": 60.0,
-          "right": 90.0,
-          "bottom": 90.0
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.2,
-        "description": "blurred metallic candle holder on right side"
+        "description": "brown liquid with visible bubbles, filling the container"
       }
     ],
-    "primary_anchor": "dark wooden architectural model",
-    "focal_element": "metallic decorative symbol",
-    "confidence": 0.9,
-    "description": "a shelf with a dark wooden architectural model, an ornate metallic symbol, and blurred metallic objects against wooden background",
-    "lighting": "warm lighting highlighting the central objects",
-    "background": "dark wooden panels and foliage in top right corner",
+    "primary_anchor": "fountain pen nib",
+    "focal_element": null,
+    "confidence": 0.95,
+    "description": "Close-up of a fountain pen nib dipping into brown ink within a glass container",
+    "lighting": "warm orange lighting highlighting metallic surfaces",
+    "background": "glass container holding the ink, partially visible as transparent walls",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 58.0,
+    "portrait_x": 64.4,
     "portrait_y": 50.0,
     "landscape_x": 50.0,
-    "landscape_y": 77.0
+    "landscape_y": 74.3
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 9520,
-        "photo_height": 6336,
+        "photo_width": 1924,
+        "photo_height": 1281,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 2914.270022883295,
-        "visible_height": 6336.0,
-        "visible_fraction_x": 0.3061208007230352,
+        "visible_width": 589.2013729977117,
+        "visible_height": 1281.0,
+        "visible_fraction_x": 0.3062377198532805,
         "visible_fraction_y": 1.0,
-        "overflow_x": 6605.729977116705,
+        "overflow_x": 1334.7986270022884,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 66,
+            "object_x": 67,
             "object_y": 50,
             "visible_source_window": {
-              "left": 45.8,
+              "left": 46.48,
               "top": 0.0,
-              "right": 76.41,
+              "right": 77.11,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.6489,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 5020.848,
-              "top": 2494.4832,
-              "right": 6670.663999999999,
-              "bottom": 5813.28
+              "left": 734.3908000000001,
+              "top": 1.5372,
+              "right": 1642.3264000000001,
+              "bottom": 1191.5862
             },
             "name": "anchor_only",
-            "score": 0.243
+            "score": -0.668
           },
           {
-            "object_x": 43,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 29.84,
+              "left": 34.69,
               "top": 0.0,
-              "right": 60.45,
+              "right": 65.31,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.4448,
+            "anchor_overlap": 0.5752,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.6022,
-              0.0,
-              0.0,
-              0.0
+              0.4475,
+              0.3062
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 492.9408,
-              "right": 8568.0,
-              "bottom": 5813.28
+              "top": 1.4091,
+              "right": 1924.0,
+              "bottom": 1216.95
             },
             "name": "anchor_plus_context",
-            "score": -0.3784
+            "score": -0.3068
           },
           {
-            "object_x": 66,
+            "object_x": 67,
             "object_y": 50,
             "visible_source_window": {
-              "left": 45.8,
+              "left": 46.48,
               "top": 0.0,
-              "right": 76.41,
-              "bottom": 100.0
-            },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
-            "context_inside": [],
-            "context_overlap": [],
-            "anomaly_inside": true,
-            "target_bbox": {
-              "left": 5020.848,
-              "top": 2494.4832,
-              "right": 6676.375999999999,
-              "bottom": 5813.28
-            },
-            "name": "anchor_plus_anomaly",
-            "score": 0.393
-          },
-          {
-            "object_x": 43,
-            "object_y": 50,
-            "visible_source_window": {
-              "left": 29.84,
-              "top": 0.0,
-              "right": 60.45,
+              "right": 77.11,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.4448,
+            "anchor_overlap": 0.6489,
+            "context_inside": [],
+            "context_overlap": [],
+            "anomaly_inside": false,
+            "target_bbox": {
+              "left": 734.3908000000001,
+              "top": 1.5372,
+              "right": 1642.3264000000001,
+              "bottom": 1191.5862
+            },
+            "name": "anchor_plus_anomaly",
+            "score": -0.668
+          },
+          {
+            "object_x": 50,
+            "object_y": 50,
+            "visible_source_window": {
+              "left": 34.69,
+              "top": 0.0,
+              "right": 65.31,
+              "bottom": 100.0
+            },
+            "anchor_inside": false,
+            "anchor_overlap": 0.5752,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.6022,
-              0.0,
-              0.0,
-              0.0
+              0.4475,
+              0.3062
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 492.9408,
-              "right": 8568.0,
-              "bottom": 5813.28
+              "top": 1.4091,
+              "right": 1924.0,
+              "bottom": 1216.95
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3784
+            "score": -0.3068
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 9520,
-        "photo_height": 6336,
+        "photo_width": 1924,
+        "photo_height": 1281,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 9520.0,
-        "visible_height": 4378.764302059496,
+        "visible_width": 1924.0,
+        "visible_height": 884.9519450800915,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6910928507038346,
+        "visible_fraction_y": 0.6908289969399621,
         "overflow_x": 0.0,
-        "overflow_y": 1957.235697940504,
+        "overflow_y": 396.0480549199085,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 100,
+            "object_y": 39,
             "visible_source_window": {
               "left": 0.0,
-              "top": 30.89,
+              "top": 12.06,
               "right": 100.0,
-              "bottom": 100.0
+              "bottom": 81.14
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.7436,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 5020.848,
-              "top": 2494.4832,
-              "right": 6670.663999999999,
-              "bottom": 5813.28
+              "left": 734.3908000000001,
+              "top": 1.5372,
+              "right": 1642.3264000000001,
+              "bottom": 1191.5862
             },
             "name": "anchor_only",
-            "score": 0.241
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 49,
+            "object_y": 42,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.14,
+              "top": 12.99,
               "right": 100.0,
-              "bottom": 84.25
+              "bottom": 82.07
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8567,
+            "anchor_overlap": 0.7436,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.8335,
-              0.8082,
-              0.8082,
-              0.8082
+              0.7385,
+              0.8276
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 492.9408,
-              "right": 8568.0,
-              "bottom": 5813.28
+              "top": 1.4091,
+              "right": 1924.0,
+              "bottom": 1216.95
             },
             "name": "anchor_plus_context",
-            "score": -0.2054
+            "score": -0.2052
           },
           {
             "object_x": 50,
-            "object_y": 100,
+            "object_y": 39,
             "visible_source_window": {
               "left": 0.0,
-              "top": 30.89,
+              "top": 12.06,
               "right": 100.0,
-              "bottom": 100.0
-            },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
-            "context_inside": [],
-            "context_overlap": [],
-            "anomaly_inside": true,
-            "target_bbox": {
-              "left": 5020.848,
-              "top": 2494.4832,
-              "right": 6676.375999999999,
-              "bottom": 5813.28
-            },
-            "name": "anchor_plus_anomaly",
-            "score": 0.391
-          },
-          {
-            "object_x": 50,
-            "object_y": 49,
-            "visible_source_window": {
-              "left": 0.0,
-              "top": 15.14,
-              "right": 100.0,
-              "bottom": 84.25
+              "bottom": 81.14
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8567,
+            "anchor_overlap": 0.7436,
+            "context_inside": [],
+            "context_overlap": [],
+            "anomaly_inside": false,
+            "target_bbox": {
+              "left": 734.3908000000001,
+              "top": 1.5372,
+              "right": 1642.3264000000001,
+              "bottom": 1191.5862
+            },
+            "name": "anchor_plus_anomaly",
+            "score": -0.651
+          },
+          {
+            "object_x": 50,
+            "object_y": 42,
+            "visible_source_window": {
+              "left": 0.0,
+              "top": 12.99,
+              "right": 100.0,
+              "bottom": 82.07
+            },
+            "anchor_inside": false,
+            "anchor_overlap": 0.7436,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.8335,
-              0.8082,
-              0.8082,
-              0.8082
+              0.7385,
+              0.8276
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 492.9408,
-              "right": 8568.0,
-              "bottom": 5813.28
+              "top": 1.4091,
+              "right": 1924.0,
+              "bottom": 1216.95
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2054
+            "score": -0.2052
           }
         ]
       }
@@ -383,20 +314,23 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": true,
-    "portrait_primary_anchor_overlap": 1.0,
+    "portrait_primary_anchor_inside": false,
+    "portrait_primary_anchor_overlap": 0.0,
     "portrait_context_inside": [],
-    "portrait_focal_anomaly_inside": true,
+    "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
-    "portrait_dead_center_fallback": false,
+    "portrait_dead_center_fallback": true,
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": true,
-    "landscape_primary_anchor_overlap": 1.0,
-    "landscape_context_inside": [],
-    "landscape_focal_anomaly_inside": true,
-    "landscape_composition_valid": true,
+    "landscape_primary_anchor_inside": false,
+    "landscape_primary_anchor_overlap": 0.7436,
+    "landscape_context_inside": [
+      false,
+      false
+    ],
+    "landscape_focal_anomaly_inside": false,
+    "landscape_composition_valid": false,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
     "landscape_context_preferred_but_unavailable": false,
@@ -410,20 +344,20 @@
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": true,
-        "judge_reason": "Panning slightly left captures the apex and symmetry of the miniature shrine behind the brass emblem, creating a more balanced architectural frame.",
-        "judge_object_x": 58.0,
-        "judge_object_y": null,
-        "max_delta_x_points": 14.4117,
+        "judge_reason": "Panning right captures more of the intricate details and high contrast of the fountain pen nib while reducing empty orange space on the left.",
+        "judge_object_x": 64.4,
+        "judge_object_y": 50.0,
+        "max_delta_x_points": 14.4142,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 58.0,
+        "clamped_object_x": 64.4,
         "clamped_object_y": 50.0,
         "applied": true,
-        "cost": 0.002296125,
+        "cost": 0.00206925,
         "usage": {
           "prompt_tokens": 1783,
-          "completion_tokens": 868,
-          "total_tokens": 2651,
-          "cost": 0.002296125,
+          "completion_tokens": 747,
+          "total_tokens": 2530,
+          "cost": 0.00206925,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -432,12 +366,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.002296125,
+            "upstream_inference_cost": 0.00206925,
             "upstream_inference_prompt_cost": 0.000668625,
-            "upstream_inference_completions_cost": 0.0016275
+            "upstream_inference_completions_cost": 0.001400625
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 816,
+            "reasoning_tokens": 690,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -447,20 +381,20 @@
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": true,
-        "judge_reason": "Panning upward includes more of the miniature shrine's roofline to prevent awkward bisection at the top edge while eliminating excess empty foreground at the bottom.",
+        "judge_reason": "Panning downward includes more of the fountain pen's nib tip, completing the strong diagonal thrust and grounding the main focal element properly within the frame.",
         "judge_object_x": 50.0,
-        "judge_object_y": 77.0,
+        "judge_object_y": 74.3,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3722,
+        "max_delta_y_points": 32.3446,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 77.0,
+        "clamped_object_y": 74.3,
         "applied": true,
-        "cost": 0.002626875,
+        "cost": 0.002539875,
         "usage": {
-          "prompt_tokens": 1785,
-          "completion_tokens": 1044,
-          "total_tokens": 2829,
-          "cost": 0.002626875,
+          "prompt_tokens": 1783,
+          "completion_tokens": 998,
+          "total_tokens": 2781,
+          "cost": 0.002539875,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -469,12 +403,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.002626875,
-            "upstream_inference_prompt_cost": 0.000669375,
-            "upstream_inference_completions_cost": 0.0019575
+            "upstream_inference_cost": 0.002539875,
+            "upstream_inference_prompt_cost": 0.000668625,
+            "upstream_inference_completions_cost": 0.00187125
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 982,
+            "reasoning_tokens": 937,
             "image_tokens": 0,
             "audio_tokens": 0
           }

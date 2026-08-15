@@ -1,19 +1,19 @@
-# Crop QA — 2026-08-15T18:44:19.761141+00:00
+# Crop QA — 2026-08-15T20:49:58.222349+00:00
 
-- Source: `photo.jpg` (9520×6336)
+- Source: `photo.jpg` (1924×1281)
 - Localization model: **Grounding DINO-T (isolated primary) + VLM assignment**
-- Primary anchor: **dark wooden architectural model**
-- Focal anomaly: **metallic decorative symbol**
-- Elements: `[('dark wooden architectural model', 'primary_anchor', {'left': 52.74, 'top': 39.37, 'right': 70.07, 'bottom': 91.75}), ('metallic decorative symbol', 'focal_anomaly', {'left': 52.76, 'top': 39.4, 'right': 70.13, 'bottom': 91.56}), ('blurred metallic object left', 'context', {'left': 26.14, 'top': 7.78, 'right': 76.97, 'bottom': 90.69}), ('blurred metallic object right', 'context', {'left': 80.0, 'top': 60.0, 'right': 90.0, 'bottom': 90.0}), ('wooden background panels', 'background_mass', {'left': 0.0, 'top': 0.0, 'right': 100.0, 'bottom': 80.0}), ('blurred metallic object left', 'context', {'left': 0.0, 'top': 60.0, 'right': 10.0, 'bottom': 90.0}), ('blurred metallic object right', 'context', {'left': 80.0, 'top': 60.0, 'right': 90.0, 'bottom': 90.0})]`
-- Portrait crop: `58.0% 50.0%`
-- Landscape crop: `50.0% 77.0%`
-- Portrait anchor overlap: **1.00**
-- Landscape anchor overlap: **1.00**
+- Primary anchor: **fountain pen nib**
+- Focal anomaly: **none**
+- Elements: `[('fountain pen nib', 'primary_anchor', {'left': 38.17, 'top': 0.12, 'right': 85.36, 'bottom': 93.02}), ('ink', 'context', {'left': 37.44, 'top': 0.11, 'right': 99.73, 'bottom': 93.66}), ('ink', 'context', {'left': 0.0, 'top': 20.0, 'right': 100.0, 'bottom': 95.0})]`
+- Portrait crop: `64.4% 50.0%`
+- Landscape crop: `50.0% 74.3%`
+- Portrait anchor overlap: **0.00**
+- Landscape anchor overlap: **0.74**
 - Portrait composition valid: **True**
-- Landscape composition valid: **True**
+- Landscape composition valid: **False**
 - Portrait anchor-priority fallback: **False**
 - Portrait anchor-center fallback: **False**
-- Portrait dead-center fallback: **False**
+- Portrait dead-center fallback: **True**
 - Landscape anchor-priority fallback: **False**
 - Landscape anchor-center fallback: **False**
 
