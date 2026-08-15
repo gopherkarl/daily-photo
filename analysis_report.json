@@ -1,468 +1,381 @@
 {
-  "generated_at": "2026-08-15T18:34:02.563312+00:00",
+  "generated_at": "2026-08-15T18:44:19.424460+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 49,
-    "y": 46
+    "x": 59,
+    "y": 51
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "Torii gate",
+        "name": "dark wooden architectural model",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 0.34,
-          "top": 8.01,
-          "right": 99.56,
-          "bottom": 99.79
+          "left": 52.74,
+          "top": 39.37,
+          "right": 70.07,
+          "bottom": 91.75
         },
         "confidence": 0.9,
         "narrative_value": 0.8,
-        "description": "large red traditional Japanese torii gate structure spanning the image",
-        "detector_score": 0.3873
+        "description": "small dark wooden structure with traditional roof and columns",
+        "detector_score": 0.5063
       },
       {
-        "name": "Crowd",
-        "role": "background_mass",
+        "name": "metallic decorative symbol",
+        "role": "focal_anomaly",
         "bbox_pct": {
-          "left": 30.0,
-          "top": 80.0,
-          "right": 70.0,
-          "bottom": 99.0
+          "left": 52.76,
+          "top": 39.4,
+          "right": 70.13,
+          "bottom": 91.56
         },
         "confidence": 0.8,
-        "narrative_value": 0.5,
-        "description": "dense group of people walking through the gate"
+        "narrative_value": 0.7,
+        "description": "ornate white metallic symbol with flame-like design",
+        "detector_score": 0.5586
       },
       {
-        "name": "Red lantern rows",
-        "role": "background_mass",
+        "name": "blurred metallic object left",
+        "role": "context",
         "bbox_pct": {
-          "left": 20.0,
-          "top": 65.0,
-          "right": 80.0,
-          "bottom": 99.0
+          "left": 26.14,
+          "top": 7.78,
+          "right": 76.97,
+          "bottom": 90.69
         },
         "confidence": 0.7,
-        "narrative_value": 0.4,
-        "description": "repetitive rows of red lanterns with white text hanging on both sides of the path"
-      },
-      {
-        "name": "Left trees",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.06,
-          "top": 53.07,
-          "right": 23.74,
-          "bottom": 99.75
-        },
-        "confidence": 0.6,
-        "narrative_value": 0.3,
-        "description": "green foliage of trees on the left side of the gate",
-        "detector_score": 0.4773
-      },
-      {
-        "name": "Right trees",
-        "role": "context",
-        "bbox_pct": {
-          "left": 55.82,
-          "top": 25.62,
-          "right": 99.89,
-          "bottom": 99.78
-        },
-        "confidence": 0.6,
-        "narrative_value": 0.3,
-        "description": "green foliage of trees on the right side of the gate",
-        "detector_score": 0.375
-      },
-      {
-        "name": "Left building",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.14,
-          "top": 7.77,
-          "right": 99.8,
-          "bottom": 99.69
-        },
-        "confidence": 0.5,
         "narrative_value": 0.2,
-        "description": "gray modern building partially visible behind left trees",
-        "detector_score": 0.4137
+        "description": "blurred metallic candle holder on left side",
+        "detector_score": 0.5554
       },
       {
-        "name": "Right building",
+        "name": "blurred metallic object right",
         "role": "context",
         "bbox_pct": {
-          "left": 70.0,
-          "top": 40.0,
-          "right": 100.0,
+          "left": 80.0,
+          "top": 60.0,
+          "right": 90.0,
           "bottom": 90.0
         },
-        "confidence": 0.5,
+        "confidence": 0.7,
         "narrative_value": 0.2,
-        "description": "white traditional-style building partially visible behind right trees"
+        "description": "blurred metallic candle holder on right side"
       },
       {
-        "name": "Left trees",
-        "role": "context",
+        "name": "wooden background panels",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 11.86,
-          "top": 46.9,
-          "right": 23.19,
-          "bottom": 60.01
+          "left": 0.0,
+          "top": 0.0,
+          "right": 100.0,
+          "bottom": 80.0
         },
-        "confidence": 0.6,
+        "confidence": 0.9,
         "narrative_value": 0.3,
-        "description": "green foliage of trees on the left side of the gate",
-        "detector_score": 0.3059
+        "description": "dark wooden panels forming the background"
       },
       {
-        "name": "Right trees",
-        "role": "context",
-        "bbox_pct": {
-          "left": 32.32,
-          "top": 57.31,
-          "right": 49.73,
-          "bottom": 82.34
-        },
-        "confidence": 0.6,
-        "narrative_value": 0.3,
-        "description": "green foliage of trees on the right side of the gate",
-        "detector_score": 0.3204
-      },
-      {
-        "name": "Left building",
+        "name": "blurred metallic object left",
         "role": "context",
         "bbox_pct": {
           "left": 0.0,
-          "top": 25.0,
-          "right": 30.0,
-          "bottom": 80.0
-        },
-        "confidence": 0.5,
-        "narrative_value": 0.2,
-        "description": "gray modern building partially visible behind left trees"
-      },
-      {
-        "name": "Right building",
-        "role": "context",
-        "bbox_pct": {
-          "left": 70.0,
-          "top": 40.0,
-          "right": 100.0,
+          "top": 60.0,
+          "right": 10.0,
           "bottom": 90.0
         },
-        "confidence": 0.5,
+        "confidence": 0.7,
         "narrative_value": 0.2,
-        "description": "white traditional-style building partially visible behind right trees"
+        "description": "blurred metallic candle holder on left side"
+      },
+      {
+        "name": "blurred metallic object right",
+        "role": "context",
+        "bbox_pct": {
+          "left": 80.0,
+          "top": 60.0,
+          "right": 90.0,
+          "bottom": 90.0
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.2,
+        "description": "blurred metallic candle holder on right side"
       }
     ],
-    "primary_anchor": "Torii gate",
-    "focal_element": null,
+    "primary_anchor": "dark wooden architectural model",
+    "focal_element": "metallic decorative symbol",
     "confidence": 0.9,
-    "description": "A large red torii gate structure spans the image, with dense crowds of people walking through it, flanked by repetitive rows of red lanterns hanging on both sides, surrounded by green trees and buildings under a partly cloudy sky.",
-    "lighting": "Bright daylight with sunlight filtering through scattered clouds.",
-    "background": "Partly cloudy sky above, green trees and distant hills behind the gate.",
+    "description": "a shelf with a dark wooden architectural model, an ornate metallic symbol, and blurred metallic objects against wooden background",
+    "lighting": "warm lighting highlighting the central objects",
+    "background": "dark wooden panels and foliage in top right corner",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 50,
-    "portrait_y": 50,
+    "portrait_x": 58.0,
+    "portrait_y": 50.0,
     "landscape_x": 50.0,
-    "landscape_y": 29.6214
+    "landscape_y": 77.0
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 7629,
-        "photo_height": 5077,
+        "photo_width": 9520,
+        "photo_height": 6336,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 2335.187643020595,
-        "visible_height": 5077.0,
-        "visible_fraction_x": 0.3060935434553146,
+        "visible_width": 2914.270022883295,
+        "visible_height": 6336.0,
+        "visible_fraction_x": 0.3061208007230352,
         "visible_fraction_y": 1.0,
-        "overflow_x": 5293.812356979405,
+        "overflow_x": 6605.729977116705,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 50,
+            "object_x": 66,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.7,
+              "left": 45.8,
               "top": 0.0,
-              "right": 65.3,
+              "right": 76.41,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.3085,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 25.9386,
-              "top": 406.6677,
-              "right": 7595.432400000001,
-              "bottom": 5066.3383
+              "left": 5020.848,
+              "top": 2494.4832,
+              "right": 6670.663999999999,
+              "bottom": 5813.28
             },
             "name": "anchor_only",
-            "score": -0.651
+            "score": 0.243
           },
           {
-            "object_x": 50,
+            "object_x": 43,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.7,
+              "left": 29.84,
               "top": 0.0,
-              "right": 65.3,
+              "right": 60.45,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3085,
+            "anchor_overlap": 0.4448,
             "context_inside": [
-              false,
-              false,
-              false,
-              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
+              0.6022,
               0.0,
-              0.2152,
-              0.3071,
-              0.0,
-              0.0,
-              0.8636,
               0.0,
               0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 394.4829,
-              "right": 7629.0,
-              "bottom": 5066.3383
+              "top": 492.9408,
+              "right": 8568.0,
+              "bottom": 5813.28
             },
             "name": "anchor_plus_context",
-            "score": -0.3577
+            "score": -0.3784
           },
           {
-            "object_x": 50,
+            "object_x": 66,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.7,
+              "left": 45.8,
               "top": 0.0,
-              "right": 65.3,
+              "right": 76.41,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.3085,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 25.9386,
-              "top": 406.6677,
-              "right": 7595.432400000001,
-              "bottom": 5066.3383
+              "left": 5020.848,
+              "top": 2494.4832,
+              "right": 6676.375999999999,
+              "bottom": 5813.28
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.651
+            "score": 0.393
           },
           {
-            "object_x": 50,
+            "object_x": 43,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.7,
+              "left": 29.84,
               "top": 0.0,
-              "right": 65.3,
+              "right": 60.45,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3085,
+            "anchor_overlap": 0.4448,
             "context_inside": [
-              false,
-              false,
-              false,
-              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
+              0.6022,
               0.0,
-              0.2152,
-              0.3071,
-              0.0,
-              0.0,
-              0.8636,
               0.0,
               0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 394.4829,
-              "right": 7629.0,
-              "bottom": 5066.3383
+              "top": 492.9408,
+              "right": 8568.0,
+              "bottom": 5813.28
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3577
+            "score": -0.3784
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 7629,
-        "photo_height": 5077,
+        "photo_width": 9520,
+        "photo_height": 6336,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 7629.0,
-        "visible_height": 3508.990846681922,
+        "visible_width": 9520.0,
+        "visible_height": 4378.764302059496,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6911543917041406,
+        "visible_fraction_y": 0.6910928507038346,
         "overflow_x": 0.0,
-        "overflow_y": 1568.009153318078,
+        "overflow_y": 1957.235697940504,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 63,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 19.46,
+              "top": 30.89,
               "right": 100.0,
-              "bottom": 88.57
+              "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7531,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 25.9386,
-              "top": 406.6677,
-              "right": 7595.432400000001,
-              "bottom": 5066.3383
+              "left": 5020.848,
+              "top": 2494.4832,
+              "right": 6670.663999999999,
+              "bottom": 5813.28
             },
             "name": "anchor_only",
-            "score": -0.651
+            "score": 0.241
           },
           {
             "object_x": 50,
-            "object_y": 62,
+            "object_y": 49,
             "visible_source_window": {
               "left": 0.0,
-              "top": 19.15,
+              "top": 15.14,
               "right": 100.0,
-              "bottom": 88.26
+              "bottom": 84.25
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7531,
+            "anchor_overlap": 0.8567,
             "context_inside": [
               false,
               false,
               false,
-              false,
-              true,
-              true,
-              true,
               false
             ],
             "context_overlap": [
-              0.7539,
-              0.8447,
-              0.7519,
-              0.9653,
-              1.0,
-              1.0,
-              1.0,
-              0.9653
+              0.8335,
+              0.8082,
+              0.8082,
+              0.8082
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 394.4829,
-              "right": 7629.0,
-              "bottom": 5066.3383
+              "top": 492.9408,
+              "right": 8568.0,
+              "bottom": 5813.28
             },
             "name": "anchor_plus_context",
-            "score": -0.1735
+            "score": -0.2054
           },
           {
             "object_x": 50,
-            "object_y": 63,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 19.46,
+              "top": 30.89,
               "right": 100.0,
-              "bottom": 88.57
+              "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7531,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 25.9386,
-              "top": 406.6677,
-              "right": 7595.432400000001,
-              "bottom": 5066.3383
+              "left": 5020.848,
+              "top": 2494.4832,
+              "right": 6676.375999999999,
+              "bottom": 5813.28
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.651
+            "score": 0.391
           },
           {
             "object_x": 50,
-            "object_y": 62,
+            "object_y": 49,
             "visible_source_window": {
               "left": 0.0,
-              "top": 19.15,
+              "top": 15.14,
               "right": 100.0,
-              "bottom": 88.26
+              "bottom": 84.25
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7531,
+            "anchor_overlap": 0.8567,
             "context_inside": [
               false,
               false,
               false,
-              false,
-              true,
-              true,
-              true,
               false
             ],
             "context_overlap": [
-              0.7539,
-              0.8447,
-              0.7519,
-              0.9653,
-              1.0,
-              1.0,
-              1.0,
-              0.9653
+              0.8335,
+              0.8082,
+              0.8082,
+              0.8082
             ],
             "anomaly_inside": false,
             "target_bbox": {
               "left": 0.0,
-              "top": 394.4829,
-              "right": 7629.0,
-              "bottom": 5066.3383
+              "top": 492.9408,
+              "right": 8568.0,
+              "bottom": 5813.28
             },
             "name": "anchor_context_anomaly",
-            "score": -0.1735
+            "score": -0.2054
           }
         ]
       }
@@ -470,29 +383,20 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": false,
-    "portrait_primary_anchor_overlap": 0.0,
+    "portrait_primary_anchor_inside": true,
+    "portrait_primary_anchor_overlap": 1.0,
     "portrait_context_inside": [],
-    "portrait_focal_anomaly_inside": false,
+    "portrait_focal_anomaly_inside": true,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
-    "portrait_dead_center_fallback": true,
+    "portrait_dead_center_fallback": false,
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.7531,
-    "landscape_context_inside": [
-      false,
-      false,
-      false,
-      false,
-      true,
-      true,
-      true,
-      false
-    ],
-    "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": false,
+    "landscape_primary_anchor_inside": true,
+    "landscape_primary_anchor_overlap": 1.0,
+    "landscape_context_inside": [],
+    "landscape_focal_anomaly_inside": true,
+    "landscape_composition_valid": true,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
     "landscape_context_preferred_but_unavailable": false,
@@ -505,21 +409,21 @@
       {
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": false,
-        "judge_reason": "The current centered crop perfectly aligns with the strong central perspective, framing the torii gate's vertical post, the lantern-lined path, and the distant shrine symmetrically.",
-        "judge_object_x": null,
+        "judge_adjust": true,
+        "judge_reason": "Panning slightly left captures the apex and symmetry of the miniature shrine behind the brass emblem, creating a more balanced architectural frame.",
+        "judge_object_x": 58.0,
         "judge_object_y": null,
-        "max_delta_x_points": 14.4112,
+        "max_delta_x_points": 14.4117,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 50.0,
+        "clamped_object_x": 58.0,
         "clamped_object_y": 50.0,
-        "applied": false,
-        "cost": 0.001295625,
+        "applied": true,
+        "cost": 0.002296125,
         "usage": {
-          "prompt_tokens": 1780,
-          "completion_tokens": 335,
-          "total_tokens": 2115,
-          "cost": 0.001295625,
+          "prompt_tokens": 1783,
+          "completion_tokens": 868,
+          "total_tokens": 2651,
+          "cost": 0.002296125,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -528,12 +432,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.001295625,
-            "upstream_inference_prompt_cost": 0.0006675,
-            "upstream_inference_completions_cost": 0.000628125
+            "upstream_inference_cost": 0.002296125,
+            "upstream_inference_prompt_cost": 0.000668625,
+            "upstream_inference_completions_cost": 0.0016275
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 277,
+            "reasoning_tokens": 816,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -543,20 +447,20 @@
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": true,
-        "judge_reason": "Panning upward includes the full sweep of the torii gate's top crossbeam, preventing an awkward slice through the main architectural silhouette.",
+        "judge_reason": "Panning upward includes more of the miniature shrine's roofline to prevent awkward bisection at the top edge while eliminating excess empty foreground at the bottom.",
         "judge_object_x": 50.0,
-        "judge_object_y": 29.6,
+        "judge_object_y": 77.0,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3786,
+        "max_delta_y_points": 32.3722,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 29.6214,
+        "clamped_object_y": 77.0,
         "applied": true,
-        "cost": 0.002380125,
+        "cost": 0.002626875,
         "usage": {
-          "prompt_tokens": 1782,
-          "completion_tokens": 913,
-          "total_tokens": 2695,
-          "cost": 0.002380125,
+          "prompt_tokens": 1785,
+          "completion_tokens": 1044,
+          "total_tokens": 2829,
+          "cost": 0.002626875,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -565,12 +469,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.002380125,
-            "upstream_inference_prompt_cost": 0.00066825,
-            "upstream_inference_completions_cost": 0.001711875
+            "upstream_inference_cost": 0.002626875,
+            "upstream_inference_prompt_cost": 0.000669375,
+            "upstream_inference_completions_cost": 0.0019575
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 844,
+            "reasoning_tokens": 982,
             "image_tokens": 0,
             "audio_tokens": 0
           }
