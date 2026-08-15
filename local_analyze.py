@@ -47,6 +47,37 @@ VISION_MODEL = os.environ.get("DAILY_PHOTO_VISION_MODEL", "qwen3-vl:8b")
 USE_GROUNDING_DINO = os.environ.get("DAILY_PHOTO_USE_GROUNDING_DINO", "1") != "0"
 SCENE_DISAGREEMENT_THRESHOLD = 0.35
 
+# Inject a compositional-skill brief into the VLM's anchor-selection prompt so the
+# semantic model reasons about whether a focal anomaly should be elevated to the
+# primary anchor, instead of being structurally forced into a supporting role.
+# Toggleable for controlled before/after comparison. Default ON.
+USE_COMPOSITION_ANCHOR = os.environ.get("DAILY_PHOTO_COMPOSITION_ANCHOR", "1") != "0"
+
+# Composition brief appended to the semantic role-assignment prompt. Drawn from the
+# same visual-weight doctrine used by the downstream refinement stage (people/faces
+# heaviest, isolated subject amplified, single anomaly amid repetition carries
+# narrative weight, leading space for directional subjects). Instructs the model to
+# pick the anchor by composition + narrative weight, not size or centrality, and
+# explicitly permits a focal anomaly (e.g. a lone person, or a compositionally
+# dominant non-human form such as a tall isolated tree) to BE the primary anchor.
+COMPOSITION_ANCHOR_BRIEF = """Composition brief for anchor selection (apply BEFORE assigning roles):
+The primary anchor must be the element that best carries the photograph's meaning, judged by
+composition and narrative weight -- NOT merely the largest, most central, or most saturated form.
+Visual-weight heuristics: people and faces are the heaviest elements; an isolated subject framed in
+negative space is amplified; a single unique element standing against repetition (an anomaly) often
+carries more narrative weight than the surrounding mass. If the anchor is directional (a person, or
+an object that faces/moves a direction), it must be framed with LEADING SPACE -- room to look or
+move into.
+A focal anomaly, such as a lone person or a visually dominant non-human form (a tall isolated tree,
+a striking building silhouette, a lone figure on a horizon), MAY be the primary anchor when it is
+compositionally dominant -- e.g. it spans a large share of frame height, stands alone against
+negative space, or shows the strongest contrast against its surroundings -- even if it occupies less
+area than the surrounding mass. When a focal anomaly is compositionally dominant over a full-width
+mass, select IT as the primary anchor; do not let a featureless background mass (an empty field, a
+flat sky, a plain floor) win anchor selection merely because it is larger.
+Classify such an element as BOTH focal_anomaly and, when it is compositionally dominant, the
+primary_anchor."""
+
 # Optional visual-weight refinement: after the deterministic crop decision, ask a
 # frontier vision LLM for a SMALL bounded pan (<=10% of pixels) for better composition.
 # The clamp is the only guard. FAIL-OPEN: any error keeps the deterministic positions.
@@ -244,6 +275,8 @@ def query_vision(image_path, verification=False):
   "background":"brief background description"
 }
 Return at least one element. Classify dense repetitive material as background_mass. Classify an isolated person, animal, object, bright focal point, or pattern-breaker with high narrative value as focal_anomaly. Include physical surroundings, signage, architecture, or other elements needed to explain the scene as context. Every bbox must contain the COMPLETE element, with coordinates from the original image: left/top=0 and right/bottom=100. Do not use vague locations without numeric bounding boxes. First identify the actual scene and its distinct elements; then produce the JSON."""
+    if USE_COMPOSITION_ANCHOR:
+        prompt = prompt.rstrip() + "\n\n" + COMPOSITION_ANCHOR_BRIEF
     if verification:
         prompt += " Re-check every element independently, especially the focal anomaly and context boundaries."
     temp_path = None
