@@ -1,312 +1,426 @@
 {
-  "generated_at": "2026-08-15T20:49:58.171679+00:00",
+  "generated_at": "2026-08-16T10:32:45.427473+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
     "x": 49,
-    "y": 50
+    "y": 52
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "fountain pen nib",
+        "name": "red multi-tiered shrine gate",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 38.17,
-          "top": 0.12,
-          "right": 85.36,
-          "bottom": 93.02
+          "left": 0.71,
+          "top": 4.32,
+          "right": 99.28,
+          "bottom": 99.61
         },
-        "confidence": 0.95,
-        "narrative_value": 0.8,
-        "description": "metallic pen nib with engraved patterns, partially submerged in ink",
-        "detector_score": 0.4169
+        "confidence": 0.9,
+        "narrative_value": 0.9,
+        "description": "large red traditional Japanese shrine gate with multiple tiers and dark roof",
+        "detector_score": 0.3198
       },
       {
-        "name": "ink",
-        "role": "context",
+        "name": "red hanging lanterns",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 37.44,
-          "top": 0.11,
-          "right": 99.73,
-          "bottom": 93.66
+          "left": 10.0,
+          "top": 30.0,
+          "right": 95.0,
+          "bottom": 70.0
         },
         "confidence": 0.8,
         "narrative_value": 0.2,
-        "description": "brown liquid with visible bubbles, filling the container",
-        "detector_score": 0.5946
+        "description": "repetitive rows of red hanging lanterns across the scene"
       },
       {
-        "name": "ink",
-        "role": "context",
+        "name": "dense crowd",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 0.0,
-          "top": 20.0,
-          "right": 100.0,
+          "left": 20.0,
+          "top": 80.0,
+          "right": 90.0,
           "bottom": 95.0
         },
-        "confidence": 0.8,
-        "narrative_value": 0.2,
-        "description": "brown liquid with visible bubbles, filling the container"
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "large group of people gathered at the base of the shrine gate"
+      },
+      {
+        "name": "blue-tiled roof structure",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.64,
+          "top": 3.75,
+          "right": 84.77,
+          "bottom": 99.39
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.4,
+        "description": "smaller building with blue-tiled roof on the left side",
+        "detector_score": 0.4461
+      },
+      {
+        "name": "green trees",
+        "role": "context",
+        "bbox_pct": {
+          "left": 66.03,
+          "top": 54.27,
+          "right": 83.68,
+          "bottom": 69.17
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.4,
+        "description": "green trees visible in the background behind the shrine gate",
+        "detector_score": 0.4882
+      },
+      {
+        "name": "red-and-white striped poles",
+        "role": "context",
+        "bbox_pct": {
+          "left": 93.54,
+          "top": 50.56,
+          "right": 99.06,
+          "bottom": 99.62
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.4,
+        "description": "red-and-white striped poles with hanging lanterns on the right side",
+        "detector_score": 0.4013
+      },
+      {
+        "name": "blue-tiled roof structure",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.51,
+          "top": 3.58,
+          "right": 99.59,
+          "bottom": 99.45
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.4,
+        "description": "smaller building with blue-tiled roof on the left side",
+        "detector_score": 0.3017
+      },
+      {
+        "name": "green trees",
+        "role": "context",
+        "bbox_pct": {
+          "left": 96.61,
+          "top": 35.76,
+          "right": 99.93,
+          "bottom": 54.67
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.4,
+        "description": "green trees visible in the background behind the shrine gate",
+        "detector_score": 0.3088
+      },
+      {
+        "name": "red-and-white striped poles",
+        "role": "context",
+        "bbox_pct": {
+          "left": 80.0,
+          "top": 30.0,
+          "right": 95.0,
+          "bottom": 70.0
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.4,
+        "description": "red-and-white striped poles with hanging lanterns on the right side"
       }
     ],
-    "primary_anchor": "fountain pen nib",
+    "primary_anchor": "red multi-tiered shrine gate",
     "focal_element": null,
-    "confidence": 0.95,
-    "description": "Close-up of a fountain pen nib dipping into brown ink within a glass container",
-    "lighting": "warm orange lighting highlighting metallic surfaces",
-    "background": "glass container holding the ink, partially visible as transparent walls",
+    "confidence": 0.9,
+    "description": "a large red traditional Japanese shrine gate with multiple tiers and dark roof, surrounded by repetitive rows of red hanging lanterns, a dense crowd of people gathered at its base, a smaller blue-tiled roof structure to the left, green trees in the background, and red-and-white striped poles with lanterns on the right",
+    "lighting": "daylight with partly cloudy sky, soft illumination",
+    "background": "partly cloudy sky above, green trees behind the shrine gate, and a smaller blue-tiled roof structure to the left",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 64.4,
+    "portrait_x": 39.0,
     "portrait_y": 50.0,
     "landscape_x": 50.0,
-    "landscape_y": 74.3
+    "landscape_y": 22.6182
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 1924,
-        "photo_height": 1281,
+        "photo_width": 5515,
+        "photo_height": 3670,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 589.2013729977117,
-        "visible_height": 1281.0,
-        "visible_fraction_x": 0.3062377198532805,
+        "visible_width": 1688.0320366132723,
+        "visible_height": 3670.0,
+        "visible_fraction_x": 0.30608015169778285,
         "visible_fraction_y": 1.0,
-        "overflow_x": 1334.7986270022884,
+        "overflow_x": 3826.9679633867277,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 67,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 46.48,
+              "left": 34.7,
               "top": 0.0,
-              "right": 77.11,
+              "right": 65.3,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.6489,
+            "anchor_overlap": 0.3105,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 734.3908000000001,
-              "top": 1.5372,
-              "right": 1642.3264000000001,
-              "bottom": 1191.5862
+              "left": 39.156499999999994,
+              "top": 158.544,
+              "right": 5475.292,
+              "bottom": 3655.687
             },
             "name": "anchor_only",
-            "score": -0.668
+            "score": -0.651
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.69,
+              "left": 34.7,
               "top": 0.0,
-              "right": 65.31,
+              "right": 65.3,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.5752,
+            "anchor_overlap": 0.3105,
             "context_inside": [
+              false,
+              false,
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.4475,
-              0.3062
+              0.3638,
+              0.0,
+              0.0,
+              0.3089,
+              0.0,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 1.4091,
-              "right": 1924.0,
-              "bottom": 1216.95
+              "left": 28.126500000000004,
+              "top": 131.386,
+              "right": 5511.1395,
+              "bottom": 3656.054
             },
             "name": "anchor_plus_context",
-            "score": -0.3068
+            "score": -0.373
           },
           {
-            "object_x": 67,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 46.48,
+              "left": 34.7,
               "top": 0.0,
-              "right": 77.11,
+              "right": 65.3,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.6489,
+            "anchor_overlap": 0.3105,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 734.3908000000001,
-              "top": 1.5372,
-              "right": 1642.3264000000001,
-              "bottom": 1191.5862
+              "left": 39.156499999999994,
+              "top": 158.544,
+              "right": 5475.292,
+              "bottom": 3655.687
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.668
+            "score": -0.651
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.69,
+              "left": 34.7,
               "top": 0.0,
-              "right": 65.31,
+              "right": 65.3,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.5752,
+            "anchor_overlap": 0.3105,
             "context_inside": [
+              false,
+              false,
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.4475,
-              0.3062
+              0.3638,
+              0.0,
+              0.0,
+              0.3089,
+              0.0,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 1.4091,
-              "right": 1924.0,
-              "bottom": 1216.95
+              "left": 28.126500000000004,
+              "top": 131.386,
+              "right": 5511.1395,
+              "bottom": 3656.054
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3068
+            "score": -0.373
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 1924,
-        "photo_height": 1281,
+        "photo_width": 5515,
+        "photo_height": 3670,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 1924.0,
-        "visible_height": 884.9519450800915,
+        "visible_width": 5515.0,
+        "visible_height": 2536.6475972540047,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6908289969399621,
+        "visible_fraction_y": 0.6911846314043609,
         "overflow_x": 0.0,
-        "overflow_y": 396.0480549199085,
+        "overflow_y": 1133.3524027459953,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 39,
+            "object_y": 56,
             "visible_source_window": {
               "left": 0.0,
-              "top": 12.06,
+              "top": 17.29,
               "right": 100.0,
-              "bottom": 81.14
+              "bottom": 86.41
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7436,
+            "anchor_overlap": 0.7253,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 734.3908000000001,
-              "top": 1.5372,
-              "right": 1642.3264000000001,
-              "bottom": 1191.5862
+              "left": 39.156499999999994,
+              "top": 158.544,
+              "right": 5475.292,
+              "bottom": 3655.687
             },
             "name": "anchor_only",
             "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 42,
+            "object_y": 55,
             "visible_source_window": {
               "left": 0.0,
-              "top": 12.99,
+              "top": 16.98,
               "right": 100.0,
-              "bottom": 82.07
+              "bottom": 86.1
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7436,
+            "anchor_overlap": 0.7253,
             "context_inside": [
               false,
-              false
+              true,
+              false,
+              false,
+              true,
+              true
             ],
             "context_overlap": [
-              0.7385,
-              0.8276
+              0.7227,
+              1.0,
+              0.7245,
+              0.721,
+              1.0,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 1.4091,
-              "right": 1924.0,
-              "bottom": 1216.95
+              "left": 28.126500000000004,
+              "top": 131.386,
+              "right": 5511.1395,
+              "bottom": 3656.054
             },
             "name": "anchor_plus_context",
-            "score": -0.2052
+            "score": -0.1857
           },
           {
             "object_x": 50,
-            "object_y": 39,
+            "object_y": 56,
             "visible_source_window": {
               "left": 0.0,
-              "top": 12.06,
+              "top": 17.29,
               "right": 100.0,
-              "bottom": 81.14
+              "bottom": 86.41
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7436,
+            "anchor_overlap": 0.7253,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 734.3908000000001,
-              "top": 1.5372,
-              "right": 1642.3264000000001,
-              "bottom": 1191.5862
+              "left": 39.156499999999994,
+              "top": 158.544,
+              "right": 5475.292,
+              "bottom": 3655.687
             },
             "name": "anchor_plus_anomaly",
             "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 42,
+            "object_y": 55,
             "visible_source_window": {
               "left": 0.0,
-              "top": 12.99,
+              "top": 16.98,
               "right": 100.0,
-              "bottom": 82.07
+              "bottom": 86.1
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7436,
+            "anchor_overlap": 0.7253,
             "context_inside": [
               false,
-              false
+              true,
+              false,
+              false,
+              true,
+              true
             ],
             "context_overlap": [
-              0.7385,
-              0.8276
+              0.7227,
+              1.0,
+              0.7245,
+              0.721,
+              1.0,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 1.4091,
-              "right": 1924.0,
-              "bottom": 1216.95
+              "left": 28.126500000000004,
+              "top": 131.386,
+              "right": 5511.1395,
+              "bottom": 3656.054
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2052
+            "score": -0.1857
           }
         ]
       }
@@ -324,10 +438,14 @@
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.7436,
+    "landscape_primary_anchor_overlap": 0.7253,
     "landscape_context_inside": [
       false,
-      false
+      true,
+      false,
+      false,
+      true,
+      true
     ],
     "landscape_focal_anomaly_inside": false,
     "landscape_composition_valid": false,
@@ -344,20 +462,20 @@
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": true,
-        "judge_reason": "Panning right captures more of the intricate details and high contrast of the fountain pen nib while reducing empty orange space on the left.",
-        "judge_object_x": 64.4,
-        "judge_object_y": 50.0,
-        "max_delta_x_points": 14.4142,
+        "judge_reason": "Panning left centers the shrine gate's architectural symmetry, vertical apex, and ornate golden plaque within the portrait frame.",
+        "judge_object_x": 39.0,
+        "judge_object_y": null,
+        "max_delta_x_points": 14.4109,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 64.4,
+        "clamped_object_x": 39.0,
         "clamped_object_y": 50.0,
         "applied": true,
-        "cost": 0.00206925,
+        "cost": 0.00309,
         "usage": {
-          "prompt_tokens": 1783,
-          "completion_tokens": 747,
-          "total_tokens": 2530,
-          "cost": 0.00206925,
+          "prompt_tokens": 1780,
+          "completion_tokens": 1292,
+          "total_tokens": 3072,
+          "cost": 0.00309,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -366,12 +484,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00206925,
-            "upstream_inference_prompt_cost": 0.000668625,
-            "upstream_inference_completions_cost": 0.001400625
+            "upstream_inference_cost": 0.00309,
+            "upstream_inference_prompt_cost": 0.0006675,
+            "upstream_inference_completions_cost": 0.0024225
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 690,
+            "reasoning_tokens": 1231,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -381,20 +499,20 @@
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": true,
-        "judge_reason": "Panning downward includes more of the fountain pen's nib tip, completing the strong diagonal thrust and grounding the main focal element properly within the frame.",
+        "judge_reason": "Panning upward restores the dramatic silhouette and peak of the traditional temple roof while cutting distracting crowd clutter at the bottom, achieving better vertical balance.",
         "judge_object_x": 50.0,
-        "judge_object_y": 74.3,
+        "judge_object_y": 22.6,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3446,
+        "max_delta_y_points": 32.3818,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 74.3,
+        "clamped_object_y": 22.6182,
         "applied": true,
-        "cost": 0.002539875,
+        "cost": 0.002316,
         "usage": {
-          "prompt_tokens": 1783,
-          "completion_tokens": 998,
-          "total_tokens": 2781,
-          "cost": 0.002539875,
+          "prompt_tokens": 1781,
+          "completion_tokens": 879,
+          "total_tokens": 2660,
+          "cost": 0.002316,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -403,12 +521,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.002539875,
-            "upstream_inference_prompt_cost": 0.000668625,
-            "upstream_inference_completions_cost": 0.00187125
+            "upstream_inference_cost": 0.002316,
+            "upstream_inference_prompt_cost": 0.000667875,
+            "upstream_inference_completions_cost": 0.001648125
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 937,
+            "reasoning_tokens": 820,
             "image_tokens": 0,
             "audio_tokens": 0
           }

@@ -1,14 +1,14 @@
-# Crop QA — 2026-08-15T20:49:58.222349+00:00
+# Crop QA — 2026-08-16T10:32:45.664971+00:00
 
-- Source: `photo.jpg` (1924×1281)
+- Source: `photo.jpg` (5515×3670)
 - Localization model: **Grounding DINO-T (isolated primary) + VLM assignment**
-- Primary anchor: **fountain pen nib**
+- Primary anchor: **red multi-tiered shrine gate**
 - Focal anomaly: **none**
-- Elements: `[('fountain pen nib', 'primary_anchor', {'left': 38.17, 'top': 0.12, 'right': 85.36, 'bottom': 93.02}), ('ink', 'context', {'left': 37.44, 'top': 0.11, 'right': 99.73, 'bottom': 93.66}), ('ink', 'context', {'left': 0.0, 'top': 20.0, 'right': 100.0, 'bottom': 95.0})]`
-- Portrait crop: `64.4% 50.0%`
-- Landscape crop: `50.0% 74.3%`
+- Elements: `[('red multi-tiered shrine gate', 'primary_anchor', {'left': 0.71, 'top': 4.32, 'right': 99.28, 'bottom': 99.61}), ('red hanging lanterns', 'background_mass', {'left': 10.0, 'top': 30.0, 'right': 95.0, 'bottom': 70.0}), ('dense crowd', 'background_mass', {'left': 20.0, 'top': 80.0, 'right': 90.0, 'bottom': 95.0}), ('blue-tiled roof structure', 'context', {'left': 0.64, 'top': 3.75, 'right': 84.77, 'bottom': 99.39}), ('green trees', 'context', {'left': 66.03, 'top': 54.27, 'right': 83.68, 'bottom': 69.17}), ('red-and-white striped poles', 'context', {'left': 93.54, 'top': 50.56, 'right': 99.06, 'bottom': 99.62}), ('blue-tiled roof structure', 'context', {'left': 0.51, 'top': 3.58, 'right': 99.59, 'bottom': 99.45}), ('green trees', 'context', {'left': 96.61, 'top': 35.76, 'right': 99.93, 'bottom': 54.67}), ('red-and-white striped poles', 'context', {'left': 80.0, 'top': 30.0, 'right': 95.0, 'bottom': 70.0})]`
+- Portrait crop: `39.0% 50.0%`
+- Landscape crop: `50.0% 22.6182%`
 - Portrait anchor overlap: **0.00**
-- Landscape anchor overlap: **0.74**
+- Landscape anchor overlap: **0.73**
 - Portrait composition valid: **True**
 - Landscape composition valid: **False**
 - Portrait anchor-priority fallback: **False**
