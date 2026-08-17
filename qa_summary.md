@@ -1,14 +1,14 @@
-# Crop QA — 2026-08-16T10:32:45.664971+00:00
+# Crop QA — 2026-08-17T10:32:37.490173+00:00
 
-- Source: `photo.jpg` (5515×3670)
+- Source: `photo.jpg` (8704×5793)
 - Localization model: **Grounding DINO-T (isolated primary) + VLM assignment**
-- Primary anchor: **red multi-tiered shrine gate**
+- Primary anchor: **framed painting**
 - Focal anomaly: **none**
-- Elements: `[('red multi-tiered shrine gate', 'primary_anchor', {'left': 0.71, 'top': 4.32, 'right': 99.28, 'bottom': 99.61}), ('red hanging lanterns', 'background_mass', {'left': 10.0, 'top': 30.0, 'right': 95.0, 'bottom': 70.0}), ('dense crowd', 'background_mass', {'left': 20.0, 'top': 80.0, 'right': 90.0, 'bottom': 95.0}), ('blue-tiled roof structure', 'context', {'left': 0.64, 'top': 3.75, 'right': 84.77, 'bottom': 99.39}), ('green trees', 'context', {'left': 66.03, 'top': 54.27, 'right': 83.68, 'bottom': 69.17}), ('red-and-white striped poles', 'context', {'left': 93.54, 'top': 50.56, 'right': 99.06, 'bottom': 99.62}), ('blue-tiled roof structure', 'context', {'left': 0.51, 'top': 3.58, 'right': 99.59, 'bottom': 99.45}), ('green trees', 'context', {'left': 96.61, 'top': 35.76, 'right': 99.93, 'bottom': 54.67}), ('red-and-white striped poles', 'context', {'left': 80.0, 'top': 30.0, 'right': 95.0, 'bottom': 70.0})]`
-- Portrait crop: `39.0% 50.0%`
-- Landscape crop: `50.0% 22.6182%`
+- Elements: `[('framed painting', 'primary_anchor', {'left': 8.83, 'top': 0.1, 'right': 76.0, 'bottom': 99.57}), ('hanging bells', 'context', {'left': 86.63, 'top': 29.81, 'right': 94.03, 'bottom': 45.93}), ('door with glass panels', 'context', {'left': 8.86, 'top': 0.2, 'right': 76.31, 'bottom': 99.41}), ('hanging bells', 'context', {'left': 86.68, 'top': 34.09, 'right': 94.02, 'bottom': 45.89}), ('door with glass panels', 'context', {'left': 75.0, 'top': 0.0, 'right': 100.0, 'bottom': 100.0})]`
+- Portrait crop: `50% 50%`
+- Landscape crop: `50% 50%`
 - Portrait anchor overlap: **0.00**
-- Landscape anchor overlap: **0.73**
+- Landscape anchor overlap: **0.69**
 - Portrait composition valid: **True**
 - Landscape composition valid: **False**
 - Portrait anchor-priority fallback: **False**

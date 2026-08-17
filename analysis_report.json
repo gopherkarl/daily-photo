@@ -1,426 +1,356 @@
 {
-  "generated_at": "2026-08-16T10:32:45.427473+00:00",
+  "generated_at": "2026-08-17T10:32:37.088552+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 49,
-    "y": 52
+    "x": 51,
+    "y": 48
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "red multi-tiered shrine gate",
+        "name": "framed painting",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 0.71,
-          "top": 4.32,
-          "right": 99.28,
-          "bottom": 99.61
+          "left": 8.83,
+          "top": 0.1,
+          "right": 76.0,
+          "bottom": 99.57
         },
         "confidence": 0.9,
-        "narrative_value": 0.9,
-        "description": "large red traditional Japanese shrine gate with multiple tiers and dark roof",
-        "detector_score": 0.3198
+        "narrative_value": 0.8,
+        "description": "large framed artwork with abstract animals in vibrant colors",
+        "detector_score": 0.8645
       },
       {
-        "name": "red hanging lanterns",
-        "role": "background_mass",
+        "name": "hanging bells",
+        "role": "context",
         "bbox_pct": {
-          "left": 10.0,
-          "top": 30.0,
-          "right": 95.0,
-          "bottom": 70.0
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.2,
-        "description": "repetitive rows of red hanging lanterns across the scene"
-      },
-      {
-        "name": "dense crowd",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 20.0,
-          "top": 80.0,
-          "right": 90.0,
-          "bottom": 95.0
+          "left": 86.63,
+          "top": 29.81,
+          "right": 94.03,
+          "bottom": 45.93
         },
         "confidence": 0.7,
         "narrative_value": 0.3,
-        "description": "large group of people gathered at the base of the shrine gate"
+        "description": "metal bells hanging from chains attached to a wall bracket above a door",
+        "detector_score": 0.3978
       },
       {
-        "name": "blue-tiled roof structure",
+        "name": "door with glass panels",
         "role": "context",
         "bbox_pct": {
-          "left": 0.64,
-          "top": 3.75,
-          "right": 84.77,
-          "bottom": 99.39
+          "left": 8.86,
+          "top": 0.2,
+          "right": 76.31,
+          "bottom": 99.41
         },
-        "confidence": 0.6,
+        "confidence": 0.8,
         "narrative_value": 0.4,
-        "description": "smaller building with blue-tiled roof on the left side",
-        "detector_score": 0.4461
+        "description": "white-framed door with multiple glass panes",
+        "detector_score": 0.5831
       },
       {
-        "name": "green trees",
+        "name": "hanging bells",
         "role": "context",
         "bbox_pct": {
-          "left": 66.03,
-          "top": 54.27,
-          "right": 83.68,
-          "bottom": 69.17
+          "left": 86.68,
+          "top": 34.09,
+          "right": 94.02,
+          "bottom": 45.89
         },
-        "confidence": 0.6,
-        "narrative_value": 0.4,
-        "description": "green trees visible in the background behind the shrine gate",
-        "detector_score": 0.4882
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "metal bells hanging from chains attached to a wall bracket above a door",
+        "detector_score": 0.3529
       },
       {
-        "name": "red-and-white striped poles",
+        "name": "door with glass panels",
         "role": "context",
         "bbox_pct": {
-          "left": 93.54,
-          "top": 50.56,
-          "right": 99.06,
-          "bottom": 99.62
+          "left": 75.0,
+          "top": 0.0,
+          "right": 100.0,
+          "bottom": 100.0
         },
-        "confidence": 0.6,
+        "confidence": 0.8,
         "narrative_value": 0.4,
-        "description": "red-and-white striped poles with hanging lanterns on the right side",
-        "detector_score": 0.4013
-      },
-      {
-        "name": "blue-tiled roof structure",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.51,
-          "top": 3.58,
-          "right": 99.59,
-          "bottom": 99.45
-        },
-        "confidence": 0.6,
-        "narrative_value": 0.4,
-        "description": "smaller building with blue-tiled roof on the left side",
-        "detector_score": 0.3017
-      },
-      {
-        "name": "green trees",
-        "role": "context",
-        "bbox_pct": {
-          "left": 96.61,
-          "top": 35.76,
-          "right": 99.93,
-          "bottom": 54.67
-        },
-        "confidence": 0.6,
-        "narrative_value": 0.4,
-        "description": "green trees visible in the background behind the shrine gate",
-        "detector_score": 0.3088
-      },
-      {
-        "name": "red-and-white striped poles",
-        "role": "context",
-        "bbox_pct": {
-          "left": 80.0,
-          "top": 30.0,
-          "right": 95.0,
-          "bottom": 70.0
-        },
-        "confidence": 0.6,
-        "narrative_value": 0.4,
-        "description": "red-and-white striped poles with hanging lanterns on the right side"
+        "description": "white-framed door with multiple glass panes"
       }
     ],
-    "primary_anchor": "red multi-tiered shrine gate",
+    "primary_anchor": "framed painting",
     "focal_element": null,
     "confidence": 0.9,
-    "description": "a large red traditional Japanese shrine gate with multiple tiers and dark roof, surrounded by repetitive rows of red hanging lanterns, a dense crowd of people gathered at its base, a smaller blue-tiled roof structure to the left, green trees in the background, and red-and-white striped poles with lanterns on the right",
-    "lighting": "daylight with partly cloudy sky, soft illumination",
-    "background": "partly cloudy sky above, green trees behind the shrine gate, and a smaller blue-tiled roof structure to the left",
+    "description": "A room featuring a large framed abstract painting of animals on the wall next to a door with glass panels and hanging bells.",
+    "lighting": "Dim ambient lighting with selective highlights on the painting and bells.",
+    "background": "Wall surface behind the painting and white-framed door with glass panes.",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 39.0,
-    "portrait_y": 50.0,
-    "landscape_x": 50.0,
-    "landscape_y": 22.6182
+    "portrait_x": 50,
+    "portrait_y": 50,
+    "landscape_x": 50,
+    "landscape_y": 50
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 5515,
-        "photo_height": 3670,
+        "photo_width": 8704,
+        "photo_height": 5793,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 1688.0320366132723,
-        "visible_height": 3670.0,
-        "visible_fraction_x": 0.30608015169778285,
+        "visible_width": 2664.5148741418766,
+        "visible_height": 5793.0,
+        "visible_fraction_x": 0.30612533020931487,
         "visible_fraction_y": 1.0,
-        "overflow_x": 3826.9679633867277,
+        "overflow_x": 6039.485125858124,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 50,
+            "object_x": 39,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.7,
+              "left": 27.06,
               "top": 0.0,
-              "right": 65.3,
+              "right": 57.67,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3105,
+            "anchor_overlap": 0.4557,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 39.156499999999994,
-              "top": 158.544,
-              "right": 5475.292,
-              "bottom": 3655.687
+              "left": 768.5632,
+              "top": 5.793,
+              "right": 6615.04,
+              "bottom": 5768.090099999999
             },
             "name": "anchor_only",
-            "score": -0.651
+            "score": -0.662
           },
           {
-            "object_x": 50,
+            "object_x": 56,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.7,
+              "left": 38.86,
               "top": 0.0,
-              "right": 65.3,
+              "right": 69.47,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3105,
+            "anchor_overlap": 0.4557,
             "context_inside": [
-              false,
-              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
-              0.3638,
               0.0,
-              0.0,
-              0.3089,
+              0.4539,
               0.0,
               0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 28.126500000000004,
-              "top": 131.386,
-              "right": 5511.1395,
-              "bottom": 3656.054
+              "left": 768.5632,
+              "top": 0.0,
+              "right": 8704.0,
+              "bottom": 5793.0
             },
             "name": "anchor_plus_context",
-            "score": -0.373
+            "score": -0.3766
           },
           {
-            "object_x": 50,
+            "object_x": 39,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.7,
+              "left": 27.06,
               "top": 0.0,
-              "right": 65.3,
+              "right": 57.67,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3105,
+            "anchor_overlap": 0.4557,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 39.156499999999994,
-              "top": 158.544,
-              "right": 5475.292,
-              "bottom": 3655.687
+              "left": 768.5632,
+              "top": 5.793,
+              "right": 6615.04,
+              "bottom": 5768.090099999999
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.651
+            "score": -0.662
           },
           {
-            "object_x": 50,
+            "object_x": 56,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.7,
+              "left": 38.86,
               "top": 0.0,
-              "right": 65.3,
+              "right": 69.47,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.3105,
+            "anchor_overlap": 0.4557,
             "context_inside": [
-              false,
-              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
-              0.3638,
               0.0,
-              0.0,
-              0.3089,
+              0.4539,
               0.0,
               0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 28.126500000000004,
-              "top": 131.386,
-              "right": 5511.1395,
-              "bottom": 3656.054
+              "left": 768.5632,
+              "top": 0.0,
+              "right": 8704.0,
+              "bottom": 5793.0
             },
             "name": "anchor_context_anomaly",
-            "score": -0.373
+            "score": -0.3766
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 5515,
-        "photo_height": 3670,
+        "photo_width": 8704,
+        "photo_height": 5793,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 5515.0,
-        "visible_height": 2536.6475972540047,
+        "visible_width": 8704.0,
+        "visible_height": 4003.441647597254,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6911846314043609,
+        "visible_fraction_y": 0.6910826251678326,
         "overflow_x": 0.0,
-        "overflow_y": 1133.3524027459953,
+        "overflow_y": 1789.558352402746,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 56,
+            "object_y": 49,
             "visible_source_window": {
               "left": 0.0,
-              "top": 17.29,
+              "top": 15.14,
               "right": 100.0,
-              "bottom": 86.41
+              "bottom": 84.25
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7253,
+            "anchor_overlap": 0.6948,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 39.156499999999994,
-              "top": 158.544,
-              "right": 5475.292,
-              "bottom": 3655.687
+              "left": 768.5632,
+              "top": 5.793,
+              "right": 6615.04,
+              "bottom": 5768.090099999999
             },
             "name": "anchor_only",
             "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 55,
+            "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 16.98,
+              "top": 15.45,
               "right": 100.0,
-              "bottom": 86.1
+              "bottom": 84.55
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7253,
+            "anchor_overlap": 0.6948,
             "context_inside": [
-              false,
               true,
               false,
-              false,
               true,
-              true
+              false
             ],
             "context_overlap": [
-              0.7227,
               1.0,
-              0.7245,
-              0.721,
+              0.6966,
               1.0,
-              1.0
+              0.6911
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 28.126500000000004,
-              "top": 131.386,
-              "right": 5511.1395,
-              "bottom": 3656.054
+              "left": 768.5632,
+              "top": 0.0,
+              "right": 8704.0,
+              "bottom": 5793.0
             },
             "name": "anchor_plus_context",
-            "score": -0.1857
+            "score": -0.1893
           },
           {
             "object_x": 50,
-            "object_y": 56,
+            "object_y": 49,
             "visible_source_window": {
               "left": 0.0,
-              "top": 17.29,
+              "top": 15.14,
               "right": 100.0,
-              "bottom": 86.41
+              "bottom": 84.25
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7253,
+            "anchor_overlap": 0.6948,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 39.156499999999994,
-              "top": 158.544,
-              "right": 5475.292,
-              "bottom": 3655.687
+              "left": 768.5632,
+              "top": 5.793,
+              "right": 6615.04,
+              "bottom": 5768.090099999999
             },
             "name": "anchor_plus_anomaly",
             "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 55,
+            "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 16.98,
+              "top": 15.45,
               "right": 100.0,
-              "bottom": 86.1
+              "bottom": 84.55
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7253,
+            "anchor_overlap": 0.6948,
             "context_inside": [
-              false,
               true,
               false,
-              false,
               true,
-              true
+              false
             ],
             "context_overlap": [
-              0.7227,
               1.0,
-              0.7245,
-              0.721,
+              0.6966,
               1.0,
-              1.0
+              0.6911
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 28.126500000000004,
-              "top": 131.386,
-              "right": 5511.1395,
-              "bottom": 3656.054
+              "left": 768.5632,
+              "top": 0.0,
+              "right": 8704.0,
+              "bottom": 5793.0
             },
             "name": "anchor_context_anomaly",
-            "score": -0.1857
+            "score": -0.1893
           }
         ]
       }
@@ -438,14 +368,12 @@
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.7253,
+    "landscape_primary_anchor_overlap": 0.6948,
     "landscape_context_inside": [
-      false,
       true,
       false,
-      false,
       true,
-      true
+      false
     ],
     "landscape_focal_anomaly_inside": false,
     "landscape_composition_valid": false,
@@ -461,21 +389,21 @@
       {
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": true,
-        "judge_reason": "Panning left centers the shrine gate's architectural symmetry, vertical apex, and ornate golden plaque within the portrait frame.",
-        "judge_object_x": 39.0,
+        "judge_adjust": false,
+        "judge_reason": "The current vertical crop neatly centers the two primary cow heads and horns, creating a balanced and striking vertical composition.",
+        "judge_object_x": null,
         "judge_object_y": null,
-        "max_delta_x_points": 14.4109,
+        "max_delta_x_points": 14.4118,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 39.0,
+        "clamped_object_x": 50.0,
         "clamped_object_y": 50.0,
-        "applied": true,
-        "cost": 0.00309,
+        "applied": false,
+        "cost": 0.001636875,
         "usage": {
           "prompt_tokens": 1780,
-          "completion_tokens": 1292,
-          "total_tokens": 3072,
-          "cost": 0.00309,
+          "completion_tokens": 517,
+          "total_tokens": 2297,
+          "cost": 0.001636875,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -484,12 +412,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00309,
+            "upstream_inference_cost": 0.001636875,
             "upstream_inference_prompt_cost": 0.0006675,
-            "upstream_inference_completions_cost": 0.0024225
+            "upstream_inference_completions_cost": 0.000969375
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 1231,
+            "reasoning_tokens": 471,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -498,21 +426,21 @@
       {
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": true,
-        "judge_reason": "Panning upward restores the dramatic silhouette and peak of the traditional temple roof while cutting distracting crowd clutter at the bottom, achieving better vertical balance.",
-        "judge_object_x": 50.0,
-        "judge_object_y": 22.6,
+        "judge_adjust": false,
+        "judge_reason": "The current vertical centering maintains a balanced relationship between the central longhorn horns in the painting and the full vertical spread of the hanging bells on the right.",
+        "judge_object_x": null,
+        "judge_object_y": null,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3818,
+        "max_delta_y_points": 32.3711,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 22.6182,
-        "applied": true,
-        "cost": 0.002316,
+        "clamped_object_y": 50.0,
+        "applied": false,
+        "cost": 0.00171375,
         "usage": {
-          "prompt_tokens": 1781,
-          "completion_tokens": 879,
-          "total_tokens": 2660,
-          "cost": 0.002316,
+          "prompt_tokens": 1780,
+          "completion_tokens": 558,
+          "total_tokens": 2338,
+          "cost": 0.00171375,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -521,12 +449,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.002316,
-            "upstream_inference_prompt_cost": 0.000667875,
-            "upstream_inference_completions_cost": 0.001648125
+            "upstream_inference_cost": 0.00171375,
+            "upstream_inference_prompt_cost": 0.0006675,
+            "upstream_inference_completions_cost": 0.00104625
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 820,
+            "reasoning_tokens": 504,
             "image_tokens": 0,
             "audio_tokens": 0
           }
