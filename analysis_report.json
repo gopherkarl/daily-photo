@@ -1,89 +1,103 @@
 {
-  "generated_at": "2026-08-17T10:32:37.088552+00:00",
+  "generated_at": "2026-08-18T11:18:35.437633+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 51,
-    "y": 48
+    "x": 52,
+    "y": 54
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "framed painting",
-        "role": "primary_anchor",
+        "name": "crowd",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 8.83,
-          "top": 0.1,
-          "right": 76.0,
-          "bottom": 99.57
+          "left": 0.0,
+          "top": 0.0,
+          "right": 98.0,
+          "bottom": 98.0
+        },
+        "confidence": 1.0,
+        "narrative_value": 1.0,
+        "description": "dense assembly of spectators filling stadium stands"
+      },
+      {
+        "name": "stadium banners",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.18,
+          "top": 1.56,
+          "right": 99.3,
+          "bottom": 38.38
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.7,
+        "description": "blue horizontal banners with 'KANSAS CITY' and 'FIFA WORLD CUP 2026' text",
+        "detector_score": 0.482
+      },
+      {
+        "name": "QATAR AIRWAYS banner",
+        "role": "context",
+        "bbox_pct": {
+          "left": 73.79,
+          "top": 47.99,
+          "right": 99.94,
+          "bottom": 58.18
         },
         "confidence": 0.9,
-        "narrative_value": 0.8,
-        "description": "large framed artwork with abstract animals in vibrant colors",
-        "detector_score": 0.8645
+        "narrative_value": 0.6,
+        "description": "pink horizontal banner with 'QATAR AIRWAYS' text",
+        "detector_score": 0.3409
       },
       {
-        "name": "hanging bells",
-        "role": "context",
+        "name": "player",
+        "role": "primary_anchor",
         "bbox_pct": {
-          "left": 86.63,
-          "top": 29.81,
-          "right": 94.03,
-          "bottom": 45.93
+          "left": 0.21,
+          "top": 0.09,
+          "right": 99.83,
+          "bottom": 99.8
         },
-        "confidence": 0.7,
-        "narrative_value": 0.3,
-        "description": "metal bells hanging from chains attached to a wall bracket above a door",
-        "detector_score": 0.3978
+        "confidence": 0.9,
+        "narrative_value": 0.9,
+        "description": "single athlete in white uniform standing on green field",
+        "detector_score": 0.4852
       },
       {
-        "name": "door with glass panels",
+        "name": "stadium banners",
         "role": "context",
         "bbox_pct": {
-          "left": 8.86,
-          "top": 0.2,
-          "right": 76.31,
-          "bottom": 99.41
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.4,
-        "description": "white-framed door with multiple glass panes",
-        "detector_score": 0.5831
-      },
-      {
-        "name": "hanging bells",
-        "role": "context",
-        "bbox_pct": {
-          "left": 86.68,
-          "top": 34.09,
-          "right": 94.02,
-          "bottom": 45.89
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.3,
-        "description": "metal bells hanging from chains attached to a wall bracket above a door",
-        "detector_score": 0.3529
-      },
-      {
-        "name": "door with glass panels",
-        "role": "context",
-        "bbox_pct": {
-          "left": 75.0,
-          "top": 0.0,
-          "right": 100.0,
-          "bottom": 100.0
+          "left": 0.21,
+          "top": 0.25,
+          "right": 99.82,
+          "bottom": 99.73
         },
         "confidence": 0.8,
-        "narrative_value": 0.4,
-        "description": "white-framed door with multiple glass panes"
+        "narrative_value": 0.7,
+        "description": "blue horizontal banners with 'KANSAS CITY' and 'FIFA WORLD CUP 2026' text",
+        "detector_score": 0.3683
+      },
+      {
+        "name": "QATAR AIRWAYS banner",
+        "role": "context",
+        "bbox_pct": {
+          "left": 66.77,
+          "top": 42.28,
+          "right": 99.88,
+          "bottom": 58.16
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.6,
+        "description": "pink horizontal banner with 'QATAR AIRWAYS' text",
+        "detector_score": 0.4242
       }
     ],
-    "primary_anchor": "framed painting",
+    "primary_anchor": "player",
     "focal_element": null,
     "confidence": 0.9,
-    "description": "A room featuring a large framed abstract painting of animals on the wall next to a door with glass panels and hanging bells.",
-    "lighting": "Dim ambient lighting with selective highlights on the painting and bells.",
-    "background": "Wall surface behind the painting and white-framed door with glass panes.",
+    "description": "Stadium filled with dense crowd of spectators during a sports event, featuring stadium banners and field signage.",
+    "lighting": "Bright daylight illumination",
+    "background": "Stadium stands and field infrastructure",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
@@ -99,53 +113,53 @@
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 8704,
-        "photo_height": 5793,
+        "photo_width": 1024,
+        "photo_height": 1280,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 2664.5148741418766,
-        "visible_height": 5793.0,
-        "visible_fraction_x": 0.30612533020931487,
+        "visible_width": 588.741418764302,
+        "visible_height": 1280.0,
+        "visible_fraction_x": 0.5749427917620137,
         "visible_fraction_y": 1.0,
-        "overflow_x": 6039.485125858124,
+        "overflow_x": 435.258581235698,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 39,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 27.06,
+              "left": 21.25,
               "top": 0.0,
-              "right": 57.67,
+              "right": 78.75,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.4557,
+            "anchor_overlap": 0.5771,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 768.5632,
-              "top": 5.793,
-              "right": 6615.04,
-              "bottom": 5768.090099999999
+              "left": 2.1504,
+              "top": 1.152,
+              "right": 1022.2592,
+              "bottom": 1277.44
             },
             "name": "anchor_only",
-            "score": -0.662
+            "score": -0.652
           },
           {
-            "object_x": 56,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 38.86,
+              "left": 21.25,
               "top": 0.0,
-              "right": 69.47,
+              "right": 78.75,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.4557,
+            "anchor_overlap": 0.5771,
             "context_inside": [
               false,
               false,
@@ -153,55 +167,55 @@
               false
             ],
             "context_overlap": [
-              0.0,
-              0.4539,
-              0.0,
-              0.0
+              0.58,
+              0.1896,
+              0.5772,
+              0.3617
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 768.5632,
-              "top": 0.0,
-              "right": 8704.0,
-              "bottom": 5793.0
+              "left": 1.8432,
+              "top": 1.152,
+              "right": 1023.3856,
+              "bottom": 1277.44
             },
             "name": "anchor_plus_context",
-            "score": -0.3766
+            "score": -0.2952
           },
           {
-            "object_x": 39,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 27.06,
+              "left": 21.25,
               "top": 0.0,
-              "right": 57.67,
+              "right": 78.75,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.4557,
+            "anchor_overlap": 0.5771,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 768.5632,
-              "top": 5.793,
-              "right": 6615.04,
-              "bottom": 5768.090099999999
+              "left": 2.1504,
+              "top": 1.152,
+              "right": 1022.2592,
+              "bottom": 1277.44
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.662
+            "score": -0.652
           },
           {
-            "object_x": 56,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 38.86,
+              "left": 21.25,
               "top": 0.0,
-              "right": 69.47,
+              "right": 78.75,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.4557,
+            "anchor_overlap": 0.5771,
             "context_inside": [
               false,
               false,
@@ -209,148 +223,148 @@
               false
             ],
             "context_overlap": [
-              0.0,
-              0.4539,
-              0.0,
-              0.0
+              0.58,
+              0.1896,
+              0.5772,
+              0.3617
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 768.5632,
-              "top": 0.0,
-              "right": 8704.0,
-              "bottom": 5793.0
+              "left": 1.8432,
+              "top": 1.152,
+              "right": 1023.3856,
+              "bottom": 1277.44
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3766
+            "score": -0.2952
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 8704,
-        "photo_height": 5793,
+        "photo_width": 1024,
+        "photo_height": 1280,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 8704.0,
-        "visible_height": 4003.441647597254,
+        "visible_width": 1024.0,
+        "visible_height": 470.99313501144167,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6910826251678326,
+        "visible_fraction_y": 0.3679633867276888,
         "overflow_x": 0.0,
-        "overflow_y": 1789.558352402746,
+        "overflow_y": 809.0068649885584,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 49,
+            "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.14,
+              "top": 31.6,
               "right": 100.0,
-              "bottom": 84.25
+              "bottom": 68.4
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.6948,
+            "anchor_overlap": 0.369,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 768.5632,
-              "top": 5.793,
-              "right": 6615.04,
-              "bottom": 5768.090099999999
+              "left": 2.1504,
+              "top": 1.152,
+              "right": 1022.2592,
+              "bottom": 1277.44
             },
             "name": "anchor_only",
-            "score": -0.651
+            "score": -0.652
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.45,
+              "top": 31.6,
               "right": 100.0,
-              "bottom": 84.55
+              "bottom": 68.4
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.6948,
+            "anchor_overlap": 0.369,
             "context_inside": [
-              true,
               false,
               true,
-              false
+              false,
+              true
             ],
             "context_overlap": [
+              0.1841,
               1.0,
-              0.6966,
-              1.0,
-              0.6911
+              0.3699,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 768.5632,
-              "top": 0.0,
-              "right": 8704.0,
-              "bottom": 5793.0
+              "left": 1.8432,
+              "top": 1.152,
+              "right": 1023.3856,
+              "bottom": 1277.44
             },
             "name": "anchor_plus_context",
-            "score": -0.1893
+            "score": -0.2424
           },
           {
             "object_x": 50,
-            "object_y": 49,
+            "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.14,
+              "top": 31.6,
               "right": 100.0,
-              "bottom": 84.25
+              "bottom": 68.4
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.6948,
+            "anchor_overlap": 0.369,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 768.5632,
-              "top": 5.793,
-              "right": 6615.04,
-              "bottom": 5768.090099999999
+              "left": 2.1504,
+              "top": 1.152,
+              "right": 1022.2592,
+              "bottom": 1277.44
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.651
+            "score": -0.652
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.45,
+              "top": 31.6,
               "right": 100.0,
-              "bottom": 84.55
+              "bottom": 68.4
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.6948,
+            "anchor_overlap": 0.369,
             "context_inside": [
-              true,
               false,
               true,
-              false
+              false,
+              true
             ],
             "context_overlap": [
+              0.1841,
               1.0,
-              0.6966,
-              1.0,
-              0.6911
+              0.3699,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 768.5632,
-              "top": 0.0,
-              "right": 8704.0,
-              "bottom": 5793.0
+              "left": 1.8432,
+              "top": 1.152,
+              "right": 1023.3856,
+              "bottom": 1277.44
             },
             "name": "anchor_context_anomaly",
-            "score": -0.1893
+            "score": -0.2424
           }
         ]
       }
@@ -368,12 +382,12 @@
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.6948,
+    "landscape_primary_anchor_overlap": 0.369,
     "landscape_context_inside": [
-      true,
       false,
       true,
-      false
+      false,
+      true
     ],
     "landscape_focal_anomaly_inside": false,
     "landscape_composition_valid": false,
@@ -387,78 +401,7 @@
     "model": "google/gemini-3.7-flash",
     "log": [
       {
-        "profile": "portrait",
-        "model": "google/gemini-3.7-flash",
-        "judge_adjust": false,
-        "judge_reason": "The current vertical crop neatly centers the two primary cow heads and horns, creating a balanced and striking vertical composition.",
-        "judge_object_x": null,
-        "judge_object_y": null,
-        "max_delta_x_points": 14.4118,
-        "max_delta_y_points": 0.0,
-        "clamped_object_x": 50.0,
-        "clamped_object_y": 50.0,
-        "applied": false,
-        "cost": 0.001636875,
-        "usage": {
-          "prompt_tokens": 1780,
-          "completion_tokens": 517,
-          "total_tokens": 2297,
-          "cost": 0.001636875,
-          "is_byok": false,
-          "prompt_tokens_details": {
-            "cached_tokens": 0,
-            "cache_write_tokens": 0,
-            "audio_tokens": 0,
-            "video_tokens": 0
-          },
-          "cost_details": {
-            "upstream_inference_cost": 0.001636875,
-            "upstream_inference_prompt_cost": 0.0006675,
-            "upstream_inference_completions_cost": 0.000969375
-          },
-          "completion_tokens_details": {
-            "reasoning_tokens": 471,
-            "image_tokens": 0,
-            "audio_tokens": 0
-          }
-        }
-      },
-      {
-        "profile": "landscape",
-        "model": "google/gemini-3.7-flash",
-        "judge_adjust": false,
-        "judge_reason": "The current vertical centering maintains a balanced relationship between the central longhorn horns in the painting and the full vertical spread of the hanging bells on the right.",
-        "judge_object_x": null,
-        "judge_object_y": null,
-        "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3711,
-        "clamped_object_x": 50.0,
-        "clamped_object_y": 50.0,
-        "applied": false,
-        "cost": 0.00171375,
-        "usage": {
-          "prompt_tokens": 1780,
-          "completion_tokens": 558,
-          "total_tokens": 2338,
-          "cost": 0.00171375,
-          "is_byok": false,
-          "prompt_tokens_details": {
-            "cached_tokens": 0,
-            "cache_write_tokens": 0,
-            "audio_tokens": 0,
-            "video_tokens": 0
-          },
-          "cost_details": {
-            "upstream_inference_cost": 0.00171375,
-            "upstream_inference_prompt_cost": 0.0006675,
-            "upstream_inference_completions_cost": 0.00104625
-          },
-          "completion_tokens_details": {
-            "reasoning_tokens": 504,
-            "image_tokens": 0,
-            "audio_tokens": 0
-          }
-        }
+        "error": "The read operation timed out"
       }
     ]
   }
