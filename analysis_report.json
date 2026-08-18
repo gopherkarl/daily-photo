@@ -1,370 +1,437 @@
 {
-  "generated_at": "2026-08-18T11:18:35.437633+00:00",
+  "generated_at": "2026-08-18T16:54:57.907799+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 52,
-    "y": 54
+    "x": 46,
+    "y": 41
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "crowd",
+        "name": "girl in purple top and pink skirt",
+        "role": "primary_anchor",
+        "bbox_pct": {
+          "left": 25.06,
+          "top": 62.84,
+          "right": 34.06,
+          "bottom": 71.99
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.8,
+        "description": "A young girl wearing a purple tank top and pink skirt, running towards the camera on the left side of the walkway.",
+        "detector_score": 0.5982
+      },
+      {
+        "name": "group of people walking away",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 15.0,
+          "top": 30.0,
+          "right": 90.0,
+          "bottom": 70.0
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.2,
+        "description": "A dense group of adults and children walking away from the camera along the walkway."
+      },
+      {
+        "name": "large red text on walls",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.1,
+          "top": 0.16,
+          "right": 45.73,
+          "bottom": 99.44
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "Large red letters with white text on the walls flanking the walkway, spelling out 'HONLAND'.",
+        "detector_score": 0.5331
+      },
+      {
+        "name": "left white picket fence",
+        "role": "context",
+        "bbox_pct": {
+          "left": 10.05,
+          "top": 0.05,
+          "right": 45.74,
+          "bottom": 40.93
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.1,
+        "description": "White picket fence on the left side of the walkway, mounted on a yellow wall with red text.",
+        "detector_score": 0.3744
+      },
+      {
+        "name": "right white picket fence",
+        "role": "context",
+        "bbox_pct": {
+          "left": 60.0,
+          "top": 0.0,
+          "right": 100.0,
+          "bottom": 90.0
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.1,
+        "description": "White picket fence on the right side of the walkway, mounted on a yellow wall with red text."
+      },
+      {
+        "name": "concrete walkway",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 50.0,
+          "right": 100.0,
+          "bottom": 95.0
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.1,
+        "description": "The concrete surface of the walkway, extending from foreground to background."
+      },
+      {
+        "name": "sky",
         "role": "background_mass",
         "bbox_pct": {
           "left": 0.0,
           "top": 0.0,
-          "right": 98.0,
-          "bottom": 98.0
+          "right": 100.0,
+          "bottom": 30.0
         },
-        "confidence": 1.0,
-        "narrative_value": 1.0,
-        "description": "dense assembly of spectators filling stadium stands"
+        "confidence": 0.5,
+        "narrative_value": 0.1,
+        "description": "Clear blue sky with scattered white clouds above the walkway."
       },
       {
-        "name": "stadium banners",
+        "name": "large red text on walls",
         "role": "context",
         "bbox_pct": {
-          "left": 0.18,
-          "top": 1.56,
-          "right": 99.3,
-          "bottom": 38.38
+          "left": 62.75,
+          "top": 0.18,
+          "right": 99.89,
+          "bottom": 99.61
         },
-        "confidence": 0.8,
-        "narrative_value": 0.7,
-        "description": "blue horizontal banners with 'KANSAS CITY' and 'FIFA WORLD CUP 2026' text",
-        "detector_score": 0.482
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "Large red letters with white text on the walls flanking the walkway, spelling out 'HONLAND'.",
+        "detector_score": 0.3244
       },
       {
-        "name": "QATAR AIRWAYS banner",
+        "name": "left white picket fence",
         "role": "context",
         "bbox_pct": {
-          "left": 73.79,
-          "top": 47.99,
-          "right": 99.94,
-          "bottom": 58.18
+          "left": 0.0,
+          "top": 0.0,
+          "right": 40.0,
+          "bottom": 90.0
         },
-        "confidence": 0.9,
-        "narrative_value": 0.6,
-        "description": "pink horizontal banner with 'QATAR AIRWAYS' text",
-        "detector_score": 0.3409
+        "confidence": 0.6,
+        "narrative_value": 0.1,
+        "description": "White picket fence on the left side of the walkway, mounted on a yellow wall with red text."
       },
       {
-        "name": "player",
-        "role": "primary_anchor",
-        "bbox_pct": {
-          "left": 0.21,
-          "top": 0.09,
-          "right": 99.83,
-          "bottom": 99.8
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.9,
-        "description": "single athlete in white uniform standing on green field",
-        "detector_score": 0.4852
-      },
-      {
-        "name": "stadium banners",
+        "name": "right white picket fence",
         "role": "context",
         "bbox_pct": {
-          "left": 0.21,
-          "top": 0.25,
-          "right": 99.82,
-          "bottom": 99.73
+          "left": 60.0,
+          "top": 0.0,
+          "right": 100.0,
+          "bottom": 90.0
         },
-        "confidence": 0.8,
-        "narrative_value": 0.7,
-        "description": "blue horizontal banners with 'KANSAS CITY' and 'FIFA WORLD CUP 2026' text",
-        "detector_score": 0.3683
-      },
-      {
-        "name": "QATAR AIRWAYS banner",
-        "role": "context",
-        "bbox_pct": {
-          "left": 66.77,
-          "top": 42.28,
-          "right": 99.88,
-          "bottom": 58.16
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.6,
-        "description": "pink horizontal banner with 'QATAR AIRWAYS' text",
-        "detector_score": 0.4242
+        "confidence": 0.6,
+        "narrative_value": 0.1,
+        "description": "White picket fence on the right side of the walkway, mounted on a yellow wall with red text."
       }
     ],
-    "primary_anchor": "player",
+    "primary_anchor": "girl in purple top and pink skirt",
     "focal_element": null,
     "confidence": 0.9,
-    "description": "Stadium filled with dense crowd of spectators during a sports event, featuring stadium banners and field signage.",
-    "lighting": "Bright daylight illumination",
-    "background": "Stadium stands and field infrastructure",
+    "description": "A walkway with people walking towards and away from camera, flanked by walls with large red text, white picket fences on top.",
+    "lighting": "Bright daylight with clear blue sky.",
+    "background": "White picket fences, large red text on walls, concrete walkway.",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 50,
+    "portrait_x": 21,
     "portrait_y": 50,
     "landscape_x": 50,
-    "landscape_y": 50
+    "landscape_y": 49
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 1024,
-        "photo_height": 1280,
+        "photo_width": 8344,
+        "photo_height": 5553,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 588.741418764302,
-        "visible_height": 1280.0,
-        "visible_fraction_x": 0.5749427917620137,
+        "visible_width": 2554.1258581235697,
+        "visible_height": 5553.0,
+        "visible_fraction_x": 0.3061032907626522,
         "visible_fraction_y": 1.0,
-        "overflow_x": 435.258581235698,
+        "overflow_x": 5789.87414187643,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 50,
+            "object_x": 21,
             "object_y": 50,
             "visible_source_window": {
-              "left": 21.25,
+              "left": 14.57,
               "top": 0.0,
-              "right": 78.75,
+              "right": 45.18,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.5771,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 2.1504,
-              "top": 1.152,
-              "right": 1022.2592,
-              "bottom": 1277.44
+              "left": 2091.0063999999998,
+              "top": 3489.5052000000005,
+              "right": 2841.9664000000002,
+              "bottom": 3997.6047
             },
             "name": "anchor_only",
-            "score": -0.652
+            "score": 0.225
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 21.25,
+              "left": 34.69,
               "top": 0.0,
-              "right": 78.75,
+              "right": 65.31,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.5771,
+            "anchor_overlap": 0.0,
             "context_inside": [
+              false,
+              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
-              0.58,
-              0.1896,
-              0.5772,
-              0.3617
+              0.2418,
+              0.3095,
+              0.1326,
+              0.0688,
+              0.1326,
+              0.1326
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 1.8432,
-              "top": 1.152,
-              "right": 1023.3856,
-              "bottom": 1277.44
+              "left": 0.0,
+              "top": 0.0,
+              "right": 8344.0,
+              "bottom": 5531.3432999999995
             },
             "name": "anchor_plus_context",
-            "score": -0.2952
+            "score": -0.3616
           },
           {
-            "object_x": 50,
+            "object_x": 21,
             "object_y": 50,
             "visible_source_window": {
-              "left": 21.25,
+              "left": 14.57,
               "top": 0.0,
-              "right": 78.75,
+              "right": 45.18,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.5771,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 2.1504,
-              "top": 1.152,
-              "right": 1022.2592,
-              "bottom": 1277.44
+              "left": 2091.0063999999998,
+              "top": 3489.5052000000005,
+              "right": 2841.9664000000002,
+              "bottom": 3997.6047
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.652
+            "score": 0.225
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 21.25,
+              "left": 34.69,
               "top": 0.0,
-              "right": 78.75,
+              "right": 65.31,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.5771,
+            "anchor_overlap": 0.0,
             "context_inside": [
+              false,
+              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
-              0.58,
-              0.1896,
-              0.5772,
-              0.3617
+              0.2418,
+              0.3095,
+              0.1326,
+              0.0688,
+              0.1326,
+              0.1326
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 1.8432,
-              "top": 1.152,
-              "right": 1023.3856,
-              "bottom": 1277.44
+              "left": 0.0,
+              "top": 0.0,
+              "right": 8344.0,
+              "bottom": 5531.3432999999995
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2952
+            "score": -0.3616
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 1024,
-        "photo_height": 1280,
+        "photo_width": 8344,
+        "photo_height": 5553,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 1024.0,
-        "visible_height": 470.99313501144167,
+        "visible_width": 8344.0,
+        "visible_height": 3837.858123569794,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.3679633867276888,
+        "visible_fraction_y": 0.6911323831388068,
         "overflow_x": 0.0,
-        "overflow_y": 809.0068649885584,
+        "overflow_y": 1715.1418764302061,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 31.6,
+              "top": 30.89,
               "right": 100.0,
-              "bottom": 68.4
+              "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.369,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 2.1504,
-              "top": 1.152,
-              "right": 1022.2592,
-              "bottom": 1277.44
+              "left": 2091.0063999999998,
+              "top": 3489.5052000000005,
+              "right": 2841.9664000000002,
+              "bottom": 3997.6047
             },
             "name": "anchor_only",
-            "score": -0.652
+            "score": 0.246
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 49,
             "visible_source_window": {
               "left": 0.0,
-              "top": 31.6,
+              "top": 15.13,
               "right": 100.0,
-              "bottom": 68.4
+              "bottom": 84.25
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.369,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
               false,
-              true,
               false,
-              true
+              false,
+              false,
+              false,
+              false
             ],
             "context_overlap": [
-              0.1841,
-              1.0,
-              0.3699,
-              1.0
+              0.6961,
+              0.631,
+              0.7679,
+              0.6951,
+              0.7679,
+              0.7679
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 1.8432,
-              "top": 1.152,
-              "right": 1023.3856,
-              "bottom": 1277.44
+              "left": 0.0,
+              "top": 0.0,
+              "right": 8344.0,
+              "bottom": 5531.3432999999995
             },
             "name": "anchor_plus_context",
-            "score": -0.2424
+            "score": 0.6762
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 31.6,
+              "top": 30.89,
               "right": 100.0,
-              "bottom": 68.4
+              "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.369,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 2.1504,
-              "top": 1.152,
-              "right": 1022.2592,
-              "bottom": 1277.44
+              "left": 2091.0063999999998,
+              "top": 3489.5052000000005,
+              "right": 2841.9664000000002,
+              "bottom": 3997.6047
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.652
+            "score": 0.246
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 49,
             "visible_source_window": {
               "left": 0.0,
-              "top": 31.6,
+              "top": 15.13,
               "right": 100.0,
-              "bottom": 68.4
+              "bottom": 84.25
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.369,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
               false,
-              true,
               false,
-              true
+              false,
+              false,
+              false,
+              false
             ],
             "context_overlap": [
-              0.1841,
-              1.0,
-              0.3699,
-              1.0
+              0.6961,
+              0.631,
+              0.7679,
+              0.6951,
+              0.7679,
+              0.7679
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 1.8432,
-              "top": 1.152,
-              "right": 1023.3856,
-              "bottom": 1277.44
+              "left": 0.0,
+              "top": 0.0,
+              "right": 8344.0,
+              "bottom": 5531.3432999999995
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2424
+            "score": 0.6762
           }
         ]
       }
@@ -372,25 +439,27 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": false,
-    "portrait_primary_anchor_overlap": 0.0,
+    "portrait_primary_anchor_inside": true,
+    "portrait_primary_anchor_overlap": 1.0,
     "portrait_context_inside": [],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
-    "portrait_dead_center_fallback": true,
-    "portrait_context_preferred_but_unavailable": false,
+    "portrait_dead_center_fallback": false,
+    "portrait_context_preferred_but_unavailable": true,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.369,
+    "landscape_primary_anchor_inside": true,
+    "landscape_primary_anchor_overlap": 1.0,
     "landscape_context_inside": [
       false,
-      true,
       false,
-      true
+      false,
+      false,
+      false,
+      false
     ],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": false,
+    "landscape_composition_valid": true,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
     "landscape_context_preferred_but_unavailable": false,
@@ -401,7 +470,7 @@
     "model": "google/gemini-3.7-flash",
     "log": [
       {
-        "error": "The read operation timed out"
+        "error": "HTTP Error 401: Unauthorized"
       }
     ]
   }

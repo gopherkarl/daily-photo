@@ -1,19 +1,19 @@
-# Crop QA — 2026-08-18T11:18:35.479597+00:00
+# Crop QA — 2026-08-18T16:54:58.145825+00:00
 
-- Source: `photo.jpg` (1024×1280)
+- Source: `photo.jpg` (8344×5553)
 - Localization model: **Grounding DINO-T (isolated primary) + VLM assignment**
-- Primary anchor: **player**
+- Primary anchor: **girl in purple top and pink skirt**
 - Focal anomaly: **none**
-- Elements: `[('crowd', 'background_mass', {'left': 0.0, 'top': 0.0, 'right': 98.0, 'bottom': 98.0}), ('stadium banners', 'context', {'left': 0.18, 'top': 1.56, 'right': 99.3, 'bottom': 38.38}), ('QATAR AIRWAYS banner', 'context', {'left': 73.79, 'top': 47.99, 'right': 99.94, 'bottom': 58.18}), ('player', 'primary_anchor', {'left': 0.21, 'top': 0.09, 'right': 99.83, 'bottom': 99.8}), ('stadium banners', 'context', {'left': 0.21, 'top': 0.25, 'right': 99.82, 'bottom': 99.73}), ('QATAR AIRWAYS banner', 'context', {'left': 66.77, 'top': 42.28, 'right': 99.88, 'bottom': 58.16})]`
-- Portrait crop: `50% 50%`
-- Landscape crop: `50% 50%`
-- Portrait anchor overlap: **0.00**
-- Landscape anchor overlap: **0.37**
+- Elements: `[('girl in purple top and pink skirt', 'primary_anchor', {'left': 25.06, 'top': 62.84, 'right': 34.06, 'bottom': 71.99}), ('group of people walking away', 'background_mass', {'left': 15.0, 'top': 30.0, 'right': 90.0, 'bottom': 70.0}), ('large red text on walls', 'context', {'left': 0.1, 'top': 0.16, 'right': 45.73, 'bottom': 99.44}), ('left white picket fence', 'context', {'left': 10.05, 'top': 0.05, 'right': 45.74, 'bottom': 40.93}), ('right white picket fence', 'context', {'left': 60.0, 'top': 0.0, 'right': 100.0, 'bottom': 90.0}), ('concrete walkway', 'background_mass', {'left': 0.0, 'top': 50.0, 'right': 100.0, 'bottom': 95.0}), ('sky', 'background_mass', {'left': 0.0, 'top': 0.0, 'right': 100.0, 'bottom': 30.0}), ('large red text on walls', 'context', {'left': 62.75, 'top': 0.18, 'right': 99.89, 'bottom': 99.61}), ('left white picket fence', 'context', {'left': 0.0, 'top': 0.0, 'right': 40.0, 'bottom': 90.0}), ('right white picket fence', 'context', {'left': 60.0, 'top': 0.0, 'right': 100.0, 'bottom': 90.0})]`
+- Portrait crop: `21% 50%`
+- Landscape crop: `50% 49%`
+- Portrait anchor overlap: **1.00**
+- Landscape anchor overlap: **1.00**
 - Portrait composition valid: **True**
-- Landscape composition valid: **False**
+- Landscape composition valid: **True**
 - Portrait anchor-priority fallback: **False**
 - Portrait anchor-center fallback: **False**
-- Portrait dead-center fallback: **True**
+- Portrait dead-center fallback: **False**
 - Landscape anchor-priority fallback: **False**
 - Landscape anchor-center fallback: **False**
 
