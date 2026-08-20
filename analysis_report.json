@@ -1,26 +1,25 @@
 {
-  "generated_at": "2026-08-19T17:47:26.578651+00:00",
+  "generated_at": "2026-08-20T10:31:58.425939+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 52,
+    "x": 45,
     "y": 51
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "boat",
-        "role": "primary_anchor",
+        "name": "water",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 59.76,
-          "top": 53.49,
-          "right": 91.1,
-          "bottom": 71.71
+          "left": 0.0,
+          "top": 30.0,
+          "right": 100.0,
+          "bottom": 100.0
         },
-        "confidence": 1.0,
-        "narrative_value": 1.0,
-        "description": "a motorboat with an outboard engine, positioned in shallow water on the right side of the image",
-        "detector_score": 0.6608
+        "confidence": 0.9,
+        "narrative_value": 0.2,
+        "description": "calm body of water extending to horizon"
       },
       {
         "name": "sky",
@@ -29,237 +28,217 @@
           "left": 0.0,
           "top": 0.0,
           "right": 100.0,
-          "bottom": 54.0
+          "bottom": 30.0
         },
-        "confidence": 1.0,
-        "narrative_value": 0.0,
-        "description": "a cloudy sky with varying cloud densities across the upper portion of the image"
+        "confidence": 0.9,
+        "narrative_value": 0.2,
+        "description": "cloud-covered sky with varying shades of gray"
       },
       {
-        "name": "water",
+        "name": "pier",
         "role": "context",
         "bbox_pct": {
-          "left": 0.26,
-          "top": 64.13,
-          "right": 99.75,
-          "bottom": 98.94
+          "left": 0.18,
+          "top": 58.88,
+          "right": 57.42,
+          "bottom": 67.22
         },
-        "confidence": 1.0,
-        "narrative_value": 0.0,
-        "description": "calm water surface extending to the horizon",
-        "detector_score": 0.5427
+        "confidence": 0.8,
+        "narrative_value": 0.3,
+        "description": "horizontal wooden pier extending from left shore into water",
+        "detector_score": 0.3051
       },
       {
-        "name": "waves",
-        "role": "context",
+        "name": "gazebo",
+        "role": "primary_anchor",
         "bbox_pct": {
-          "left": 0.27,
-          "top": 84.72,
-          "right": 99.72,
-          "bottom": 94.62
+          "left": 44.76,
+          "top": 58.73,
+          "right": 54.4,
+          "bottom": 66.25
         },
-        "confidence": 1.0,
-        "narrative_value": 0.0,
-        "description": "small waves with white foam at the shoreline",
-        "detector_score": 0.481
+        "confidence": 0.9,
+        "narrative_value": 0.7,
+        "description": "small open-air gazebo with roof on rocky outcrop in water",
+        "detector_score": 0.5462
       },
       {
-        "name": "water",
+        "name": "pier",
         "role": "context",
         "bbox_pct": {
-          "left": 0.0,
-          "top": 54.0,
-          "right": 100.0,
-          "bottom": 100.0
+          "left": 0.13,
+          "top": 64.09,
+          "right": 45.07,
+          "bottom": 66.96
         },
-        "confidence": 1.0,
-        "narrative_value": 0.0,
-        "description": "calm water surface extending to the horizon"
-      },
-      {
-        "name": "waves",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 70.0,
-          "right": 100.0,
-          "bottom": 85.0
-        },
-        "confidence": 1.0,
-        "narrative_value": 0.0,
-        "description": "small waves with white foam at the shoreline"
+        "confidence": 0.8,
+        "narrative_value": 0.3,
+        "description": "horizontal wooden pier extending from left shore into water",
+        "detector_score": 0.3464
       }
     ],
-    "primary_anchor": "boat",
+    "primary_anchor": "gazebo",
     "focal_element": null,
-    "confidence": 1.0,
-    "description": "a black-and-white photograph of a motorboat floating in shallow water under a cloudy sky",
-    "lighting": "diffused overcast lighting with soft shadows",
-    "background": "cloudy sky above calm water",
+    "confidence": 0.9,
+    "description": "calm body of water under a cloud-covered sky, with a wooden pier extending left and a small gazebo on a rocky outcrop in the center",
+    "lighting": "overcast lighting with diffused light from clouds",
+    "background": "cloud-covered sky above calm sea",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 50,
+    "portrait_x": 49,
     "portrait_y": 50,
     "landscape_x": 50,
-    "landscape_y": 100
+    "landscape_y": 92
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 6654,
-        "photo_height": 4436,
+        "photo_width": 9281,
+        "photo_height": 6177,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 2040.3569794050343,
-        "visible_height": 4436.0,
-        "visible_fraction_x": 0.30663615560640733,
+        "visible_width": 2841.137299771167,
+        "visible_height": 6177.0,
+        "visible_fraction_x": 0.30612404910798047,
         "visible_fraction_y": 1.0,
-        "overflow_x": 4613.6430205949655,
+        "overflow_x": 6439.862700228833,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 87,
+            "object_x": 49,
             "object_y": 50,
             "visible_source_window": {
-              "left": 60.32,
+              "left": 34.0,
               "top": 0.0,
-              "right": 90.99,
+              "right": 64.61,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.9784,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 3976.4304,
-              "top": 2372.8164,
-              "right": 6061.794,
-              "bottom": 3181.0555999999997
+              "left": 4154.1756,
+              "top": 3627.7520999999997,
+              "right": 5048.8640000000005,
+              "bottom": 4092.2625
             },
             "name": "anchor_only",
-            "score": -0.685
+            "score": 0.246
           },
           {
-            "object_x": 50,
+            "object_x": 19,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.67,
+              "left": 13.18,
               "top": 0.0,
-              "right": 65.33,
+              "right": 43.8,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.1778,
+            "anchor_overlap": 0.0,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.3082,
-              0.3083,
-              0.3066,
-              0.3066
+              0.5348,
+              0.6812
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 2372.8164,
-              "right": 6654.0,
-              "bottom": 4436.0
+              "left": 12.065299999999999,
+              "top": 3627.7520999999997,
+              "right": 5329.1502,
+              "bottom": 4152.1794
             },
             "name": "anchor_plus_context",
-            "score": -0.3251
+            "score": -0.274
           },
           {
-            "object_x": 87,
+            "object_x": 49,
             "object_y": 50,
             "visible_source_window": {
-              "left": 60.32,
+              "left": 34.0,
               "top": 0.0,
-              "right": 90.99,
+              "right": 64.61,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.9784,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 3976.4304,
-              "top": 2372.8164,
-              "right": 6061.794,
-              "bottom": 3181.0555999999997
+              "left": 4154.1756,
+              "top": 3627.7520999999997,
+              "right": 5048.8640000000005,
+              "bottom": 4092.2625
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.685
+            "score": 0.246
           },
           {
-            "object_x": 50,
+            "object_x": 19,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.67,
+              "left": 13.18,
               "top": 0.0,
-              "right": 65.33,
+              "right": 43.8,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.1778,
+            "anchor_overlap": 0.0,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.3082,
-              0.3083,
-              0.3066,
-              0.3066
+              0.5348,
+              0.6812
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 2372.8164,
-              "right": 6654.0,
-              "bottom": 4436.0
+              "left": 12.065299999999999,
+              "top": 3627.7520999999997,
+              "right": 5329.1502,
+              "bottom": 4152.1794
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3251
+            "score": -0.274
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 6654,
-        "photo_height": 4436,
+        "photo_width": 9281,
+        "photo_height": 6177,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 6654.0,
-        "visible_height": 3060.5354691075513,
+        "visible_width": 9281.0,
+        "visible_height": 4268.8352402745995,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6899313501144164,
+        "visible_fraction_y": 0.6910855172858344,
         "overflow_x": 0.0,
-        "overflow_y": 1375.4645308924487,
+        "overflow_y": 1908.1647597254005,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 91,
+            "object_y": 90,
             "visible_source_window": {
               "left": 0.0,
-              "top": 28.22,
+              "top": 27.8,
               "right": 100.0,
-              "bottom": 97.21
+              "bottom": 96.91
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -267,55 +246,51 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 3976.4304,
-              "top": 2372.8164,
-              "right": 6061.794,
-              "bottom": 3181.0555999999997
+              "left": 4154.1756,
+              "top": 3627.7520999999997,
+              "right": 5048.8640000000005,
+              "bottom": 4092.2625
             },
             "name": "anchor_only",
-            "score": 0.248
+            "score": 0.245
           },
           {
             "object_x": 50,
-            "object_y": 100,
+            "object_y": 92,
             "visible_source_window": {
               "left": 0.0,
-              "top": 31.01,
+              "top": 28.42,
               "right": 100.0,
-              "bottom": 100.0
+              "bottom": 97.53
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
             "context_inside": [
               true,
-              true,
-              true,
               true
             ],
             "context_overlap": [
-              1.0,
-              1.0,
               1.0,
               1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 2372.8164,
-              "right": 6654.0,
-              "bottom": 4436.0
+              "left": 12.065299999999999,
+              "top": 3627.7520999999997,
+              "right": 5329.1502,
+              "bottom": 4152.1794
             },
             "name": "anchor_plus_context",
-            "score": 0.748
+            "score": 0.745
           },
           {
             "object_x": 50,
-            "object_y": 91,
+            "object_y": 90,
             "visible_source_window": {
               "left": 0.0,
-              "top": 28.22,
+              "top": 27.8,
               "right": 100.0,
-              "bottom": 97.21
+              "bottom": 96.91
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -323,46 +298,42 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 3976.4304,
-              "top": 2372.8164,
-              "right": 6061.794,
-              "bottom": 3181.0555999999997
+              "left": 4154.1756,
+              "top": 3627.7520999999997,
+              "right": 5048.8640000000005,
+              "bottom": 4092.2625
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.248
+            "score": 0.245
           },
           {
             "object_x": 50,
-            "object_y": 100,
+            "object_y": 92,
             "visible_source_window": {
               "left": 0.0,
-              "top": 31.01,
+              "top": 28.42,
               "right": 100.0,
-              "bottom": 100.0
+              "bottom": 97.53
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
             "context_inside": [
               true,
-              true,
-              true,
               true
             ],
             "context_overlap": [
-              1.0,
-              1.0,
               1.0,
               1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 2372.8164,
-              "right": 6654.0,
-              "bottom": 4436.0
+              "left": 12.065299999999999,
+              "top": 3627.7520999999997,
+              "right": 5329.1502,
+              "bottom": 4152.1794
             },
             "name": "anchor_context_anomaly",
-            "score": 0.748
+            "score": 0.745
           }
         ]
       }
@@ -370,20 +341,18 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": false,
-    "portrait_primary_anchor_overlap": 0.0,
+    "portrait_primary_anchor_inside": true,
+    "portrait_primary_anchor_overlap": 1.0,
     "portrait_context_inside": [],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
-    "portrait_dead_center_fallback": true,
-    "portrait_context_preferred_but_unavailable": false,
+    "portrait_dead_center_fallback": false,
+    "portrait_context_preferred_but_unavailable": true,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": true,
     "landscape_primary_anchor_overlap": 1.0,
     "landscape_context_inside": [
-      true,
-      true,
       true,
       true
     ],
@@ -399,7 +368,7 @@
     "model": "google/gemini-3.7-flash",
     "log": [
       {
-        "error": "The read operation timed out"
+        "error": "HTTP Error 401: Unauthorized"
       }
     ]
   }
