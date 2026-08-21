@@ -1,339 +1,396 @@
 {
-  "generated_at": "2026-08-20T10:31:58.425939+00:00",
+  "generated_at": "2026-08-21T10:32:40.008083+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 45,
+    "x": 54,
     "y": 51
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "water",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 30.0,
-          "right": 100.0,
-          "bottom": 100.0
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.2,
-        "description": "calm body of water extending to horizon"
-      },
-      {
-        "name": "sky",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 0.0,
-          "right": 100.0,
-          "bottom": 30.0
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.2,
-        "description": "cloud-covered sky with varying shades of gray"
-      },
-      {
-        "name": "pier",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.18,
-          "top": 58.88,
-          "right": 57.42,
-          "bottom": 67.22
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "horizontal wooden pier extending from left shore into water",
-        "detector_score": 0.3051
-      },
-      {
-        "name": "gazebo",
+        "name": "tall palm tree with sunlight filtering through fronds",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 44.76,
-          "top": 58.73,
-          "right": 54.4,
-          "bottom": 66.25
+          "left": 33.95,
+          "top": 0.05,
+          "right": 75.77,
+          "bottom": 83.47
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.8,
+        "description": "tall palm tree with sunlight visible behind its fronds, creating a bright focal point against the sky",
+        "detector_score": 0.4759
+      },
+      {
+        "name": "stacked kayaks",
+        "role": "secondary_subject",
+        "bbox_pct": {
+          "left": 57.3,
+          "top": 62.95,
+          "right": 91.72,
+          "bottom": 71.4
         },
         "confidence": 0.9,
         "narrative_value": 0.7,
-        "description": "small open-air gazebo with roof on rocky outcrop in water",
-        "detector_score": 0.5462
+        "description": "three kayaks stacked vertically on a rack, with orange, yellow, and red-yellow gradient colors",
+        "detector_score": 0.3901
       },
       {
-        "name": "pier",
+        "name": "volleyball net",
         "role": "context",
         "bbox_pct": {
-          "left": 0.13,
-          "top": 64.09,
-          "right": 45.07,
-          "bottom": 66.96
+          "left": 0.0,
+          "top": 70.0,
+          "right": 45.0,
+          "bottom": 80.0
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.6,
+        "description": "blue volleyball net stretched across the sand"
+      },
+      {
+        "name": "distant houses with thatched roofs",
+        "role": "context",
+        "bbox_pct": {
+          "left": 6.93,
+          "top": 68.53,
+          "right": 41.96,
+          "bottom": 76.42
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.5,
+        "description": "low-rise buildings with thatched roofs in the background",
+        "detector_score": 0.3514
+      },
+      {
+        "name": "beach sand",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 75.0,
+          "right": 100.0,
+          "bottom": 98.0
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.2,
+        "description": "light-colored sandy beach covering the lower portion of the image"
+      },
+      {
+        "name": "multiple palm trees in background",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 33.92,
+          "top": 0.11,
+          "right": 76.26,
+          "bottom": 92.35
         },
         "confidence": 0.8,
         "narrative_value": 0.3,
-        "description": "horizontal wooden pier extending from left shore into water",
-        "detector_score": 0.3464
+        "description": "cluster of palm trees forming a dense background layer behind the central tree",
+        "detector_score": 0.3166
+      },
+      {
+        "name": "volleyball net",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 70.0,
+          "right": 45.0,
+          "bottom": 80.0
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.6,
+        "description": "blue volleyball net stretched across the sand"
+      },
+      {
+        "name": "distant houses with thatched roofs",
+        "role": "context",
+        "bbox_pct": {
+          "left": 7.04,
+          "top": 68.58,
+          "right": 41.79,
+          "bottom": 74.08
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.5,
+        "description": "low-rise buildings with thatched roofs in the background",
+        "detector_score": 0.3942
       }
     ],
-    "primary_anchor": "gazebo",
+    "primary_anchor": "tall palm tree with sunlight filtering through fronds",
     "focal_element": null,
     "confidence": 0.9,
-    "description": "calm body of water under a cloud-covered sky, with a wooden pier extending left and a small gazebo on a rocky outcrop in the center",
-    "lighting": "overcast lighting with diffused light from clouds",
-    "background": "cloud-covered sky above calm sea",
+    "description": "beach with stacked kayaks, volleyball net, palm trees, and distant houses on sandy shore",
+    "lighting": "soft evening light with sunlight filtering through palm fronds",
+    "background": "palm trees, distant houses, rocky outcrop",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 49,
-    "portrait_y": 50,
+    "portrait_x": 60.0,
+    "portrait_y": 50.0,
     "landscape_x": 50,
-    "landscape_y": 92
+    "landscape_y": 23
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 9281,
-        "photo_height": 6177,
+        "photo_width": 9064,
+        "photo_height": 6033,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 2841.137299771167,
-        "visible_height": 6177.0,
-        "visible_fraction_x": 0.30612404910798047,
+        "visible_width": 2774.903890160183,
+        "visible_height": 6033.0,
+        "visible_fraction_x": 0.30614561894971126,
         "visible_fraction_y": 1.0,
-        "overflow_x": 6439.862700228833,
+        "overflow_x": 6289.096109839817,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 49,
+            "object_x": 57,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.0,
+              "left": 39.55,
               "top": 0.0,
-              "right": 64.61,
+              "right": 70.16,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.7321,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4154.1756,
-              "top": 3627.7520999999997,
-              "right": 5048.8640000000005,
-              "bottom": 4092.2625
+              "left": 3077.228,
+              "top": 3.0165,
+              "right": 6867.792799999999,
+              "bottom": 5035.7451
             },
             "name": "anchor_only",
-            "score": 0.246
+            "score": -0.653
           },
           {
-            "object_x": 19,
+            "object_x": 33,
             "object_y": 50,
             "visible_source_window": {
-              "left": 13.18,
+              "left": 22.9,
               "top": 0.0,
-              "right": 43.8,
+              "right": 53.51,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.0,
+            "anchor_overlap": 0.4678,
             "context_inside": [
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.5348,
-              0.6812
+              0.4912,
+              0.5442,
+              0.4912,
+              0.5437
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 12.065299999999999,
-              "top": 3627.7520999999997,
-              "right": 5329.1502,
-              "bottom": 4152.1794
+              "left": 0.0,
+              "top": 3.0165,
+              "right": 6867.792799999999,
+              "bottom": 5035.7451
             },
             "name": "anchor_plus_context",
-            "score": -0.274
+            "score": -0.2916
           },
           {
-            "object_x": 49,
+            "object_x": 57,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.0,
+              "left": 39.55,
               "top": 0.0,
-              "right": 64.61,
+              "right": 70.16,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.7321,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4154.1756,
-              "top": 3627.7520999999997,
-              "right": 5048.8640000000005,
-              "bottom": 4092.2625
+              "left": 3077.228,
+              "top": 3.0165,
+              "right": 6867.792799999999,
+              "bottom": 5035.7451
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.246
+            "score": -0.653
           },
           {
-            "object_x": 19,
+            "object_x": 33,
             "object_y": 50,
             "visible_source_window": {
-              "left": 13.18,
+              "left": 22.9,
               "top": 0.0,
-              "right": 43.8,
+              "right": 53.51,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.0,
+            "anchor_overlap": 0.4678,
             "context_inside": [
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.5348,
-              0.6812
+              0.4912,
+              0.5442,
+              0.4912,
+              0.5437
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 12.065299999999999,
-              "top": 3627.7520999999997,
-              "right": 5329.1502,
-              "bottom": 4152.1794
+              "left": 0.0,
+              "top": 3.0165,
+              "right": 6867.792799999999,
+              "bottom": 5035.7451
             },
             "name": "anchor_context_anomaly",
-            "score": -0.274
+            "score": -0.2916
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 9281,
-        "photo_height": 6177,
+        "photo_width": 9064,
+        "photo_height": 6033,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 9281.0,
-        "visible_height": 4268.8352402745995,
+        "visible_width": 9064.0,
+        "visible_height": 4169.025171624714,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6910855172858344,
+        "visible_fraction_y": 0.6910368260607846,
         "overflow_x": 0.0,
-        "overflow_y": 1908.1647597254005,
+        "overflow_y": 1863.974828375286,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 90,
+            "object_y": 23,
             "visible_source_window": {
               "left": 0.0,
-              "top": 27.8,
+              "top": 7.11,
               "right": 100.0,
-              "bottom": 96.91
+              "bottom": 76.21
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8284,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4154.1756,
-              "top": 3627.7520999999997,
-              "right": 5048.8640000000005,
-              "bottom": 4092.2625
+              "left": 3077.228,
+              "top": 3.0165,
+              "right": 6867.792799999999,
+              "bottom": 5035.7451
             },
             "name": "anchor_only",
-            "score": 0.245
+            "score": -0.654
           },
           {
             "object_x": 50,
-            "object_y": 92,
+            "object_y": 23,
             "visible_source_window": {
               "left": 0.0,
-              "top": 28.42,
+              "top": 7.11,
               "right": 100.0,
-              "bottom": 97.53
+              "bottom": 76.21
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8284,
             "context_inside": [
-              true,
+              false,
+              false,
+              false,
               true
             ],
             "context_overlap": [
-              1.0,
+              0.621,
+              0.9734,
+              0.621,
               1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 12.065299999999999,
-              "top": 3627.7520999999997,
-              "right": 5329.1502,
-              "bottom": 4152.1794
+              "left": 0.0,
+              "top": 3.0165,
+              "right": 6867.792799999999,
+              "bottom": 5035.7451
             },
             "name": "anchor_plus_context",
-            "score": 0.745
+            "score": -0.203
           },
           {
             "object_x": 50,
-            "object_y": 90,
+            "object_y": 23,
             "visible_source_window": {
               "left": 0.0,
-              "top": 27.8,
+              "top": 7.11,
               "right": 100.0,
-              "bottom": 96.91
+              "bottom": 76.21
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8284,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4154.1756,
-              "top": 3627.7520999999997,
-              "right": 5048.8640000000005,
-              "bottom": 4092.2625
+              "left": 3077.228,
+              "top": 3.0165,
+              "right": 6867.792799999999,
+              "bottom": 5035.7451
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.245
+            "score": -0.654
           },
           {
             "object_x": 50,
-            "object_y": 92,
+            "object_y": 23,
             "visible_source_window": {
               "left": 0.0,
-              "top": 28.42,
+              "top": 7.11,
               "right": 100.0,
-              "bottom": 97.53
+              "bottom": 76.21
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8284,
             "context_inside": [
-              true,
+              false,
+              false,
+              false,
               true
             ],
             "context_overlap": [
-              1.0,
+              0.621,
+              0.9734,
+              0.621,
               1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 12.065299999999999,
-              "top": 3627.7520999999997,
-              "right": 5329.1502,
-              "bottom": 4152.1794
+              "left": 0.0,
+              "top": 3.0165,
+              "right": 6867.792799999999,
+              "bottom": 5035.7451
             },
             "name": "anchor_context_anomaly",
-            "score": 0.745
+            "score": -0.203
           }
         ]
       }
@@ -341,23 +398,25 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": true,
-    "portrait_primary_anchor_overlap": 1.0,
+    "portrait_primary_anchor_inside": false,
+    "portrait_primary_anchor_overlap": 0.0,
     "portrait_context_inside": [],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
-    "portrait_dead_center_fallback": false,
-    "portrait_context_preferred_but_unavailable": true,
+    "portrait_dead_center_fallback": true,
+    "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": true,
-    "landscape_primary_anchor_overlap": 1.0,
+    "landscape_primary_anchor_inside": false,
+    "landscape_primary_anchor_overlap": 0.8284,
     "landscape_context_inside": [
-      true,
+      false,
+      false,
+      false,
       true
     ],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": true,
+    "landscape_composition_valid": false,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
     "landscape_context_preferred_but_unavailable": false,
@@ -368,7 +427,78 @@
     "model": "google/gemini-3.7-flash",
     "log": [
       {
-        "error": "HTTP Error 401: Unauthorized"
+        "profile": "portrait",
+        "model": "google/gemini-3.7-flash",
+        "judge_adjust": true,
+        "judge_reason": "Panning right captures more of the high-contrast, vibrantly colored kayaks and centers the main palm tree trunk, eliminating the awkward edge cut on the right.",
+        "judge_object_x": 60.0,
+        "judge_object_y": null,
+        "max_delta_x_points": 14.4122,
+        "max_delta_y_points": 0.0,
+        "clamped_object_x": 60.0,
+        "clamped_object_y": 50.0,
+        "applied": true,
+        "cost": 0.00237675,
+        "usage": {
+          "prompt_tokens": 1783,
+          "completion_tokens": 911,
+          "total_tokens": 2694,
+          "cost": 0.00237675,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00237675,
+            "upstream_inference_prompt_cost": 0.000668625,
+            "upstream_inference_completions_cost": 0.001708125
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 852,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "profile": "landscape",
+        "model": "google/gemini-3.7-flash",
+        "judge_adjust": false,
+        "judge_reason": "The current framing effectively balances the lush palm canopy against the open sky while retaining the vibrant yellow kayaks as a grounding visual base.",
+        "judge_object_x": null,
+        "judge_object_y": null,
+        "max_delta_x_points": 0.0,
+        "max_delta_y_points": 32.3663,
+        "clamped_object_x": 50.0,
+        "clamped_object_y": 23.0,
+        "applied": false,
+        "cost": 0.003137625,
+        "usage": {
+          "prompt_tokens": 1782,
+          "completion_tokens": 1317,
+          "total_tokens": 3099,
+          "cost": 0.003137625,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.003137625,
+            "upstream_inference_prompt_cost": 0.00066825,
+            "upstream_inference_completions_cost": 0.002469375
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1268,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
       }
     ]
   }
