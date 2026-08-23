@@ -36,6 +36,15 @@ except Exception:  # noqa: BLE001
     visual_weight_refine = None
     _VW_IMPORT_OK = False
 
+# Optional anchor-consistency gate. Guarded so an import failure never breaks
+# rotation -- the gate is strictly optional and fails open.
+try:
+    import anchor_consistency
+    _AC_IMPORT_OK = True
+except Exception:  # noqa: BLE001
+    anchor_consistency = None
+    _AC_IMPORT_OK = False
+
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 PHOTO_PATH = os.path.join(REPO_DIR, "photo.jpg")
 INDEX_PATH = os.path.join(REPO_DIR, "index.html")
@@ -365,6 +374,26 @@ def ground_vision_elements(image_path, vision):
     if not primary_dets:
         raise RuntimeError(f"Grounding DINO could not localize primary element: {primary['name']}")
 
+    # Consistency gate: when DINO returns several instances of the anchor's
+    # category (e.g. multiple people), the VLM's own bounding box cannot be
+    # trusted to pick WHICH one is the anchor (photo 21.jpg bug: VLM boxed the
+    # wrong person). Ask the VLM to choose the candidate that matches its
+    # semantic description. Bounded attempts -> fails open, never oscillates.
+    anchor_gate_applied = False
+    anchor_gate_chosen = None
+    if _AC_IMPORT_OK and anchor_consistency.ENABLED and len(primary_dets) > 1:
+        try:
+            anchor_desc = primary.get("description") or primary["name"]
+            chosen = anchor_consistency.disambiguate_anchor(
+                image_path, anchor_desc, list(primary_dets)
+            )
+            if chosen is not None:
+                primary_dets = [chosen]
+                anchor_gate_applied = True
+                anchor_gate_chosen = chosen
+        except Exception:  # noqa: BLE001 - fail open
+            anchor_gate_applied = False
+
     # Fix #2: ground only crop-relevant labels (exclude background_mass and
     # the primary itself, already handled), keeping the primary out of this
     # call so it cannot suppress other labels either.
@@ -381,7 +410,19 @@ def ground_vision_elements(image_path, vision):
     grounded_primary = next(item for item in grounded if item["name"] == primary["name"])
     if "detector_score" not in grounded_primary:
         raise RuntimeError(f"Grounding DINO could not localize primary element: {primary['name']}")
-    return {**vision, "elements": grounded, "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"}
+    # The consistency gate's pick is authoritative for the anchor: because a
+    # secondary_subject can share the anchor's canonical category (e.g. "group
+    # of people" -> person), match_detections_to_elements could re-select the
+    # anchor by IoU against the VLM's (possibly wrong) box and undo the gate.
+    # Force the chosen detection back onto the anchor so the semantic pick wins.
+    if anchor_gate_applied and anchor_gate_chosen is not None:
+        grounded_primary["bbox_pct"] = anchor_gate_chosen["bbox_pct"]
+        grounded_primary["detector_score"] = anchor_gate_chosen["detector_score"]
+    result = {**vision, "elements": grounded, "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"}
+    if anchor_gate_applied:
+        result["anchor_consistency_gate"] = "applied"
+        result["anchor_consistency_desc"] = primary.get("description") or primary["name"]
+    return result
 
 
 
