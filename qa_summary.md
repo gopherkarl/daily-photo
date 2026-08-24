@@ -1,19 +1,19 @@
-# Crop QA — 2026-08-23T10:33:29.662766+00:00
+# Crop QA — 2026-08-24T10:32:48.811954+00:00
 
-- Source: `photo.jpg` (9520×6336)
+- Source: `photo.jpg` (2886×4337)
 - Localization model: **Grounding DINO-T (isolated primary) + VLM assignment**
-- Primary anchor: **man in dark shirt and cap**
-- Focal anomaly: **none**
-- Elements: `[('man in dark shirt and cap', 'primary_anchor', {'left': 91.09, 'top': 43.31, 'right': 97.7, 'bottom': 74.08}), ('BAR MANOLO signage', 'context', {'left': 7.26, 'top': 30.87, 'right': 16.34, 'bottom': 43.09}), ('checkered floor', 'background_mass', {'left': 0.0, 'top': 6.15, 'right': 6.51, 'bottom': 9.74}), ('group of people', 'secondary_subject', {'left': 26.7, 'top': 44.78, 'right': 33.41, 'bottom': 73.4}), ('large hanging plant', 'context', {'left': 62.88, 'top': 22.5, 'right': 83.99, 'bottom': 67.85}), ('bar counter', 'context', {'left': 51.97, 'top': 51.23, 'right': 82.29, 'bottom': 80.14}), ('glass doors', 'context', {'left': 84.01, 'top': 27.12, 'right': 99.92, 'bottom': 71.69}), ('exposed ceiling pipes', 'background_mass', {'left': 0.0, 'top': 0.0, 'right': 100.0, 'bottom': 20.51}), ('hanging ceiling lights', 'background_mass', {'left': 0.0, 'top': 0.0, 'right': 100.0, 'bottom': 35.9}), ('metal pole', 'context', {'left': 91.87, 'top': 70.73, 'right': 93.66, 'bottom': 99.9}), ('black rug', 'context', {'left': 62.06, 'top': 72.61, 'right': 99.25, 'bottom': 98.91}), ('BAR MANOLO signage', 'context', {'left': 2.5, 'top': 2.05, 'right': 7.51, 'bottom': 3.08}), ('large hanging plant', 'context', {'left': 64.06, 'top': 23.59, 'right': 83.08, 'bottom': 66.67}), ('bar counter', 'context', {'left': 0.0, 'top': 5.13, 'right': 65.07, 'bottom': 71.79}), ('glass doors', 'context', {'left': 84.53, 'top': 31.12, 'right': 93.53, 'bottom': 65.33}), ('metal pole', 'context', {'left': 48.05, 'top': 62.56, 'right': 54.05, 'bottom': 83.08}), ('black rug', 'context', {'left': 62.06, 'top': 73.85, 'right': 98.6, 'bottom': 100.0})]`
-- Portrait crop: `100% 50%`
-- Landscape crop: `50.0% 72.0%`
-- Portrait anchor overlap: **1.00**
-- Landscape anchor overlap: **1.00**
+- Primary anchor: **city skyline**
+- Focal anomaly: **yellow bag**
+- Elements: `[('city skyline', 'primary_anchor', {'left': 0.33, 'top': 1.75, 'right': 99.69, 'bottom': 32.62}), ('yellow bag', 'focal_anomaly', {'left': 50.02, 'top': 45.37, 'right': 77.1, 'bottom': 52.38}), ('two people', 'context', {'left': 32.85, 'top': 43.39, 'right': 36.74, 'bottom': 45.85}), ('large yacht', 'secondary_subject', {'left': 6.29, 'top': 23.53, 'right': 89.12, 'bottom': 41.57}), ('river', 'background_mass', {'left': 0.0, 'top': 32.32, 'right': 11.76, 'bottom': 38.38}), ('deck furniture', 'background_mass', {'left': 14.12, 'top': 49.49, 'right': 95.29, 'bottom': 100.0}), ('two people', 'context', {'left': 27.93, 'top': 43.03, 'right': 33.33, 'bottom': 45.83})]`
+- Portrait crop: `50% 50%`
+- Landscape crop: `50% 3%`
+- Portrait anchor overlap: **0.00**
+- Landscape anchor overlap: **0.99**
 - Portrait composition valid: **True**
-- Landscape composition valid: **True**
+- Landscape composition valid: **False**
 - Portrait anchor-priority fallback: **False**
 - Portrait anchor-center fallback: **False**
-- Portrait dead-center fallback: **False**
+- Portrait dead-center fallback: **True**
 - Landscape anchor-priority fallback: **False**
 - Landscape anchor-center fallback: **False**
 
