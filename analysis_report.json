@@ -1,324 +1,396 @@
 {
-  "generated_at": "2026-08-26T12:15:55.003756+00:00",
+  "generated_at": "2026-08-26T23:13:15.449718+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 51,
-    "y": 56
+    "x": 52,
+    "y": 48
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "Buddha head statue",
+        "name": "vase with dried leaves",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 31.55,
-          "top": 12.07,
-          "right": 74.9,
-          "bottom": 90.88
+          "left": 25.6,
+          "top": 50.26,
+          "right": 51.3,
+          "bottom": 90.17
         },
-        "confidence": 0.95,
-        "narrative_value": 0.9,
-        "description": "White ceramic Buddha head statue with a rounded ushnisha (top knot) and closed eyes, positioned centrally.",
-        "detector_score": 0.9079
+        "confidence": 0.9,
+        "narrative_value": 0.8,
+        "description": "brown glass vase containing dried leaves with muted brown and pinkish hues",
+        "detector_score": 0.8347
       },
       {
-        "name": "Book titled 'Siddhartha'",
-        "role": "context",
-        "bbox_pct": {
-          "left": 30.0,
-          "top": 75.0,
-          "right": 75.0,
-          "bottom": 90.0
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.6,
-        "description": "Black book cover with white text reading 'Siddhartha' and 'SIDDHARTHA BY HERMANN HESSE', placed beneath the Buddha head."
-      },
-      {
-        "name": "Dark background",
+        "name": "sheer curtains",
         "role": "background_mass",
         "bbox_pct": {
           "left": 0.0,
           "top": 0.0,
-          "right": 100.0,
+          "right": 20.0,
           "bottom": 100.0
         },
-        "confidence": 0.9,
-        "narrative_value": 0.1,
-        "description": "Uniform dark background with no visible details, surrounding the Buddha head and book."
+        "confidence": 0.8,
+        "narrative_value": 0.2,
+        "description": "light gray sheer fabric curtains on the left side of the image"
       },
       {
-        "name": "Book titled 'Siddhartha'",
+        "name": "grid window",
         "role": "context",
         "bbox_pct": {
-          "left": 30.0,
-          "top": 75.0,
-          "right": 75.0,
-          "bottom": 90.0
+          "left": 51.13,
+          "top": 0.15,
+          "right": 84.65,
+          "bottom": 80.35
         },
-        "confidence": 0.8,
-        "narrative_value": 0.6,
-        "description": "Black book cover with white text reading 'Siddhartha' and 'SIDDHARTHA BY HERMANN HESSE', placed beneath the Buddha head."
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "window with black grid frames, showing a blurred view of another building",
+        "detector_score": 0.7648
+      },
+      {
+        "name": "stack of books",
+        "role": "secondary_subject",
+        "bbox_pct": {
+          "left": 84.62,
+          "top": 66.53,
+          "right": 92.63,
+          "bottom": 69.87
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.2,
+        "description": "stack of three books with brown and beige covers",
+        "detector_score": 0.3364
+      },
+      {
+        "name": "decorative vase",
+        "role": "secondary_subject",
+        "bbox_pct": {
+          "left": 25.61,
+          "top": 50.29,
+          "right": 51.25,
+          "bottom": 90.23
+        },
+        "confidence": 0.6,
+        "narrative_value": 0.2,
+        "description": "small brown decorative vase above the stack of books",
+        "detector_score": 0.822
+      },
+      {
+        "name": "white windowsill",
+        "role": "context",
+        "bbox_pct": {
+          "left": 18.13,
+          "top": 71.58,
+          "right": 97.19,
+          "bottom": 99.66
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "white ledge surface where the vase and other objects are placed",
+        "detector_score": 0.5522
+      },
+      {
+        "name": "grid window",
+        "role": "context",
+        "bbox_pct": {
+          "left": 50.0,
+          "top": 0.0,
+          "right": 80.0,
+          "bottom": 100.0
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "window with black grid frames, showing a blurred view of another building"
+      },
+      {
+        "name": "white windowsill",
+        "role": "context",
+        "bbox_pct": {
+          "left": 15.0,
+          "top": 70.0,
+          "right": 95.0,
+          "bottom": 100.0
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.3,
+        "description": "white ledge surface where the vase and other objects are placed"
       }
     ],
-    "primary_anchor": "Buddha head statue",
+    "primary_anchor": "vase with dried leaves",
     "focal_element": null,
-    "confidence": 0.95,
-    "description": "A white Buddha head statue resting on a black book titled 'Siddhartha' by Hermann Hesse, set against a dark background.",
-    "lighting": "Warm, focused lighting highlighting the Buddha head, creating a soft glow.",
-    "background": "Solid dark background with no discernible features.",
+    "confidence": 0.9,
+    "description": "A brown glass vase with dried leaves sits on a white windowsill, with sheer curtains on the left, a grid window on the right, and a stack of books with a decorative object on the windowsill.",
+    "lighting": "Soft natural light from the window, diffused and calm.",
+    "background": "Sheer curtains on the left, grid window with black frames, and white windowsill.",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 50,
+    "portrait_x": 33,
     "portrait_y": 50,
     "landscape_x": 50.0,
-    "landscape_y": 39.0
+    "landscape_y": 70.0
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 2048,
-        "photo_height": 1363,
+        "photo_width": 1280,
+        "photo_height": 852,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 626.9176201372998,
-        "visible_height": 1363.0,
-        "visible_fraction_x": 0.3061121192076659,
+        "visible_width": 391.88100686498854,
+        "visible_height": 852.0,
+        "visible_fraction_x": 0.3061570366132723,
         "visible_fraction_y": 1.0,
-        "overflow_x": 1421.0823798627002,
+        "overflow_x": 888.1189931350115,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 55,
+            "object_x": 33,
             "object_y": 50,
             "visible_source_window": {
-              "left": 38.16,
+              "left": 22.9,
               "top": 0.0,
-              "right": 68.78,
+              "right": 53.51,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7061,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 646.144,
-              "top": 164.5141,
-              "right": 1533.9520000000002,
-              "bottom": 1238.6943999999999
+              "left": 327.68,
+              "top": 428.2151999999999,
+              "right": 656.64,
+              "bottom": 768.2484000000001
             },
             "name": "anchor_only",
-            "score": -0.654
+            "score": 0.231
           },
           {
-            "object_x": 54,
+            "object_x": 59,
             "object_y": 50,
             "visible_source_window": {
-              "left": 37.47,
+              "left": 40.94,
               "top": 0.0,
-              "right": 68.08,
+              "right": 71.55,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7061,
+            "anchor_overlap": 0.4032,
             "context_inside": [
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.6802,
-              0.6802
+              0.6093,
+              0.3872,
+              0.7184,
+              0.3827
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 614.4,
-              "top": 164.5141,
-              "right": 1536.0,
-              "bottom": 1238.6943999999999
+              "left": 192.0,
+              "top": 0.0,
+              "right": 1244.032,
+              "bottom": 852.0
             },
             "name": "anchor_plus_context",
-            "score": -0.2329
+            "score": -0.2759
           },
           {
-            "object_x": 55,
+            "object_x": 33,
             "object_y": 50,
             "visible_source_window": {
-              "left": 38.16,
+              "left": 22.9,
               "top": 0.0,
-              "right": 68.78,
+              "right": 53.51,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7061,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 646.144,
-              "top": 164.5141,
-              "right": 1533.9520000000002,
-              "bottom": 1238.6943999999999
+              "left": 327.68,
+              "top": 428.2151999999999,
+              "right": 656.64,
+              "bottom": 768.2484000000001
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.654
+            "score": 0.231
           },
           {
-            "object_x": 54,
+            "object_x": 59,
             "object_y": 50,
             "visible_source_window": {
-              "left": 37.47,
+              "left": 40.94,
               "top": 0.0,
-              "right": 68.08,
+              "right": 71.55,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7061,
+            "anchor_overlap": 0.4032,
             "context_inside": [
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.6802,
-              0.6802
+              0.6093,
+              0.3872,
+              0.7184,
+              0.3827
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 614.4,
-              "top": 164.5141,
-              "right": 1536.0,
-              "bottom": 1238.6943999999999
+              "left": 192.0,
+              "top": 0.0,
+              "right": 1244.032,
+              "bottom": 852.0
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2329
+            "score": -0.2759
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 2048,
-        "photo_height": 1363,
+        "photo_width": 1280,
+        "photo_height": 852,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 2048.0,
-        "visible_height": 941.9862700228833,
+        "visible_width": 1280.0,
+        "visible_height": 588.741418764302,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6911124504936782,
+        "visible_fraction_y": 0.6910110548876784,
         "overflow_x": 0.0,
-        "overflow_y": 421.01372997711667,
+        "overflow_y": 263.258581235698,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 55,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 16.99,
+              "top": 30.9,
               "right": 100.0,
-              "bottom": 86.1
+              "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.8769,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 646.144,
-              "top": 164.5141,
-              "right": 1533.9520000000002,
-              "bottom": 1238.6943999999999
+              "left": 327.68,
+              "top": 428.2151999999999,
+              "right": 656.64,
+              "bottom": 768.2484000000001
             },
             "name": "anchor_only",
-            "score": -0.651
+            "score": 0.248
           },
           {
             "object_x": 50,
-            "object_y": 55,
+            "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 16.99,
+              "top": 15.45,
               "right": 100.0,
-              "bottom": 86.1
+              "bottom": 84.55
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8769,
+            "anchor_overlap": 0.8592,
             "context_inside": [
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.74,
-              0.74
+              0.8092,
+              0.4619,
+              0.691,
+              0.485
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 614.4,
-              "top": 164.5141,
-              "right": 1536.0,
-              "bottom": 1238.6943999999999
+              "left": 192.0,
+              "top": 0.0,
+              "right": 1244.032,
+              "bottom": 852.0
             },
             "name": "anchor_plus_context",
-            "score": -0.216
+            "score": -0.2491
           },
           {
             "object_x": 50,
-            "object_y": 55,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 16.99,
+              "top": 30.9,
               "right": 100.0,
-              "bottom": 86.1
+              "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.8769,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 646.144,
-              "top": 164.5141,
-              "right": 1533.9520000000002,
-              "bottom": 1238.6943999999999
+              "left": 327.68,
+              "top": 428.2151999999999,
+              "right": 656.64,
+              "bottom": 768.2484000000001
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.651
+            "score": 0.248
           },
           {
             "object_x": 50,
-            "object_y": 55,
+            "object_y": 50,
             "visible_source_window": {
               "left": 0.0,
-              "top": 16.99,
+              "top": 15.45,
               "right": 100.0,
-              "bottom": 86.1
+              "bottom": 84.55
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8769,
+            "anchor_overlap": 0.8592,
             "context_inside": [
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.74,
-              0.74
+              0.8092,
+              0.4619,
+              0.691,
+              0.485
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 614.4,
-              "top": 164.5141,
-              "right": 1536.0,
-              "bottom": 1238.6943999999999
+              "left": 192.0,
+              "top": 0.0,
+              "right": 1244.032,
+              "bottom": 852.0
             },
             "name": "anchor_context_anomaly",
-            "score": -0.216
+            "score": -0.2491
           }
         ]
       }
@@ -326,26 +398,23 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": false,
-    "portrait_primary_anchor_overlap": 0.0,
+    "portrait_primary_anchor_inside": true,
+    "portrait_primary_anchor_overlap": 1.0,
     "portrait_context_inside": [],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
-    "portrait_dead_center_fallback": true,
-    "portrait_context_preferred_but_unavailable": false,
+    "portrait_dead_center_fallback": false,
+    "portrait_context_preferred_but_unavailable": true,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.8769,
-    "landscape_context_inside": [
-      false,
-      false
-    ],
+    "landscape_primary_anchor_inside": true,
+    "landscape_primary_anchor_overlap": 1.0,
+    "landscape_context_inside": [],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": false,
+    "landscape_composition_valid": true,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
-    "landscape_context_preferred_but_unavailable": false,
+    "landscape_context_preferred_but_unavailable": true,
     "landscape_anchor_priority_fallback": false
   },
   "visual_weight_refine": {
@@ -356,20 +425,20 @@
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": false,
-        "judge_reason": "The Buddha head is already well-centered within the vertical crop, creating a balanced and serene symmetrical composition against the dark negative space.",
+        "judge_reason": "The vase and dried foliage are nicely centered within the portrait frame, creating a harmonious and balanced still-life composition.",
         "judge_object_x": null,
         "judge_object_y": null,
-        "max_delta_x_points": 14.4116,
+        "max_delta_x_points": 14.4125,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 50.0,
+        "clamped_object_x": 33.0,
         "clamped_object_y": 50.0,
         "applied": false,
-        "cost": 0.00172425,
+        "cost": 0.00186975,
         "usage": {
-          "prompt_tokens": 1783,
-          "completion_tokens": 563,
-          "total_tokens": 2346,
-          "cost": 0.00172425,
+          "prompt_tokens": 1781,
+          "completion_tokens": 641,
+          "total_tokens": 2422,
+          "cost": 0.00186975,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -378,12 +447,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00172425,
-            "upstream_inference_prompt_cost": 0.000668625,
-            "upstream_inference_completions_cost": 0.001055625
+            "upstream_inference_cost": 0.00186975,
+            "upstream_inference_prompt_cost": 0.000667875,
+            "upstream_inference_completions_cost": 0.001201875
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 513,
+            "reasoning_tokens": 594,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -393,20 +462,20 @@
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": true,
-        "judge_reason": "Panning upward includes the top of the Buddha's head and ushnisha, eliminating the awkward visual truncation at the top edge while maintaining the focal weight of the face.",
+        "judge_reason": "Panning upward includes more of the decorative dried foliage above the vase, reducing the awkward top cut while keeping the base of the vase securely inside the frame.",
         "judge_object_x": 50.0,
-        "judge_object_y": 39.0,
+        "judge_object_y": 70.0,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3742,
+        "max_delta_y_points": 32.3636,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 39.0,
+        "clamped_object_y": 70.0,
         "applied": true,
-        "cost": 0.00259575,
+        "cost": 0.002391375,
         "usage": {
           "prompt_tokens": 1782,
-          "completion_tokens": 1028,
-          "total_tokens": 2810,
-          "cost": 0.00259575,
+          "completion_tokens": 919,
+          "total_tokens": 2701,
+          "cost": 0.002391375,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -415,12 +484,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00259575,
+            "upstream_inference_cost": 0.002391375,
             "upstream_inference_prompt_cost": 0.00066825,
-            "upstream_inference_completions_cost": 0.0019275
+            "upstream_inference_completions_cost": 0.001723125
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 962,
+            "reasoning_tokens": 857,
             "image_tokens": 0,
             "audio_tokens": 0
           }

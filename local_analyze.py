@@ -52,6 +52,9 @@ REPORT_PATH = os.path.join(REPO_DIR, "analysis_report.json")
 DISPLAY_PROFILES_PATH = os.path.join(REPO_DIR, "display_profiles.json")
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 VISION_MODEL = os.environ.get("DAILY_PHOTO_VISION_MODEL", "qwen3-vl:8b")
+# Warm inference is ~2s, but a cold/unloaded model can stall far longer; the
+# run script also warms the model up, so this is a generous safety net.
+VISION_TIMEOUT = int(os.environ.get("DAILY_PHOTO_VISION_TIMEOUT", "600"))
 
 USE_GROUNDING_DINO = os.environ.get("DAILY_PHOTO_USE_GROUNDING_DINO", "1") != "0"
 SCENE_DISAGREEMENT_THRESHOLD = 0.35
@@ -323,7 +326,7 @@ Return at least one element. Classify dense repetitive material as background_ma
             data=json.dumps(payload).encode("utf-8"),
             headers={"Content-Type": "application/json"},
         )
-        with urllib.request.urlopen(request, timeout=180) as response:
+        with urllib.request.urlopen(request, timeout=VISION_TIMEOUT) as response:
             result = json.loads(response.read().decode("utf-8"))
         raw_response = (
             result.get("message", {}).get("content", "")
