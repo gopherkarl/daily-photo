@@ -1,327 +1,324 @@
 {
-  "generated_at": "2026-08-25T10:32:25.682427+00:00",
+  "generated_at": "2026-08-26T12:15:55.003756+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 46,
-    "y": 57
+    "x": 51,
+    "y": 56
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "central skyscraper with spire",
+        "name": "Buddha head statue",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 43.12,
-          "top": 16.16,
-          "right": 50.26,
-          "bottom": 79.92
+          "left": 31.55,
+          "top": 12.07,
+          "right": 74.9,
+          "bottom": 90.88
         },
         "confidence": 0.95,
         "narrative_value": 0.9,
-        "description": "Tall skyscraper with a spire, standing prominently against the skyline",
-        "detector_score": 0.4124
+        "description": "White ceramic Buddha head statue with a rounded ushnisha (top knot) and closed eyes, positioned centrally.",
+        "detector_score": 0.9079
       },
       {
-        "name": "other high-rise buildings",
+        "name": "Book titled 'Siddhartha'",
+        "role": "context",
+        "bbox_pct": {
+          "left": 30.0,
+          "top": 75.0,
+          "right": 75.0,
+          "bottom": 90.0
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.6,
+        "description": "Black book cover with white text reading 'Siddhartha' and 'SIDDHARTHA BY HERMANN HESSE', placed beneath the Buddha head."
+      },
+      {
+        "name": "Dark background",
         "role": "background_mass",
         "bbox_pct": {
           "left": 0.0,
-          "top": 16.0,
-          "right": 100.0,
-          "bottom": 79.0
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.1,
-        "description": "Dense cluster of high-rise buildings forming the urban skyline"
-      },
-      {
-        "name": "body of water",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.23,
-          "top": 82.26,
-          "right": 99.78,
-          "bottom": 99.73
-        },
-        "confidence": 0.95,
-        "narrative_value": 0.2,
-        "description": "Waterfront in the foreground, reflecting the cityscape",
-        "detector_score": 0.5822
-      },
-      {
-        "name": "body of water",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 79.0,
+          "top": 0.0,
           "right": 100.0,
           "bottom": 100.0
         },
-        "confidence": 0.95,
-        "narrative_value": 0.2,
-        "description": "Waterfront in the foreground, reflecting the cityscape"
+        "confidence": 0.9,
+        "narrative_value": 0.1,
+        "description": "Uniform dark background with no visible details, surrounding the Buddha head and book."
+      },
+      {
+        "name": "Book titled 'Siddhartha'",
+        "role": "context",
+        "bbox_pct": {
+          "left": 30.0,
+          "top": 75.0,
+          "right": 75.0,
+          "bottom": 90.0
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.6,
+        "description": "Black book cover with white text reading 'Siddhartha' and 'SIDDHARTHA BY HERMANN HESSE', placed beneath the Buddha head."
       }
     ],
-    "primary_anchor": "central skyscraper with spire",
+    "primary_anchor": "Buddha head statue",
     "focal_element": null,
     "confidence": 0.95,
-    "description": "Black-and-white photograph of a city skyline with a prominent skyscraper featuring a spire, surrounded by other high-rise buildings, with a body of water in the foreground.",
-    "lighting": "Overcast, diffused lighting with muted tones, creating a somber mood.",
-    "background": "Dense urban skyline under a cloudy sky.",
-    "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment",
-    "anchor_consistency_gate": "applied",
-    "anchor_consistency_desc": "Tall skyscraper with a spire, standing prominently against the skyline"
+    "description": "A white Buddha head statue resting on a black book titled 'Siddhartha' by Hermann Hesse, set against a dark background.",
+    "lighting": "Warm, focused lighting highlighting the Buddha head, creating a soft glow.",
+    "background": "Solid dark background with no discernible features.",
+    "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 45.2,
-    "portrait_y": 50.0,
-    "landscape_x": 50,
-    "landscape_y": 44
+    "portrait_x": 50,
+    "portrait_y": 50,
+    "landscape_x": 50.0,
+    "landscape_y": 39.0
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 9494,
-        "photo_height": 6319,
+        "photo_width": 2048,
+        "photo_height": 1363,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 2906.450800915332,
-        "visible_height": 6319.000000000001,
-        "visible_fraction_x": 0.30613553833108614,
-        "visible_fraction_y": 1.0000000000000002,
-        "overflow_x": 6587.549199084668,
+        "visible_width": 626.9176201372998,
+        "visible_height": 1363.0,
+        "visible_fraction_x": 0.3061121192076659,
+        "visible_fraction_y": 1.0,
+        "overflow_x": 1421.0823798627002,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 45,
+            "object_x": 55,
             "object_y": 50,
             "visible_source_window": {
-              "left": 31.22,
+              "left": 38.16,
               "top": 0.0,
-              "right": 61.84,
+              "right": 68.78,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.7061,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4093.8127999999997,
-              "top": 1021.1504,
-              "right": 4771.684399999999,
-              "bottom": 5050.1448
+              "left": 646.144,
+              "top": 164.5141,
+              "right": 1533.9520000000002,
+              "bottom": 1238.6943999999999
             },
             "name": "anchor_only",
-            "score": 0.249
+            "score": -0.654
           },
           {
-            "object_x": 50,
+            "object_x": 54,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.69,
+              "left": 37.47,
               "top": 0.0,
-              "right": 65.31,
+              "right": 68.08,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.7061,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.3075,
-              0.3061
+              0.6802,
+              0.6802
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 1021.1504,
-              "right": 9494.0,
-              "bottom": 6319.0
+              "left": 614.4,
+              "top": 164.5141,
+              "right": 1536.0,
+              "bottom": 1238.6943999999999
             },
             "name": "anchor_plus_context",
-            "score": 0.5727
+            "score": -0.2329
           },
           {
-            "object_x": 45,
+            "object_x": 55,
             "object_y": 50,
             "visible_source_window": {
-              "left": 31.22,
+              "left": 38.16,
               "top": 0.0,
-              "right": 61.84,
+              "right": 68.78,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.7061,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4093.8127999999997,
-              "top": 1021.1504,
-              "right": 4771.684399999999,
-              "bottom": 5050.1448
+              "left": 646.144,
+              "top": 164.5141,
+              "right": 1533.9520000000002,
+              "bottom": 1238.6943999999999
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.249
+            "score": -0.654
           },
           {
-            "object_x": 50,
+            "object_x": 54,
             "object_y": 50,
             "visible_source_window": {
-              "left": 34.69,
+              "left": 37.47,
               "top": 0.0,
-              "right": 65.31,
+              "right": 68.08,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.7061,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.3075,
-              0.3061
+              0.6802,
+              0.6802
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 1021.1504,
-              "right": 9494.0,
-              "bottom": 6319.0
+              "left": 614.4,
+              "top": 164.5141,
+              "right": 1536.0,
+              "bottom": 1238.6943999999999
             },
             "name": "anchor_context_anomaly",
-            "score": 0.5727
+            "score": -0.2329
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 9494,
-        "photo_height": 6319,
+        "photo_width": 2048,
+        "photo_height": 1363,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 9494.0,
-        "visible_height": 4366.805491990847,
+        "visible_width": 2048.0,
+        "visible_height": 941.9862700228833,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6910595809449038,
+        "visible_fraction_y": 0.6911124504936782,
         "overflow_x": 0.0,
-        "overflow_y": 1952.1945080091527,
+        "overflow_y": 421.01372997711667,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 44,
+            "object_y": 55,
             "visible_source_window": {
               "left": 0.0,
-              "top": 13.59,
+              "top": 16.99,
               "right": 100.0,
-              "bottom": 82.7
+              "bottom": 86.1
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8769,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4093.8127999999997,
-              "top": 1021.1504,
-              "right": 4771.684399999999,
-              "bottom": 5050.1448
+              "left": 646.144,
+              "top": 164.5141,
+              "right": 1533.9520000000002,
+              "bottom": 1238.6943999999999
             },
             "name": "anchor_only",
-            "score": 0.246
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 76,
+            "object_y": 55,
             "visible_source_window": {
               "left": 0.0,
-              "top": 23.48,
+              "top": 16.99,
               "right": 100.0,
-              "bottom": 92.59
+              "bottom": 86.1
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8852,
+            "anchor_overlap": 0.8769,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.591,
-              0.6469
+              0.74,
+              0.74
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 1021.1504,
-              "right": 9494.0,
-              "bottom": 6319.0
+              "left": 614.4,
+              "top": 164.5141,
+              "right": 1536.0,
+              "bottom": 1238.6943999999999
             },
             "name": "anchor_plus_context",
-            "score": -0.2493
+            "score": -0.216
           },
           {
             "object_x": 50,
-            "object_y": 44,
+            "object_y": 55,
             "visible_source_window": {
               "left": 0.0,
-              "top": 13.59,
+              "top": 16.99,
               "right": 100.0,
-              "bottom": 82.7
+              "bottom": 86.1
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8769,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4093.8127999999997,
-              "top": 1021.1504,
-              "right": 4771.684399999999,
-              "bottom": 5050.1448
+              "left": 646.144,
+              "top": 164.5141,
+              "right": 1533.9520000000002,
+              "bottom": 1238.6943999999999
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.246
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 76,
+            "object_y": 55,
             "visible_source_window": {
               "left": 0.0,
-              "top": 23.48,
+              "top": 16.99,
               "right": 100.0,
-              "bottom": 92.59
+              "bottom": 86.1
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8852,
+            "anchor_overlap": 0.8769,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.591,
-              0.6469
+              0.74,
+              0.74
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 1021.1504,
-              "right": 9494.0,
-              "bottom": 6319.0
+              "left": 614.4,
+              "top": 164.5141,
+              "right": 1536.0,
+              "bottom": 1238.6943999999999
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2493
+            "score": -0.216
           }
         ]
       }
@@ -329,26 +326,26 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": true,
-    "portrait_primary_anchor_overlap": 1.0,
-    "portrait_context_inside": [
-      false,
-      false
-    ],
+    "portrait_primary_anchor_inside": false,
+    "portrait_primary_anchor_overlap": 0.0,
+    "portrait_context_inside": [],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
-    "portrait_dead_center_fallback": false,
+    "portrait_dead_center_fallback": true,
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": true,
-    "landscape_primary_anchor_overlap": 1.0,
-    "landscape_context_inside": [],
+    "landscape_primary_anchor_inside": false,
+    "landscape_primary_anchor_overlap": 0.8769,
+    "landscape_context_inside": [
+      false,
+      false
+    ],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": true,
+    "landscape_composition_valid": false,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
-    "landscape_context_preferred_but_unavailable": true,
+    "landscape_context_preferred_but_unavailable": false,
     "landscape_anchor_priority_fallback": false
   },
   "visual_weight_refine": {
@@ -358,21 +355,21 @@
       {
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": true,
-        "judge_reason": "Shifting slightly to the left centers the soaring spire of One World Trade Center as the primary vertical anchor and balances the surrounding sky and skyline elements.",
-        "judge_object_x": 45.2,
+        "judge_adjust": false,
+        "judge_reason": "The Buddha head is already well-centered within the vertical crop, creating a balanced and serene symmetrical composition against the dark negative space.",
+        "judge_object_x": null,
         "judge_object_y": null,
-        "max_delta_x_points": 14.412,
+        "max_delta_x_points": 14.4116,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 45.2,
+        "clamped_object_x": 50.0,
         "clamped_object_y": 50.0,
-        "applied": true,
-        "cost": 0.002489625,
+        "applied": false,
+        "cost": 0.00172425,
         "usage": {
-          "prompt_tokens": 1784,
-          "completion_tokens": 971,
-          "total_tokens": 2755,
-          "cost": 0.002489625,
+          "prompt_tokens": 1783,
+          "completion_tokens": 563,
+          "total_tokens": 2346,
+          "cost": 0.00172425,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -381,12 +378,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.002489625,
-            "upstream_inference_prompt_cost": 0.000669,
-            "upstream_inference_completions_cost": 0.001820625
+            "upstream_inference_cost": 0.00172425,
+            "upstream_inference_prompt_cost": 0.000668625,
+            "upstream_inference_completions_cost": 0.001055625
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 914,
+            "reasoning_tokens": 513,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -395,21 +392,21 @@
       {
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": false,
-        "judge_reason": "The tall skyscraper fills almost the entire vertical span of the frame, and the current crop neatly balances the small margins above the spire and below the waterline.",
-        "judge_object_x": null,
-        "judge_object_y": null,
+        "judge_adjust": true,
+        "judge_reason": "Panning upward includes the top of the Buddha's head and ushnisha, eliminating the awkward visual truncation at the top edge while maintaining the focal weight of the face.",
+        "judge_object_x": 50.0,
+        "judge_object_y": 39.0,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3687,
+        "max_delta_y_points": 32.3742,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 44.0,
-        "applied": false,
-        "cost": 0.0019905,
+        "clamped_object_y": 39.0,
+        "applied": true,
+        "cost": 0.00259575,
         "usage": {
-          "prompt_tokens": 1783,
-          "completion_tokens": 705,
-          "total_tokens": 2488,
-          "cost": 0.0019905,
+          "prompt_tokens": 1782,
+          "completion_tokens": 1028,
+          "total_tokens": 2810,
+          "cost": 0.00259575,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -418,12 +415,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.0019905,
-            "upstream_inference_prompt_cost": 0.000668625,
-            "upstream_inference_completions_cost": 0.001321875
+            "upstream_inference_cost": 0.00259575,
+            "upstream_inference_prompt_cost": 0.00066825,
+            "upstream_inference_completions_cost": 0.0019275
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 651,
+            "reasoning_tokens": 962,
             "image_tokens": 0,
             "audio_tokens": 0
           }
