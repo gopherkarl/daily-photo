@@ -1,164 +1,179 @@
 {
-  "generated_at": "2026-08-26T23:13:15.449718+00:00",
+  "generated_at": "2026-08-28T10:35:06.102864+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 52,
-    "y": 48
+    "x": 49,
+    "y": 49
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "vase with dried leaves",
+        "name": "mural figure",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 25.6,
-          "top": 50.26,
-          "right": 51.3,
-          "bottom": 90.17
+          "left": 69.58,
+          "top": 25.73,
+          "right": 81.07,
+          "bottom": 36.85
         },
         "confidence": 0.9,
-        "narrative_value": 0.8,
-        "description": "brown glass vase containing dried leaves with muted brown and pinkish hues",
-        "detector_score": 0.8347
+        "narrative_value": 0.9,
+        "description": "a person depicted in a tile mosaic above a building entrance",
+        "detector_score": 0.5885
       },
       {
-        "name": "sheer curtains",
+        "name": "white building facade",
         "role": "background_mass",
         "bbox_pct": {
-          "left": 0.0,
-          "top": 0.0,
-          "right": 20.0,
-          "bottom": 100.0
+          "left": 10.0,
+          "top": 20.0,
+          "right": 50.0,
+          "bottom": 70.0
         },
         "confidence": 0.8,
         "narrative_value": 0.2,
-        "description": "light gray sheer fabric curtains on the left side of the image"
+        "description": "a white building with arched windows and a uniform facade"
       },
       {
-        "name": "grid window",
+        "name": "CHOLULA LA FONDA sign",
         "role": "context",
         "bbox_pct": {
-          "left": 51.13,
-          "top": 0.15,
-          "right": 84.65,
-          "bottom": 80.35
+          "left": 62.72,
+          "top": 47.08,
+          "right": 84.1,
+          "bottom": 53.18
         },
-        "confidence": 0.7,
+        "confidence": 0.9,
         "narrative_value": 0.3,
-        "description": "window with black grid frames, showing a blurred view of another building",
-        "detector_score": 0.7648
+        "description": "a rectangular sign with text 'CHOLULA LA FONDA' above a building entrance",
+        "detector_score": 0.4165
       },
       {
-        "name": "stack of books",
-        "role": "secondary_subject",
-        "bbox_pct": {
-          "left": 84.62,
-          "top": 66.53,
-          "right": 92.63,
-          "bottom": 69.87
-        },
-        "confidence": 0.6,
-        "narrative_value": 0.2,
-        "description": "stack of three books with brown and beige covers",
-        "detector_score": 0.3364
-      },
-      {
-        "name": "decorative vase",
-        "role": "secondary_subject",
-        "bbox_pct": {
-          "left": 25.61,
-          "top": 50.29,
-          "right": 51.25,
-          "bottom": 90.23
-        },
-        "confidence": 0.6,
-        "narrative_value": 0.2,
-        "description": "small brown decorative vase above the stack of books",
-        "detector_score": 0.822
-      },
-      {
-        "name": "white windowsill",
+        "name": "outdoor seating area",
         "role": "context",
         "bbox_pct": {
-          "left": 18.13,
-          "top": 71.58,
-          "right": 97.19,
-          "bottom": 99.66
+          "left": 0.22,
+          "top": 66.13,
+          "right": 99.7,
+          "bottom": 99.84
         },
-        "confidence": 0.7,
-        "narrative_value": 0.3,
-        "description": "white ledge surface where the vase and other objects are placed",
-        "detector_score": 0.5522
+        "confidence": 0.8,
+        "narrative_value": 0.2,
+        "description": "tables and umbrellas arranged on a cobblestone street",
+        "detector_score": 0.3623
       },
       {
-        "name": "grid window",
-        "role": "context",
+        "name": "cobblestone street",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 50.0,
-          "top": 0.0,
-          "right": 80.0,
+          "left": 0.0,
+          "top": 65.0,
+          "right": 100.0,
           "bottom": 100.0
         },
-        "confidence": 0.7,
-        "narrative_value": 0.3,
-        "description": "window with black grid frames, showing a blurred view of another building"
+        "confidence": 0.9,
+        "narrative_value": 0.1,
+        "description": "a cobblestone street with a patterned surface"
       },
       {
-        "name": "white windowsill",
+        "name": "palm tree",
         "role": "context",
         "bbox_pct": {
-          "left": 15.0,
-          "top": 70.0,
-          "right": 95.0,
-          "bottom": 100.0
+          "left": 0.05,
+          "top": 47.64,
+          "right": 13.58,
+          "bottom": 56.02
         },
         "confidence": 0.7,
+        "narrative_value": 0.2,
+        "description": "a palm tree visible in the distance",
+        "detector_score": 0.4328
+      },
+      {
+        "name": "CHOLULA LA FONDA sign",
+        "role": "context",
+        "bbox_pct": {
+          "left": 60.0,
+          "top": 45.0,
+          "right": 85.0,
+          "bottom": 55.0
+        },
+        "confidence": 0.9,
         "narrative_value": 0.3,
-        "description": "white ledge surface where the vase and other objects are placed"
+        "description": "a rectangular sign with text 'CHOLULA LA FONDA' above a building entrance"
+      },
+      {
+        "name": "outdoor seating area",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.29,
+          "top": 18.22,
+          "right": 99.64,
+          "bottom": 99.59
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.2,
+        "description": "tables and umbrellas arranged on a cobblestone street",
+        "detector_score": 0.2806
+      },
+      {
+        "name": "palm tree",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 45.0,
+          "right": 15.0,
+          "bottom": 65.0
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.2,
+        "description": "a palm tree visible in the distance"
       }
     ],
-    "primary_anchor": "vase with dried leaves",
+    "primary_anchor": "mural figure",
     "focal_element": null,
     "confidence": 0.9,
-    "description": "A brown glass vase with dried leaves sits on a white windowsill, with sheer curtains on the left, a grid window on the right, and a stack of books with a decorative object on the windowsill.",
-    "lighting": "Soft natural light from the window, diffused and calm.",
-    "background": "Sheer curtains on the left, grid window with black frames, and white windowsill.",
-    "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
+    "description": "a sepia-toned street scene with a building featuring a tiled mural, outdoor seating, and a cobblestone street",
+    "lighting": "even, sepia-toned lighting",
+    "background": "a row of buildings with arched windows and a cobblestone street",
+    "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment",
+    "anchor_consistency_gate": "applied",
+    "anchor_consistency_desc": "a person depicted in a tile mosaic above a building entrance"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 33,
-    "portrait_y": 50,
+    "portrait_x": 72.0,
+    "portrait_y": 50.0,
     "landscape_x": 50.0,
-    "landscape_y": 70.0
+    "landscape_y": 31.0
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 1280,
-        "photo_height": 852,
+        "photo_width": 2441,
+        "photo_height": 3720,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 391.88100686498854,
-        "visible_height": 852.0,
-        "visible_fraction_x": 0.3061570366132723,
+        "visible_width": 1711.0297482837527,
+        "visible_height": 3720.0,
+        "visible_fraction_x": 0.700954423713131,
         "visible_fraction_y": 1.0,
-        "overflow_x": 888.1189931350115,
+        "overflow_x": 729.9702517162473,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 33,
+            "object_x": 100,
             "object_y": 50,
             "visible_source_window": {
-              "left": 22.9,
+              "left": 29.9,
               "top": 0.0,
-              "right": 53.51,
+              "right": 100.0,
               "bottom": 100.0
             },
             "anchor_inside": true,
@@ -167,54 +182,58 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 327.68,
-              "top": 428.2151999999999,
-              "right": 656.64,
-              "bottom": 768.2484000000001
+              "left": 1698.4478,
+              "top": 957.1560000000001,
+              "right": 1978.9187,
+              "bottom": 1370.82
             },
             "name": "anchor_only",
-            "score": 0.231
+            "score": 0.199
           },
           {
-            "object_x": 59,
+            "object_x": 49,
             "object_y": 50,
             "visible_source_window": {
-              "left": 40.94,
+              "left": 14.65,
               "top": 0.0,
-              "right": 71.55,
+              "right": 84.75,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.4032,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
+              true,
+              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
-              0.6093,
-              0.3872,
-              0.7184,
-              0.3827
+              1.0,
+              0.7046,
+              0.0,
+              0.9899,
+              0.7055,
+              0.0231
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 192.0,
-              "top": 0.0,
-              "right": 1244.032,
-              "bottom": 852.0
+              "left": 0.0,
+              "top": 677.784,
+              "right": 2433.677,
+              "bottom": 3714.0480000000002
             },
             "name": "anchor_plus_context",
-            "score": -0.2759
+            "score": 0.6426
           },
           {
-            "object_x": 33,
+            "object_x": 100,
             "object_y": 50,
             "visible_source_window": {
-              "left": 22.9,
+              "left": 29.9,
               "top": 0.0,
-              "right": 53.51,
+              "right": 100.0,
               "bottom": 100.0
             },
             "anchor_inside": true,
@@ -223,71 +242,75 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 327.68,
-              "top": 428.2151999999999,
-              "right": 656.64,
-              "bottom": 768.2484000000001
+              "left": 1698.4478,
+              "top": 957.1560000000001,
+              "right": 1978.9187,
+              "bottom": 1370.82
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.231
+            "score": 0.199
           },
           {
-            "object_x": 59,
+            "object_x": 49,
             "object_y": 50,
             "visible_source_window": {
-              "left": 40.94,
+              "left": 14.65,
               "top": 0.0,
-              "right": 71.55,
+              "right": 84.75,
               "bottom": 100.0
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.4032,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
+              true,
+              false,
               false,
               false,
               false,
               false
             ],
             "context_overlap": [
-              0.6093,
-              0.3872,
-              0.7184,
-              0.3827
+              1.0,
+              0.7046,
+              0.0,
+              0.9899,
+              0.7055,
+              0.0231
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 192.0,
-              "top": 0.0,
-              "right": 1244.032,
-              "bottom": 852.0
+              "left": 0.0,
+              "top": 677.784,
+              "right": 2433.677,
+              "bottom": 3714.0480000000002
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2759
+            "score": 0.6426
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 1280,
-        "photo_height": 852,
+        "photo_width": 2441,
+        "photo_height": 3720,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 1280.0,
-        "visible_height": 588.741418764302,
+        "visible_width": 2441.0,
+        "visible_height": 1122.7482837528603,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6910110548876784,
+        "visible_fraction_y": 0.3018140547722743,
         "overflow_x": 0.0,
-        "overflow_y": 263.258581235698,
+        "overflow_y": 2597.2517162471395,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 100,
+            "object_y": 23,
             "visible_source_window": {
               "left": 0.0,
-              "top": 30.9,
+              "top": 16.06,
               "right": 100.0,
-              "bottom": 100.0
+              "bottom": 46.24
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -295,55 +318,59 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 327.68,
-              "top": 428.2151999999999,
-              "right": 656.64,
-              "bottom": 768.2484000000001
+              "left": 1698.4478,
+              "top": 957.1560000000001,
+              "right": 1978.9187,
+              "bottom": 1370.82
             },
             "name": "anchor_only",
-            "score": 0.248
+            "score": 0.249
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 63,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.45,
+              "top": 43.99,
               "right": 100.0,
-              "bottom": 84.55
+              "bottom": 74.17
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8592,
+            "anchor_overlap": 0.0,
             "context_inside": [
+              true,
               false,
+              true,
+              true,
               false,
-              false,
-              false
+              true
             ],
             "context_overlap": [
-              0.8092,
-              0.4619,
-              0.691,
-              0.485
+              1.0,
+              0.2384,
+              1.0,
+              1.0,
+              0.3709,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 192.0,
-              "top": 0.0,
-              "right": 1244.032,
-              "bottom": 852.0
+              "left": 0.0,
+              "top": 677.784,
+              "right": 2433.677,
+              "bottom": 3714.0480000000002
             },
             "name": "anchor_plus_context",
-            "score": -0.2491
+            "score": -0.2089
           },
           {
             "object_x": 50,
-            "object_y": 100,
+            "object_y": 23,
             "visible_source_window": {
               "left": 0.0,
-              "top": 30.9,
+              "top": 16.06,
               "right": 100.0,
-              "bottom": 100.0
+              "bottom": 46.24
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -351,46 +378,50 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 327.68,
-              "top": 428.2151999999999,
-              "right": 656.64,
-              "bottom": 768.2484000000001
+              "left": 1698.4478,
+              "top": 957.1560000000001,
+              "right": 1978.9187,
+              "bottom": 1370.82
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.248
+            "score": 0.249
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 63,
             "visible_source_window": {
               "left": 0.0,
-              "top": 15.45,
+              "top": 43.99,
               "right": 100.0,
-              "bottom": 84.55
+              "bottom": 74.17
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8592,
+            "anchor_overlap": 0.0,
             "context_inside": [
+              true,
               false,
+              true,
+              true,
               false,
-              false,
-              false
+              true
             ],
             "context_overlap": [
-              0.8092,
-              0.4619,
-              0.691,
-              0.485
+              1.0,
+              0.2384,
+              1.0,
+              1.0,
+              0.3709,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 192.0,
-              "top": 0.0,
-              "right": 1244.032,
-              "bottom": 852.0
+              "left": 0.0,
+              "top": 677.784,
+              "right": 2433.677,
+              "bottom": 3714.0480000000002
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2491
+            "score": -0.2089
           }
         ]
       }
@@ -400,12 +431,19 @@
   "validation": {
     "portrait_primary_anchor_inside": true,
     "portrait_primary_anchor_overlap": 1.0,
-    "portrait_context_inside": [],
+    "portrait_context_inside": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
     "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
     "portrait_dead_center_fallback": false,
-    "portrait_context_preferred_but_unavailable": true,
+    "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": true,
     "landscape_primary_anchor_overlap": 1.0,
@@ -424,21 +462,21 @@
       {
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": false,
-        "judge_reason": "The vase and dried foliage are nicely centered within the portrait frame, creating a harmonious and balanced still-life composition.",
-        "judge_object_x": null,
+        "judge_adjust": true,
+        "judge_reason": "Panning right captures the full ornate stone entrance and framing of the restaurant facade, eliminating the awkward edge crop through the right architectural pillar while keeping the tiled portrait well-composed.",
+        "judge_object_x": 72.0,
         "judge_object_y": null,
-        "max_delta_x_points": 14.4125,
+        "max_delta_x_points": 33.4397,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 33.0,
+        "clamped_object_x": 72.0,
         "clamped_object_y": 50.0,
-        "applied": false,
-        "cost": 0.00186975,
+        "applied": true,
+        "cost": 0.00177525,
         "usage": {
-          "prompt_tokens": 1781,
-          "completion_tokens": 641,
-          "total_tokens": 2422,
-          "cost": 0.00186975,
+          "prompt_tokens": 1784,
+          "completion_tokens": 590,
+          "total_tokens": 2374,
+          "cost": 0.00177525,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -447,12 +485,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00186975,
-            "upstream_inference_prompt_cost": 0.000667875,
-            "upstream_inference_completions_cost": 0.001201875
+            "upstream_inference_cost": 0.00177525,
+            "upstream_inference_prompt_cost": 0.000669,
+            "upstream_inference_completions_cost": 0.00110625
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 594,
+            "reasoning_tokens": 528,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -462,20 +500,20 @@
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": true,
-        "judge_reason": "Panning upward includes more of the decorative dried foliage above the vase, reducing the awkward top cut while keeping the base of the vase securely inside the frame.",
+        "judge_reason": "Panning slightly downward includes the decorative lintel and restaurant signage over the entrance, eliminating an awkward horizontal crop slice across the doorway molding while maintaining the mural anchor.",
         "judge_object_x": 50.0,
-        "judge_object_y": 70.0,
+        "judge_object_y": 31.0,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3636,
+        "max_delta_y_points": 14.3228,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 70.0,
+        "clamped_object_y": 31.0,
         "applied": true,
-        "cost": 0.002391375,
+        "cost": 0.0028065,
         "usage": {
-          "prompt_tokens": 1782,
-          "completion_tokens": 919,
-          "total_tokens": 2701,
-          "cost": 0.002391375,
+          "prompt_tokens": 1784,
+          "completion_tokens": 1140,
+          "total_tokens": 2924,
+          "cost": 0.0028065,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -484,12 +522,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.002391375,
-            "upstream_inference_prompt_cost": 0.00066825,
-            "upstream_inference_completions_cost": 0.001723125
+            "upstream_inference_cost": 0.0028065,
+            "upstream_inference_prompt_cost": 0.000669,
+            "upstream_inference_completions_cost": 0.0021375
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 857,
+            "reasoning_tokens": 1067,
             "image_tokens": 0,
             "audio_tokens": 0
           }
