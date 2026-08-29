@@ -1,193 +1,125 @@
 {
-  "generated_at": "2026-08-29T10:32:54.640424+00:00",
+  "generated_at": "2026-08-29T20:53:01.781778+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 53,
-    "y": 49
+    "x": 49,
+    "y": 50
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "person in white dress",
+        "name": "pagoda",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 20.03,
-          "top": 79.73,
-          "right": 31.77,
-          "bottom": 93.86
+          "left": 61.43,
+          "top": 7.65,
+          "right": 94.45,
+          "bottom": 82.27
         },
-        "confidence": 0.9,
-        "narrative_value": 0.8,
-        "description": "person wearing white dress sitting on a sofa",
-        "detector_score": 0.7492
+        "confidence": 0.95,
+        "narrative_value": 0.9,
+        "description": "Multi-tiered traditional Japanese pagoda with a spire, illuminated against the cityscape.",
+        "detector_score": 0.4294
       },
       {
-        "name": "cloudy sky",
+        "name": "cityscape",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.26,
+          "top": 54.98,
+          "right": 99.71,
+          "bottom": 99.38
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.3,
+        "description": "Dense urban area with illuminated buildings and rooftops.",
+        "detector_score": 0.3244
+      },
+      {
+        "name": "sky",
         "role": "background_mass",
         "bbox_pct": {
           "left": 0.0,
           "top": 0.0,
-          "right": 100.0,
-          "bottom": 70.0
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.2,
-        "description": "sky with scattered white clouds"
-      },
-      {
-        "name": "concrete building",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.08,
-          "top": 0.04,
-          "right": 38.21,
-          "bottom": 86.76
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.3,
-        "description": "modern concrete building with large rectangular panels",
-        "detector_score": 0.4343
-      },
-      {
-        "name": "glass skyscraper",
-        "role": "context",
-        "bbox_pct": {
-          "left": 70.0,
-          "top": 0.0,
-          "right": 100.0,
-          "bottom": 100.0
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.3,
-        "description": "tall glass skyscraper with reflective blue windows"
-      },
-      {
-        "name": "rooftop furniture",
-        "role": "context",
-        "bbox_pct": {
-          "left": 3.39,
-          "top": 86.29,
-          "right": 42.94,
-          "bottom": 99.95
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "sofas and chairs on the rooftop lounge",
-        "detector_score": 0.3608
-      },
-      {
-        "name": "greenery",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 70.0,
           "right": 100.0,
           "bottom": 80.0
         },
-        "confidence": 0.7,
+        "confidence": 0.8,
         "narrative_value": 0.2,
-        "description": "plants and trees in the middle ground"
+        "description": "Cloudy sky with sunset hues and scattered clouds."
       },
       {
-        "name": "person in white shirt",
-        "role": "secondary_subject",
+        "name": "mountains",
+        "role": "background_mass",
         "bbox_pct": {
-          "left": 36.61,
-          "top": 78.25,
-          "right": 43.78,
-          "bottom": 94.36
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "person wearing white shirt sitting on a chair",
-        "detector_score": 0.8189
-      },
-      {
-        "name": "concrete building",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.09,
-          "top": 0.1,
-          "right": 99.93,
-          "bottom": 86.61
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.3,
-        "description": "modern concrete building with large rectangular panels",
-        "detector_score": 0.2862
-      },
-      {
-        "name": "glass skyscraper",
-        "role": "context",
-        "bbox_pct": {
-          "left": 70.0,
-          "top": 0.0,
+          "left": 0.0,
+          "top": 50.0,
           "right": 100.0,
-          "bottom": 100.0
+          "bottom": 55.0
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.1,
+        "description": "Distant mountain range under the sky."
+      },
+      {
+        "name": "cityscape",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.27,
+          "top": 54.87,
+          "right": 99.63,
+          "bottom": 80.57
         },
         "confidence": 0.9,
         "narrative_value": 0.3,
-        "description": "tall glass skyscraper with reflective blue windows"
-      },
-      {
-        "name": "rooftop furniture",
-        "role": "context",
-        "bbox_pct": {
-          "left": 56.97,
-          "top": 86.93,
-          "right": 78.69,
-          "bottom": 99.9
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "sofas and chairs on the rooftop lounge",
-        "detector_score": 0.4429
+        "description": "Dense urban area with illuminated buildings and rooftops.",
+        "detector_score": 0.4431
       }
     ],
-    "primary_anchor": "person in white dress",
+    "primary_anchor": "pagoda",
     "focal_element": null,
-    "confidence": 0.9,
-    "description": "A rooftop lounge area with people sitting on sofas and chairs, surrounded by modern buildings and greenery under a cloudy sky.",
-    "lighting": "Bright daylight with sunlight illuminating the scene.",
-    "background": "Modern skyscrapers and greenery.",
+    "confidence": 0.95,
+    "description": "A cityscape at dusk featuring a prominent multi-tiered pagoda, illuminated urban buildings, distant mountains, and a cloudy sky.",
+    "lighting": "Dusk lighting with warm sunset colors in the sky and artificial city lights.",
+    "background": "Distant mountains under a cloudy sky, with a cityscape of illuminated buildings.",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment",
     "anchor_consistency_gate": "applied",
-    "anchor_consistency_desc": "person wearing white dress sitting on a sofa"
+    "anchor_consistency_desc": "Multi-tiered traditional Japanese pagoda with a spire, illuminated against the cityscape."
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 24.5,
-    "portrait_y": 50.0,
-    "landscape_x": 50,
-    "landscape_y": 100
+    "portrait_x": 93,
+    "portrait_y": 50,
+    "landscape_x": 50.0,
+    "landscape_y": 33.1462
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 8064,
-        "photo_height": 6048,
+        "photo_width": 3281,
+        "photo_height": 2461,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 2781.803203661327,
-        "visible_height": 6048.0,
-        "visible_fraction_x": 0.3449656750572082,
+        "visible_width": 1131.9473684210527,
+        "visible_height": 2461.0,
+        "visible_fraction_x": 0.34500072185951014,
         "visible_fraction_y": 1.0,
-        "overflow_x": 5282.196796338672,
+        "overflow_x": 2149.0526315789475,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 13,
+            "object_x": 93,
             "object_y": 50,
             "visible_source_window": {
-              "left": 8.52,
+              "left": 60.91,
               "top": 0.0,
-              "right": 43.01,
+              "right": 95.42,
               "bottom": 100.0
             },
             "anchor_inside": true,
@@ -196,13 +128,13 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 1615.2192,
-              "top": 4822.0704,
-              "right": 2561.9328,
-              "bottom": 5676.6528
+              "left": 2015.5183,
+              "top": 188.2665,
+              "right": 3098.9045,
+              "bottom": 2024.6647
             },
             "name": "anchor_only",
-            "score": 0.21
+            "score": 0.206
           },
           {
             "object_x": 50,
@@ -214,40 +146,32 @@
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.0,
+            "anchor_overlap": 0.1763,
             "context_inside": [
-              false,
-              false,
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.1431,
-              0.0,
-              0.2576,
-              0.3455,
-              0.0,
-              0.4732
+              0.3469,
+              0.3472
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 6.4512,
-              "top": 0.0,
-              "right": 8064.0,
-              "bottom": 6048.0
+              "left": 8.5306,
+              "top": 188.2665,
+              "right": 3271.4851,
+              "bottom": 2445.7418
             },
             "name": "anchor_plus_context",
-            "score": -0.3522
+            "score": -0.3142
           },
           {
-            "object_x": 13,
+            "object_x": 93,
             "object_y": 50,
             "visible_source_window": {
-              "left": 8.52,
+              "left": 60.91,
               "top": 0.0,
-              "right": 43.01,
+              "right": 95.42,
               "bottom": 100.0
             },
             "anchor_inside": true,
@@ -256,13 +180,13 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 1615.2192,
-              "top": 4822.0704,
-              "right": 2561.9328,
-              "bottom": 5676.6528
+              "left": 2015.5183,
+              "top": 188.2665,
+              "right": 3098.9045,
+              "bottom": 2024.6647
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.21
+            "score": 0.206
           },
           {
             "object_x": 50,
@@ -274,168 +198,144 @@
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.0,
+            "anchor_overlap": 0.1763,
             "context_inside": [
-              false,
-              false,
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.1431,
-              0.0,
-              0.2576,
-              0.3455,
-              0.0,
-              0.4732
+              0.3469,
+              0.3472
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 6.4512,
-              "top": 0.0,
-              "right": 8064.0,
-              "bottom": 6048.0
+              "left": 8.5306,
+              "top": 188.2665,
+              "right": 3271.4851,
+              "bottom": 2445.7418
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3522
+            "score": -0.3142
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 8064,
-        "photo_height": 6048,
+        "photo_width": 3281,
+        "photo_height": 2461,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 8064.0,
-        "visible_height": 3709.070938215103,
+        "visible_width": 3281.0,
+        "visible_height": 1509.1098398169336,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6132723112128147,
+        "visible_fraction_y": 0.6132100121157796,
         "overflow_x": 0.0,
-        "overflow_y": 2338.929061784897,
+        "overflow_y": 951.8901601830664,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 100,
+            "object_y": 37,
             "visible_source_window": {
               "left": 0.0,
-              "top": 38.67,
+              "top": 14.31,
               "right": 100.0,
-              "bottom": 100.0
+              "bottom": 75.63
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8218,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 1615.2192,
-              "top": 4822.0704,
-              "right": 2561.9328,
-              "bottom": 5676.6528
+              "left": 2015.5183,
+              "top": 188.2665,
+              "right": 3098.9045,
+              "bottom": 2024.6647
             },
             "name": "anchor_only",
-            "score": 0.247
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 59,
             "visible_source_window": {
               "left": 0.0,
-              "top": 19.34,
+              "top": 22.82,
               "right": 100.0,
-              "bottom": 80.66
+              "bottom": 84.14
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.0661,
+            "anchor_overlap": 0.7967,
             "context_inside": [
               false,
-              false,
-              false,
-              false,
-              false,
-              false
+              true
             ],
             "context_overlap": [
-              0.7072,
-              0.6133,
-              0.0,
-              0.7089,
-              0.6133,
-              0.0
+              0.6568,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 6.4512,
-              "top": 0.0,
-              "right": 8064.0,
-              "bottom": 6048.0
+              "left": 8.5306,
+              "top": 188.2665,
+              "right": 3271.4851,
+              "bottom": 2445.7418
             },
             "name": "anchor_plus_context",
-            "score": -0.2929
+            "score": -0.1939
           },
           {
             "object_x": 50,
-            "object_y": 100,
+            "object_y": 37,
             "visible_source_window": {
               "left": 0.0,
-              "top": 38.67,
+              "top": 14.31,
               "right": 100.0,
-              "bottom": 100.0
+              "bottom": 75.63
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.8218,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 1615.2192,
-              "top": 4822.0704,
-              "right": 2561.9328,
-              "bottom": 5676.6528
+              "left": 2015.5183,
+              "top": 188.2665,
+              "right": 3098.9045,
+              "bottom": 2024.6647
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.247
+            "score": -0.651
           },
           {
             "object_x": 50,
-            "object_y": 50,
+            "object_y": 59,
             "visible_source_window": {
               "left": 0.0,
-              "top": 19.34,
+              "top": 22.82,
               "right": 100.0,
-              "bottom": 80.66
+              "bottom": 84.14
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.0661,
+            "anchor_overlap": 0.7967,
             "context_inside": [
               false,
-              false,
-              false,
-              false,
-              false,
-              false
+              true
             ],
             "context_overlap": [
-              0.7072,
-              0.6133,
-              0.0,
-              0.7089,
-              0.6133,
-              0.0
+              0.6568,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 6.4512,
-              "top": 0.0,
-              "right": 8064.0,
-              "bottom": 6048.0
+              "left": 8.5306,
+              "top": 188.2665,
+              "right": 3271.4851,
+              "bottom": 2445.7418
             },
             "name": "anchor_context_anomaly",
-            "score": -0.2929
+            "score": -0.1939
           }
         ]
       }
@@ -452,14 +352,17 @@
     "portrait_dead_center_fallback": false,
     "portrait_context_preferred_but_unavailable": true,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": true,
-    "landscape_primary_anchor_overlap": 1.0,
-    "landscape_context_inside": [],
+    "landscape_primary_anchor_inside": false,
+    "landscape_primary_anchor_overlap": 0.7967,
+    "landscape_context_inside": [
+      false,
+      true
+    ],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": true,
+    "landscape_composition_valid": false,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
-    "landscape_context_preferred_but_unavailable": true,
+    "landscape_context_preferred_but_unavailable": false,
     "landscape_anchor_priority_fallback": false
   },
   "visual_weight_refine": {
@@ -469,21 +372,21 @@
       {
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": true,
-        "judge_reason": "Panning right includes the seated companion to complete the social interaction and balances the frame away from the heavy architectural column on the left.",
-        "judge_object_x": 24.5,
+        "judge_adjust": false,
+        "judge_reason": "The pagoda anchor spans nearly the entire available width of the vertical crop and is already neatly centered with balanced margins on both sides.",
+        "judge_object_x": null,
         "judge_object_y": null,
-        "max_delta_x_points": 15.2664,
+        "max_delta_x_points": 15.2672,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 24.5,
+        "clamped_object_x": 93.0,
         "clamped_object_y": 50.0,
-        "applied": true,
-        "cost": 0.00453,
+        "applied": false,
+        "cost": 0.0031875,
         "usage": {
           "prompt_tokens": 1740,
-          "completion_tokens": 860,
-          "total_tokens": 2600,
-          "cost": 0.00453,
+          "completion_tokens": 502,
+          "total_tokens": 2242,
+          "cost": 0.0031875,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -492,12 +395,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00453,
+            "upstream_inference_cost": 0.0031875,
             "upstream_inference_prompt_cost": 0.001305,
-            "upstream_inference_completions_cost": 0.003225
+            "upstream_inference_completions_cost": 0.0018825
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 807,
+            "reasoning_tokens": 453,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -506,21 +409,21 @@
       {
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": false,
-        "judge_reason": "The current framing grounds the rooftop terrace and seated figures well along the lower third while capturing the expansive sky framed by the flanking skyscrapers.",
-        "judge_object_x": null,
-        "judge_object_y": null,
+        "judge_adjust": true,
+        "judge_reason": "Panning upward includes more of the iconic pagoda's spire and dramatic evening clouds while trimming the distracting dark rooftop foreground.",
+        "judge_object_x": 50.0,
+        "judge_object_y": 33.1,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 25.858,
+        "max_delta_y_points": 25.8538,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 100.0,
-        "applied": false,
-        "cost": 0.004059,
+        "clamped_object_y": 33.1462,
+        "applied": true,
+        "cost": 0.00428625,
         "usage": {
-          "prompt_tokens": 1742,
-          "completion_tokens": 734,
-          "total_tokens": 2476,
-          "cost": 0.004059,
+          "prompt_tokens": 1740,
+          "completion_tokens": 795,
+          "total_tokens": 2535,
+          "cost": 0.00428625,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -529,12 +432,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.004059,
-            "upstream_inference_prompt_cost": 0.0013065,
-            "upstream_inference_completions_cost": 0.0027525
+            "upstream_inference_cost": 0.00428625,
+            "upstream_inference_prompt_cost": 0.001305,
+            "upstream_inference_completions_cost": 0.00298125
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 684,
+            "reasoning_tokens": 730,
             "image_tokens": 0,
             "audio_tokens": 0
           }
