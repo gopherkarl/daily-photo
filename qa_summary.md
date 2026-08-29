@@ -1,12 +1,12 @@
-# Crop QA — 2026-08-28T10:35:06.182685+00:00
+# Crop QA — 2026-08-29T10:32:54.878069+00:00
 
-- Source: `photo.jpg` (2441×3720)
+- Source: `photo.jpg` (8064×6048)
 - Localization model: **Grounding DINO-T (isolated primary) + VLM assignment**
-- Primary anchor: **mural figure**
+- Primary anchor: **person in white dress**
 - Focal anomaly: **none**
-- Elements: `[('mural figure', 'primary_anchor', {'left': 69.58, 'top': 25.73, 'right': 81.07, 'bottom': 36.85}), ('white building facade', 'background_mass', {'left': 10.0, 'top': 20.0, 'right': 50.0, 'bottom': 70.0}), ('CHOLULA LA FONDA sign', 'context', {'left': 62.72, 'top': 47.08, 'right': 84.1, 'bottom': 53.18}), ('outdoor seating area', 'context', {'left': 0.22, 'top': 66.13, 'right': 99.7, 'bottom': 99.84}), ('cobblestone street', 'background_mass', {'left': 0.0, 'top': 65.0, 'right': 100.0, 'bottom': 100.0}), ('palm tree', 'context', {'left': 0.05, 'top': 47.64, 'right': 13.58, 'bottom': 56.02}), ('CHOLULA LA FONDA sign', 'context', {'left': 60.0, 'top': 45.0, 'right': 85.0, 'bottom': 55.0}), ('outdoor seating area', 'context', {'left': 0.29, 'top': 18.22, 'right': 99.64, 'bottom': 99.59}), ('palm tree', 'context', {'left': 0.0, 'top': 45.0, 'right': 15.0, 'bottom': 65.0})]`
-- Portrait crop: `72.0% 50.0%`
-- Landscape crop: `50.0% 31.0%`
+- Elements: `[('person in white dress', 'primary_anchor', {'left': 20.03, 'top': 79.73, 'right': 31.77, 'bottom': 93.86}), ('cloudy sky', 'background_mass', {'left': 0.0, 'top': 0.0, 'right': 100.0, 'bottom': 70.0}), ('concrete building', 'context', {'left': 0.08, 'top': 0.04, 'right': 38.21, 'bottom': 86.76}), ('glass skyscraper', 'context', {'left': 70.0, 'top': 0.0, 'right': 100.0, 'bottom': 100.0}), ('rooftop furniture', 'context', {'left': 3.39, 'top': 86.29, 'right': 42.94, 'bottom': 99.95}), ('greenery', 'background_mass', {'left': 0.0, 'top': 70.0, 'right': 100.0, 'bottom': 80.0}), ('person in white shirt', 'secondary_subject', {'left': 36.61, 'top': 78.25, 'right': 43.78, 'bottom': 94.36}), ('concrete building', 'context', {'left': 0.09, 'top': 0.1, 'right': 99.93, 'bottom': 86.61}), ('glass skyscraper', 'context', {'left': 70.0, 'top': 0.0, 'right': 100.0, 'bottom': 100.0}), ('rooftop furniture', 'context', {'left': 56.97, 'top': 86.93, 'right': 78.69, 'bottom': 99.9})]`
+- Portrait crop: `24.5% 50.0%`
+- Landscape crop: `50% 100%`
 - Portrait anchor overlap: **1.00**
 - Landscape anchor overlap: **1.00**
 - Portrait composition valid: **True**
