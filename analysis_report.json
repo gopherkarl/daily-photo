@@ -1,125 +1,137 @@
 {
-  "generated_at": "2026-08-29T20:53:01.781778+00:00",
+  "generated_at": "2026-08-31T11:51:30.111612+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 49,
-    "y": 50
+    "x": 52,
+    "y": 54
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "pagoda",
+        "name": "player",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 61.43,
-          "top": 7.65,
-          "right": 94.45,
-          "bottom": 82.27
-        },
-        "confidence": 0.95,
-        "narrative_value": 0.9,
-        "description": "Multi-tiered traditional Japanese pagoda with a spire, illuminated against the cityscape.",
-        "detector_score": 0.4294
-      },
-      {
-        "name": "cityscape",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.26,
-          "top": 54.98,
-          "right": 99.71,
-          "bottom": 99.38
+          "left": 92.73,
+          "top": 56.06,
+          "right": 95.86,
+          "bottom": 59.97
         },
         "confidence": 0.9,
-        "narrative_value": 0.3,
-        "description": "Dense urban area with illuminated buildings and rooftops.",
-        "detector_score": 0.3244
+        "narrative_value": 0.8,
+        "description": "A single person in athletic attire standing on the field near the goalpost.",
+        "detector_score": 0.604
       },
       {
-        "name": "sky",
+        "name": "crowd",
         "role": "background_mass",
         "bbox_pct": {
           "left": 0.0,
           "top": 0.0,
           "right": 100.0,
-          "bottom": 80.0
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.2,
-        "description": "Cloudy sky with sunset hues and scattered clouds."
-      },
-      {
-        "name": "mountains",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 50.0,
-          "right": 100.0,
-          "bottom": 55.0
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.1,
-        "description": "Distant mountain range under the sky."
-      },
-      {
-        "name": "cityscape",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.27,
-          "top": 54.87,
-          "right": 99.63,
-          "bottom": 80.57
+          "bottom": 100.0
         },
         "confidence": 0.9,
+        "narrative_value": 0.2,
+        "description": "Dense, repetitive crowd of spectators filling the stadium seats."
+      },
+      {
+        "name": "stadium_signage",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 100.0,
+          "bottom": 20.0
+        },
+        "confidence": 0.8,
         "narrative_value": 0.3,
-        "description": "Dense urban area with illuminated buildings and rooftops.",
-        "detector_score": 0.4431
+        "description": "Blue banners with text including 'KANSAS CITY' and 'FIFA WORLD CUP 2026'."
+      },
+      {
+        "name": "field",
+        "role": "context",
+        "bbox_pct": {
+          "left": 70.66,
+          "top": 48.14,
+          "right": 99.89,
+          "bottom": 80.45
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.4,
+        "description": "Green grass playing field with a goalpost and white boundary lines.",
+        "detector_score": 0.3762
+      },
+      {
+        "name": "stadium_signage",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 100.0,
+          "bottom": 20.0
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.3,
+        "description": "Blue banners with text including 'KANSAS CITY' and 'FIFA WORLD CUP 2026'."
+      },
+      {
+        "name": "field",
+        "role": "context",
+        "bbox_pct": {
+          "left": 80.0,
+          "top": 50.0,
+          "right": 100.0,
+          "bottom": 70.0
+        },
+        "confidence": 0.7,
+        "narrative_value": 0.4,
+        "description": "Green grass playing field with a goalpost and white boundary lines."
       }
     ],
-    "primary_anchor": "pagoda",
+    "primary_anchor": "player",
     "focal_element": null,
-    "confidence": 0.95,
-    "description": "A cityscape at dusk featuring a prominent multi-tiered pagoda, illuminated urban buildings, distant mountains, and a cloudy sky.",
-    "lighting": "Dusk lighting with warm sunset colors in the sky and artificial city lights.",
-    "background": "Distant mountains under a cloudy sky, with a cityscape of illuminated buildings.",
+    "confidence": 0.9,
+    "description": "A stadium filled with a dense crowd of spectators, with a single player visible on the field near the goalpost.",
+    "lighting": "Bright daylight with clear visibility.",
+    "background": "Stadium seating and signage indicating a major sports event.",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment",
     "anchor_consistency_gate": "applied",
-    "anchor_consistency_desc": "Multi-tiered traditional Japanese pagoda with a spire, illuminated against the cityscape."
+    "anchor_consistency_desc": "A single person in athletic attire standing on the field near the goalpost."
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 93,
+    "portrait_x": 100,
     "portrait_y": 50,
-    "landscape_x": 50.0,
-    "landscape_y": 33.1462
+    "landscape_x": 50,
+    "landscape_y": 63
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 3281,
-        "photo_height": 2461,
+        "photo_width": 1024,
+        "photo_height": 1280,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 1131.9473684210527,
-        "visible_height": 2461.0,
-        "visible_fraction_x": 0.34500072185951014,
+        "visible_width": 588.741418764302,
+        "visible_height": 1280.0,
+        "visible_fraction_x": 0.5749427917620137,
         "visible_fraction_y": 1.0,
-        "overflow_x": 2149.0526315789475,
+        "overflow_x": 435.258581235698,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 93,
+            "object_x": 100,
             "object_y": 50,
             "visible_source_window": {
-              "left": 60.91,
+              "left": 42.51,
               "top": 0.0,
-              "right": 95.42,
+              "right": 100.0,
               "bottom": 100.0
             },
             "anchor_inside": true,
@@ -128,50 +140,54 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 2015.5183,
-              "top": 188.2665,
-              "right": 3098.9045,
-              "bottom": 2024.6647
+              "left": 949.5552,
+              "top": 717.568,
+              "right": 981.6064,
+              "bottom": 767.616
             },
             "name": "anchor_only",
-            "score": 0.206
+            "score": 0.202
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 32.75,
+              "left": 21.25,
               "top": 0.0,
-              "right": 67.25,
+              "right": 78.75,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.1763,
+            "anchor_overlap": 0.0,
             "context_inside": [
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.3469,
-              0.3472
+              0.5749,
+              0.2767,
+              0.5749,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 8.5306,
-              "top": 188.2665,
-              "right": 3271.4851,
-              "bottom": 2445.7418
+              "left": 0.0,
+              "top": 0.0,
+              "right": 1024.0,
+              "bottom": 1029.76
             },
             "name": "anchor_plus_context",
-            "score": -0.3142
+            "score": -0.3128
           },
           {
-            "object_x": 93,
+            "object_x": 100,
             "object_y": 50,
             "visible_source_window": {
-              "left": 60.91,
+              "left": 42.51,
               "top": 0.0,
-              "right": 95.42,
+              "right": 100.0,
               "bottom": 100.0
             },
             "anchor_inside": true,
@@ -180,162 +196,174 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 2015.5183,
-              "top": 188.2665,
-              "right": 3098.9045,
-              "bottom": 2024.6647
+              "left": 949.5552,
+              "top": 717.568,
+              "right": 981.6064,
+              "bottom": 767.616
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.206
+            "score": 0.202
           },
           {
             "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 32.75,
+              "left": 21.25,
               "top": 0.0,
-              "right": 67.25,
+              "right": 78.75,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.1763,
+            "anchor_overlap": 0.0,
             "context_inside": [
+              false,
+              false,
               false,
               false
             ],
             "context_overlap": [
-              0.3469,
-              0.3472
+              0.5749,
+              0.2767,
+              0.5749,
+              0.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 8.5306,
-              "top": 188.2665,
-              "right": 3271.4851,
-              "bottom": 2445.7418
+              "left": 0.0,
+              "top": 0.0,
+              "right": 1024.0,
+              "bottom": 1029.76
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3142
+            "score": -0.3128
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 3281,
-        "photo_height": 2461,
+        "photo_width": 1024,
+        "photo_height": 1280,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 3281.0,
-        "visible_height": 1509.1098398169336,
+        "visible_width": 1024.0,
+        "visible_height": 470.99313501144167,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6132100121157796,
+        "visible_fraction_y": 0.3679633867276888,
         "overflow_x": 0.0,
-        "overflow_y": 951.8901601830664,
+        "overflow_y": 809.0068649885584,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 37,
+            "object_y": 63,
             "visible_source_window": {
               "left": 0.0,
-              "top": 14.31,
+              "top": 39.82,
               "right": 100.0,
-              "bottom": 75.63
+              "bottom": 76.61
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.8218,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 2015.5183,
-              "top": 188.2665,
-              "right": 3098.9045,
-              "bottom": 2024.6647
+              "left": 949.5552,
+              "top": 717.568,
+              "right": 981.6064,
+              "bottom": 767.616
             },
             "name": "anchor_only",
-            "score": -0.651
+            "score": 0.248
           },
           {
             "object_x": 50,
-            "object_y": 59,
+            "object_y": 35,
             "visible_source_window": {
               "left": 0.0,
-              "top": 22.82,
+              "top": 22.12,
               "right": 100.0,
-              "bottom": 84.14
+              "bottom": 58.92
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7967,
+            "anchor_overlap": 0.7308,
             "context_inside": [
               false,
-              true
+              false,
+              false,
+              false
             ],
             "context_overlap": [
-              0.6568,
-              1.0
+              0.0,
+              0.3336,
+              0.0,
+              0.4459
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 8.5306,
-              "top": 188.2665,
-              "right": 3271.4851,
-              "bottom": 2445.7418
+              "left": 0.0,
+              "top": 0.0,
+              "right": 1024.0,
+              "bottom": 1029.76
             },
             "name": "anchor_plus_context",
-            "score": -0.1939
+            "score": -0.3533
           },
           {
             "object_x": 50,
-            "object_y": 37,
+            "object_y": 63,
             "visible_source_window": {
               "left": 0.0,
-              "top": 14.31,
+              "top": 39.82,
               "right": 100.0,
-              "bottom": 75.63
+              "bottom": 76.61
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.8218,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 2015.5183,
-              "top": 188.2665,
-              "right": 3098.9045,
-              "bottom": 2024.6647
+              "left": 949.5552,
+              "top": 717.568,
+              "right": 981.6064,
+              "bottom": 767.616
             },
             "name": "anchor_plus_anomaly",
-            "score": -0.651
+            "score": 0.248
           },
           {
             "object_x": 50,
-            "object_y": 59,
+            "object_y": 35,
             "visible_source_window": {
               "left": 0.0,
-              "top": 22.82,
+              "top": 22.12,
               "right": 100.0,
-              "bottom": 84.14
+              "bottom": 58.92
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.7967,
+            "anchor_overlap": 0.7308,
             "context_inside": [
               false,
-              true
+              false,
+              false,
+              false
             ],
             "context_overlap": [
-              0.6568,
-              1.0
+              0.0,
+              0.3336,
+              0.0,
+              0.4459
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 8.5306,
-              "top": 188.2665,
-              "right": 3271.4851,
-              "bottom": 2445.7418
+              "left": 0.0,
+              "top": 0.0,
+              "right": 1024.0,
+              "bottom": 1029.76
             },
             "name": "anchor_context_anomaly",
-            "score": -0.1939
+            "score": -0.3533
           }
         ]
       }
@@ -352,17 +380,14 @@
     "portrait_dead_center_fallback": false,
     "portrait_context_preferred_but_unavailable": true,
     "portrait_anchor_priority_fallback": false,
-    "landscape_primary_anchor_inside": false,
-    "landscape_primary_anchor_overlap": 0.7967,
-    "landscape_context_inside": [
-      false,
-      true
-    ],
+    "landscape_primary_anchor_inside": true,
+    "landscape_primary_anchor_overlap": 1.0,
+    "landscape_context_inside": [],
     "landscape_focal_anomaly_inside": false,
-    "landscape_composition_valid": false,
+    "landscape_composition_valid": true,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
-    "landscape_context_preferred_but_unavailable": false,
+    "landscape_context_preferred_but_unavailable": true,
     "landscape_anchor_priority_fallback": false
   },
   "visual_weight_refine": {
@@ -373,20 +398,20 @@
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": false,
-        "judge_reason": "The pagoda anchor spans nearly the entire available width of the vertical crop and is already neatly centered with balanced margins on both sides.",
+        "judge_reason": "The crop is already at the rightmost limit (x=100%), and panning left would push the lone player dangerously close to the right frame boundary while reducing the pitch context.",
         "judge_object_x": null,
         "judge_object_y": null,
-        "max_delta_x_points": 15.2672,
+        "max_delta_x_points": 23.5262,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 93.0,
+        "clamped_object_x": 100.0,
         "clamped_object_y": 50.0,
         "applied": false,
-        "cost": 0.0031875,
+        "cost": 0.00348825,
         "usage": {
-          "prompt_tokens": 1740,
-          "completion_tokens": 502,
-          "total_tokens": 2242,
-          "cost": 0.0031875,
+          "prompt_tokens": 1751,
+          "completion_tokens": 580,
+          "total_tokens": 2331,
+          "cost": 0.00348825,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -395,12 +420,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.0031875,
-            "upstream_inference_prompt_cost": 0.001305,
-            "upstream_inference_completions_cost": 0.0018825
+            "upstream_inference_cost": 0.00348825,
+            "upstream_inference_prompt_cost": 0.00131325,
+            "upstream_inference_completions_cost": 0.002175
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 453,
+            "reasoning_tokens": 519,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -409,21 +434,21 @@
       {
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": true,
-        "judge_reason": "Panning upward includes more of the iconic pagoda's spire and dramatic evening clouds while trimming the distracting dark rooftop foreground.",
-        "judge_object_x": 50.0,
-        "judge_object_y": 33.1,
+        "judge_adjust": false,
+        "judge_reason": "The lone player on the green pitch is vertically well-balanced against the massive scale and sweeping diagonal arc of the crowd texture.",
+        "judge_object_x": null,
+        "judge_object_y": null,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 25.8538,
+        "max_delta_y_points": 15.8219,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 33.1462,
-        "applied": true,
-        "cost": 0.00428625,
+        "clamped_object_y": 63.0,
+        "applied": false,
+        "cost": 0.00391875,
         "usage": {
-          "prompt_tokens": 1740,
-          "completion_tokens": 795,
-          "total_tokens": 2535,
-          "cost": 0.00428625,
+          "prompt_tokens": 1750,
+          "completion_tokens": 695,
+          "total_tokens": 2445,
+          "cost": 0.00391875,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -432,12 +457,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00428625,
-            "upstream_inference_prompt_cost": 0.001305,
-            "upstream_inference_completions_cost": 0.00298125
+            "upstream_inference_cost": 0.00391875,
+            "upstream_inference_prompt_cost": 0.0013125,
+            "upstream_inference_completions_cost": 0.00260625
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 730,
+            "reasoning_tokens": 646,
             "image_tokens": 0,
             "audio_tokens": 0
           }

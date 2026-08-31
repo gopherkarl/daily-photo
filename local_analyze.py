@@ -309,7 +309,7 @@ Return at least one element. Classify dense repetitive material as background_ma
                 "messages": [{"role": "user", "content": prompt, "images": [image_b64]}],
                 "format": "json",
                 "stream": False,
-                "options": {"temperature": 0.0},
+                "options": {"temperature": 0.0, "num_ctx": 8192},
             }
         else:
             endpoint = OLLAMA_URL
@@ -319,7 +319,7 @@ Return at least one element. Classify dense repetitive material as background_ma
                 "images": [image_b64],
                 "format": "json",
                 "stream": False,
-                "options": {"temperature": 0.0},
+                "options": {"temperature": 0.0, "num_ctx": 8192},
             }
         request = urllib.request.Request(
             endpoint,
@@ -328,10 +328,15 @@ Return at least one element. Classify dense repetitive material as background_ma
         )
         with urllib.request.urlopen(request, timeout=VISION_TIMEOUT) as response:
             result = json.loads(response.read().decode("utf-8"))
+        message = result.get("message", {}) if "message" in result else {}
+        # Ollama/Qwen may place structured output in `thinking` while leaving
+        # `content` empty, especially when JSON format is enabled. Prefer the
+        # normal content field, but accept the structured thinking field as a
+        # compatibility fallback rather than treating a valid response as empty.
         raw_response = (
-            result.get("message", {}).get("content", "")
-            if "message" in result
-            else result.get("response", "")
+            message.get("content", "")
+            or message.get("thinking", "")
+            or result.get("response", "")
         )
         try:
             return validate_vision_report(extract_json(raw_response))
