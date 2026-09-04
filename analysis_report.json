@@ -1,137 +1,151 @@
 {
-  "generated_at": "2026-08-31T11:51:30.111612+00:00",
+  "generated_at": "2026-09-04T11:33:09.617898+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 52,
-    "y": 54
+    "x": 47,
+    "y": 51
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "player",
+        "name": "gazebo",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 92.73,
-          "top": 56.06,
-          "right": 95.86,
-          "bottom": 59.97
+          "left": 23.06,
+          "top": 38.24,
+          "right": 50.79,
+          "bottom": 62.69
         },
         "confidence": 0.9,
         "narrative_value": 0.8,
-        "description": "A single person in athletic attire standing on the field near the goalpost.",
-        "detector_score": 0.604
+        "description": "silhouetted wooden gazebo with roof and railings on rocky outcrop",
+        "detector_score": 0.9275
       },
       {
-        "name": "crowd",
+        "name": "sun",
+        "role": "focal_anomaly",
+        "bbox_pct": {
+          "left": 25.25,
+          "top": 34.12,
+          "right": 48.36,
+          "bottom": 44.96
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.7,
+        "description": "bright circular sun partially obscured by clouds behind gazebo",
+        "detector_score": 0.4503
+      },
+      {
+        "name": "bird",
+        "role": "focal_anomaly",
+        "bbox_pct": {
+          "left": 69.87,
+          "top": 68.76,
+          "right": 72.53,
+          "bottom": 73.97
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.6,
+        "description": "silhouetted bird standing in shallow water",
+        "detector_score": 0.8957
+      },
+      {
+        "name": "rocks",
+        "role": "context",
+        "bbox_pct": {
+          "left": 0.1,
+          "top": 61.5,
+          "right": 64.44,
+          "bottom": 81.5
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.5,
+        "description": "rocky outcrop supporting gazebo",
+        "detector_score": 0.3036
+      },
+      {
+        "name": "ocean",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 60.0,
+          "right": 100.0,
+          "bottom": 100.0
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.3,
+        "description": "calm water reflecting sunset light"
+      },
+      {
+        "name": "sky",
         "role": "background_mass",
         "bbox_pct": {
           "left": 0.0,
           "top": 0.0,
           "right": 100.0,
-          "bottom": 100.0
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.2,
-        "description": "Dense, repetitive crowd of spectators filling the stadium seats."
-      },
-      {
-        "name": "stadium_signage",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 0.0,
-          "right": 100.0,
-          "bottom": 20.0
+          "bottom": 60.0
         },
         "confidence": 0.8,
         "narrative_value": 0.3,
-        "description": "Blue banners with text including 'KANSAS CITY' and 'FIFA WORLD CUP 2026'."
+        "description": "cloudy sky with warm orange and yellow hues"
       },
       {
-        "name": "field",
+        "name": "rocks",
         "role": "context",
         "bbox_pct": {
-          "left": 70.66,
-          "top": 48.14,
-          "right": 99.89,
-          "bottom": 80.45
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.4,
-        "description": "Green grass playing field with a goalpost and white boundary lines.",
-        "detector_score": 0.3762
-      },
-      {
-        "name": "stadium_signage",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 0.0,
-          "right": 100.0,
-          "bottom": 20.0
+          "left": 42.0,
+          "top": 61.71,
+          "right": 64.2,
+          "bottom": 70.35
         },
         "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "Blue banners with text including 'KANSAS CITY' and 'FIFA WORLD CUP 2026'."
-      },
-      {
-        "name": "field",
-        "role": "context",
-        "bbox_pct": {
-          "left": 80.0,
-          "top": 50.0,
-          "right": 100.0,
-          "bottom": 70.0
-        },
-        "confidence": 0.7,
-        "narrative_value": 0.4,
-        "description": "Green grass playing field with a goalpost and white boundary lines."
+        "narrative_value": 0.5,
+        "description": "rocky outcrop supporting gazebo",
+        "detector_score": 0.2854
       }
     ],
-    "primary_anchor": "player",
-    "focal_element": null,
+    "primary_anchor": "gazebo",
+    "focal_element": "sun",
     "confidence": 0.9,
-    "description": "A stadium filled with a dense crowd of spectators, with a single player visible on the field near the goalpost.",
-    "lighting": "Bright daylight with clear visibility.",
-    "background": "Stadium seating and signage indicating a major sports event.",
-    "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment",
-    "anchor_consistency_gate": "applied",
-    "anchor_consistency_desc": "A single person in athletic attire standing on the field near the goalpost."
+    "description": "sunset scene with a gazebo on rocky outcrop, ocean, and a bird in water",
+    "lighting": "warm golden hour sunlight with sun behind gazebo",
+    "background": "cloudy sky over ocean",
+    "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 100,
+    "portrait_x": 31,
     "portrait_y": 50,
-    "landscape_x": 50,
-    "landscape_y": 63
+    "landscape_x": 50.0,
+    "landscape_y": 50.0
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 1024,
-        "photo_height": 1280,
+        "photo_width": 4329,
+        "photo_height": 2881,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 588.741418764302,
-        "visible_height": 1280.0,
-        "visible_fraction_x": 0.5749427917620137,
+        "visible_width": 1325.1281464530891,
+        "visible_height": 2881.0,
+        "visible_fraction_x": 0.30610490793557155,
         "visible_fraction_y": 1.0,
-        "overflow_x": 435.258581235698,
+        "overflow_x": 3003.8718535469106,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 100,
+            "object_x": 31,
             "object_y": 50,
             "visible_source_window": {
-              "left": 42.51,
+              "left": 21.51,
               "top": 0.0,
-              "right": 100.0,
+              "right": 52.12,
               "bottom": 100.0
             },
             "anchor_inside": true,
@@ -140,127 +154,119 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 949.5552,
-              "top": 717.568,
-              "right": 981.6064,
-              "bottom": 767.616
+              "left": 998.2674,
+              "top": 1101.6944,
+              "right": 2198.6991000000003,
+              "bottom": 1806.0989
             },
             "name": "anchor_only",
-            "score": 0.202
+            "score": 0.234
           },
           {
-            "object_x": 50,
+            "object_x": 24,
             "object_y": 50,
             "visible_source_window": {
-              "left": 21.25,
+              "left": 16.65,
               "top": 0.0,
-              "right": 78.75,
+              "right": 47.26,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.0,
+            "anchor_overlap": 0.8728,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.5749,
-              0.2767,
-              0.5749,
-              0.0
+              0.4758,
+              0.2371
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 0.0,
-              "right": 1024.0,
-              "bottom": 1029.76
+              "left": 4.329,
+              "top": 1101.6944,
+              "right": 2789.6076,
+              "bottom": 2348.015
             },
             "name": "anchor_plus_context",
-            "score": -0.3128
+            "score": -0.3339
           },
           {
-            "object_x": 100,
+            "object_x": 31,
             "object_y": 50,
             "visible_source_window": {
-              "left": 42.51,
+              "left": 21.51,
               "top": 0.0,
-              "right": 100.0,
+              "right": 52.12,
               "bottom": 100.0
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 949.5552,
-              "top": 717.568,
-              "right": 981.6064,
-              "bottom": 767.616
+              "left": 998.2674,
+              "top": 982.9971999999998,
+              "right": 2198.6991000000003,
+              "bottom": 1806.0989
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.202
+            "score": 0.384
           },
           {
-            "object_x": 50,
+            "object_x": 24,
             "object_y": 50,
             "visible_source_window": {
-              "left": 21.25,
+              "left": 16.65,
               "top": 0.0,
-              "right": 78.75,
+              "right": 47.26,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.0,
+            "anchor_overlap": 0.8728,
             "context_inside": [
-              false,
-              false,
               false,
               false
             ],
             "context_overlap": [
-              0.5749,
-              0.2767,
-              0.5749,
-              0.0
+              0.4758,
+              0.2371
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 0.0,
-              "right": 1024.0,
-              "bottom": 1029.76
+              "left": 4.329,
+              "top": 982.9971999999998,
+              "right": 2789.6076,
+              "bottom": 2348.015
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3128
+            "score": -0.3339
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 1024,
-        "photo_height": 1280,
+        "photo_width": 4329,
+        "photo_height": 2881,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 1024.0,
-        "visible_height": 470.99313501144167,
+        "visible_width": 4329.0,
+        "visible_height": 1991.141876430206,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.3679633867276888,
+        "visible_fraction_y": 0.6911287318397105,
         "overflow_x": 0.0,
-        "overflow_y": 809.0068649885584,
+        "overflow_y": 889.8581235697941,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 63,
+            "object_y": 52,
             "visible_source_window": {
               "left": 0.0,
-              "top": 39.82,
+              "top": 16.06,
               "right": 100.0,
-              "bottom": 76.61
+              "bottom": 85.17
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -268,102 +274,94 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 949.5552,
-              "top": 717.568,
-              "right": 981.6064,
-              "bottom": 767.616
+              "left": 998.2674,
+              "top": 1101.6944,
+              "right": 2198.6991000000003,
+              "bottom": 1806.0989
             },
             "name": "anchor_only",
-            "score": 0.248
+            "score": 0.247
           },
           {
             "object_x": 50,
-            "object_y": 35,
+            "object_y": 82,
             "visible_source_window": {
               "left": 0.0,
-              "top": 22.12,
+              "top": 25.33,
               "right": 100.0,
-              "bottom": 58.92
+              "bottom": 94.44
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7308,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
-              false,
-              false,
-              false,
-              false
+              true,
+              true
             ],
             "context_overlap": [
-              0.0,
-              0.3336,
-              0.0,
-              0.4459
+              1.0,
+              1.0
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 0.0,
-              "top": 0.0,
-              "right": 1024.0,
-              "bottom": 1029.76
+              "left": 4.329,
+              "top": 1101.6944,
+              "right": 2789.6076,
+              "bottom": 2348.015
             },
             "name": "anchor_plus_context",
-            "score": -0.3533
+            "score": 0.747
           },
           {
             "object_x": 50,
-            "object_y": 63,
+            "object_y": 45,
             "visible_source_window": {
               "left": 0.0,
-              "top": 39.82,
+              "top": 13.9,
               "right": 100.0,
-              "bottom": 76.61
+              "bottom": 83.01
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 949.5552,
-              "top": 717.568,
-              "right": 981.6064,
-              "bottom": 767.616
+              "left": 998.2674,
+              "top": 982.9971999999998,
+              "right": 2198.6991000000003,
+              "bottom": 1806.0989
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.248
+            "score": 0.397
           },
           {
             "object_x": 50,
-            "object_y": 35,
+            "object_y": 75,
             "visible_source_window": {
               "left": 0.0,
-              "top": 22.12,
+              "top": 23.17,
               "right": 100.0,
-              "bottom": 58.92
+              "bottom": 92.28
             },
-            "anchor_inside": false,
-            "anchor_overlap": 0.7308,
+            "anchor_inside": true,
+            "anchor_overlap": 1.0,
             "context_inside": [
-              false,
-              false,
-              false,
-              false
+              true,
+              true
             ],
             "context_overlap": [
-              0.0,
-              0.3336,
-              0.0,
-              0.4459
+              1.0,
+              1.0
             ],
-            "anomaly_inside": false,
+            "anomaly_inside": true,
             "target_bbox": {
-              "left": 0.0,
-              "top": 0.0,
-              "right": 1024.0,
-              "bottom": 1029.76
+              "left": 4.329,
+              "top": 982.9971999999998,
+              "right": 2789.6076,
+              "bottom": 2348.015
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3533
+            "score": 0.897
           }
         ]
       }
@@ -374,20 +372,23 @@
     "portrait_primary_anchor_inside": true,
     "portrait_primary_anchor_overlap": 1.0,
     "portrait_context_inside": [],
-    "portrait_focal_anomaly_inside": false,
+    "portrait_focal_anomaly_inside": true,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
     "portrait_dead_center_fallback": false,
-    "portrait_context_preferred_but_unavailable": true,
+    "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": true,
     "landscape_primary_anchor_overlap": 1.0,
-    "landscape_context_inside": [],
-    "landscape_focal_anomaly_inside": false,
+    "landscape_context_inside": [
+      true,
+      true
+    ],
+    "landscape_focal_anomaly_inside": true,
     "landscape_composition_valid": true,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
-    "landscape_context_preferred_but_unavailable": true,
+    "landscape_context_preferred_but_unavailable": false,
     "landscape_anchor_priority_fallback": false
   },
   "visual_weight_refine": {
@@ -398,20 +399,20 @@
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
         "judge_adjust": false,
-        "judge_reason": "The crop is already at the rightmost limit (x=100%), and panning left would push the lone player dangerously close to the right frame boundary while reducing the pitch context.",
+        "judge_reason": "The gazebo anchor is neatly centered within the vertical crop, framing the sun's brilliance and the reflection below without clipping its edges.",
         "judge_object_x": null,
         "judge_object_y": null,
-        "max_delta_x_points": 23.5262,
+        "max_delta_x_points": 14.4114,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 100.0,
+        "clamped_object_x": 31.0,
         "clamped_object_y": 50.0,
         "applied": false,
-        "cost": 0.00348825,
+        "cost": 0.0029655,
         "usage": {
-          "prompt_tokens": 1751,
-          "completion_tokens": 580,
-          "total_tokens": 2331,
-          "cost": 0.00348825,
+          "prompt_tokens": 1784,
+          "completion_tokens": 434,
+          "total_tokens": 2218,
+          "cost": 0.0029655,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -420,12 +421,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00348825,
-            "upstream_inference_prompt_cost": 0.00131325,
-            "upstream_inference_completions_cost": 0.002175
+            "upstream_inference_cost": 0.0029655,
+            "upstream_inference_prompt_cost": 0.001338,
+            "upstream_inference_completions_cost": 0.0016275
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 519,
+            "reasoning_tokens": 384,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -434,21 +435,21 @@
       {
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": false,
-        "judge_reason": "The lone player on the green pitch is vertically well-balanced against the massive scale and sweeping diagonal arc of the crowd texture.",
-        "judge_object_x": null,
-        "judge_object_y": null,
+        "judge_adjust": true,
+        "judge_reason": "Panning upward includes more of the dramatic dark storm clouds above the sunset, giving the gazebo and sunburst breathing room while trimming excess dark water at the bottom.",
+        "judge_object_x": 50.0,
+        "judge_object_y": 50.0,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 15.8219,
+        "max_delta_y_points": 32.3759,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 63.0,
-        "applied": false,
-        "cost": 0.00391875,
+        "clamped_object_y": 50.0,
+        "applied": true,
+        "cost": 0.00479925,
         "usage": {
-          "prompt_tokens": 1750,
-          "completion_tokens": 695,
-          "total_tokens": 2445,
-          "cost": 0.00391875,
+          "prompt_tokens": 1784,
+          "completion_tokens": 923,
+          "total_tokens": 2707,
+          "cost": 0.00479925,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -457,12 +458,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00391875,
-            "upstream_inference_prompt_cost": 0.0013125,
-            "upstream_inference_completions_cost": 0.00260625
+            "upstream_inference_cost": 0.00479925,
+            "upstream_inference_prompt_cost": 0.001338,
+            "upstream_inference_completions_cost": 0.00346125
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 646,
+            "reasoning_tokens": 860,
             "image_tokens": 0,
             "audio_tokens": 0
           }
