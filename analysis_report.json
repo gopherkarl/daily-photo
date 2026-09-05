@@ -1,81 +1,26 @@
 {
-  "generated_at": "2026-09-04T11:33:09.617898+00:00",
+  "generated_at": "2026-09-05T10:32:41.856143+00:00",
   "source_photo": "photo.jpg",
   "math_centroid": {
-    "x": 47,
+    "x": 52,
     "y": 51
   },
   "vision_model": "qwen3-vl:8b",
   "vision": {
     "elements": [
       {
-        "name": "gazebo",
+        "name": "boat",
         "role": "primary_anchor",
         "bbox_pct": {
-          "left": 23.06,
-          "top": 38.24,
-          "right": 50.79,
-          "bottom": 62.69
+          "left": 59.76,
+          "top": 53.49,
+          "right": 91.1,
+          "bottom": 71.71
         },
         "confidence": 0.9,
-        "narrative_value": 0.8,
-        "description": "silhouetted wooden gazebo with roof and railings on rocky outcrop",
-        "detector_score": 0.9275
-      },
-      {
-        "name": "sun",
-        "role": "focal_anomaly",
-        "bbox_pct": {
-          "left": 25.25,
-          "top": 34.12,
-          "right": 48.36,
-          "bottom": 44.96
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.7,
-        "description": "bright circular sun partially obscured by clouds behind gazebo",
-        "detector_score": 0.4503
-      },
-      {
-        "name": "bird",
-        "role": "focal_anomaly",
-        "bbox_pct": {
-          "left": 69.87,
-          "top": 68.76,
-          "right": 72.53,
-          "bottom": 73.97
-        },
-        "confidence": 0.9,
-        "narrative_value": 0.6,
-        "description": "silhouetted bird standing in shallow water",
-        "detector_score": 0.8957
-      },
-      {
-        "name": "rocks",
-        "role": "context",
-        "bbox_pct": {
-          "left": 0.1,
-          "top": 61.5,
-          "right": 64.44,
-          "bottom": 81.5
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.5,
-        "description": "rocky outcrop supporting gazebo",
-        "detector_score": 0.3036
-      },
-      {
-        "name": "ocean",
-        "role": "background_mass",
-        "bbox_pct": {
-          "left": 0.0,
-          "top": 60.0,
-          "right": 100.0,
-          "bottom": 100.0
-        },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "calm water reflecting sunset light"
+        "narrative_value": 0.9,
+        "description": "white boat with outboard motor floating in water",
+        "detector_score": 0.6608
       },
       {
         "name": "sky",
@@ -84,189 +29,215 @@
           "left": 0.0,
           "top": 0.0,
           "right": 100.0,
-          "bottom": 60.0
+          "bottom": 53.0
         },
-        "confidence": 0.8,
-        "narrative_value": 0.3,
-        "description": "cloudy sky with warm orange and yellow hues"
+        "confidence": 0.9,
+        "narrative_value": 0.1,
+        "description": "cloudy sky"
       },
       {
-        "name": "rocks",
+        "name": "water",
+        "role": "background_mass",
+        "bbox_pct": {
+          "left": 0.0,
+          "top": 53.0,
+          "right": 100.0,
+          "bottom": 100.0
+        },
+        "confidence": 0.9,
+        "narrative_value": 0.1,
+        "description": "calm water with gentle waves"
+      },
+      {
+        "name": "distant land",
         "role": "context",
         "bbox_pct": {
-          "left": 42.0,
-          "top": 61.71,
-          "right": 64.2,
-          "bottom": 70.35
+          "left": 0.26,
+          "top": 63.92,
+          "right": 99.75,
+          "bottom": 99.57
         },
         "confidence": 0.8,
-        "narrative_value": 0.5,
-        "description": "rocky outcrop supporting gazebo",
-        "detector_score": 0.2854
+        "narrative_value": 0.2,
+        "description": "thin strip of land on the horizon",
+        "detector_score": 0.4283
+      },
+      {
+        "name": "distant land",
+        "role": "context",
+        "bbox_pct": {
+          "left": 20.0,
+          "top": 60.0,
+          "right": 50.0,
+          "bottom": 62.0
+        },
+        "confidence": 0.8,
+        "narrative_value": 0.2,
+        "description": "thin strip of land on the horizon"
       }
     ],
-    "primary_anchor": "gazebo",
-    "focal_element": "sun",
+    "primary_anchor": "boat",
+    "focal_element": null,
     "confidence": 0.9,
-    "description": "sunset scene with a gazebo on rocky outcrop, ocean, and a bird in water",
-    "lighting": "warm golden hour sunlight with sun behind gazebo",
-    "background": "cloudy sky over ocean",
+    "description": "A black-and-white photograph showing a boat in water under a cloudy sky, with a distant landmass visible on the horizon.",
+    "lighting": "Overcast, diffused lighting with no direct sunlight.",
+    "background": "Cloudy sky and calm water with a distant landmass on the horizon.",
     "localization_model": "Grounding DINO-T (isolated primary) + VLM assignment"
   },
   "selection_method": "deterministic_argmax_score_candidate",
   "synthesis_model": null,
   "synthesis": null,
   "positions": {
-    "portrait_x": 31,
-    "portrait_y": 50,
-    "landscape_x": 50.0,
-    "landscape_y": 50.0
+    "portrait_x": 64.4,
+    "portrait_y": 50.0,
+    "landscape_x": 50,
+    "landscape_y": 100
   },
   "display_context": {
     "default_profile": "portrait_phone",
     "profiles": {
       "portrait_phone": {
-        "photo_width": 4329,
-        "photo_height": 2881,
+        "photo_width": 6654,
+        "photo_height": 4436,
         "viewport_width": 402,
         "viewport_height": 874,
-        "visible_width": 1325.1281464530891,
-        "visible_height": 2881.0,
-        "visible_fraction_x": 0.30610490793557155,
+        "visible_width": 2040.3569794050343,
+        "visible_height": 4436.0,
+        "visible_fraction_x": 0.30663615560640733,
         "visible_fraction_y": 1.0,
-        "overflow_x": 3003.8718535469106,
+        "overflow_x": 4613.6430205949655,
         "overflow_y": 0.0,
         "x_critical": true,
         "y_critical": false,
         "candidates": [
           {
-            "object_x": 31,
+            "object_x": 87,
             "object_y": 50,
             "visible_source_window": {
-              "left": 21.51,
+              "left": 60.32,
               "top": 0.0,
-              "right": 52.12,
+              "right": 90.99,
               "bottom": 100.0
             },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
+            "anchor_inside": false,
+            "anchor_overlap": 0.9784,
             "context_inside": [],
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 998.2674,
-              "top": 1101.6944,
-              "right": 2198.6991000000003,
-              "bottom": 1806.0989
+              "left": 3976.4304,
+              "top": 2372.8164,
+              "right": 6061.794,
+              "bottom": 3181.0555999999997
             },
             "name": "anchor_only",
-            "score": 0.234
+            "score": -0.685
           },
           {
-            "object_x": 24,
+            "object_x": 50,
             "object_y": 50,
             "visible_source_window": {
-              "left": 16.65,
+              "left": 34.67,
               "top": 0.0,
-              "right": 47.26,
+              "right": 65.33,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8728,
+            "anchor_overlap": 0.1778,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.4758,
-              0.2371
+              0.3082,
+              0.5111
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4.329,
-              "top": 1101.6944,
-              "right": 2789.6076,
-              "bottom": 2348.015
+              "left": 17.3004,
+              "top": 2372.8164,
+              "right": 6637.365000000001,
+              "bottom": 4416.9252
             },
             "name": "anchor_plus_context",
-            "score": -0.3339
+            "score": -0.2996
           },
           {
-            "object_x": 31,
+            "object_x": 87,
             "object_y": 50,
             "visible_source_window": {
-              "left": 21.51,
+              "left": 60.32,
               "top": 0.0,
-              "right": 52.12,
-              "bottom": 100.0
-            },
-            "anchor_inside": true,
-            "anchor_overlap": 1.0,
-            "context_inside": [],
-            "context_overlap": [],
-            "anomaly_inside": true,
-            "target_bbox": {
-              "left": 998.2674,
-              "top": 982.9971999999998,
-              "right": 2198.6991000000003,
-              "bottom": 1806.0989
-            },
-            "name": "anchor_plus_anomaly",
-            "score": 0.384
-          },
-          {
-            "object_x": 24,
-            "object_y": 50,
-            "visible_source_window": {
-              "left": 16.65,
-              "top": 0.0,
-              "right": 47.26,
+              "right": 90.99,
               "bottom": 100.0
             },
             "anchor_inside": false,
-            "anchor_overlap": 0.8728,
+            "anchor_overlap": 0.9784,
+            "context_inside": [],
+            "context_overlap": [],
+            "anomaly_inside": false,
+            "target_bbox": {
+              "left": 3976.4304,
+              "top": 2372.8164,
+              "right": 6061.794,
+              "bottom": 3181.0555999999997
+            },
+            "name": "anchor_plus_anomaly",
+            "score": -0.685
+          },
+          {
+            "object_x": 50,
+            "object_y": 50,
+            "visible_source_window": {
+              "left": 34.67,
+              "top": 0.0,
+              "right": 65.33,
+              "bottom": 100.0
+            },
+            "anchor_inside": false,
+            "anchor_overlap": 0.1778,
             "context_inside": [
               false,
               false
             ],
             "context_overlap": [
-              0.4758,
-              0.2371
+              0.3082,
+              0.5111
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4.329,
-              "top": 982.9971999999998,
-              "right": 2789.6076,
-              "bottom": 2348.015
+              "left": 17.3004,
+              "top": 2372.8164,
+              "right": 6637.365000000001,
+              "bottom": 4416.9252
             },
             "name": "anchor_context_anomaly",
-            "score": -0.3339
+            "score": -0.2996
           }
         ]
       },
       "landscape_phone": {
-        "photo_width": 4329,
-        "photo_height": 2881,
+        "photo_width": 6654,
+        "photo_height": 4436,
         "viewport_width": 874,
         "viewport_height": 402,
-        "visible_width": 4329.0,
-        "visible_height": 1991.141876430206,
+        "visible_width": 6654.0,
+        "visible_height": 3060.5354691075513,
         "visible_fraction_x": 1.0,
-        "visible_fraction_y": 0.6911287318397105,
+        "visible_fraction_y": 0.6899313501144164,
         "overflow_x": 0.0,
-        "overflow_y": 889.8581235697941,
+        "overflow_y": 1375.4645308924487,
         "x_critical": false,
         "y_critical": true,
         "candidates": [
           {
             "object_x": 50,
-            "object_y": 52,
+            "object_y": 91,
             "visible_source_window": {
               "left": 0.0,
-              "top": 16.06,
+              "top": 28.22,
               "right": 100.0,
-              "bottom": 85.17
+              "bottom": 97.21
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -274,22 +245,22 @@
             "context_overlap": [],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 998.2674,
-              "top": 1101.6944,
-              "right": 2198.6991000000003,
-              "bottom": 1806.0989
+              "left": 3976.4304,
+              "top": 2372.8164,
+              "right": 6061.794,
+              "bottom": 3181.0555999999997
             },
             "name": "anchor_only",
-            "score": 0.247
+            "score": 0.248
           },
           {
             "object_x": 50,
-            "object_y": 82,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 25.33,
+              "top": 31.01,
               "right": 100.0,
-              "bottom": 94.44
+              "bottom": 100.0
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -303,45 +274,45 @@
             ],
             "anomaly_inside": false,
             "target_bbox": {
-              "left": 4.329,
-              "top": 1101.6944,
-              "right": 2789.6076,
-              "bottom": 2348.015
+              "left": 17.3004,
+              "top": 2372.8164,
+              "right": 6637.365000000001,
+              "bottom": 4416.9252
             },
             "name": "anchor_plus_context",
-            "score": 0.747
+            "score": 0.748
           },
           {
             "object_x": 50,
-            "object_y": 45,
+            "object_y": 91,
             "visible_source_window": {
               "left": 0.0,
-              "top": 13.9,
+              "top": 28.22,
               "right": 100.0,
-              "bottom": 83.01
+              "bottom": 97.21
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
             "context_inside": [],
             "context_overlap": [],
-            "anomaly_inside": true,
+            "anomaly_inside": false,
             "target_bbox": {
-              "left": 998.2674,
-              "top": 982.9971999999998,
-              "right": 2198.6991000000003,
-              "bottom": 1806.0989
+              "left": 3976.4304,
+              "top": 2372.8164,
+              "right": 6061.794,
+              "bottom": 3181.0555999999997
             },
             "name": "anchor_plus_anomaly",
-            "score": 0.397
+            "score": 0.248
           },
           {
             "object_x": 50,
-            "object_y": 75,
+            "object_y": 100,
             "visible_source_window": {
               "left": 0.0,
-              "top": 23.17,
+              "top": 31.01,
               "right": 100.0,
-              "bottom": 92.28
+              "bottom": 100.0
             },
             "anchor_inside": true,
             "anchor_overlap": 1.0,
@@ -353,15 +324,15 @@
               1.0,
               1.0
             ],
-            "anomaly_inside": true,
+            "anomaly_inside": false,
             "target_bbox": {
-              "left": 4.329,
-              "top": 982.9971999999998,
-              "right": 2789.6076,
-              "bottom": 2348.015
+              "left": 17.3004,
+              "top": 2372.8164,
+              "right": 6637.365000000001,
+              "bottom": 4416.9252
             },
             "name": "anchor_context_anomaly",
-            "score": 0.897
+            "score": 0.748
           }
         ]
       }
@@ -369,13 +340,13 @@
     "position_method": "candidate crops scored around primary anchor, context, and focal anomaly"
   },
   "validation": {
-    "portrait_primary_anchor_inside": true,
-    "portrait_primary_anchor_overlap": 1.0,
+    "portrait_primary_anchor_inside": false,
+    "portrait_primary_anchor_overlap": 0.0,
     "portrait_context_inside": [],
-    "portrait_focal_anomaly_inside": true,
+    "portrait_focal_anomaly_inside": false,
     "portrait_composition_valid": true,
     "portrait_anchor_center_fallback": false,
-    "portrait_dead_center_fallback": false,
+    "portrait_dead_center_fallback": true,
     "portrait_context_preferred_but_unavailable": false,
     "portrait_anchor_priority_fallback": false,
     "landscape_primary_anchor_inside": true,
@@ -384,7 +355,7 @@
       true,
       true
     ],
-    "landscape_focal_anomaly_inside": true,
+    "landscape_focal_anomaly_inside": false,
     "landscape_composition_valid": true,
     "landscape_anchor_center_fallback": false,
     "landscape_dead_center_fallback": false,
@@ -398,21 +369,21 @@
       {
         "profile": "portrait",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": false,
-        "judge_reason": "The gazebo anchor is neatly centered within the vertical crop, framing the sun's brilliance and the reflection below without clipping its edges.",
-        "judge_object_x": null,
+        "judge_adjust": true,
+        "judge_reason": "Panning right includes significantly more of the boat, which is the primary subject and visual anchor currently severely clipped at the frame edge.",
+        "judge_object_x": 64.4,
         "judge_object_y": null,
-        "max_delta_x_points": 14.4114,
+        "max_delta_x_points": 14.4224,
         "max_delta_y_points": 0.0,
-        "clamped_object_x": 31.0,
+        "clamped_object_x": 64.4,
         "clamped_object_y": 50.0,
-        "applied": false,
-        "cost": 0.0029655,
+        "applied": true,
+        "cost": 0.0035835,
         "usage": {
-          "prompt_tokens": 1784,
-          "completion_tokens": 434,
-          "total_tokens": 2218,
-          "cost": 0.0029655,
+          "prompt_tokens": 1783,
+          "completion_tokens": 599,
+          "total_tokens": 2382,
+          "cost": 0.0035835,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -421,12 +392,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.0029655,
-            "upstream_inference_prompt_cost": 0.001338,
-            "upstream_inference_completions_cost": 0.0016275
+            "upstream_inference_cost": 0.0035835,
+            "upstream_inference_prompt_cost": 0.00133725,
+            "upstream_inference_completions_cost": 0.00224625
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 384,
+            "reasoning_tokens": 546,
             "image_tokens": 0,
             "audio_tokens": 0
           }
@@ -435,21 +406,21 @@
       {
         "profile": "landscape",
         "model": "google/gemini-3.7-flash",
-        "judge_adjust": true,
-        "judge_reason": "Panning upward includes more of the dramatic dark storm clouds above the sunset, giving the gazebo and sunburst breathing room while trimming excess dark water at the bottom.",
-        "judge_object_x": 50.0,
-        "judge_object_y": 50.0,
+        "judge_adjust": false,
+        "judge_reason": "The current framing nicely captures the foreground surf line to ground the image while positioning the boat across the horizon with ample atmospheric sky above.",
+        "judge_object_x": null,
+        "judge_object_y": null,
         "max_delta_x_points": 0.0,
-        "max_delta_y_points": 32.3759,
+        "max_delta_y_points": 32.2509,
         "clamped_object_x": 50.0,
-        "clamped_object_y": 50.0,
-        "applied": true,
-        "cost": 0.00479925,
+        "clamped_object_y": 100.0,
+        "applied": false,
+        "cost": 0.004923,
         "usage": {
           "prompt_tokens": 1784,
-          "completion_tokens": 923,
-          "total_tokens": 2707,
-          "cost": 0.00479925,
+          "completion_tokens": 956,
+          "total_tokens": 2740,
+          "cost": 0.004923,
           "is_byok": false,
           "prompt_tokens_details": {
             "cached_tokens": 0,
@@ -458,12 +429,12 @@
             "video_tokens": 0
           },
           "cost_details": {
-            "upstream_inference_cost": 0.00479925,
+            "upstream_inference_cost": 0.004923,
             "upstream_inference_prompt_cost": 0.001338,
-            "upstream_inference_completions_cost": 0.00346125
+            "upstream_inference_completions_cost": 0.003585
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 860,
+            "reasoning_tokens": 906,
             "image_tokens": 0,
             "audio_tokens": 0
           }
